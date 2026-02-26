@@ -74,55 +74,87 @@ export default function ProductsPage() {
                 videoClassName="rotate-180 scale-125"
             />
 
-            {/* Products Grid */}
-            <section className="py-32 px-6 md:px-24">
-                <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {productMetadata.map((product, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="group relative bg-zinc-900/40 border border-white/5 p-8 rounded-2xl hover:border-emerald-500/30 transition-all duration-300 hover:bg-zinc-900/60 flex flex-col h-full"
-                        >
-                            {/* Tech Header */}
-                            <div className="flex justify-between items-start mb-8 border-b border-white/5 pb-6">
-                                <div className="p-3 bg-white/5 rounded-xl text-emerald-400 group-hover:scale-110 transition-transform duration-300">
-                                    <product.icon className="w-6 h-6" />
+            {/* Products Section - Blueprint Layout */}
+            <section className="py-24 px-6 md:px-24">
+                <div className="container mx-auto">
+                    <div className="flex flex-col">
+                        {productMetadata.map((product, idx) => (
+                            <motion.div
+                                key={product.id}
+                                initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                                className={`group relative grid grid-cols-1 lg:grid-cols-12 border-t border-white/10 py-20 gap-12 lg:gap-0 ${idx === productMetadata.length - 1 ? 'border-b' : ''}`}
+                            >
+                                {/* Industrial ID & Icon */}
+                                <div className="lg:col-span-2 flex flex-row lg:flex-col justify-between items-start">
+                                    <span className="text-6xl md:text-8xl font-black font-heading text-white/5 group-hover:text-emerald-500/10 transition-colors duration-700 leading-none tabular-nums">
+                                        {(idx + 1).toString().padStart(2, '0')}
+                                    </span>
+                                    <div className="p-4 border border-white/10 group-hover:border-emerald-500/30 transition-colors duration-500 bg-zinc-900/50">
+                                        <product.icon className="w-8 h-8 text-emerald-500" />
+                                    </div>
                                 </div>
-                                <div className="text-right">
-                                    <span className="block font-mono text-xs text-zinc-500 uppercase tracking-widest mb-1">{t('products.version_label')}</span>
-                                    <span className="font-mono text-sm text-emerald-500">{product.version}</span>
-                                </div>
-                            </div>
 
-                            {/* Info Used t() here */}
-                            <div className="flex-grow">
-                                <span className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2 block">
-                                    {t(`products.items.${product.id}.type`)}
-                                </span>
-                                <h3 className="text-2xl font-serif mb-4 group-hover:text-emerald-400 transition-colors">{product.name}</h3>
-                                <p className="text-zinc-400 leading-relaxed mb-8 text-sm">
-                                    {t(`products.items.${product.id}.description`)}
-                                </p>
-                            </div>
-
-                            {/* Tech Stack Specs */}
-                            <div className="space-y-4">
-                                <div className="flex flex-wrap gap-2">
-                                    {product.stack.map((tech, tIdx) => (
-                                        <span key={tIdx} className="px-2 py-1 bg-white/5 text-[10px] font-mono uppercase tracking-wider text-zinc-400 rounded border border-white/5">
-                                            {tech}
+                                {/* Core Info */}
+                                <div className={`lg:col-span-5 flex flex-col justify-center ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
+                                    <div className="mb-4 flex items-baseline gap-4">
+                                        <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.3em] font-bold">
+                                            {t(`products.items.${product.id}.type`)}
                                         </span>
-                                    ))}
+                                        <div className="h-px flex-grow bg-white/5" />
+                                        <span className="font-mono text-[10px] text-emerald-500/50">
+                                            {product.version}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-4xl md:text-6xl font-heading font-black italic uppercase tracking-tightest mb-6 group-hover:text-emerald-500 transition-colors duration-500">
+                                        {product.name}
+                                    </h3>
+                                    <p className="text-zinc-400 text-lg leading-relaxed max-w-xl">
+                                        {t(`products.items.${product.id}.description`)}
+                                    </p>
                                 </div>
-                            </div>
 
-                            {/* Hover Overlay Link */}
-                            <Link href="/contact" className="absolute inset-0 z-10 focus:outline-none" aria-label={`Inquire about ${product.name}`} />
-                        </motion.div>
-                    ))}
+                                {/* Tech Schematic (Asymmetric Center/Edge) */}
+                                <div className={`lg:col-span-5 flex flex-col justify-center lg:items-end ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
+                                    <div className="relative w-full max-w-md bg-zinc-900/40 border border-white/5 p-8 group-hover:border-emerald-500/20 transition-all duration-700">
+                                        {/* Schematic Corner Accents */}
+                                        <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-emerald-500/50" />
+                                        <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-emerald-500/50" />
+
+                                        <h4 className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+                                            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                                            Active Architecture
+                                        </h4>
+
+                                        <div className="grid grid-cols-1 gap-4">
+                                            {product.stack.map((tech, tIdx) => (
+                                                <div key={tIdx} className="flex items-center gap-4 group/item">
+                                                    <span className="font-mono text-[10px] text-zinc-700">L-{tIdx + 1}</span>
+                                                    <div className="h-px flex-grow bg-white/5 group-hover/item:bg-emerald-500/20 transition-colors" />
+                                                    <span className="font-mono text-xs uppercase tracking-wider text-zinc-400 group-hover/item:text-white transition-colors">
+                                                        {tech}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <Link
+                                            href="/contact"
+                                            className="mt-10 flex items-center justify-between group/link border border-white/5 hover:border-emerald-500/50 px-6 py-3 transition-all"
+                                        >
+                                            <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover/link:text-white">Request Deployment</span>
+                                            <ArrowUpRight className="w-4 h-4 text-zinc-700 group-hover/link:text-emerald-500 transition-colors" />
+                                        </Link>
+                                    </div>
+                                </div>
+
+                                {/* Hover Background Effect */}
+                                <div className="absolute inset-0 bg-emerald-500/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
