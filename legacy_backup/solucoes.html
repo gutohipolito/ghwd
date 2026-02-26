@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GHWD / Soluções — Digital Experience Partner</title>
+    <link href="img/favicon-ghwd.svg" type="image/svg" rel="icon">
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Nossos serviços de transformação digital: E-commerce Scaling, UI/UX Design e Desenvolvimento de Alta Performance.">
+    <meta name="author" content="GHWD">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/modern.css" rel="stylesheet" type="text/css">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MVP22YZZM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9MVP22YZZM', {
+            anonymize_ip: true,
+        });
+    </script>
+
+    <style>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            padding: 40px;
+            height: 100%;
+            transition: var(--transition-medium);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content {
+            flex-grow: 1;
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            margin-bottom: 20px;
+            display: block;
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background -->
+    <div class="ambient-glow">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-panel"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 100; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center;">
+        <a href="index.html" class="logo"
+            style="font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: #fff;">GHWD<span
+                class="text-accent">.</span></a>
+
+        <ul style="display: flex; gap: 30px; margin: 0;">
+            <li class="d-none d-md-block"><a href="solucoes.html" style="color: #fff;">Serviços</a></li>
+            <li class="d-none d-md-block"><a href="clients.html">Cases</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5554999221230" class="btn-primary"
+                    style="padding: 8px 20px; font-size: 0.9rem;">Start Project</a></li>
+        </ul>
+    </nav>
+
+    <section style="padding-top: 150px; padding-bottom: 100px; min-height: 100vh;">
+        <div class="container">
+            <h1 class="section-title reveal-on-scroll">Expertise<span class="text-accent">.</span></h1>
+            <p class="reveal-on-scroll delay-100"
+                style="max-width: 700px; color: var(--text-muted); font-size: 1.1rem; margin-top: 20px;">
+                Não somos apenas desenvolvedores. Somos parceiros estratégicos de tecnologia focados em escalar sua
+                operação digital.
+            </p>
+
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="spotlight-card service-card reveal-on-scroll delay-200">
+                    <div class="spotlight-content service-content">
+                        <span class="service-icon">01.</span>
+                        <h3 class="mb-3">E-commerce Scaling</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">
+                            Arquitetura robusta para lojas virtuais de alto tráfego. Implementação de funcionalidades
+                            complexas, otimização de checkout e integrações de ERP/CRM.
+                        </p>
+                        <div class="tech-grid" style="margin-top: 0; gap: 10px;">
+                            <span class="tech-item">VTEX IO</span>
+                            <span class="tech-item">WooCommerce</span>
+                            <span class="tech-item">Shopify Plus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="spotlight-card service-card reveal-on-scroll delay-300">
+                    <div class="spotlight-content service-content">
+                        <span class="service-icon">02.</span>
+                        <h3 class="mb-3">Product Design & UX</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">
+                            Design centrado no usuário que converte. Desde a pesquisa inicial até protótipos de alta
+                            fidelidade e design systems completos.
+                        </p>
+                        <div class="tech-grid" style="margin-top: 0; gap: 10px;">
+                            <span class="tech-item">Figma</span>
+                            <span class="tech-item">Prototyping</span>
+                            <span class="tech-item">User Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="spotlight-card service-card reveal-on-scroll delay-400">
+                    <div class="spotlight-content service-content">
+                        <span class="service-icon">03.</span>
+                        <h3 class="mb-3">Web Engineering</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">
+                            Desenvolvimento front-end e back-end de alta performance. Aplicações web progressivas (PWA),
+                            APIs e micro-serviços.
+                        </p>
+                        <div class="tech-grid" style="margin-top: 0; gap: 10px;">
+                            <span class="tech-item">React / Next.js</span>
+                            <span class="tech-item">Node.js</span>
+                            <span class="tech-item">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Small -->
+            <div style="margin-top: 100px; text-align: center; border-top: 1px solid #222; padding-top: 40px;">
+                <h3 style="margin-bottom: 10px;">Pronto para o próximo nível?</h3>
+                <a href="mailto:contato@ghwd.com.br" class="text-accent"
+                    style="font-size: 1.2rem;">contato@ghwd.com.br</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/jquery-v1.12.4.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

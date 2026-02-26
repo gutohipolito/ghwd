@@ -1,0 +1,130 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import { useLanguage } from "@/lib/i18n-context";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+
+export function NavbarOrchestra() {
+    const { scrollY } = useScroll();
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const { t } = useLanguage();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        setIsScrolled(latest > 50);
+    });
+
+    return (
+        <>
+            <motion.nav
+                className={cn(
+                    "fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-6 transition-all duration-500",
+                    isScrolled
+                        ? "bg-white/80 backdrop-blur-md border-b border-black/5 py-4"
+                        : "bg-transparent border-transparent"
+                )}
+            >
+                <Link href="/" className={cn(
+                    "font-heading font-black text-2xl tracking-tighter uppercase transition-colors duration-300",
+                    isScrolled ? "text-black" : "text-white"
+                )}>
+                    GHWD<span className="text-emerald-500">.</span>
+                </Link>
+
+                {/* Desktop Menu */}
+                <ul className={cn(
+                    "hidden md:flex gap-8 items-center transition-colors duration-300",
+                    isScrolled ? "text-zinc-600" : "text-zinc-300"
+                )}>
+                    {[
+                        { href: '/products', label: t('nav.products') },
+                        { href: '/services', label: t('nav.services') },
+                        { href: '/cases', label: t('nav.cases') },
+                        { href: '/about', label: t('nav.about') }
+                    ].map((item) => (
+                        <li key={item.href}>
+                            <Link
+                                href={item.href}
+                                className="relative group overflow-hidden font-heading font-black italic uppercase tracking-tighter text-base hover:text-emerald-500 transition-colors duration-300 pb-1"
+                            >
+                                <span className="relative z-10">{item.label}</span>
+                                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-emerald-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+
+                {/* CTA & Mobile Toggle */}
+                <div className="flex items-center gap-4">
+
+                    {/* Language Switcher Desktop */}
+                    <div className="hidden md:block">
+                        <LanguageSwitcher />
+                    </div>
+
+                    <Link
+                        href="https://api.whatsapp.com/send?phone=5554999221230"
+                        className={cn(
+                            "hidden md:flex items-center gap-2 px-5 py-2 border rounded-full transition-all duration-300 text-sm font-semibold group",
+                            isScrolled
+                                ? "border-black text-black hover:bg-black hover:text-white"
+                                : "border-white/20 bg-white/10 text-white hover:bg-white hover:text-black"
+                        )}
+                    >
+                        <span>{t('nav.start')}</span>
+                        <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                    </Link>
+
+                    {/* Language Switcher Mobile (Icon Only) */}
+                    <div className="md:hidden">
+                        <LanguageSwitcher />
+                    </div>
+
+                    <button
+                        className={cn(
+                            "md:hidden z-50 relative p-2 transition-colors",
+                            isScrolled ? "text-black" : "text-white"
+                        )}
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        {mobileMenuOpen ? <X /> : <Menu />}
+                    </button>
+                </div>
+            </motion.nav>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl flex flex-col justify-center items-center md:hidden"
+                    >
+                        <div className="flex flex-col gap-8 text-center">
+                            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.home')}</Link>
+                            <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.products')}</Link>
+                            <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.services')}</Link>
+                            <Link href="/cases" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.cases')}</Link>
+                            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.about')}</Link>
+
+                            <div className="mt-8">
+                                <Link
+                                    href="https://api.whatsapp.com/send?phone=5554999221230"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="px-8 py-3 bg-emerald-400 text-black rounded-full text-xl font-bold inline-block"
+                                >
+                                    {t('nav.start_project')}
+                                </Link>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
+    );
+}

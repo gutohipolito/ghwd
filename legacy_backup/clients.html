@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>GHWD / Clientes — Desenvolvimento Web & E-commerce</title>
+        <link href="img/favicon-ghwd.svg" type="image/svg" rel="icon">
+
+        <!-- Meta Tags -->
+        <meta name="description"
+                content="Transforme sua presença digital com um parceiro especializado em desenvolvimento web e soluções para e-commerce.">
+        <meta name="author" content="GHWD">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700;900&display=swap"
+                rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="css/plugins.css" rel="stylesheet" type="text/css">
+        <link href="css/modern.css" rel="stylesheet" type="text/css">
+
+        <!-- Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MVP22YZZM"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9MVP22YZZM', {
+                        anonymize_ip: true,
+                });
+        </script>
+
+        <style>
+                .clients-section {
+                        margin-bottom: 80px;
+                }
+
+                .clients-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                        gap: 20px;
+                        margin-top: 30px;
+                }
+
+                .client-card {
+                        background: rgba(255, 255, 255, 0.03);
+                        border-radius: 8px;
+                        padding: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: var(--transition-medium);
+                        border: 1px solid transparent;
+                }
+
+                .client-card:hover {
+                        background: rgba(255, 255, 255, 0.08);
+                        border-color: rgba(255, 255, 255, 0.1);
+                        transform: translateY(-3px);
+                }
+
+                .client-logo {
+                        max-width: 100%;
+                        max-height: 80px;
+                        filter: grayscale(100%) opacity(0.7);
+                        transition: var(--transition-fast);
+                }
+
+                .client-card:hover .client-logo {
+                        filter: grayscale(0%) opacity(1);
+                }
+
+                .region-title {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        margin-bottom: 20px;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        padding-bottom: 10px;
+                }
+
+                .region-badge {
+                        background: var(--accent-primary);
+                        color: #000;
+                        font-weight: 700;
+                        padding: 2px 8px;
+                        border-radius: 4px;
+                        font-size: 0.9rem;
+                }
+        </style>
+</head>
+
+<body>
+
+        <!-- Ambient Glow Background -->
+        <div class="ambient-glow">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+        </div>
+        <div class="noise-overlay"></div>
+
+        <!-- Navigation -->
+        <nav class="glass-panel"
+                style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 100; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center;">
+                <a href="index.html" class="logo"
+                        style="font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: #fff;">GHWD<span
+                                class="text-accent">.</span></a>
+
+                <ul style="display: flex; gap: 30px; margin: 0;">
+                        <li class="d-none d-md-block"><a href="index.html" style="color: var(--text-muted);">Home</a>
+                        </li>
+                        <li class="d-none d-md-block"><a href="solucoes.html"
+                                        style="color: var(--text-muted);">Soluções</a></li>
+                        <li class="d-none d-md-block"><a href="clients.html" style="color: #fff;">Clientes</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5554999221230" class="btn-primary"
+                                        style="padding: 8px 20px; font-size: 0.9rem;">WhatsApp</a></li>
+                </ul>
+        </nav>
+
+        <section style="padding-top: 150px; padding-bottom: 100px; min-height: 100vh;">
+                <div class="container">
+                        <h1 class="section-title reveal-on-scroll">Clientes<span class="text-accent">.</span></h1>
+                        <p class="reveal-on-scroll delay-100"
+                                style="max-width: 600px; color: var(--text-muted); font-size: 1.1rem; margin-top: 20px; margin-bottom: 60px;">
+                                Orgulho de ter colaborado com grandes marcas em todo o Brasil.
+                        </p>
+
+                        <!-- SP Section -->
+                        <div class="clients-section">
+                                <div class="region-title">
+                                        <span class="region-badge">SP</span>
+                                        <h3>São Paulo</h3>
+                                </div>
+                                <div class="clients-grid">
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-besni-ghwd.png"
+                                                        alt="Besni" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-avery-dennison-ghwd.png"
+                                                        alt="Avery Dennison" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-cris-arcangeli-ghwd.png"
+                                                        alt="Cris Arcangeli" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-beautyin-ghwd.png"
+                                                        alt="Beauty'in" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-trucss-ghwd.png"
+                                                        alt="Trucss" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-joseph-teperman-ghwd.png"
+                                                        alt="Joseph Teperman" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-vivi-sanches-ghwd.png"
+                                                        alt="Vivi Sanches" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-divorciosja-ghwd.png"
+                                                        alt="Divórcios Já" class="client-logo"></div>
+                                </div>
+                        </div>
+
+                        <!-- RS Section -->
+                        <div class="clients-section">
+                                <div class="region-title">
+                                        <span class="region-badge">RS</span>
+                                        <h3>Rio Grande do Sul</h3>
+                                </div>
+
+                                <!-- Farroupilha -->
+                                <h4 class="text-accent mt-4 mb-3"
+                                        style="font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">
+                                        Farroupilha</h4>
+                                <div class="clients-grid">
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-grendene-ghwd.png"
+                                                        alt="Grendene" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-malacara-ghwd.png"
+                                                        alt="Malacara" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-dominator-ghwd.png"
+                                                        alt="Dominator" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-prime-fitness-club-ghwd.png"
+                                                        alt="Prime Fitness Club" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-moveis-unghero-ghwd.png"
+                                                        alt="Móveis Unghero" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-ballare-ghwd.png"
+                                                        alt="Ballare" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-perfilcomp-ghwd.png"
+                                                        alt="Perfilcomp" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-fachini-extintores-ghwd.png"
+                                                        alt="Fachini Extintores" class="client-logo"></div>
+
+                                        <!-- More Items (Previously Hidden) -->
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-imobiliaria-torre-ghwd.png"
+                                                        alt="Imobiliária Torre" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-imobiliaria-feltrin-ghwd.png"
+                                                        alt="Feltrin Imóveis" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-poder-auto-ghwd.png"
+                                                        alt="PoderAuto" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-kavalek-ghwd.png"
+                                                        alt="Kavalek" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-horus-odontologia-ghwd.png"
+                                                        alt="Horus Odontologia" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-metal-jeta-ghwd.png"
+                                                        alt="Metal Jeta" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/cliente-bonacina-massens-ghwd.png"
+                                                        alt="Bonacina & Massens" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-marcia-esteticista.png"
+                                                        alt="Márcia Esteticista" class="client-logo"></div>
+                                </div>
+
+                                <!-- Caxias do Sul -->
+                                <h4 class="text-accent mt-5 mb-3"
+                                        style="font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">Caxias
+                                        do Sul</h4>
+                                <div class="clients-grid">
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-amendoeira.png"
+                                                        alt="Amendoeira Chocolaterie" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-verse.png"
+                                                        alt="Verse" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-austral.png"
+                                                        alt="Austral Incorporadora" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-arte-dente.png"
+                                                        alt="Arte Dente" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-guenoa.png"
+                                                        alt="Guenoa" class="client-logo"></div>
+                                </div>
+
+                                <!-- Porto Alegre & Outros -->
+                                <h4 class="text-accent mt-5 mb-3"
+                                        style="font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">Porto
+                                        Alegre, Bento
+                                        Gonçalves, Gramado & Passo Fundo</h4>
+                                <div class="clients-grid">
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-cyrela.png"
+                                                        alt="Cyrela" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-enfoque-palestrantes.png"
+                                                        alt="Enfoque Palestrantes" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-bytinga.png"
+                                                        alt="By Tinga" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-fasolo.png"
+                                                        alt="Fasolo" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-nascimento-pinturas.png"
+                                                        alt="Nascimento Pinturas" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-hard-rock-cafe-gramado.png"
+                                                        alt="Hard Rock Café Gramado" class="client-logo"></div>
+                                        <div class="client-card"><img loading="lazy"
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-supercarros.png"
+                                                        alt="SuperCarros" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-rosana-denardi.png"
+                                                        alt="Dra Rosana de Nardi" class="client-logo"></div>
+                                </div>
+                        </div>
+
+                        <!-- Acre Section -->
+                        <div class="clients-section">
+                                <div class="region-title">
+                                        <span class="region-badge">AC</span>
+                                        <h3>Acre</h3>
+                                </div>
+                                <div class="clients-grid">
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-prefeitura-rio-branco.png"
+                                                        alt="Prefeitura de Rio Branco" class="client-logo"></div>
+                                        <div class="client-card"><img
+                                                        src="https://ghwd.com.br/lista-clientes/clientes-ghwd-unip-acrelandia.png"
+                                                        alt="UNIP Acrelândia" class="client-logo"></div>
+                                </div>
+                        </div>
+
+                        <!-- Footer Small -->
+                        <div
+                                style="margin-top: 100px; text-align: center; border-top: 1px solid #222; padding-top: 40px;">
+                                <h3 style="margin-bottom: 10px;">Seja o próximo case de sucesso.</h3>
+                                <a href="mailto:contato@ghwd.com.br" class="text-accent"
+                                        style="font-size: 1.2rem;">contato@ghwd.com.br</a>
+                                <p class="mt-2"><a href="tel:+5554999221230" style="color: var(--text-muted);">+55 (54)
+                                                9 9922-1230</a>
+                                </p>
+                        </div>
+                </div>
+        </section>
+
+        <!-- Background Elements -->
+        <div
+                style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at 90% 90%, rgba(51, 208, 108, 0.05), transparent 40%); pointer-events: none;">
+        </div>
+
+        <script src="js/jquery-v1.12.4.min.js"></script>
+        <script src="js/main.js"></script>
+
+</body>
+
+</html>
