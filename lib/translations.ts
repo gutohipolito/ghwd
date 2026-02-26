@@ -20,7 +20,8 @@ export const translations: Record<Language, any> = {
             description: "We don't just code. We engineer the digital nervous systems for the world's most ambitious brands.",
             start_project: 'START PROJECT',
             view_work: 'VIEW WORK',
-            scroll: 'Scroll to Explore'
+            scroll: 'Scroll to Explore',
+            headline_html: 'We engineer <br /><span className="text-zinc-500">digital empires</span> <br />for ambitious brands.'
         },
         footer: {
             tagline: 'Engineering the future of digital business.',
@@ -173,7 +174,8 @@ export const translations: Record<Language, any> = {
                 commerce: {
                     title: "Commerce Experience",
                     desc: "Global systems for retail and B2B scale.",
-                    caps: ["Omnichannel Core", "Global Logistics", "Wholesale Portal", "Subscription Models"]
+                    caps: ["Omnichannel Core", "Global Logistics", "Wholesale Portal", "Subscription Models"],
+                    tags: ["B2B", "Retail", "Global"]
                 }
             },
             projects_items: {
@@ -270,7 +272,8 @@ export const translations: Record<Language, any> = {
             description: "Nós não apenas programamos. Projetamos os sistemas nervosos digitais para as marcas mais ambiciosas do mundo.",
             start_project: 'INICIAR PROJETO',
             view_work: 'VER PROJETOS',
-            scroll: 'Role para Explorar'
+            scroll: 'Role para Explorar',
+            headline_html: 'Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />para marcas ambiciosas.'
         },
         footer: {
             tagline: 'Transformando visão estratégica em domínio digital.',
@@ -423,7 +426,8 @@ export const translations: Record<Language, any> = {
                 commerce: {
                     title: "Commerce Experience",
                     desc: "Sistemas globais para escala de varejo e B2B.",
-                    caps: ["Núcleo Omnichannel", "Logística Global", "Portal de Atacado", "Modelos de Assinatura"]
+                    caps: ["Núcleo Omnichannel", "Logística Global", "Portal de Atacado", "Modelos de Assinatura"],
+                    tags: ["B2B", "Varejo", "Global"]
                 }
             },
             projects_items: {
@@ -519,7 +523,8 @@ export const translations: Record<Language, any> = {
             description: "Nós não nos limitamos a programar. Projetamos os sistemas nervosos digitais para as marcas mais ambiciosas do mundo.",
             start_project: 'INICIAR PROJETO',
             view_work: 'VER PROJETOS',
-            scroll: 'Percorra para Explorar'
+            scroll: 'Percorra para Explorar',
+            headline_html: 'Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />para marcas ambiciosas.'
         },
         footer: {
             tagline: 'Transformando visão estratégica em domínio digital.',
@@ -672,7 +677,8 @@ export const translations: Record<Language, any> = {
                 commerce: {
                     title: "Experiência de Comércio",
                     desc: "Sistemas globais para escala de retalho e B2B.",
-                    caps: ["Núcleo Omnichannel", "Logística Global", "Portal de Revenda", "Modelos de Subscrição"]
+                    caps: ["Núcleo Omnichannel", "Logística Global", "Portal de Revenda", "Modelos de Subscrição"],
+                    tags: ["B2B", "Retalho", "Global"]
                 }
             },
             projects_items: {
@@ -768,7 +774,8 @@ export const translations: Record<Language, any> = {
             description: "No solo programamos. Diseñamos los sistemas nerviosos digitales para las marcas más ambiciosas del mundo.",
             start_project: 'INICIAR PROYECTO',
             view_work: 'VER PROYECTOS',
-            scroll: 'Desplazarse para Explorar'
+            scroll: 'Desplazarse para Explorar',
+            headline_html: 'Diseñamos <br /><span className="text-zinc-500">imperios digitales</span> <br />para marcas ambiciosas.'
         },
         footer: {
             tagline: 'Transformando la visión estratégica en dominio digital.',
@@ -921,7 +928,8 @@ export const translations: Record<Language, any> = {
                 commerce: {
                     title: "Commerce Experience",
                     desc: "Sistemas globales para escala minorista y B2B.",
-                    caps: ["Core Omnicanal", "Logística Global", "Portal B2B", "Modelos de Suscripción"]
+                    caps: ["Core Omnicanal", "Logística Global", "Portal B2B", "Modelos de Suscripción"],
+                    tags: ["B2B", "Retail", "Global"]
                 }
             },
             projects_items: {

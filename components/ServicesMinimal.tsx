@@ -93,7 +93,7 @@ export function ServicesMinimal() {
                                         {content.desc}
                                     </p>
                                     <div className="flex gap-2">
-                                        {service.tags.map(tag => (
+                                        {(content.tags || service.tags).map((tag: string) => (
                                             <span key={tag} className="text-[10px] uppercase font-bold tracking-widest border border-white/10 px-2 py-1 rounded-full text-zinc-400">
                                                 {tag}
                                             </span>

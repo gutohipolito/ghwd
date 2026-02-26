@@ -54,13 +54,7 @@ export function HeroPremium() {
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                     className="font-heading font-black italic uppercase text-5xl md:text-8xl leading-[0.9] tracking-tighter mb-12"
                 >
-                    {language === 'pt' ? (
-                        <>Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />para marcas ambiciosas.</>
-                    ) : language === 'es' ? (
-                        <>Diseñamos <br /><span className="text-zinc-500">imperios digitales</span> <br />para marcas ambiciosas.</>
-                    ) : (
-                        <>We engineer <br /><span className="text-zinc-500">digital empires</span> <br />for ambitious brands.</>
-                    )}
+                    <span dangerouslySetInnerHTML={{ __html: t('hero.headline_html') }} />
                 </motion.h1>
 
                 {/* Actions */}
