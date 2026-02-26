@@ -8,11 +8,11 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
 
 const CITIES = [
-    { name: "Caxias do Sul, RS", lat: -29.1678, lon: -51.1794, timeZone: "America/Sao_Paulo" },
-    { name: "Farroupilha, RS", lat: -29.2232, lon: -51.3468, timeZone: "America/Sao_Paulo" },
-    { name: "Bento Gonçalves, RS", lat: -29.1708, lon: -51.5189, timeZone: "America/Sao_Paulo" },
-    { name: "Porto Alegre, RS", lat: -30.0346, lon: -51.2177, timeZone: "America/Sao_Paulo" },
-    { name: "Rio Branco, AC", lat: -9.9754, lon: -67.8249, timeZone: "America/Rio_Branco" },
+    { name: "São Paulo, BR", lat: -23.5505, lon: -46.6333, timeZone: "America/Sao_Paulo" },
+    { name: "New York, US", lat: 40.7128, lon: -74.0060, timeZone: "America/New_York" },
+    { name: "London, UK", lat: 51.5074, lon: -0.1278, timeZone: "Europe/London" },
+    { name: "Tokyo, JP", lat: 35.6762, lon: 139.6503, timeZone: "Asia/Tokyo" },
+    { name: "Dubai, UAE", lat: 25.2048, lon: 55.2708, timeZone: "Asia/Dubai" },
 ];
 
 export function MegaFooter() {
@@ -72,7 +72,7 @@ export function MegaFooter() {
     const currentCity = CITIES[cityIndex];
     const currentTemp = weatherData[currentCity.name];
 
-    const timeString = now ? now.toLocaleTimeString('pt-BR', {
+    const timeString = now ? now.toLocaleTimeString('en-US', {
         hour: '2-digit',
         minute: '2-digit',
         timeZone: currentCity.timeZone,
@@ -128,10 +128,10 @@ export function MegaFooter() {
                     </div>
                 </div>
 
-                {/* Middle Section: Navigation & Newsletter */}
+                {/* Middle Section: Navigation */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
                     {/* Navigation Columns */}
-                    <div className="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="md:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-8">
                         <div className="space-y-6">
                             <h4 className="text-zinc-600 font-bold text-[10px] uppercase tracking-[0.2em]">{t('footer.sitemap')}</h4>
                             <div className="flex flex-col gap-4">
@@ -172,26 +172,6 @@ export function MegaFooter() {
                                     </Link>
                                 ))}
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Newsletter: Architectural Simplicity */}
-                    <div className="md:col-span-4 flex flex-col gap-8">
-                        <div className="space-y-4">
-                            <h4 className="text-white font-bold text-sm uppercase tracking-widest">{t('footer.intelligence')}</h4>
-                            <p className="text-zinc-500 text-sm leading-relaxed">
-                                {t('footer.newsletter_desc')}
-                            </p>
-                        </div>
-                        <div className="relative group">
-                            <input
-                                type="email"
-                                placeholder={t('footer.email_placeholder')}
-                                className="w-full bg-transparent border-b border-zinc-800 focus:border-emerald-500 transition-colors py-4 text-sm text-white placeholder:text-zinc-700 outline-none"
-                            />
-                            <button className="absolute right-0 bottom-4 text-zinc-600 hover:text-emerald-500 transition-colors">
-                                <Send size={18} />
-                            </button>
                         </div>
                     </div>
                 </div>
