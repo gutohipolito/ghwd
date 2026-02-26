@@ -116,38 +116,18 @@ export default function ProductsPage() {
                                     </p>
                                 </div>
 
-                                {/* Tech Schematic (Asymmetric Center/Edge) */}
+                                {/* CTA Section (Clean & Impactful) */}
                                 <div className={`lg:col-span-5 flex flex-col justify-center lg:items-end ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
-                                    <div className="relative w-full max-w-md bg-zinc-900/40 border border-white/5 p-8 group-hover:border-emerald-500/20 transition-all duration-700">
-                                        {/* Schematic Corner Accents */}
-                                        <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-emerald-500/50" />
-                                        <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-emerald-500/50" />
-
-                                        <h4 className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-6 flex items-center gap-3">
-                                            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                                            Active Architecture
-                                        </h4>
-
-                                        <div className="grid grid-cols-1 gap-4">
-                                            {product.stack.map((tech, tIdx) => (
-                                                <div key={tIdx} className="flex items-center gap-4 group/item">
-                                                    <span className="font-mono text-[10px] text-zinc-700">L-{tIdx + 1}</span>
-                                                    <div className="h-px flex-grow bg-white/5 group-hover/item:bg-emerald-500/20 transition-colors" />
-                                                    <span className="font-mono text-xs uppercase tracking-wider text-zinc-400 group-hover/item:text-white transition-colors">
-                                                        {tech}
-                                                    </span>
-                                                </div>
-                                            ))}
+                                    <Link
+                                        href="/contact"
+                                        className="group/link flex items-center justify-between border border-white/10 hover:border-emerald-500 bg-zinc-900/50 hover:bg-emerald-500/5 px-8 py-6 transition-all duration-300 w-full lg:w-fit min-w-[240px]"
+                                    >
+                                        <div className="flex flex-col items-start gap-1">
+                                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 group-hover/link:text-emerald-500 transition-colors">Start Project</span>
+                                            <span className="text-[9px] font-mono text-zinc-700 uppercase tracking-widest">Deployment Ready</span>
                                         </div>
-
-                                        <Link
-                                            href="/contact"
-                                            className="mt-10 flex items-center justify-between group/link border border-white/5 hover:border-emerald-500/50 px-6 py-3 transition-all"
-                                        >
-                                            <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover/link:text-white">Request Deployment</span>
-                                            <ArrowUpRight className="w-4 h-4 text-zinc-700 group-hover/link:text-emerald-500 transition-colors" />
-                                        </Link>
-                                    </div>
+                                        <ArrowUpRight className="w-5 h-5 text-zinc-700 group-hover/link:text-emerald-500 group-hover/link:rotate-45 transition-all duration-300" />
+                                    </Link>
                                 </div>
 
                                 {/* Hover Background Effect */}
