@@ -141,32 +141,20 @@ export default function CasesPage() {
                                                     initial={{ opacity: 0, y: 10 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ delay: 0.05 * cIdx, duration: 0.4 }}
-                                                    whileHover={{ scale: 1.02, y: -2 }}
-                                                    className="group relative p-5 border border-white/10 rounded-xl bg-zinc-900/30 backdrop-blur-sm overflow-hidden flex items-center justify-between transition-all duration-300"
+                                                    whileHover={{ scale: 1.04, y: -4 }}
+                                                    className="group relative p-6 border border-white/5 rounded-2xl bg-zinc-900/40 backdrop-blur-md overflow-hidden flex items-center justify-between transition-all duration-500"
                                                 >
-                                                    {/* Brand Gradient Overlay (half to end) */}
+                                                    {/* Fixed Brand Gradient Overlay (half to end) */}
                                                     <div 
-                                                        className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
+                                                        className="absolute inset-0 opacity-15 transition-opacity duration-500 pointer-events-none"
                                                         style={{ 
                                                             background: `linear-gradient(to right, transparent 50%, ${(client as any).color || '#10b981'} 100%)` 
                                                         }}
                                                     />
 
-                                                    {/* Subtle Right Border Glow */}
-                                                    <div 
-                                                        className="absolute right-0 top-0 bottom-0 w-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                                                        style={{ backgroundColor: (client as any).color || '#10b981' }}
-                                                    />
-
-                                                    <span className="text-zinc-200 font-medium text-lg relative z-10 transition-colors duration-300 group-hover:text-white">
+                                                    <span className="text-zinc-300 font-medium text-lg relative z-10 transition-colors duration-300 group-hover:text-white">
                                                         {client.name}
                                                     </span>
-
-                                                    {/* Corner brand color dot */}
-                                                    <div 
-                                                        className="w-1.5 h-1.5 rounded-full relative z-10 opacity-40 group-hover:opacity-100 transition-all duration-300 group-hover:scale-125"
-                                                        style={{ backgroundColor: (client as any).color || '#10b981' }}
-                                                    />
                                                 </motion.div>
                                             ))}
                                         </div>
