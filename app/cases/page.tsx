@@ -107,23 +107,21 @@ export default function CasesPage() {
                 <div className="container mx-auto px-6 md:px-24 mb-24">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start transition-all duration-700">
                         {/* Map Column */}
-                        <motion.div 
-                            layout
-                            className={`relative border border-white/10 rounded-3xl bg-zinc-900/50 overflow-hidden flex flex-col pt-8 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] ${selectedState ? 'w-full lg:w-5/12' : 'w-full lg:w-8/12 mx-auto aspect-square lg:aspect-[16/9]'}`}
+                        <div 
+                            className={`relative border border-white/10 rounded-3xl bg-zinc-900/50 overflow-hidden flex flex-col pt-8 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] ${selectedState ? 'w-full lg:w-5/12' : 'w-full lg:w-8/12 mx-auto min-h-[500px] lg:min-h-[600px]'}`}
                         >
-                            <div className={`p-4 flex-grow w-full ${selectedState ? 'h-[400px] md:h-[600px]' : 'h-full min-h-[500px]'}`}>
+                            <div className={`p-4 flex-grow w-full ${selectedState ? 'h-[400px] md:h-[600px]' : 'h-full min-h-[500px] flex items-center justify-center'}`}>
                                 <BrazilMap 
                                     activeStates={activeStates} 
                                     selectedState={selectedState} 
                                     onStateClick={(sigla) => setSelectedState(prev => prev === sigla ? null : sigla)} 
                                 />
                             </div>
-                        </motion.div>
+                        </div>
 
                         {/* Clients Column */}
                         {selectedState && (
                             <motion.div 
-                                layout
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: 20 }}

@@ -14,14 +14,15 @@ interface BrazilMapProps {
 
 export function BrazilMap({ activeStates, selectedState, onStateClick }: BrazilMapProps) {
   return (
-    <div className="w-full aspect-square md:aspect-[4/3] flex items-center justify-center relative">
+    <div className="w-full h-full flex items-center justify-center relative">
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          scale: 600,
+          scale: 800,
           center: [-54, -15],
         }}
-        className="w-full h-full"
+        className="w-full max-h-full object-contain"
+        style={{ width: "100%", height: "100%" }}
       >
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
