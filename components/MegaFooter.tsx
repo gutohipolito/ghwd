@@ -8,11 +8,10 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
 
 const CITIES = [
-    { name: "São Paulo, BR", lat: -23.5505, lon: -46.6333, timeZone: "America/Sao_Paulo" },
-    { name: "New York, US", lat: 40.7128, lon: -74.0060, timeZone: "America/New_York" },
-    { name: "London, UK", lat: 51.5074, lon: -0.1278, timeZone: "Europe/London" },
-    { name: "Tokyo, JP", lat: 35.6762, lon: 139.6503, timeZone: "Asia/Tokyo" },
-    { name: "Dubai, UAE", lat: 25.2048, lon: 55.2708, timeZone: "Asia/Dubai" },
+    { name: "São Paulo", lat: -23.5505, lon: -46.6333, timeZone: "America/Sao_Paulo" },
+    { name: "New York", lat: 40.7128, lon: -74.0060, timeZone: "America/New_York" },
+    { name: "Lisbon", lat: 38.7223, lon: -9.1393, timeZone: "Europe/Lisbon" },
+    { name: "Madrid", lat: 40.4168, lon: -3.7038, timeZone: "Europe/Madrid" },
 ];
 
 export function MegaFooter() {
@@ -96,7 +95,7 @@ export function MegaFooter() {
             </motion.div>
 
             {/* Grain Overlay */}
-            <div className="absolute inset-0 opacity-[0.1] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+            <div className="absolute inset-0 opacity-[0.1] mix-blend-overlay pointer-events-none bg-[url('/noise.svg')]"></div>
 
             <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col h-full justify-between gap-20">
                 {/* Upper Section: Core CTA */}
@@ -132,6 +131,7 @@ export function MegaFooter() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
                     {/* Navigation Columns */}
                     <div className="md:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        {/* Sitemap */}
                         <div className="space-y-6">
                             <h4 className="text-zinc-600 font-bold text-[10px] uppercase tracking-[0.2em]">{t('footer.sitemap')}</h4>
                             <div className="flex flex-col gap-4">
@@ -148,19 +148,33 @@ export function MegaFooter() {
                             </div>
                         </div>
 
+                        {/* Products */}
                         <div className="space-y-6">
-                            <h4 className="text-zinc-600 font-bold text-[10px] uppercase tracking-[0.2em]">{t('footer.social')}</h4>
+                            <h4 className="text-zinc-600 font-bold text-[10px] uppercase tracking-[0.2em]">{t('footer.products')}</h4>
                             <div className="flex flex-col gap-4">
-                                {['LinkedIn', 'Instagram', 'GitHub', 'Behance'].map((social) => (
-                                    <a key={social} href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">
-                                        {social}
-                                    </a>
+                                {['Velocity', 'Synapse', 'Obsidian', 'X-Ray', 'Wholesale', 'Edge'].map((product) => (
+                                    <Link key={product} href="/products" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                                        {product}
+                                    </Link>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="md:col-span-2 space-y-6">
-                            <h4 className="text-zinc-600 font-bold text-[10px] uppercase tracking-[0.2em]">{t('footer.legal')}</h4>
+                        {/* Presence */}
+                        <div className="space-y-6">
+                            <h4 className="text-zinc-600 font-bold text-[10px] uppercase tracking-[0.2em]">{t('footer.presence')}</h4>
+                            <div className="flex flex-col gap-4">
+                                {CITIES.map((city) => (
+                                    <div key={city.name} className="flex flex-col gap-1">
+                                        <span className="text-zinc-400 text-sm">{city.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Compliance */}
+                        <div className="space-y-6">
+                            <h4 className="text-zinc-600 font-bold text-[10px] uppercase tracking-[0.2em]">{t('footer.compliance')}</h4>
                             <div className="flex flex-col gap-4">
                                 {[
                                     { name: t('footer.privacy'), href: "/privacy" },
