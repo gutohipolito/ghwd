@@ -42,14 +42,30 @@ export function MegaFooter() {
         const timeInterval = setInterval(() => setNow(new Date()), 1000);
 
         const fetchWeather = async () => {
-            const newWeatherData: { [key: string]: string } = {};
+            const newWeatherData: { [key: string]: string } = { ...weatherData };
             for (const city of CITIES) {
                 try {
-                    const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m`);
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+
+                    const res = await fetch(
+                        `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m`,
+                        { signal: controller.signal }
+                    );
+                    clearTimeout(timeoutId);
+
+                    if (!res.ok) throw new Error("Network response was not ok");
+                    
                     const data = await res.json();
-                    newWeatherData[city.name] = `${Math.round(data.current.temperature_2m)}°C`;
+                    if (data?.current?.temperature_2m !== undefined) {
+                        newWeatherData[city.name] = `${Math.round(data.current.temperature_2m)}°C`;
+                    }
                 } catch (e) {
-                    console.error(`Weather fetch failed for ${city.name}`);
+                    // Silently fail if weather is unavailable to avoid console noise
+                    // The UI will simply not show the temperature for this city
+                    if (!newWeatherData[city.name]) {
+                        newWeatherData[city.name] = "--°C";
+                    }
                 }
             }
             setWeatherData(newWeatherData);
