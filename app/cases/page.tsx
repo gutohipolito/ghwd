@@ -15,58 +15,93 @@ const regions = [
     {
         name: "São Paulo",
         siglas: ["SP"],
-        clients: [
-            { name: "Besni", color: "#eb1c24", image: "https://ghwd.com.br/lista-clientes/cliente-besni-ghwd.png" },
-            { name: "Avery Dennison", color: "#da291c", image: "https://ghwd.com.br/lista-clientes/cliente-avery-dennison-ghwd.png" },
-            { name: "Cris Arcangeli", color: "#e5007e", image: "https://ghwd.com.br/lista-clientes/cliente-cris-arcangeli-ghwd.png" },
-            { name: "Beauty'in", color: "#fe94ca", image: "https://ghwd.com.br/lista-clientes/cliente-beautyin-ghwd.png" },
-            { name: "Trucss", color: "#009fe3", image: "https://ghwd.com.br/lista-clientes/cliente-trucss-ghwd.png" },
-            { name: "Joseph Teperman", color: "#71717a", image: "https://ghwd.com.br/lista-clientes/cliente-joseph-teperman-ghwd.png" },
-            { name: "Vivi Sanches", color: "#00c4cc", image: "https://ghwd.com.br/lista-clientes/cliente-vivi-sanches-ghwd.png" },
-            { name: "Divórcios Já", color: "#2c3e50", image: "https://ghwd.com.br/lista-clientes/cliente-divorciosja-ghwd.png" },
+        cities: [
+            {
+                name: "São Paulo",
+                clients: [
+                    { name: "Besni", color: "#eb1c24", image: "https://ghwd.com.br/lista-clientes/cliente-besni-ghwd.png" },
+                    { name: "Avery Dennison", color: "#da291c", image: "https://ghwd.com.br/lista-clientes/cliente-avery-dennison-ghwd.png" },
+                    { name: "Cris Arcangeli", color: "#e5007e", image: "https://ghwd.com.br/lista-clientes/cliente-cris-arcangeli-ghwd.png" },
+                    { name: "Beauty'in", color: "#fe94ca", image: "https://ghwd.com.br/lista-clientes/cliente-beautyin-ghwd.png" },
+                    { name: "Trucss", color: "#009fe3", image: "https://ghwd.com.br/lista-clientes/cliente-trucss-ghwd.png" },
+                    { name: "Joseph Teperman", color: "#71717a", image: "https://ghwd.com.br/lista-clientes/cliente-joseph-teperman-ghwd.png" },
+                    { name: "Vivi Sanches", color: "#00c4cc", image: "https://ghwd.com.br/lista-clientes/cliente-vivi-sanches-ghwd.png" },
+                    { name: "Divórcios Já", color: "#2c3e50", image: "https://ghwd.com.br/lista-clientes/cliente-divorciosja-ghwd.png" },
+                ]
+            }
         ]
     },
     {
         name: "Rio Grande do Sul",
         siglas: ["RS"],
-        clients: [
-            { name: "Grendene", color: "#004a99", image: "https://ghwd.com.br/lista-clientes/cliente-grendene-ghwd.png" },
-            { name: "Malacara", color: "#c8a165", image: "https://ghwd.com.br/lista-clientes/cliente-malacara-ghwd.png" },
-            { name: "Dominator", color: "#a855f7", image: "https://ghwd.com.br/lista-clientes/cliente-dominator-ghwd.png" },
-            { name: "Prime Fitness Club", color: "#10b981", image: "https://ghwd.com.br/lista-clientes/cliente-prime-fitness-club-ghwd.png" },
-            { name: "Móveis Unghero", color: "#d97706", image: "https://ghwd.com.br/lista-clientes/cliente-moveis-unghero-ghwd.png" },
-            { name: "Ballare", color: "#ec4899", image: "https://ghwd.com.br/lista-clientes/cliente-ballare-ghwd.png" },
-            { name: "Perfilcomp", color: "#64748b", image: "https://ghwd.com.br/lista-clientes/cliente-perfilcomp-ghwd.png" },
-            { name: "Fachini Extintores", color: "#ef4444", image: "https://ghwd.com.br/lista-clientes/cliente-fachini-extintores-ghwd.png" },
-            { name: "Imobiliária Torre", color: "#3b82f6", image: "https://ghwd.com.br/lista-clientes/cliente-imobiliaria-torre-ghwd.png" },
-            { name: "Feltrin Imóveis", color: "#2563eb", image: "https://ghwd.com.br/lista-clientes/cliente-imobiliaria-feltrin-ghwd.png" },
-            { name: "PoderAuto", color: "#f59e0b", image: "https://ghwd.com.br/lista-clientes/cliente-poder-auto-ghwd.png" },
-            { name: "Kavalek", color: "#1e293b", image: "https://ghwd.com.br/lista-clientes/cliente-kavalek-ghwd.png" },
-            { name: "Horus Odontologia", color: "#06b6d4", image: "https://ghwd.com.br/lista-clientes/cliente-horus-odontologia-ghwd.png" },
-            { name: "Metal Jeta", color: "#71717a", image: "https://ghwd.com.br/lista-clientes/cliente-metal-jeta-ghwd.png" },
-            { name: "Bonacina & Massens", color: "#4f46e5", image: "https://ghwd.com.br/lista-clientes/cliente-bonacina-massens-ghwd.png" },
-            { name: "Márcia Esteticista", color: "#db2777", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-marcia-esteticista.png" },
-            { name: "Amendoeira Chocolaterie", color: "#78350f", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-amendoeira.png" },
-            { name: "Verse", color: "#000000", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-verse.png" },
-            { name: "Austral Incorporadora", color: "#1e3a8a", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-austral.png" },
-            { name: "Arte Dente", color: "#22d3ee", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-arte-dente.png" },
-            { name: "Guenoa", color: "#15803d", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-guenoa.png" },
-            { name: "Cyrela", color: "#002d58", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-cyrela.png" },
-            { name: "Enfoque Palestrantes", color: "#f97316", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-enfoque-palestrantes.png" },
-            { name: "By Tinga", color: "#eab308", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-bytinga.png" },
-            { name: "Fasolo", color: "#4b5563", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-fasolo.png" },
-            { name: "Nascimento Pinturas", color: "#6366f1", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-nascimento-pinturas.png" },
-            { name: "Hard Rock Café Gramado", color: "#ffcc00", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-hard-rock-cafe-gramado.png" },
-            { name: "SuperCarros", color: "#da291c", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-supercarros.png" },
-            { name: "Dra Rosana de Nardi", color: "#8b5cf6", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-rosana-denardi.png" },
+        cities: [
+            {
+                name: "Farroupilha",
+                clients: [
+                    { name: "Grendene", color: "#004a99", image: "https://ghwd.com.br/lista-clientes/cliente-grendene-ghwd.png" },
+                    { name: "Malacara", color: "#c8a165", image: "https://ghwd.com.br/lista-clientes/cliente-malacara-ghwd.png" },
+                    { name: "Dominator", color: "#a855f7", image: "https://ghwd.com.br/lista-clientes/cliente-dominator-ghwd.png" },
+                    { name: "Prime Fitness Club", color: "#10b981", image: "https://ghwd.com.br/lista-clientes/cliente-prime-fitness-club-ghwd.png" },
+                    { name: "Móveis Unghero", color: "#d97706", image: "https://ghwd.com.br/lista-clientes/cliente-moveis-unghero-ghwd.png" },
+                    { name: "Ballare", color: "#ec4899", image: "https://ghwd.com.br/lista-clientes/cliente-ballare-ghwd.png" },
+                    { name: "Perfilcomp", color: "#64748b", image: "https://ghwd.com.br/lista-clientes/cliente-perfilcomp-ghwd.png" },
+                    { name: "Fachini Extintores", color: "#ef4444", image: "https://ghwd.com.br/lista-clientes/cliente-fachini-extintores-ghwd.png" },
+                    { name: "Imobiliária Torre", color: "#3b82f6", image: "https://ghwd.com.br/lista-clientes/cliente-imobiliaria-torre-ghwd.png" },
+                    { name: "Feltrin Imóveis", color: "#2563eb", image: "https://ghwd.com.br/lista-clientes/cliente-imobiliaria-feltrin-ghwd.png" },
+                    { name: "PoderAuto", color: "#f59e0b", image: "https://ghwd.com.br/lista-clientes/cliente-poder-auto-ghwd.png" },
+                    { name: "Kavalek", color: "#1e293b", image: "https://ghwd.com.br/lista-clientes/cliente-kavalek-ghwd.png" },
+                    { name: "Horus Odontologia", color: "#06b6d4", image: "https://ghwd.com.br/lista-clientes/cliente-horus-odontologia-ghwd.png" },
+                    { name: "Metal Jeta", color: "#71717a", image: "https://ghwd.com.br/lista-clientes/cliente-metal-jeta-ghwd.png" },
+                    { name: "Bonacina & Massens", color: "#4f46e5", image: "https://ghwd.com.br/lista-clientes/cliente-bonacina-massens-ghwd.png" },
+                    { name: "Márcia Esteticista", color: "#db2777", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-marcia-esteticista.png" },
+                    { name: "Amendoeira Chocolaterie", color: "#78350f", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-amendoeira.png" },
+                    { name: "Verse", color: "#000000", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-verse.png" },
+                    { name: "Arte Dente", color: "#22d3ee", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-arte-dente.png" },
+                    { name: "Guenoa", color: "#15803d", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-guenoa.png" },
+                    { name: "Enfoque Palestrantes", color: "#f97316", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-enfoque-palestrantes.png" },
+                    { name: "Nascimento Pinturas", color: "#6366f1", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-nascimento-pinturas.png" },
+                    { name: "Dra Rosana de Nardi", color: "#8b5cf6", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-rosana-denardi.png" },
+                ]
+            },
+            {
+                name: "Porto Alegre",
+                clients: [
+                    { name: "Austral Incorporadora", color: "#1e3a8a", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-austral.png" },
+                    { name: "Cyrela", color: "#002d58", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-cyrela.png" },
+                    { name: "By Tinga", color: "#eab308", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-bytinga.png" },
+                ]
+            },
+            {
+                name: "Gramado",
+                clients: [
+                    { name: "Hard Rock Café Gramado", color: "#ffcc00", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-hard-rock-cafe-gramado.png" },
+                    { name: "SuperCarros", color: "#da291c", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-supercarros.png" },
+                ]
+            },
+            {
+                name: "Bento Gonçalves",
+                clients: [
+                    { name: "Fasolo", color: "#4b5563", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-fasolo.png" },
+                ]
+            }
         ]
     },
     {
         name: "Acre & Nacional",
         siglas: ["AC"],
-        clients: [
-            { name: "Prefeitura de Rio Branco", color: "#166534", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-prefeitura-rio-branco.png" },
-            { name: "UNIP Acrelândia", color: "#1e3a8a", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-unip-acrelandia.png" },
+        cities: [
+            {
+                name: "Rio Branco",
+                clients: [
+                    { name: "Prefeitura de Rio Branco", color: "#166534", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-prefeitura-rio-branco.png" },
+                ]
+            },
+            {
+                name: "Acrelândia",
+                clients: [
+                    { name: "UNIP Acrelândia", color: "#1e3a8a", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-unip-acrelandia.png" },
+                ]
+            }
         ]
     }
 ];
@@ -129,35 +164,45 @@ export default function CasesPage() {
                                 className="w-full lg:w-7/12 space-y-12"
                             >
                                 {displayedRegions.map((region, idx) => (
-                                    <div key={region.name}>
+                                    <div key={region.name} className="space-y-16">
                                         <h4 className="text-sm font-mono uppercase tracking-widest text-zinc-400 mb-8 border-l border-emerald-500 pl-4">
-                                            {region.name} <span className="text-zinc-600 ml-2">({region.clients.length} parceiros)</span>
+                                            {region.name} <span className="text-zinc-600 ml-2">({region.cities.reduce((acc, c) => acc + c.clients.length, 0)} parceiros)</span>
                                         </h4>
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                            {region.clients.map((client, cIdx) => (
-                                                <motion.div
-                                                    key={cIdx}
-                                                    initial={{ opacity: 0, y: 10 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    transition={{ delay: 0.05 * cIdx, duration: 0.4 }}
-                                                    whileHover={{ scale: 1.04, y: -4 }}
-                                                    className="group relative p-6 border border-white/5 rounded-2xl bg-zinc-900/40 backdrop-blur-md overflow-hidden flex items-center justify-between transition-all duration-500"
-                                                >
-                                                    {/* Fixed Brand Gradient Overlay (half to end) */}
-                                                    <div 
-                                                        className="absolute inset-0 opacity-15 transition-opacity duration-500 pointer-events-none"
-                                                        style={{ 
-                                                            background: `linear-gradient(to right, transparent 50%, ${(client as any).color || '#10b981'} 100%)` 
-                                                        }}
-                                                    />
+                                        {region.cities.map((city, cityIdx) => (
+                                            <div key={city.name} className="space-y-6">
+                                                {/* City Header */}
+                                                <div className="flex items-center gap-4">
+                                                    <h5 className="text-xl font-serif text-white/90">{city.name}</h5>
+                                                    <div className="h-[1px] flex-grow bg-white/5" />
+                                                </div>
 
-                                                    <span className="text-zinc-300 font-medium text-lg relative z-10 transition-colors duration-300 group-hover:text-white">
-                                                        {client.name}
-                                                    </span>
-                                                </motion.div>
-                                            ))}
-                                        </div>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    {city.clients.map((client, cIdx) => (
+                                                        <motion.div
+                                                            key={cIdx}
+                                                            initial={{ opacity: 0, y: 10 }}
+                                                            animate={{ opacity: 1, y: 0 }}
+                                                            transition={{ delay: 0.05 * cIdx + (cityIdx * 0.1), duration: 0.4 }}
+                                                            whileHover={{ scale: 1.04, y: -4 }}
+                                                            className="group relative p-6 border border-white/5 rounded-2xl bg-zinc-900/40 backdrop-blur-md overflow-hidden flex items-center justify-between transition-all duration-500"
+                                                        >
+                                                            {/* Fixed Brand Gradient Overlay (half to end) */}
+                                                            <div 
+                                                                className="absolute inset-0 opacity-15 transition-opacity duration-500 pointer-events-none"
+                                                                style={{ 
+                                                                    background: `linear-gradient(to right, transparent 50%, ${(client as any).color || '#10b981'} 100%)` 
+                                                                }}
+                                                            />
+
+                                                            <span className="text-zinc-300 font-medium text-lg relative z-10 transition-colors duration-300 group-hover:text-white">
+                                                                {client.name}
+                                                            </span>
+                                                        </motion.div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                 ))}
                             </motion.div>
