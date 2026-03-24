@@ -1,59 +1,20 @@
 "use client";
 
+import React, { useState } from "react";
+import { BrazilMap } from "@/components/ui/BrazilMap";
 import { NavbarOrchestra } from "@/components/NavbarOrchestra";
 import { MegaFooter } from "@/components/MegaFooter";
-import { Marquee } from "@/components/ui/Marquee";
-import { DissolveGrid } from "@/components/ui/DissolveGrid";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { useLanguage } from "@/lib/i18n-context";
 
-const cases = [
-    // ... (keeping the cases array as is for now, as translating data content is more complex and might require data structure changes)
-    {
-        client: "Grendene Global",
-        title: "E-Commerce Replatforming",
-        category: "Architecture",
-        slug: "grendene-global",
-        description: "Migration of a massive multi-brand ecosystem to a headless structure, improving load times by 400% across 50+ global markets.",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
-        stat: "+400% Perf"
-    },
-    {
-        client: "Hard Rock Cafe",
-        title: "Digital Experience Core",
-        category: "Experience",
-        slug: "hard-rock-cafe",
-        description: "Transforming the legendary dining experience with a digital nervous system that connects kitchen, service, and customer loyalty.",
-        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2670&auto=format&fit=crop",
-        stat: "Omnichannel"
-    },
-    {
-        client: "Besni",
-        title: "Retail Intelligence",
-        category: "Data",
-        slug: "besni",
-        description: "Unifying physical and digital retail data to create a single source of truth for inventory and customer behavior.",
-        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop",
-        stat: "40+ Stores"
-    },
-    {
-        client: "Cyrela",
-        title: "Real Estate Innovation",
-        category: "Platform",
-        slug: "cyrela",
-        description: "A premium digital sales suite for high-end real estate, enabling virtual tours and seamless contract generation.",
-        image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670&auto=format&fit=crop",
-        stat: "$2B+ Sales"
-    }
-];
+
 
 const regions = [
     {
         name: "São Paulo",
+        siglas: ["SP"],
         clients: [
             { name: "Besni", image: "https://ghwd.com.br/lista-clientes/cliente-besni-ghwd.png" },
             { name: "Avery Dennison", image: "https://ghwd.com.br/lista-clientes/cliente-avery-dennison-ghwd.png" },
@@ -66,7 +27,8 @@ const regions = [
         ]
     },
     {
-        name: "Rio Grande do Sul (Serra)",
+        name: "Rio Grande do Sul",
+        siglas: ["RS"],
         clients: [
             { name: "Grendene", image: "https://ghwd.com.br/lista-clientes/cliente-grendene-ghwd.png" },
             { name: "Malacara", image: "https://ghwd.com.br/lista-clientes/cliente-malacara-ghwd.png" },
@@ -84,11 +46,6 @@ const regions = [
             { name: "Metal Jeta", image: "https://ghwd.com.br/lista-clientes/cliente-metal-jeta-ghwd.png" },
             { name: "Bonacina & Massens", image: "https://ghwd.com.br/lista-clientes/cliente-bonacina-massens-ghwd.png" },
             { name: "Márcia Esteticista", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-marcia-esteticista.png" },
-        ]
-    },
-    {
-        name: "Rio Grande do Sul (Capital & Outros)",
-        clients: [
             { name: "Amendoeira Chocolaterie", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-amendoeira.png" },
             { name: "Verse", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-verse.png" },
             { name: "Austral Incorporadora", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-austral.png" },
@@ -106,6 +63,7 @@ const regions = [
     },
     {
         name: "Acre & Nacional",
+        siglas: ["AC"],
         clients: [
             { name: "Prefeitura de Rio Branco", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-prefeitura-rio-branco.png" },
             { name: "UNIP Acrelândia", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-unip-acrelandia.png" },
@@ -115,6 +73,13 @@ const regions = [
 
 export default function CasesPage() {
     const { t } = useLanguage();
+    const [selectedState, setSelectedState] = useState<string | null>(null);
+
+    const activeStates = regions.flatMap((r) => r.siglas);
+
+    const displayedRegions = selectedState
+        ? regions.filter((r) => r.siglas.includes(selectedState))
+        : regions;
 
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
@@ -126,99 +91,74 @@ export default function CasesPage() {
                 subtitle={t('cases.header.subtitle')}
             />
 
-            {/* Editorial Gallery */}
-            <section className="py-32 px-6 md:px-24">
-                <div className="container mx-auto flex flex-col gap-32">
-                    {cases.map((item, idx) => (
-                        <div key={idx} className="group grid md:grid-cols-2 gap-12 md:gap-24 items-center">
-                            {/* Image */}
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
-                                className={`relative aspect-[4/3] overflow-hidden ${idx % 2 === 1 ? 'md:order-2' : ''}`}
-                            >
-                                <div className="absolute inset-0 bg-emerald-500/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
-                                <Image
-                                    src={item.image}
-                                    alt={item.title}
-                                    fill
-                                    className="object-cover grayscale group-hover:grayscale-0 scale-105 group-hover:scale-100 transition-all duration-700"
-                                />
-                                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-full">
-                                    <span className="text-emerald-400 font-mono text-xs">{item.stat}</span>
-                                </div>
-                            </motion.div>
-
-                            {/* Content */}
-                            <motion.div
-                                initial={{ opacity: 0, x: idx % 2 === 0 ? 20 : -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                                className={`${idx % 2 === 1 ? 'md:order-1 md:text-right' : ''}`}
-                            >
-                                <span className="text-zinc-500 text-sm font-bold uppercase tracking-widest mb-4 block">
-                                    {item.client} — {item.category}
-                                </span>
-                                <h2 className="text-4xl md:text-5xl font-serif mb-6 group-hover:text-emerald-500 transition-colors duration-500">
-                                    {item.title}
-                                </h2>
-                                <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-                                    {item.description}
-                                </p>
-                                <Link
-                                    href={`/cases/${item.slug}`}
-                                    className={`inline-flex items-center gap-2 border-b border-white/20 pb-1 hover:border-emerald-500 hover:text-emerald-500 transition-colors ${idx % 2 === 1 ? 'flex-row-reverse' : ''}`}
-                                >
-                                    <span className="uppercase tracking-widest text-xs font-bold">{t('cases.cta.read_case')}</span>
-                                    <ArrowUpRight className="w-4 h-4" />
-                                </Link>
-                            </motion.div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* Client Marquees */}
+            {/* Client Ledger & Interactive Map */}
             <section className="py-24 border-t border-white/5 bg-zinc-950">
                 <div className="container mx-auto px-6 md:px-24 mb-16">
-                    <span className="font-mono text-emerald-500 text-xs uppercase tracking-widest mb-2 block">
+                    <span className="font-mono text-emerald-500 text-xs uppercase tracking-widest mb-2 block flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                         {t('cases.client_index.tag')}
                     </span>
-                    <h3 className="text-3xl font-serif">{t('cases.client_index.title')}</h3>
+                    <h3 className="text-4xl md:text-5xl font-serif max-w-2xl leading-tight">Nossa Presença Digital pelo Brasil</h3>
+                    <p className="text-zinc-400 mt-6 max-w-xl leading-relaxed text-lg">
+                        Selecione um dos estados destacados no mapa para ver as marcas e organizações que confiam na GHWD em cada região do país.
+                    </p>
                 </div>
 
-                <div className="space-y-24">
-                    {regions.map((region, idx) => (
-                        <div key={idx} className="container mx-auto px-6 md:px-24">
-                            <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-8 border-l-2 border-emerald-500 pl-4">
-                                {region.name}
-                            </h4>
-
-                            {region.clients.length <= 4 ? (
-                                /* Static Grid for small lists */
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                                    {region.clients.map((client, cIdx) => (
-                                        <div key={cIdx} className="relative bg-zinc-900/50 border border-white/5 rounded-2xl flex items-center justify-center p-8 hover:border-emerald-500/30 transition-colors group h-64 w-full">
-                                            <div className="relative w-full h-48 opacity-60 group-hover:opacity-100 transition-opacity duration-500">
-                                                <Image
-                                                    src={client.image}
-                                                    alt={client.name}
-                                                    fill
-                                                    className="object-contain"
-                                                />
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            ) : (
-                                /* Dynamic Dissolve Grid */
-                                <DissolveGrid clients={region.clients} interval={5000} />
-                            )}
+                <div className="container mx-auto px-6 md:px-24 mb-24">
+                    <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+                        {/* Map Column */}
+                        <div className="lg:col-span-5 relative w-full border border-white/10 rounded-3xl bg-zinc-900/50 overflow-hidden flex flex-col pt-8">
+                            <div className="absolute top-6 left-6 z-10 flex gap-4 text-xs font-mono">
+                                <button 
+                                    onClick={() => setSelectedState(null)} 
+                                    className={`px-4 py-2 rounded-full transition-all border ${!selectedState ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-transparent text-zinc-500 border-white/10 hover:border-white/20'}`}
+                                >
+                                    Brasil Inteiro
+                                </button>
+                            </div>
+                            <div className="p-4 flex-grow w-full h-[400px] md:h-[600px]">
+                                <BrazilMap 
+                                    activeStates={activeStates} 
+                                    selectedState={selectedState} 
+                                    onStateClick={setSelectedState} 
+                                />
+                            </div>
                         </div>
-                    ))}
+
+                        {/* Clients Column */}
+                        <div className="lg:col-span-7 space-y-16">
+                            {displayedRegions.map((region, idx) => (
+                                <motion.div 
+                                    key={region.name} 
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                >
+                                    <h4 className="text-sm font-mono uppercase tracking-widest text-zinc-400 mb-8 border-l border-emerald-500 pl-4">
+                                        {region.name} <span className="text-zinc-600 ml-2">({region.clients.length} parceiros)</span>
+                                    </h4>
+
+                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-t border-l border-white/5 rounded-2xl overflow-hidden bg-white/[0.02]">
+                                        {region.clients.map((client, cIdx) => (
+                                            <div
+                                                key={cIdx}
+                                                className="relative flex items-center justify-center p-8 aspect-square border-r border-b border-white/5 group hover:bg-white/5 transition-colors duration-300"
+                                            >
+                                                <div className="relative w-full h-full opacity-40 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0 mix-blend-screen sm:mix-blend-normal">
+                                                    <Image
+                                                        src={client.image}
+                                                        alt={client.name}
+                                                        fill
+                                                        className="object-contain"
+                                                    />
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
 
