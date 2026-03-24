@@ -105,59 +105,54 @@ export default function CasesPage() {
                 </div>
 
                 <div className="container mx-auto px-6 md:px-24 mb-24">
-                    <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start transition-all duration-700">
                         {/* Map Column */}
-                        <div className="lg:col-span-5 relative w-full border border-white/10 rounded-3xl bg-zinc-900/50 overflow-hidden flex flex-col pt-8">
-                            <div className="absolute top-6 left-6 z-10 flex gap-4 text-xs font-mono">
-                                <button 
-                                    onClick={() => setSelectedState(null)} 
-                                    className={`px-4 py-2 rounded-full transition-all border ${!selectedState ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-transparent text-zinc-500 border-white/10 hover:border-white/20'}`}
-                                >
-                                    Brasil Inteiro
-                                </button>
-                            </div>
-                            <div className="p-4 flex-grow w-full h-[400px] md:h-[600px]">
+                        <motion.div 
+                            layout
+                            className={`relative border border-white/10 rounded-3xl bg-zinc-900/50 overflow-hidden flex flex-col pt-8 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] ${selectedState ? 'w-full lg:w-5/12' : 'w-full lg:w-8/12 mx-auto aspect-square lg:aspect-[16/9]'}`}
+                        >
+                            <div className={`p-4 flex-grow w-full ${selectedState ? 'h-[400px] md:h-[600px]' : 'h-full min-h-[500px]'}`}>
                                 <BrazilMap 
                                     activeStates={activeStates} 
                                     selectedState={selectedState} 
-                                    onStateClick={setSelectedState} 
+                                    onStateClick={(sigla) => setSelectedState(prev => prev === sigla ? null : sigla)} 
                                 />
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Clients Column */}
-                        <div className="lg:col-span-7 space-y-16">
-                            {displayedRegions.map((region, idx) => (
-                                <motion.div 
-                                    key={region.name} 
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                >
-                                    <h4 className="text-sm font-mono uppercase tracking-widest text-zinc-400 mb-8 border-l border-emerald-500 pl-4">
-                                        {region.name} <span className="text-zinc-600 ml-2">({region.clients.length} parceiros)</span>
-                                    </h4>
+                        {selectedState && (
+                            <motion.div 
+                                layout
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 20 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                                className="w-full lg:w-7/12 space-y-12"
+                            >
+                                {displayedRegions.map((region, idx) => (
+                                    <div key={region.name}>
+                                        <h4 className="text-sm font-mono uppercase tracking-widest text-zinc-400 mb-8 border-l border-emerald-500 pl-4">
+                                            {region.name} <span className="text-zinc-600 ml-2">({region.clients.length} parceiros)</span>
+                                        </h4>
 
-                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-t border-l border-white/5 rounded-2xl overflow-hidden bg-white/[0.02]">
-                                        {region.clients.map((client, cIdx) => (
-                                            <div
-                                                key={cIdx}
-                                                className="relative flex items-center justify-center p-8 aspect-square border-r border-b border-white/5 group hover:bg-white/5 transition-colors duration-300"
-                                            >
-                                                <div className="relative w-full h-full opacity-40 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0 mix-blend-screen sm:mix-blend-normal">
-                                                    <Image
-                                                        src={client.image}
-                                                        alt={client.name}
-                                                        fill
-                                                        className="object-contain"
-                                                    />
-                                                </div>
-                                            </div>
-                                        ))}
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            {region.clients.map((client, cIdx) => (
+                                                <motion.div
+                                                    key={cIdx}
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    transition={{ delay: 0.1 * cIdx, duration: 0.4 }}
+                                                    className="p-5 border border-white/10 rounded-xl bg-zinc-900/30 hover:bg-zinc-800/50 hover:border-emerald-500/30 transition-all flex items-center"
+                                                >
+                                                    <span className="text-zinc-200 font-medium text-lg">{client.name}</span>
+                                                </motion.div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </motion.div>
-                            ))}
-                        </div>
+                                ))}
+                            </motion.div>
+                        )}
                     </div>
                 </div>
             </section>
