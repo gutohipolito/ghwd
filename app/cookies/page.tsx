@@ -4,6 +4,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Save } from "lucide-react";
+import { useLanguage } from "@/lib/i18n-context";
 
 type CookieType = 'essential' | 'analytics' | 'marketing' | 'functional';
 

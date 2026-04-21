@@ -28,11 +28,23 @@ export function NavbarOrchestra() {
                         : "bg-transparent border-transparent"
                 )}
             >
-                <Link href="/" className={cn(
-                    "font-heading font-black text-2xl tracking-tighter uppercase transition-colors duration-300",
-                    isScrolled ? "text-black" : "text-white"
-                )}>
-                    GHWD<span className="text-emerald-500">.</span>
+                <Link href="/" className="group relative">
+                    <div 
+                        className={cn(
+                            "h-7 md:h-8 w-32 md:w-44 transition-all duration-500 ease-in-out",
+                            isScrolled 
+                                ? "bg-black" 
+                                : "bg-gradient-to-br from-white via-white to-zinc-400"
+                        )}
+                        style={{
+                            maskImage: 'url(/ghwd-new-logo.png)',
+                            WebkitMaskImage: 'url(/ghwd-new-logo.png)',
+                            maskSize: 'contain',
+                            WebkitMaskSize: 'contain',
+                            maskRepeat: 'no-repeat',
+                            WebkitMaskRepeat: 'no-repeat'
+                        }}
+                    />
                 </Link>
 
                 {/* Desktop Menu */}

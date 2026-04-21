@@ -103,10 +103,6 @@ export default function ProductsPage() {
                                         <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.3em] font-bold">
                                             {t(`products.items.${product.id}.type`)}
                                         </span>
-                                        <div className="h-px flex-grow bg-white/5" />
-                                        <span className="font-mono text-[10px] text-emerald-500/50">
-                                            {product.version}
-                                        </span>
                                     </div>
                                     <h3 className="text-4xl md:text-6xl font-heading font-black italic uppercase tracking-tightest mb-6 group-hover:text-emerald-500 transition-colors duration-500">
                                         {product.name}
@@ -117,16 +113,14 @@ export default function ProductsPage() {
                                 </div>
 
                                 {/* CTA Section (Clean & Impactful) */}
-                                <div className={`lg:col-span-5 flex flex-col justify-center lg:items-end ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
+                                <div className={`lg:col-span-5 flex flex-col justify-center ${idx % 2 === 1 ? 'lg:order-1 lg:items-start' : 'lg:items-end'} mt-8 lg:mt-0`}>
                                     <Link
                                         href="/contact"
-                                        className="group/link flex items-center justify-between border border-white/10 hover:border-emerald-500 bg-zinc-900/50 hover:bg-emerald-500/5 px-8 py-6 transition-all duration-300 w-full lg:w-fit min-w-[240px]"
+                                        className="group relative inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full uppercase font-black text-sm tracking-widest overflow-hidden transition-all duration-300 w-full md:w-auto
+                                        before:absolute before:inset-0 before:bg-emerald-500 before:translate-x-[-100%] hover:before:translate-x-0 before:transition-transform before:duration-500 before:ease-[cubic-bezier(0.19,1,0.22,1)]"
                                     >
-                                        <div className="flex flex-col items-start gap-1">
-                                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 group-hover/link:text-emerald-500 transition-colors">Start Project</span>
-                                            <span className="text-[9px] font-mono text-zinc-700 uppercase tracking-widest">Deployment Ready</span>
-                                        </div>
-                                        <ArrowUpRight className="w-5 h-5 text-zinc-700 group-hover/link:text-emerald-500 group-hover/link:rotate-45 transition-all duration-300" />
+                                        <span className="relative z-10">{t('nav.start_project')}</span>
+                                        <ArrowUpRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                     </Link>
                                 </div>
 

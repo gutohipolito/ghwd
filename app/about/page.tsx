@@ -34,8 +34,12 @@ export default function AboutPage() {
                 showVideo={true}
                 videoSrc="/videos/green-earth.mp4"
                 videoClassName="opacity-80 !grayscale-0 saturate-150"
-                subtitle={
-                    <div className="flex flex-col gap-8 text-xl md:text-2xl text-zinc-400 font-light leading-relaxed max-w-3xl">
+            />
+
+            {/* Mission Statement / Introduction */}
+            <section className="w-full py-20 bg-zinc-950">
+                <div className="container mx-auto px-6 md:px-24">
+                    <div className="flex flex-col gap-8 text-xl md:text-2xl text-zinc-400 font-light leading-relaxed max-w-4xl mx-auto text-center">
                         {language === 'pt' ? (
                             <>
                                 <p>Nascemos de uma observação simples: a maioria das agências tradicionais lucra com a complexidade e prazos prolongados. Operamos na lógica inversa.</p>
@@ -56,8 +60,8 @@ export default function AboutPage() {
                             </>
                         )}
                     </div>
-                }
-            />
+                </div>
+            </section>
             {/* Digital Core Section */}
             <section className="w-full py-32 relative overflow-hidden bg-zinc-950 border-t border-white/5">
                 <div className="container mx-auto px-6 md:px-24 relative z-10">

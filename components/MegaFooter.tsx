@@ -101,14 +101,20 @@ export function MegaFooter() {
             className="relative min-h-[80vh] bg-zinc-950 flex flex-col justify-between p-6 md:p-16 md:pb-8 overflow-hidden border-t border-white/[0.05]"
         >
             {/* Parallax Background Branding */}
-            <motion.div
-                style={{ x: parallaxX, y: parallaxY }}
-                className="absolute inset-0 select-none opacity-[0.02] pointer-events-none flex items-center justify-center"
-            >
-                <span className="text-[35vw] font-black font-heading text-white leading-none tracking-tighter">
-                    GHWD
-                </span>
-            </motion.div>
+            {/* Background Video - Geometric Particles & Plexus */}
+            <div className="absolute inset-0 z-0">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover opacity-20 grayscale brightness-125 contrast-125"
+                >
+                    <source src="https://videos.pexels.com/video-files/3130182/3130182-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-zinc-950/40" /> {/* Dark overlay for contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />
+            </div>
 
             {/* Grain Overlay */}
             <div className="absolute inset-0 opacity-[0.1] mix-blend-overlay pointer-events-none bg-[url('/noise.svg')]"></div>

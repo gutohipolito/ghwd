@@ -14,23 +14,25 @@ export const translations: Record<Language, any> = {
             start_project: "Start Project"
         },
         hero: {
-            tagline: 'Global Digital Partner',
+            tagline: 'Global Talent. Focus on Brazil.',
             we_build: 'WE BUILD',
             results: 'RESULTS.',
-            description: "We don't just code. We engineer the digital nervous systems for the world's most ambitious brands.",
+            description: "We access the top 1% of global engineering and design to build the digital future of the most ambitious Brazilian companies.",
             start_project: 'START PROJECT',
             view_work: 'VIEW WORK',
             scroll: 'Scroll to Explore',
-            headline_html: 'We engineer <br /><span className="text-zinc-500">digital empires</span> <br />for ambitious brands.'
+            headline_html: 'We engineer <br /><span className="text-zinc-500">digital empires</span> <br />in Brazil.'
         },
         footer: {
             tagline: 'Engineering the future of digital business.',
-            social: 'Social',
+            compliance: 'Compliance',
             legal: 'Legal',
             privacy: 'Privacy Policy',
             terms: 'Terms of Service',
             cookies: 'Cookie Settings',
             sitemap: "Sitemap",
+            products: "Products",
+            presence: "Presence",
             method: "The Method",
             intelligence: "Intelligence",
             newsletter_desc: "Join the inner circle. No spam, only dominance.",
@@ -94,12 +96,12 @@ export const translations: Record<Language, any> = {
         },
         about: {
             header: {
-                tag: "/ Global Unit",
-                title: "We don't sell hours. We sell outcomes.",
+                tag: "/ National Presence",
+                title: "Borderless talent. Results in Brazil.",
                 vision_tag: "/ Global Network",
-                vision_title: "Borderless Intelligence.",
-                vision_p1: "We are a distributed collective. By removing geographical constraints, we access the top 1% of talent in strategy, design, and engineering across 4 time zones.",
-                vision_p2: "No overhead. No offices. Just pure intellectual capital dedicated to your project."
+                vision_title: "Global Intelligence. Local Focus.",
+                vision_p1: "We are a distributed collective. By removing geographical constraints, we access the top 1% of talent in strategy, design, and engineering across 4 time zones to elevate the Brazilian market.",
+                vision_p2: "No overhead. No offices. Just international intellectual capital dedicated to scaling your national operation."
             }
         },
         contact: {
@@ -266,23 +268,25 @@ export const translations: Record<Language, any> = {
             start_project: "Iniciar Projeto"
         },
         hero: {
-            tagline: 'Parceiro Digital Global',
+            tagline: 'Talento Global. Foco no Brasil.',
             we_build: 'NÓS ENTREGAMOS',
             results: 'RESULTADOS.',
-            description: "Nós não apenas programamos. Projetamos os sistemas nervosos digitais para as marcas mais ambiciosas do mundo.",
+            description: "Acessamos o top 1% da engenharia e design mundial para construir o futuro digital das empresas brasileiras mais ambiciosas.",
             start_project: 'INICIAR PROJETO',
             view_work: 'VER PROJETOS',
             scroll: 'Role para Explorar',
-            headline_html: 'Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />para marcas ambiciosas.'
+            headline_html: 'Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />no Brasil.'
         },
         footer: {
             tagline: 'Transformando visão estratégica em domínio digital.',
-            social: 'Social',
+            compliance: 'LGPD',
             legal: 'Legal',
             privacy: 'Política de Privacidade',
             terms: 'Termos de Serviço',
             cookies: 'Configurações de Cookies',
             sitemap: "Sitemap",
+            products: "Produtos",
+            presence: "Presença",
             method: "O Método",
             intelligence: "Inteligência",
             newsletter_desc: "Junte-se ao círculo interno. Sem spam, apenas domínio.",
@@ -346,12 +350,12 @@ export const translations: Record<Language, any> = {
         },
         about: {
             header: {
-                tag: "/ Unidade Global",
-                title: "Não vendemos horas. Vendemos resultados.",
+                tag: "/ Atuação Nacional",
+                title: "Talento sem fronteiras. Resultados no Brasil.",
                 vision_tag: "/ Rede Global",
-                vision_title: "Inteligência Sem Fronteiras.",
-                vision_p1: "Somos um coletivo distribuído. Ao remover restrições geográficas, acessamos o top 1% de talentos em estratégia, design e engenharia em 4 fusos horários.",
-                vision_p2: "Sem custo fixo. Sem escritórios. Apenas capital intelectual puro dedicado ao seu projeto."
+                vision_title: "Inteligência Global. Foco Local.",
+                vision_p1: "Somos um coletivo distribuído. Ao remover restrições geográficas, acessamos o top 1% de talentos em estratégia, design e engenharia em 4 fusos horários para elevar o nível do mercado brasileiro.",
+                vision_p2: "Sem custo fixo. Sem escritórios. Apenas capital intelectual internacional dedicado a alavancar a sua operação nacional."
             }
         },
         contact: {
@@ -517,23 +521,25 @@ export const translations: Record<Language, any> = {
             start_project: "Iniciar Projeto"
         },
         hero: {
-            tagline: 'Parceiro Digital Global',
+            tagline: 'Talento Global. Foco no Brasil.',
             we_build: 'NÓS ENTREGAMOS',
             results: 'RESULTADOS.',
-            description: "Nós não nos limitamos a programar. Projetamos os sistemas nervosos digitais para as marcas mais ambiciosas do mundo.",
+            description: "Acedemos ao top 1% da engenharia e design mundial para construir o futuro digital das empresas brasileiras mais ambiciosas.",
             start_project: 'INICIAR PROJETO',
             view_work: 'VER PROJETOS',
             scroll: 'Percorra para Explorar',
-            headline_html: 'Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />para marcas ambiciosas.'
+            headline_html: 'Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />no Brasil.'
         },
         footer: {
             tagline: 'Transformando visão estratégica em domínio digital.',
-            social: 'Redes Sociais',
+            compliance: 'LGPD',
             legal: 'Jurídico',
             privacy: 'Política de Privacidade',
             terms: 'Termos de Serviço',
             cookies: 'Definições de Cookies',
             sitemap: "Mapa do Site",
+            products: "Produtos",
+            presence: "Presença",
             method: "O Método",
             intelligence: "Inteligência",
             newsletter_desc: "Junte-se ao círculo restrito. Sem spam, apenas domínio.",
@@ -597,12 +603,12 @@ export const translations: Record<Language, any> = {
         },
         about: {
             header: {
-                tag: "/ Unidade Global",
-                title: "Não vendemos horas. Vendemos resultados.",
+                tag: "/ Atuação Nacional",
+                title: "Talento sem fronteiras. Resultados no Brasil.",
                 vision_tag: "/ Rede Global",
-                vision_title: "Inteligência Sem Fronteiras.",
-                vision_p1: "Somos um coletivo distribuído. Ao remover restrições geográficas, acedemos ao top 1% de talentos em estratégia, design e engenharia em 4 fusos horários.",
-                vision_p2: "Sem custos fixos. Sem escritórios. Apenas capital intelectual puro dedicado ao seu projeto."
+                vision_title: "Inteligência Global. Foco Local.",
+                vision_p1: "Somos um coletivo distribuído. Ao remover restrições geográficas, acedemos ao top 1% de talentos em estratégia, design e engenharia em 4 fusos horários para elevar o nível do mercado brasileiro.",
+                vision_p2: "Sem custos fixos. Sem escritórios. Apenas capital intelectual internacional dedicado a alavancar a sua operação nacional."
             }
         },
         contact: {
@@ -768,23 +774,25 @@ export const translations: Record<Language, any> = {
             start_project: "Iniciar Proyecto"
         },
         hero: {
-            tagline: 'Socio Digital Global',
+            tagline: 'Talento Global. Foco en Brasil.',
             we_build: 'NOSOTROS CREAMOS',
             results: 'RESULTADOS.',
-            description: "No solo programamos. Diseñamos los sistemas nerviosos digitales para las marcas más ambiciosas del mundo.",
+            description: "Accedemos al top 1% de la ingeniería y diseño mundial para construir el futuro digital de las empresas brasileñas más ambiciosas.",
             start_project: 'INICIAR PROYECTO',
             view_work: 'VER PROYECTOS',
             scroll: 'Desplazarse para Explorar',
-            headline_html: 'Diseñamos <br /><span className="text-zinc-500">imperios digitales</span> <br />para marcas ambiciosas.'
+            headline_html: 'Diseñamos <br /><span className="text-zinc-500">imperios digitales</span> <br />en Brasil.'
         },
         footer: {
             tagline: 'Transformando la visión estratégica en dominio digital.',
-            social: 'Social',
+            compliance: 'Legal',
             legal: 'Legal',
             privacy: 'Política de Privacidad',
             terms: 'Termos de Servicio',
             cookies: 'Configuración de Cookies',
             sitemap: "Sitemap",
+            products: "Productos",
+            presence: "Presencia",
             method: "El Método",
             intelligence: "Inteligencia",
             newsletter_desc: "Únete al círculo interno. Sin spam, solo dominio.",
@@ -848,12 +856,12 @@ export const translations: Record<Language, any> = {
         },
         about: {
             header: {
-                tag: "/ Unidad Global",
-                title: "No vendemos horas. Vendemos resultados.",
+                tag: "/ Actuación Nacional",
+                title: "Talento sin fronteras. Resultados en Brasil.",
                 vision_tag: "/ Red Global",
-                vision_title: "Inteligencia Sin Fronteras.",
-                vision_p1: "Somos un colectivo distribuido. Al eliminar las restricciones geográficas, accedemos al top 1% de talento en estrategia, diseño e ingeniería en 4 husos horarios.",
-                vision_p2: "Sin costos fijos. Sin oficinas. Solo capital intelectual puro dedicado a su proyecto."
+                vision_title: "Inteligencia Global. Enfoque Local.",
+                vision_p1: "Somos un colectivo distribuido. Al eliminar las restricciones geográficas, accedemos al top 1% de talentos en estrategia, diseño e ingeniería en 4 husos horarios para elevar el mercado brasileño.",
+                vision_p2: "Sin costos fijos. Sin oficinas. Solo capital intelectual internacional dedicado a impulsar su operación nacional."
             }
         },
         contact: {

@@ -35,7 +35,7 @@ export function LegalLayout({
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "outExpo" }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         className="max-w-4xl"
                     >
                         <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-6 block border-l-2 border-emerald-500 pl-4">

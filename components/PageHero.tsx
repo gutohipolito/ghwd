@@ -28,7 +28,7 @@ export function PageHero({
     const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
     return (
-        <section className="relative h-[80vh] min-h-[600px] flex flex-col justify-center px-6 md:px-24 pt-20 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
+        <section className="relative h-[65vh] min-h-[500px] flex flex-col justify-center px-6 md:px-24 pt-16 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
 
             {/* Background - Video Texture */}
             <div className="absolute inset-0 z-0">
