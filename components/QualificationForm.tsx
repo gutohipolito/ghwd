@@ -80,7 +80,23 @@ export function QualificationForm() {
         email: "",
         negocio: ""
     });
+    const [errors, setErrors] = useState<Record<string, string>>({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const validateEmail = (email: string) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
+    const formatPhone = (value: string) => {
+        const numbers = value.replace(/\D/g, "");
+        if (numbers.length <= 11) {
+            return numbers
+                .replace(/(\d{2})(\d)/, "($1) $2")
+                .replace(/(\d{5})(\d)/, "$1-$2")
+                .substring(0, 15);
+        }
+        return value.substring(0, 15);
+    };
 
     const handleSelect = (option: Option) => {
         setAnswers({ ...answers, [currentStep]: option });
@@ -133,6 +149,15 @@ export function QualificationForm() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         
+        const newErrors: Record<string, string> = {};
+        if (!validateEmail(formData.email)) newErrors.email = t('contact.qualification.results.errors.invalid_email');
+        if (formData.tel.replace(/\D/g, "").length < 10) newErrors.tel = t('contact.qualification.results.errors.invalid_phone');
+
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+
         // URL do seu App Script do Google
         const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwDZtxeQo0wQKnWLBV6SOOjQtYXlkAsHnVozCW0ydA7f4zUIBgHZYhG6cEIryA7AVVF/exec";
 
@@ -335,10 +360,17 @@ export function QualificationForm() {
                                         required
                                         type="tel" 
                                         value={formData.tel}
-                                        onChange={(e) => setFormData({...formData, tel: e.target.value})}
+                                        onChange={(e) => {
+                                            setFormData({...formData, tel: formatPhone(e.target.value)});
+                                            if (errors.tel) setErrors({...errors, tel: ""});
+                                        }}
                                         placeholder="(11) 99999-9999"
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                                        className={cn(
+                                            "w-full bg-white/5 border rounded-2xl p-4 text-white focus:outline-none transition-colors",
+                                            errors.tel ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-emerald-500"
+                                        )}
                                     />
+                                    {errors.tel && <p className="text-[10px] text-red-500 ml-1 uppercase tracking-wider">{errors.tel}</p>}
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('contact.qualification.fields.email')}</label>
@@ -346,10 +378,17 @@ export function QualificationForm() {
                                         required
                                         type="email" 
                                         value={formData.email}
-                                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                                        onChange={(e) => {
+                                            setFormData({...formData, email: e.target.value});
+                                            if (errors.email) setErrors({...errors, email: ""});
+                                        }}
                                         placeholder="seu@email.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                                        className={cn(
+                                            "w-full bg-white/5 border rounded-2xl p-4 text-white focus:outline-none transition-colors",
+                                            errors.email ? "border-red-500/50 focus:border-red-500" : "border-white/10 focus:border-emerald-500"
+                                        )}
                                     />
+                                    {errors.email && <p className="text-[10px] text-red-500 ml-1 uppercase tracking-wider">{errors.email}</p>}
                                 </div>
                             </div>
 

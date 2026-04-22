@@ -154,7 +154,11 @@ export const translations: Record<Language, any> = {
                     cold_footer: "We will contact you via email shortly.",
                     wa_hot: "I'm excited to start!",
                     wa_warm: "I'd like to know more about the services.",
-                    wa_cold: "I'm still researching, but I'd like to understand better."
+                    wa_cold: "I'm still researching, but I'd like to understand more.",
+                    errors: {
+                        invalid_email: "Invalid email",
+                        invalid_phone: "Invalid phone"
+                    }
                 },
                 steps: [
                     { title: "What do you need?", hint: "Select the option that best describes your project.", options: ["Landing page / Sales page", "Institutional site", "E-commerce", "Redesign / Improve site", "Other / Not sure yet"] },
@@ -247,7 +251,7 @@ export const translations: Record<Language, any> = {
                 sections: [
                     {
                         title: "1. Data Collection",
-                        content: "We collect information to provide better services. This includes direct inputs (forms), navigational data (IP, browser), and cookies. Under GDPR, we act as Data Controllers for our direct clients."
+                        content: "We collect information to provide better services. This includes direct inputs (forms), navigational data (IP, browser) and cookies. Under GDPR, we act as Data Controllers for our direct clients."
                     },
                     {
                         title: "2. Usage of Information",
@@ -302,7 +306,6 @@ export const translations: Record<Language, any> = {
     pt: {
         nav: {
             cases: 'Projetos',
-            // ... (trimmed for brevity in thought, but tool call will include full content)
             products: 'Produtos',
             services: 'Expertise',
             about: 'Sobre',
@@ -452,7 +455,11 @@ export const translations: Record<Language, any> = {
                     cold_footer: "Entraremos em contato via e-mail em breve.",
                     wa_hot: "Estou animado para começar!",
                     wa_warm: "Gostaria de saber mais sobre os serviços.",
-                    wa_cold: "Ainda estou pesquisando, mas gostaria de entender melhor."
+                    wa_cold: "Ainda estou pesquisando, mas gostaria de entender melhor.",
+                    errors: {
+                        invalid_email: "E-mail inválido",
+                        invalid_phone: "Telefone inválido"
+                    }
                 },
                 steps: [
                     { title: "O que você precisa?", hint: "Selecione a opção que melhor descreve seu projeto.", options: ["Landing page / Página de vendas", "Site institucional (apresentar meu negócio)", "Loja virtual / E-commerce", "Reformular / melhorar site que já tenho", "Outro / Não sei ainda"] },
@@ -749,7 +756,11 @@ export const translations: Record<Language, any> = {
                     cold_footer: "Entraremos em contacto via e-mail em breve.",
                     wa_hot: "Estou entusiasmado para começar!",
                     wa_warm: "Gostaria de saber mais sobre os serviços.",
-                    wa_cold: "Ainda estou a pesquisar, mas gostaria de entender melhor."
+                    wa_cold: "Ainda estou a pesquisar, mas gostaria de entender melhor.",
+                    errors: {
+                        invalid_email: "E-mail inválido",
+                        invalid_phone: "Telefone inválido"
+                    }
                 },
                 steps: [
                     { title: "O que precisa?", hint: "Selecione a opção que melhor descreve o seu projeto.", options: ["Landing page / Página de vendas", "Site institucional (apresentar o meu negócio)", "Loja virtual / E-commerce", "Reformular / melhorar site que já tenho", "Outro / Não sei ainda"] },
@@ -1046,7 +1057,11 @@ export const translations: Record<Language, any> = {
                     cold_footer: "Nos pondremos en contacto por correo electrónico pronto.",
                     wa_hot: "¡Estoy emocionado por empezar!",
                     wa_warm: "Me gustaría saber más sobre los servicios.",
-                    wa_cold: "Todavía estoy investigando, pero me gustaría entender mejor."
+                    wa_cold: "Todavía estou investigando, pero me gustaría entender mejor.",
+                    errors: {
+                        invalid_email: "Correo electrónico inválido",
+                        invalid_phone: "Teléfono inválido"
+                    }
                 },
                 steps: [
                     { title: "¿Qué necesitas?", hint: "Selecciona la opción que mejor describa tu proyecto.", options: ["Landing page / Página de ventas", "Sitio institucional", "Tienda virtual / E-commerce", "Reformular / mejorar sitio actual", "Otro / No lo sé todavía"] },
