@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n-context";
@@ -83,9 +84,12 @@ export function SelectedWorks() {
                                 <div className={`md:col-span-7 relative overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                                     <div className="aspect-[16/9] overflow-hidden relative">
                                         <div className="absolute inset-0 bg-emerald-500/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
-                                        <img
+                                        <Image
                                             src={project.image}
                                             alt={content.title}
+                                            width={1280}
+                                            height={720}
+                                            priority={index === 0}
                                             className="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-105 group-hover:scale-100 transition-all duration-700 ease-out"
                                         />
                                     </div>

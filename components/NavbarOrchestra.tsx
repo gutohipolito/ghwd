@@ -99,6 +99,7 @@ export function NavbarOrchestra() {
                     </div>
 
                     <button
+                        aria-label="Toggle Menu"
                         className={cn(
                             "md:hidden z-50 relative p-2 transition-colors",
                             isScrolled ? "text-black" : "text-white"
