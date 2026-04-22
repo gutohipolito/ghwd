@@ -133,8 +133,8 @@ export function QualificationForm() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         
-        // URL do seu App Script do Google (Substitua pela URL que você copiou)
-        const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz_XXXXXXXXX/exec";
+        // URL do seu App Script do Google
+        const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwDZtxeQo0wQKnWLBV6SOOjQtYXlkAsHnVozCW0ydA7f4zUIBgHZYhG6cEIryA7AVVF/exec";
 
         const payload = {
             ...formData,
