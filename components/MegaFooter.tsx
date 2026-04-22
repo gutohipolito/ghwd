@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MoveRight, Send, ArrowUpRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/lib/i18n-context";
+import { useModal } from "@/lib/modal-context";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
 
@@ -16,6 +17,7 @@ const CITIES = [
 
 export function MegaFooter() {
     const { t } = useLanguage();
+    const { openModal } = useModal();
     const [now, setNow] = useState<Date | null>(null);
     const [cityIndex, setCityIndex] = useState(0);
     const [weatherData, setWeatherData] = useState<{ [key: string]: string }>({});
@@ -138,13 +140,13 @@ export function MegaFooter() {
                     </div>
 
                     <div className="flex flex-col items-end gap-6 md:pt-4">
-                        <Link
-                            href="/contact"
+                        <button
+                            onClick={openModal}
                             className="group flex items-center gap-4 bg-emerald-500 text-black px-12 py-5 rounded-full text-lg font-bold hover:bg-white transition-all duration-300 shadow-xl shadow-emerald-500/10"
                         >
                             <span>{t('hero.start_project')}</span>
                             <ArrowUpRight className="group-hover:rotate-45 transition-transform duration-300" />
-                        </Link>
+                        </button>
                         <LanguageSwitcher />
                     </div>
                 </div>

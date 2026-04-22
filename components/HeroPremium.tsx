@@ -4,9 +4,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, MoveDown } from "lucide-react";
 import { useLanguage } from "@/lib/i18n-context";
+import { useModal } from "@/lib/modal-context";
 
 export function HeroPremium() {
     const { t, language } = useLanguage();
+    const { openModal } = useModal();
     const { scrollY } = useScroll();
 
     // Smooth, slow parallax
@@ -64,13 +66,13 @@ export function HeroPremium() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex flex-col md:flex-row gap-6 items-start"
                 >
-                    <Link
-                        href="/contact"
+                    <button
+                        onClick={openModal}
                         className="group flex items-center gap-4 text-white text-lg tracking-wide hover:ml-4 transition-all duration-300"
                     >
                         <span className="border-b border-white pb-1 group-hover:border-emerald-500 transition-colors">{t('hero.start_project')}</span>
                         <ArrowRight className="w-5 h-5 group-hover:text-emerald-500 transition-colors" />
-                    </Link>
+                    </button>
                 </motion.div>
 
             </div>

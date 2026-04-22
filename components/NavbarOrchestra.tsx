@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { useLanguage } from "@/lib/i18n-context";
+import { useModal } from "@/lib/modal-context";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export function NavbarOrchestra() {
@@ -13,6 +14,7 @@ export function NavbarOrchestra() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const { t } = useLanguage();
+    const { openModal } = useModal();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 50);
@@ -78,8 +80,8 @@ export function NavbarOrchestra() {
                         <LanguageSwitcher />
                     </div>
 
-                    <Link
-                        href="/contact"
+                    <button
+                        onClick={openModal}
                         className={cn(
                             "hidden md:flex items-center gap-2 px-5 py-2 border rounded-full transition-all duration-300 text-sm font-semibold group",
                             isScrolled
@@ -89,7 +91,7 @@ export function NavbarOrchestra() {
                     >
                         <span>{t('nav.start')}</span>
                         <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-                    </Link>
+                    </button>
 
                     {/* Language Switcher Mobile (Icon Only) */}
                     <div className="md:hidden">
@@ -125,13 +127,15 @@ export function NavbarOrchestra() {
                             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.about')}</Link>
 
                             <div className="mt-8">
-                                <Link
-                                    href="/contact"
-                                    onClick={() => setMobileMenuOpen(false)}
+                                <button
+                                    onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        openModal();
+                                    }}
                                     className="px-8 py-3 bg-emerald-400 text-black rounded-full text-xl font-bold inline-block"
                                 >
                                     {t('nav.start_project')}
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </motion.div>
