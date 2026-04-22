@@ -119,6 +119,50 @@ export const translations: Record<Language, any> = {
                 budget: "Budget Range",
                 ambition: "Tell us about the ambition",
                 submit: "Submit Application"
+            },
+            qualification: {
+                step_label: "Step",
+                of_label: "of",
+                question_label: "Question",
+                last_step: "Last step 🎉",
+                contact_data_title: "Your contact details",
+                contact_data_subtitle: "Promise: zero spam. We'll only use this to get back to you about the project.",
+                fields: {
+                    name: "Full name *",
+                    name_placeholder: "What do you prefer to be called?",
+                    whatsapp: "WhatsApp *",
+                    email: "Email *",
+                    company: "Business name (optional)",
+                    company_placeholder: "Ex: My Company Inc."
+                },
+                buttons: {
+                    back: "Back",
+                    continue: "Continue",
+                    submit: "Submit & See result",
+                    whatsapp: "Talk now on WhatsApp"
+                },
+                results: {
+                    hot_title: "Perfect, {name}!",
+                    hot_desc: "Your answers show you have a clear project and are ready to move forward. We'll be in touch within 24 hours to schedule a call.",
+                    warm_title: "Great, {name}!",
+                    warm_desc: "You have an interesting project. We'll send you more information and talk about how we can help at the right time for you.",
+                    cold_title: "Hello, {name}!",
+                    cold_desc: "It seems you're still exploring your options — and that's okay! We'll send you useful content for when the time is right.",
+                    meta_project: "Project",
+                    meta_deadline: "Deadline",
+                    meta_investment: "Investment",
+                    cold_footer: "We will contact you via email shortly.",
+                    wa_hot: "I'm excited to start!",
+                    wa_warm: "I'd like to know more about the services.",
+                    wa_cold: "I'm still researching, but I'd like to understand better."
+                },
+                steps: [
+                    { title: "What do you need?", hint: "Select the option that best describes your project.", options: ["Landing page / Sales page", "Institutional site", "E-commerce", "Redesign / Improve site", "Other / Not sure yet"] },
+                    { title: "Is your business already active?", hint: "This helps us understand the context of the project.", options: ["Yes, I'm already selling or providing services", "Opening now / Launch phase", "Still an idea, I'm researching"] },
+                    { title: "What is your deadline for the project?", hint: "Helps us prioritize and fit the project into our calendar.", options: ["Urgent — as soon as possible", "Next 1 to 2 months", "No rush, I want to plan well"] },
+                    { title: "What investment range do you consider?", hint: "No commitment — just so we can present the right options.", options: ["Up to $1,500", "$1,500 to $4,000", "$4,000 to $8,000", "Above $8,000", "Not sure yet / Want a quote"] },
+                    { title: "How do you prefer to be contacted?", hint: "We'll call you on your preferred channel.", options: ["WhatsApp — quick and practical", "Email — I prefer in writing", "Video call — I want to talk directly"] }
+                ]
             }
         },
         home: {
@@ -373,6 +417,50 @@ export const translations: Record<Language, any> = {
                 budget: "Faixa de Orçamento",
                 ambition: "Conte-nos sobre a ambição",
                 submit: "Enviar Aplicação"
+            },
+            qualification: {
+                step_label: "Passo",
+                of_label: "de",
+                question_label: "Pergunta",
+                last_step: "Última etapa 🎉",
+                contact_data_title: "Seus dados de contato",
+                contact_data_subtitle: "Promessa: zero spam. Vamos usar isso só para te retornar sobre o projeto.",
+                fields: {
+                    name: "Nome completo *",
+                    name_placeholder: "Como prefere ser chamado?",
+                    whatsapp: "WhatsApp *",
+                    email: "E-mail *",
+                    company: "Nome do seu negócio (opcional)",
+                    company_placeholder: "Ex: Minha Empresa Inc."
+                },
+                buttons: {
+                    back: "Voltar",
+                    continue: "Continuar",
+                    submit: "Enviar & Ver resultado",
+                    whatsapp: "Falar agora no WhatsApp"
+                },
+                results: {
+                    hot_title: "Perfeito, {name}!",
+                    hot_desc: "Suas respostas mostram que você tem um projeto claro e está pronto para avançar. Vamos entrar em contato em até 24 horas para marcar uma conversa.",
+                    warm_title: "Ótimo, {name}!",
+                    warm_desc: "Você tem um projeto interessante. Vamos te mandar mais informações e conversamos sobre como podemos ajudar no momento certo para você.",
+                    cold_title: "Olá, {name}!",
+                    cold_desc: "Parece que você ainda está explorando suas opções — e tudo bem! Vamos te enviar conteúdo útil para quando o momento for certo.",
+                    meta_project: "Projeto",
+                    meta_deadline: "Prazo",
+                    meta_investment: "Investimento",
+                    cold_footer: "Entraremos em contato via e-mail em breve.",
+                    wa_hot: "Estou animado para começar!",
+                    wa_warm: "Gostaria de saber mais sobre os serviços.",
+                    wa_cold: "Ainda estou pesquisando, mas gostaria de entender melhor."
+                },
+                steps: [
+                    { title: "O que você precisa?", hint: "Selecione a opção que melhor descreve seu projeto.", options: ["Landing page / Página de vendas", "Site institucional (apresentar meu negócio)", "Loja virtual / E-commerce", "Reformular / melhorar site que já tenho", "Outro / Não sei ainda"] },
+                    { title: "Seu negócio já está ativo?", hint: "Isso nos ajuda a entender o contexto do projeto.", options: ["Sim, já estou vendendo ou prestando serviços", "Estou abrindo agora / Em fase de lançamento", "Ainda é uma ideia, estou pesquisando"] },
+                    { title: "Qual é o seu prazo para o projeto?", hint: "Nos ajuda a priorizar e encaixar o projeto no nosso calendário.", options: ["Urgente — preciso o quanto antes", "Nos próximos 1 a 2 meses", "Sem pressa, quero planejar bem"] },
+                    { title: "Qual faixa de investimento você considera?", hint: "Sem compromisso — serve só para te apresentarmos as opções certas.", options: ["Até R$1.500", "R$1.500 a R$4.000", "R$4.000 a R$8.000", "Acima de R$8.000", "Não sei ainda / Quero um orçamento"] },
+                    { title: "Como prefere ser contatado?", hint: "Vamos te chamar no canal de sua preferência.", options: ["WhatsApp — rápido e prático", "E-mail — prefiro por escrito", "Videochamada — quero conversar direto"] }
+                ]
             }
         },
         home: {
@@ -626,6 +714,50 @@ export const translations: Record<Language, any> = {
                 budget: "Intervalo de Orçamento",
                 ambition: "Conte-nos sobre a sua ambição",
                 submit: "Enviar Candidatura"
+            },
+            qualification: {
+                step_label: "Passo",
+                of_label: "de",
+                question_label: "Pergunta",
+                last_step: "Última etapa 🎉",
+                contact_data_title: "Os seus dados de contacto",
+                contact_data_subtitle: "Promessa: zero spam. Vamos usar isto apenas para lhe responder sobre o projeto.",
+                fields: {
+                    name: "Nome completo *",
+                    name_placeholder: "Como prefere ser chamado?",
+                    whatsapp: "WhatsApp *",
+                    email: "E-mail *",
+                    company: "Nome do seu negócio (opcional)",
+                    company_placeholder: "Ex: Minha Empresa Inc."
+                },
+                buttons: {
+                    back: "Voltar",
+                    continue: "Continuar",
+                    submit: "Enviar & Ver resultado",
+                    whatsapp: "Falar agora no WhatsApp"
+                },
+                results: {
+                    hot_title: "Perfeito, {name}!",
+                    hot_desc: "As suas respostas mostram que tem um projeto claro e está pronto para avançar. Vamos entrar em contacto em até 24 horas para marcar uma conversa.",
+                    warm_title: "Ótimo, {name}!",
+                    warm_desc: "Tem um projeto interessante. Vamos enviar-lhe mais informações e conversamos sobre como podemos ajudar no momento certo para si.",
+                    cold_title: "Olá, {name}!",
+                    cold_desc: "Parece que ainda está a explorar as suas opções — e tudo bem! Vamos enviar-lhe conteúdo útil para quando o momento for certo.",
+                    meta_project: "Projeto",
+                    meta_deadline: "Prazo",
+                    meta_investment: "Investimento",
+                    cold_footer: "Entraremos em contacto via e-mail em breve.",
+                    wa_hot: "Estou entusiasmado para começar!",
+                    wa_warm: "Gostaria de saber mais sobre os serviços.",
+                    wa_cold: "Ainda estou a pesquisar, mas gostaria de entender melhor."
+                },
+                steps: [
+                    { title: "O que precisa?", hint: "Selecione a opção que melhor descreve o seu projeto.", options: ["Landing page / Página de vendas", "Site institucional (apresentar o meu negócio)", "Loja virtual / E-commerce", "Reformular / melhorar site que já tenho", "Outro / Não sei ainda"] },
+                    { title: "O seu negócio já está ativo?", hint: "Isto ajuda-nos a entender o contexto do projeto.", options: ["Sim, já estou a vender ou a prestar serviços", "A abrir agora / Em fase de lançamento", "Ainda é uma ideia, estou a pesquisar"] },
+                    { title: "Qual é o seu prazo para o projeto?", hint: "Ajuda-nos a priorizar e encaixar o projeto no nosso calendário.", options: ["Urgente — preciso o quanto antes", "Nos próximos 1 a 2 meses", "Sem pressa, quero planear bem"] },
+                    { title: "Qual faixa de investimento considera?", hint: "Sem compromisso — serve apenas para lhe apresentarmos as opções certas.", options: ["Até 1.500€", "1.500€ a 4.000€", "4.000€ a 8.000€", "Acima de 8.000€", "Não sei ainda / Quero um orçamento"] },
+                    { title: "Como prefere ser contactado?", hint: "Vamos contactá-lo pelo canal da sua preferência.", options: ["WhatsApp — rápido e prático", "E-mail — prefiro por escrito", "Videochamada — quero conversar direto"] }
+                ]
             }
         },
         home: {
@@ -879,6 +1011,50 @@ export const translations: Record<Language, any> = {
                 budget: "Rango de Presupuesto",
                 ambition: "Cuéntenos sobre la ambición",
                 submit: "Enviar Aplicación"
+            },
+            qualification: {
+                step_label: "Paso",
+                of_label: "de",
+                question_label: "Pregunta",
+                last_step: "Último paso 🎉",
+                contact_data_title: "Tus datos de contacto",
+                contact_data_subtitle: "Promesa: cero spam. Solo usaremos esto para contactarte sobre el proyecto.",
+                fields: {
+                    name: "Nombre completo *",
+                    name_placeholder: "¿Cómo prefieres que te llamemos?",
+                    whatsapp: "WhatsApp *",
+                    email: "Correo electrónico *",
+                    company: "Nombre de tu negocio (opcional)",
+                    company_placeholder: "Ej: Mi Empresa Inc."
+                },
+                buttons: {
+                    back: "Volver",
+                    continue: "Continuar",
+                    submit: "Enviar y ver resultado",
+                    whatsapp: "Hablar ahora por WhatsApp"
+                },
+                results: {
+                    hot_title: "¡Perfecto, {name}!",
+                    hot_desc: "Tus respuestas muestran que tienes un proyecto claro y estás listo para avanzar. Nos pondremos en contacto en menos de 24 horas para programar una charla.",
+                    warm_title: "¡Genial, {name}!",
+                    warm_desc: "Tienes un proyecto interesante. Te enviaremos más información y hablaremos sobre cómo podemos ayudar en el momento adecuado para ti.",
+                    cold_title: "¡Hola, {name}!",
+                    cold_desc: "Parece que todavía estás explorando tus opciones, ¡y está bien! Te enviaremos contenido útil para cuando llegue el momento adecuado.",
+                    meta_project: "Proyecto",
+                    meta_deadline: "Plazo",
+                    meta_investment: "Inversión",
+                    cold_footer: "Nos pondremos en contacto por correo electrónico pronto.",
+                    wa_hot: "¡Estoy emocionado por empezar!",
+                    wa_warm: "Me gustaría saber más sobre los servicios.",
+                    wa_cold: "Todavía estoy investigando, pero me gustaría entender mejor."
+                },
+                steps: [
+                    { title: "¿Qué necesitas?", hint: "Selecciona la opción que mejor describa tu proyecto.", options: ["Landing page / Página de ventas", "Sitio institucional", "Tienda virtual / E-commerce", "Reformular / mejorar sitio actual", "Otro / No lo sé todavía"] },
+                    { title: "¿Tu negocio ya está activo?", hint: "Esto nos ayuda a entender el contexto del proyecto.", options: ["Sí, ya estoy vendiendo o prestando servicios", "Abriendo ahora / Fase de lanzamiento", "Todavía es una idea, estoy investigando"] },
+                    { title: "¿Cuál es tu plazo para el proyecto?", hint: "Nos ayuda a priorizar y encajar el proyecto en nuestro calendario.", options: ["Urgente — lo antes posible", "En los próximos 1 a 2 meses", "Sin prisa, quiero planificar bien"] },
+                    { title: "¿Qué rango de inversión consideras?", hint: "Sin compromiso — solo para presentarte las opciones adecuadas.", options: ["Hasta $1,500", "$1,500 a $4,000", "$4,000 a $8,000", "Más de $8,000", "No lo sé todavía / Quiero un presupuesto"] },
+                    { title: "¿Cómo prefieres ser contactado?", hint: "Te llamaremos por tu canal preferido.", options: ["WhatsApp — rápido y práctico", "Email — prefiero por escrito", "Videollamada — quiero hablar directo"] }
+                ]
             }
         },
         home: {

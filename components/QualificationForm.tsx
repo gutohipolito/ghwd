@@ -4,73 +4,74 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Check } from "lucide-react";
+import { useLanguage } from "@/lib/i18n-context";
 
 type Option = {
-    label: string;
+    labelKey: string;
     value: string;
     points: number;
-    badge?: string;
 };
 
 type Step = {
-    title: string;
-    hint: string;
+    titleKey: string;
+    hintKey: string;
     options: Option[];
 };
 
 const steps: Step[] = [
     {
-        title: "O que você precisa?",
-        hint: "Selecione a opção que melhor descreve seu projeto.",
+        titleKey: "qualification.steps.0.title",
+        hintKey: "qualification.steps.0.hint",
         options: [
-            { label: "Landing page / Página de vendas", value: "landing", points: 1 },
-            { label: "Site institucional (apresentar meu negócio)", value: "site", points: 1 },
-            { label: "Loja virtual / E-commerce", value: "ecommerce", points: 2, badge: "Popular" },
-            { label: "Reformular / melhorar site que já tenho", value: "redesign", points: 2 },
-            { label: "Outro / Não sei ainda", value: "outro", points: 0 },
+            { labelKey: "qualification.steps.0.options.0", value: "landing", points: 1 },
+            { labelKey: "qualification.steps.0.options.1", value: "site", points: 1 },
+            { labelKey: "qualification.steps.0.options.2", value: "ecommerce", points: 2 },
+            { labelKey: "qualification.steps.0.options.3", value: "redesign", points: 2 },
+            { labelKey: "qualification.steps.0.options.4", value: "outro", points: 0 },
         ],
     },
     {
-        title: "Seu negócio já está ativo?",
-        hint: "Isso nos ajuda a entender o contexto do projeto.",
+        titleKey: "qualification.steps.1.title",
+        hintKey: "qualification.steps.1.hint",
         options: [
-            { label: "Sim, já estou vendendo ou prestando serviços", value: "ativo", points: 2, badge: "Ativo" },
-            { label: "Estou abrindo agora / Em fase de lançamento", value: "abrindo", points: 1, badge: "Novo" },
-            { label: "Ainda é uma ideia, estou pesquisando", value: "ideia", points: 0, badge: "Explorando" },
+            { labelKey: "qualification.steps.1.options.0", value: "ativo", points: 2 },
+            { labelKey: "qualification.steps.1.options.1", value: "abrindo", points: 1 },
+            { labelKey: "qualification.steps.1.options.2", value: "ideia", points: 0 },
         ],
     },
     {
-        title: "Qual é o seu prazo para o projeto?",
-        hint: "Nos ajuda a priorizar e encaixar o projeto no nosso calendário.",
+        titleKey: "qualification.steps.2.title",
+        hintKey: "qualification.steps.2.hint",
         options: [
-            { label: "Urgente — preciso o quanto antes", value: "urgente", points: 2, badge: "Urgente" },
-            { label: "Nos próximos 1 a 2 meses", value: "1-2meses", points: 2, badge: "Em breve" },
-            { label: "Sem pressa, quero planejar bem", value: "sempressa", points: 0 },
+            { labelKey: "qualification.steps.2.options.0", value: "urgente", points: 2 },
+            { labelKey: "qualification.steps.2.options.1", value: "1-2meses", points: 2 },
+            { labelKey: "qualification.steps.2.options.2", value: "sempressa", points: 0 },
         ],
     },
     {
-        title: "Qual faixa de investimento você considera?",
-        hint: "Sem compromisso — serve só para te apresentarmos as opções certas.",
+        titleKey: "qualification.steps.3.title",
+        hintKey: "qualification.steps.3.hint",
         options: [
-            { label: "Até R$1.500", value: "ate1500", points: 0 },
-            { label: "R$1.500 a R$4.000", value: "1500-4000", points: 1 },
-            { label: "R$4.000 a R$8.000", value: "4000-8000", points: 2, badge: "Recomendado" },
-            { label: "Acima de R$8.000", value: "acima8000", points: 2, badge: "Premium" },
-            { label: "Não sei ainda / Quero um orçamento", value: "naoseibudget", points: 1 },
+            { labelKey: "qualification.steps.3.options.0", value: "ate1500", points: 0 },
+            { labelKey: "qualification.steps.3.options.1", value: "1500-4000", points: 1 },
+            { labelKey: "qualification.steps.3.options.2", value: "4000-8000", points: 2 },
+            { labelKey: "qualification.steps.3.options.3", value: "acima8000", points: 2 },
+            { labelKey: "qualification.steps.3.options.4", value: "naoseibudget", points: 1 },
         ],
     },
     {
-        title: "Como prefere ser contatado?",
-        hint: "Vamos te chamar no canal de sua preferência.",
+        titleKey: "qualification.steps.4.title",
+        hintKey: "qualification.steps.4.hint",
         options: [
-            { label: "WhatsApp — rápido e prático", value: "whatsapp", points: 1 },
-            { label: "E-mail — prefiro por escrito", value: "email", points: 1 },
-            { label: "Videochamada — quero conversar direto", value: "videocall", points: 2, badge: "Top ⭐" },
+            { labelKey: "qualification.steps.4.options.0", value: "whatsapp", points: 1 },
+            { labelKey: "qualification.steps.4.options.1", value: "email", points: 1 },
+            { labelKey: "qualification.steps.4.options.2", value: "videocall", points: 2 },
         ],
     },
 ];
 
 export function QualificationForm() {
+    const { t } = useLanguage();
     const [currentStep, setCurrentStep] = useState(0);
     const [answers, setAnswers] = useState<Record<number, Option>>({});
     const [formData, setFormData] = useState({
@@ -108,23 +109,23 @@ export function QualificationForm() {
         if (score >= 7) {
             return {
                 tier: "hot",
-                title: `Perfeito, ${firstName}!`,
-                desc: "Suas respostas mostram que você tem um projeto claro e está pronto para avançar. Vamos entrar em contato em até 24 horas para marcar uma conversa.",
-                waMsg: "Estou animado para começar!"
+                title: t('qualification.results.hot_title').replace('{name}', firstName),
+                desc: t('qualification.results.hot_desc'),
+                waMsg: t('qualification.results.wa_hot')
             };
         } else if (score >= 4) {
             return {
                 tier: "warm",
-                title: `Ótimo, ${firstName}!`,
-                desc: "Você tem um projeto interessante. Vamos te mandar mais informações e conversamos sobre como podemos ajudar no momento certo para você.",
-                waMsg: "Gostaria de saber mais sobre os serviços."
+                title: t('qualification.results.warm_title').replace('{name}', firstName),
+                desc: t('qualification.results.warm_desc'),
+                waMsg: t('qualification.results.wa_warm')
             };
         } else {
             return {
                 tier: "cold",
-                title: `Olá, ${firstName}!`,
-                desc: "Parece que você ainda está explorando suas opções — e tudo bem! Vamos te enviar conteúdo útil para quando o momento for certo.",
-                waMsg: "Ainda estou pesquisando, mas gostaria de entender melhor."
+                title: t('qualification.results.cold_title').replace('{name}', firstName),
+                desc: t('qualification.results.cold_desc'),
+                waMsg: t('qualification.results.wa_cold')
             };
         }
     };
@@ -138,8 +139,8 @@ export function QualificationForm() {
         const result = getResult();
         const waLink = `https://wa.me/5554999221230?text=${encodeURIComponent(
             `Olá! Me chamo ${formData.nome}${formData.negocio ? ` e represento ${formData.negocio}` : ""}.\n` +
-            `Preenchi o formulário do site e meu projeto é: ${answers[0]?.label || "-"}.\n` +
-            `Budget considerado: ${answers[3]?.label || "-"}.\n` +
+            `Preenchi o formulário do site e meu projeto é: ${t(answers[0]?.labelKey) || "-"}.\n` +
+            `Budget considerado: ${t(answers[3]?.labelKey) || "-"}.\n` +
             `${result.waMsg}`
         )}`;
 
@@ -155,7 +156,7 @@ export function QualificationForm() {
                     result.tier === 'warm' ? "bg-amber-500/10 border-amber-500/30 text-amber-500" :
                     "bg-zinc-500/10 border-zinc-500/30 text-zinc-500"
                 )}>
-                    {result.tier === 'hot' ? '🔥' : result.tier === 'warm' ? '✨' : '👋'}
+                    {result.tier === 'hot' ? '' : result.tier === 'warm' ? '✨' : '👋'}
                 </div>
                 <h2 className="text-3xl md:text-4xl font-serif mb-4">{result.title}</h2>
                 <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
@@ -164,16 +165,16 @@ export function QualificationForm() {
 
                 <div className="bg-white/5 border border-white/5 rounded-2xl p-6 text-left space-y-4 mb-8">
                     <div className="flex justify-between items-center text-sm">
-                        <span className="text-zinc-500">Projeto</span>
-                        <span className="text-white font-medium">{answers[0]?.label}</span>
+                        <span className="text-zinc-500">{t('qualification.results.meta_project')}</span>
+                        <span className="text-white font-medium">{t(answers[0]?.labelKey)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                        <span className="text-zinc-500">Prazo</span>
-                        <span className="text-white font-medium">{answers[2]?.label}</span>
+                        <span className="text-zinc-500">{t('qualification.results.meta_deadline')}</span>
+                        <span className="text-white font-medium">{t(answers[2]?.labelKey)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                        <span className="text-zinc-500">Investimento</span>
-                        <span className="text-white font-medium">{answers[3]?.label}</span>
+                        <span className="text-zinc-500">{t('qualification.results.meta_investment')}</span>
+                        <span className="text-white font-medium">{t(answers[3]?.labelKey)}</span>
                     </div>
                 </div>
 
@@ -184,12 +185,12 @@ export function QualificationForm() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-emerald-500 text-black px-10 py-4 rounded-full font-bold hover:bg-white transition-all duration-300"
                     >
-                        Falar agora no WhatsApp
+                        {t('qualification.buttons.whatsapp')}
                         <ArrowRight className="w-5 h-5" />
                     </a>
                 ) : (
                     <p className="text-zinc-500 text-sm">
-                        Entraremos em contato via e-mail em breve.
+                        {t('qualification.results.cold_footer')}
                     </p>
                 )}
             </motion.div>
@@ -211,7 +212,7 @@ export function QualificationForm() {
                     />
                 ))}
                 <span className="ml-auto text-[10px] font-mono uppercase tracking-widest text-zinc-500">
-                    Passo {currentStep + 1} de 6
+                    {t('qualification.step_label')} {currentStep + 1} {t('qualification.of_label')} 6
                 </span>
             </div>
 
@@ -226,10 +227,10 @@ export function QualificationForm() {
                         className="bg-zinc-900/50 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-xl"
                     >
                         <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-4 block">
-                            Pergunta 0{currentStep + 1}
+                            {t('qualification.question_label')} 0{currentStep + 1}
                         </span>
-                        <h2 className="text-2xl md:text-3xl font-serif mb-2">{steps[currentStep].title}</h2>
-                        <p className="text-zinc-500 text-sm mb-8">{steps[currentStep].hint}</p>
+                        <h2 className="text-2xl md:text-3xl font-serif mb-2">{t(steps[currentStep].titleKey)}</h2>
+                        <p className="text-zinc-500 text-sm mb-8">{t(steps[currentStep].hintKey)}</p>
 
                         <div className="space-y-3">
                             {steps[currentStep].options.map((option) => (
@@ -244,12 +245,7 @@ export function QualificationForm() {
                                     )}
                                 >
                                     <div className="flex items-center gap-4">
-                                        <span className="text-base font-medium">{option.label}</span>
-                                        {option.badge && (
-                                            <span className="text-[9px] uppercase tracking-widest bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-md font-bold">
-                                                {option.badge}
-                                            </span>
-                                        )}
+                                        <span className="text-base font-medium">{t(option.labelKey)}</span>
                                     </div>
                                     <div className={cn(
                                         "w-5 h-5 rounded-full border flex items-center justify-center transition-all",
@@ -271,14 +267,14 @@ export function QualificationForm() {
                                     currentStep === 0 && "opacity-0 pointer-events-none"
                                 )}
                             >
-                                ← Voltar
+                                ← {t('qualification.buttons.back')}
                             </button>
                             <button 
                                 onClick={nextStep}
                                 disabled={!answers[currentStep]}
                                 className="flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-emerald-500 hover:text-white transition-all disabled:opacity-30"
                             >
-                                Continuar
+                                {t('qualification.buttons.continue')}
                                 <ArrowRight className="w-4 h-4" />
                             </button>
                         </div>
@@ -291,27 +287,27 @@ export function QualificationForm() {
                         className="bg-zinc-900/50 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-xl"
                     >
                         <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-4 block">
-                            Última etapa 🎉
+                            {t('qualification.last_step')}
                         </span>
-                        <h2 className="text-2xl md:text-3xl font-serif mb-2">Seus dados de contato</h2>
-                        <p className="text-zinc-500 text-sm mb-8">Promessa: zero spam. Vamos usar isso só para te retornar sobre o projeto.</p>
+                        <h2 className="text-2xl md:text-3xl font-serif mb-2">{t('qualification.contact_data_title')}</h2>
+                        <p className="text-zinc-500 text-sm mb-8">{t('qualification.contact_data_subtitle')}</p>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">Nome completo *</label>
+                                <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('qualification.fields.name')}</label>
                                 <input 
                                     required
                                     type="text" 
                                     value={formData.nome}
                                     onChange={(e) => setFormData({...formData, nome: e.target.value})}
-                                    placeholder="Como prefere ser chamado?"
+                                    placeholder={t('qualification.fields.name_placeholder')}
                                     className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-emerald-500 transition-colors"
                                 />
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">WhatsApp *</label>
+                                    <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('qualification.fields.whatsapp')}</label>
                                     <input 
                                         required
                                         type="tel" 
@@ -322,7 +318,7 @@ export function QualificationForm() {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">E-mail *</label>
+                                    <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('qualification.fields.email')}</label>
                                     <input 
                                         required
                                         type="email" 
@@ -335,12 +331,12 @@ export function QualificationForm() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">Nome do seu negócio (opcional)</label>
+                                <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('qualification.fields.company')}</label>
                                 <input 
                                     type="text" 
                                     value={formData.negocio}
                                     onChange={(e) => setFormData({...formData, negocio: e.target.value})}
-                                    placeholder="Ex: Minha Empresa Inc."
+                                    placeholder={t('qualification.fields.company_placeholder')}
                                     className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-emerald-500 transition-colors"
                                 />
                             </div>
@@ -351,13 +347,13 @@ export function QualificationForm() {
                                     onClick={prevStep}
                                     className="text-zinc-500 hover:text-white transition-colors text-sm font-medium"
                                 >
-                                    ← Voltar
+                                    ← {t('qualification.buttons.back')}
                                 </button>
                                 <button 
                                     type="submit"
                                     className="flex items-center gap-2 bg-emerald-500 text-black px-8 py-3 rounded-full font-bold hover:bg-white transition-all shadow-lg shadow-emerald-500/20"
                                 >
-                                    Enviar & Ver resultado
+                                    {t('qualification.buttons.submit')}
                                     <ArrowRight className="w-4 h-4" />
                                 </button>
                             </div>
