@@ -20,52 +20,52 @@ type Step = {
 
 const steps: Step[] = [
     {
-        titleKey: "qualification.steps.0.title",
-        hintKey: "qualification.steps.0.hint",
+        titleKey: "contact.qualification.steps.0.title",
+        hintKey: "contact.qualification.steps.0.hint",
         options: [
-            { labelKey: "qualification.steps.0.options.0", value: "landing", points: 1 },
-            { labelKey: "qualification.steps.0.options.1", value: "site", points: 1 },
-            { labelKey: "qualification.steps.0.options.2", value: "ecommerce", points: 2 },
-            { labelKey: "qualification.steps.0.options.3", value: "redesign", points: 2 },
-            { labelKey: "qualification.steps.0.options.4", value: "outro", points: 0 },
+            { labelKey: "contact.qualification.steps.0.options.0", value: "landing", points: 1 },
+            { labelKey: "contact.qualification.steps.0.options.1", value: "site", points: 1 },
+            { labelKey: "contact.qualification.steps.0.options.2", value: "ecommerce", points: 2 },
+            { labelKey: "contact.qualification.steps.0.options.3", value: "redesign", points: 2 },
+            { labelKey: "contact.qualification.steps.0.options.4", value: "outro", points: 0 },
         ],
     },
     {
-        titleKey: "qualification.steps.1.title",
-        hintKey: "qualification.steps.1.hint",
+        titleKey: "contact.qualification.steps.1.title",
+        hintKey: "contact.qualification.steps.1.hint",
         options: [
-            { labelKey: "qualification.steps.1.options.0", value: "ativo", points: 2 },
-            { labelKey: "qualification.steps.1.options.1", value: "abrindo", points: 1 },
-            { labelKey: "qualification.steps.1.options.2", value: "ideia", points: 0 },
+            { labelKey: "contact.qualification.steps.1.options.0", value: "ativo", points: 2 },
+            { labelKey: "contact.qualification.steps.1.options.1", value: "abrindo", points: 1 },
+            { labelKey: "contact.qualification.steps.1.options.2", value: "ideia", points: 0 },
         ],
     },
     {
-        titleKey: "qualification.steps.2.title",
-        hintKey: "qualification.steps.2.hint",
+        titleKey: "contact.qualification.steps.2.title",
+        hintKey: "contact.qualification.steps.2.hint",
         options: [
-            { labelKey: "qualification.steps.2.options.0", value: "urgente", points: 2 },
-            { labelKey: "qualification.steps.2.options.1", value: "1-2meses", points: 2 },
-            { labelKey: "qualification.steps.2.options.2", value: "sempressa", points: 0 },
+            { labelKey: "contact.qualification.steps.2.options.0", value: "urgente", points: 2 },
+            { labelKey: "contact.qualification.steps.2.options.1", value: "1-2meses", points: 2 },
+            { labelKey: "contact.qualification.steps.2.options.2", value: "sempressa", points: 0 },
         ],
     },
     {
-        titleKey: "qualification.steps.3.title",
-        hintKey: "qualification.steps.3.hint",
+        titleKey: "contact.qualification.steps.3.title",
+        hintKey: "contact.qualification.steps.3.hint",
         options: [
-            { labelKey: "qualification.steps.3.options.0", value: "ate1500", points: 0 },
-            { labelKey: "qualification.steps.3.options.1", value: "1500-4000", points: 1 },
-            { labelKey: "qualification.steps.3.options.2", value: "4000-8000", points: 2 },
-            { labelKey: "qualification.steps.3.options.3", value: "acima8000", points: 2 },
-            { labelKey: "qualification.steps.3.options.4", value: "naoseibudget", points: 1 },
+            { labelKey: "contact.qualification.steps.3.options.0", value: "ate1500", points: 0 },
+            { labelKey: "contact.qualification.steps.3.options.1", value: "1500-4000", points: 1 },
+            { labelKey: "contact.qualification.steps.3.options.2", value: "4000-8000", points: 2 },
+            { labelKey: "contact.qualification.steps.3.options.3", value: "acima8000", points: 2 },
+            { labelKey: "contact.qualification.steps.3.options.4", value: "naoseibudget", points: 1 },
         ],
     },
     {
-        titleKey: "qualification.steps.4.title",
-        hintKey: "qualification.steps.4.hint",
+        titleKey: "contact.qualification.steps.4.title",
+        hintKey: "contact.qualification.steps.4.hint",
         options: [
-            { labelKey: "qualification.steps.4.options.0", value: "whatsapp", points: 1 },
-            { labelKey: "qualification.steps.4.options.1", value: "email", points: 1 },
-            { labelKey: "qualification.steps.4.options.2", value: "videocall", points: 2 },
+            { labelKey: "contact.qualification.steps.4.options.0", value: "whatsapp", points: 1 },
+            { labelKey: "contact.qualification.steps.4.options.1", value: "email", points: 1 },
+            { labelKey: "contact.qualification.steps.4.options.2", value: "videocall", points: 2 },
         ],
     },
 ];
@@ -109,23 +109,23 @@ export function QualificationForm() {
         if (score >= 7) {
             return {
                 tier: "hot",
-                title: t('qualification.results.hot_title').replace('{name}', firstName),
-                desc: t('qualification.results.hot_desc'),
-                waMsg: t('qualification.results.wa_hot')
+                title: t('contact.qualification.results.hot_title').replace('{name}', firstName),
+                desc: t('contact.qualification.results.hot_desc'),
+                waMsg: t('contact.qualification.results.wa_hot')
             };
         } else if (score >= 4) {
             return {
                 tier: "warm",
-                title: t('qualification.results.warm_title').replace('{name}', firstName),
-                desc: t('qualification.results.warm_desc'),
-                waMsg: t('qualification.results.wa_warm')
+                title: t('contact.qualification.results.warm_title').replace('{name}', firstName),
+                desc: t('contact.qualification.results.warm_desc'),
+                waMsg: t('contact.qualification.results.wa_warm')
             };
         } else {
             return {
                 tier: "cold",
-                title: t('qualification.results.cold_title').replace('{name}', firstName),
-                desc: t('qualification.results.cold_desc'),
-                waMsg: t('qualification.results.wa_cold')
+                title: t('contact.qualification.results.cold_title').replace('{name}', firstName),
+                desc: t('contact.qualification.results.cold_desc'),
+                waMsg: t('contact.qualification.results.wa_cold')
             };
         }
     };
@@ -165,15 +165,15 @@ export function QualificationForm() {
 
                 <div className="bg-white/5 border border-white/5 rounded-2xl p-6 text-left space-y-4 mb-8">
                     <div className="flex justify-between items-center text-sm">
-                        <span className="text-zinc-500">{t('qualification.results.meta_project')}</span>
+                        <span className="text-zinc-500">{t('contact.qualification.results.meta_project')}</span>
                         <span className="text-white font-medium">{t(answers[0]?.labelKey)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                        <span className="text-zinc-500">{t('qualification.results.meta_deadline')}</span>
+                        <span className="text-zinc-500">{t('contact.qualification.results.meta_deadline')}</span>
                         <span className="text-white font-medium">{t(answers[2]?.labelKey)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                        <span className="text-zinc-500">{t('qualification.results.meta_investment')}</span>
+                        <span className="text-zinc-500">{t('contact.qualification.results.meta_investment')}</span>
                         <span className="text-white font-medium">{t(answers[3]?.labelKey)}</span>
                     </div>
                 </div>
@@ -185,12 +185,12 @@ export function QualificationForm() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-emerald-500 text-black px-10 py-4 rounded-full font-bold hover:bg-white transition-all duration-300"
                     >
-                        {t('qualification.buttons.whatsapp')}
+                        {t('contact.qualification.buttons.whatsapp')}
                         <ArrowRight className="w-5 h-5" />
                     </a>
                 ) : (
                     <p className="text-zinc-500 text-sm">
-                        {t('qualification.results.cold_footer')}
+                        {t('contact.qualification.results.cold_footer')}
                     </p>
                 )}
             </motion.div>
@@ -212,7 +212,7 @@ export function QualificationForm() {
                     />
                 ))}
                 <span className="ml-auto text-[10px] font-mono uppercase tracking-widest text-zinc-500">
-                    {t('qualification.step_label')} {currentStep + 1} {t('qualification.of_label')} 6
+                    {t('contact.qualification.step_label')} {currentStep + 1} {t('contact.qualification.of_label')} 6
                 </span>
             </div>
 
@@ -227,7 +227,7 @@ export function QualificationForm() {
                         className="bg-zinc-900/50 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-xl"
                     >
                         <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-4 block">
-                            {t('qualification.question_label')} 0{currentStep + 1}
+                            {t('contact.qualification.question_label')} 0{currentStep + 1}
                         </span>
                         <h2 className="text-2xl md:text-3xl font-serif mb-2">{t(steps[currentStep].titleKey)}</h2>
                         <p className="text-zinc-500 text-sm mb-8">{t(steps[currentStep].hintKey)}</p>
@@ -267,14 +267,14 @@ export function QualificationForm() {
                                     currentStep === 0 && "opacity-0 pointer-events-none"
                                 )}
                             >
-                                ← {t('qualification.buttons.back')}
+                                ← {t('contact.qualification.buttons.back')}
                             </button>
                             <button 
                                 onClick={nextStep}
                                 disabled={!answers[currentStep]}
                                 className="flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-emerald-500 hover:text-white transition-all disabled:opacity-30"
                             >
-                                {t('qualification.buttons.continue')}
+                                {t('contact.qualification.buttons.continue')}
                                 <ArrowRight className="w-4 h-4" />
                             </button>
                         </div>
@@ -287,27 +287,27 @@ export function QualificationForm() {
                         className="bg-zinc-900/50 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-xl"
                     >
                         <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-4 block">
-                            {t('qualification.last_step')}
+                            {t('contact.qualification.last_step')}
                         </span>
-                        <h2 className="text-2xl md:text-3xl font-serif mb-2">{t('qualification.contact_data_title')}</h2>
-                        <p className="text-zinc-500 text-sm mb-8">{t('qualification.contact_data_subtitle')}</p>
+                        <h2 className="text-2xl md:text-3xl font-serif mb-2">{t('contact.qualification.contact_data_title')}</h2>
+                        <p className="text-zinc-500 text-sm mb-8">{t('contact.qualification.contact_data_subtitle')}</p>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('qualification.fields.name')}</label>
+                                <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('contact.qualification.fields.name')}</label>
                                 <input 
                                     required
                                     type="text" 
                                     value={formData.nome}
                                     onChange={(e) => setFormData({...formData, nome: e.target.value})}
-                                    placeholder={t('qualification.fields.name_placeholder')}
+                                    placeholder={t('contact.qualification.fields.name_placeholder')}
                                     className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-emerald-500 transition-colors"
                                 />
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('qualification.fields.whatsapp')}</label>
+                                    <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('contact.qualification.fields.whatsapp')}</label>
                                     <input 
                                         required
                                         type="tel" 
@@ -318,7 +318,7 @@ export function QualificationForm() {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('qualification.fields.email')}</label>
+                                    <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('contact.qualification.fields.email')}</label>
                                     <input 
                                         required
                                         type="email" 
@@ -331,12 +331,12 @@ export function QualificationForm() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('qualification.fields.company')}</label>
+                                <label className="text-[10px] uppercase tracking-widest text-zinc-500 ml-1">{t('contact.qualification.fields.company')}</label>
                                 <input 
                                     type="text" 
                                     value={formData.negocio}
                                     onChange={(e) => setFormData({...formData, negocio: e.target.value})}
-                                    placeholder={t('qualification.fields.company_placeholder')}
+                                    placeholder={t('contact.qualification.fields.company_placeholder')}
                                     className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-emerald-500 transition-colors"
                                 />
                             </div>
@@ -347,13 +347,13 @@ export function QualificationForm() {
                                     onClick={prevStep}
                                     className="text-zinc-500 hover:text-white transition-colors text-sm font-medium"
                                 >
-                                    ← {t('qualification.buttons.back')}
+                                    ← {t('contact.qualification.buttons.back')}
                                 </button>
                                 <button 
                                     type="submit"
                                     className="flex items-center gap-2 bg-emerald-500 text-black px-8 py-3 rounded-full font-bold hover:bg-white transition-all shadow-lg shadow-emerald-500/20"
                                 >
-                                    {t('qualification.buttons.submit')}
+                                    {t('contact.qualification.buttons.submit')}
                                     <ArrowRight className="w-4 h-4" />
                                 </button>
                             </div>

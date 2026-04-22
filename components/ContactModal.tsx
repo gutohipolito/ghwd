@@ -51,7 +51,7 @@ export function ContactModal() {
                                 playsInline
                                 className="w-full h-full object-cover"
                             >
-                                <source src="https://videos.pexels.com/video-files/3130182/3130182-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+                                <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" type="video/mp4" />
                             </video>
                             <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-transparent to-zinc-950" />
                         </div>
