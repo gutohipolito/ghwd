@@ -130,8 +130,31 @@ export function QualificationForm() {
         }
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        
+        // URL do seu App Script do Google (Substitua pela URL que você copiou)
+        const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz_XXXXXXXXX/exec";
+
+        const payload = {
+            ...formData,
+            projeto: t(answers[0]?.labelKey) || "-",
+            budget: t(answers[3]?.labelKey) || "-",
+            score: calculateScore()
+        };
+
+        try {
+            // Envio silencioso para não travar a experiência do usuário
+            fetch(GOOGLE_SHEET_URL, {
+                method: "POST",
+                mode: "no-cors", // Necessário para Google Apps Script
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+        } catch (error) {
+            console.error("Erro ao salvar lead:", error);
+        }
+
         setIsSubmitted(true);
     };
 
