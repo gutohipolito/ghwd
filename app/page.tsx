@@ -16,7 +16,7 @@ export default function Home() {
 
       <DashboardsShowcase />
 
-      <SelectedWorks />
+      {/* <SelectedWorks /> */}
 
       <MegaFooter />
     </main>

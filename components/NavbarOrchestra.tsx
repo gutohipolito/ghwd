@@ -57,7 +57,6 @@ export function NavbarOrchestra() {
                     {[
                         { href: '/products', label: t('nav.products') },
                         { href: '/services', label: t('nav.services') },
-                        { href: '/cases', label: t('nav.cases') },
                         { href: '/about', label: t('nav.about') }
                     ].map((item) => (
                         <li key={item.href}>

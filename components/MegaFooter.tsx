@@ -162,7 +162,6 @@ export function MegaFooter() {
                                 {[
                                     { name: t('nav.home'), href: "/" },
                                     { name: t('nav.services'), href: "/services" },
-                                    { name: t('nav.cases'), href: "/cases" },
                                     { name: t('nav.about'), href: "/about" }
                                 ].map((item) => (
                                     <Link key={item.name} href={item.href} className="text-zinc-400 hover:text-white transition-colors text-sm">
