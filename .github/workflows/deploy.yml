@@ -1,0 +1,36 @@
+name: 🚀 Deploy via FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+
+    - name: 🛠️ Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: 📦 Install dependencies
+      run: npm install --legacy-peer-deps
+
+    - name: 🏗️ Build Project
+      run: npm run build
+
+    - name: 📂 Sync files via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./out/
+        server-dir: /public_html/ # Ajuste conforme o seu servidor (ex: /public_html/ ou /)
+        dangerous-clean-slate: false # Define como true se quiser apagar arquivos no servidor que não estão no git

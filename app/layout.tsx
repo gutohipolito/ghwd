@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit, Playfair_Display } from "next/font/google"; // Import fonts
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({
     subsets: ["latin"],
@@ -99,6 +100,7 @@ export default function RootLayout({
             >
                 <LanguageProvider>
                     <StructuredData />
+                    <GoogleAnalytics gaId="G-9MVP22YZZM" />
                     <ModalProvider>
                         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
                             {/* Primary Acid Green Blob - More intense, liquid movement */}
