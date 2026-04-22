@@ -79,7 +79,7 @@ export function NavbarOrchestra() {
                     </div>
 
                     <Link
-                        href="https://api.whatsapp.com/send?phone=5554999221230"
+                        href="/contact"
                         className={cn(
                             "hidden md:flex items-center gap-2 px-5 py-2 border rounded-full transition-all duration-300 text-sm font-semibold group",
                             isScrolled
@@ -126,7 +126,7 @@ export function NavbarOrchestra() {
 
                             <div className="mt-8">
                                 <Link
-                                    href="https://api.whatsapp.com/send?phone=5554999221230"
+                                    href="/contact"
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="px-8 py-3 bg-emerald-400 text-black rounded-full text-xl font-bold inline-block"
                                 >
