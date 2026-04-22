@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { NavbarOrchestra } from "@/components/NavbarOrchestra";
 import { MegaFooter } from "@/components/MegaFooter";
@@ -8,6 +10,15 @@ import { useLanguage } from "@/lib/i18n-context";
 
 export default function NotFound() {
     const { t } = useLanguage();
+    const router = useRouter();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            router.push("/");
+        }, 3000); // Redireciona após 3 segundos
+
+        return () => clearTimeout(timer);
+    }, [router]);
 
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
@@ -35,6 +46,9 @@ export default function NotFound() {
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">{t('home.not_found.title')}</h2>
                     <p className="text-zinc-400 mb-8 max-w-md mx-auto">
                         {t('home.not_found.subtitle')}
+                    </p>
+                    <p className="text-emerald-500/60 text-xs font-mono uppercase tracking-widest mb-8 animate-pulse">
+                        Redirecionando em 3 segundos...
                     </p>
 
                     <Link
