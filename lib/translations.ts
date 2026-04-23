@@ -59,9 +59,9 @@ export const translations: Record<Language, any> = {
         },
         cases: {
             header: {
-                tag: "/ Selected Works",
-                title: "Digital Craftsmanship.",
-                subtitle: "A curation of our most significant partnerships. We don't just build websites; we build businesses."
+                tag: "/ Clients",
+                title: "Valued Partnerships.",
+                subtitle: "A curation of companies that trust GHWD to build their digital future."
             },
             client_index: {
                 tag: "/ Client Index",
@@ -360,9 +360,9 @@ export const translations: Record<Language, any> = {
         },
         cases: {
             header: {
-                tag: "/ Trabalhos Selecionados",
-                title: "Artesanato Digital.",
-                subtitle: "Uma curadoria das nossas parcerias mais significativas. Não apenas construímos sites; construímos negócios."
+                tag: "/ Clientes",
+                title: "Parcerias de Valor.",
+                subtitle: "Uma curadoria das empresas que confiam na GHWD para construir seu futuro digital."
             },
             client_index: {
                 tag: "/ Índice de Clientes",
@@ -661,9 +661,9 @@ export const translations: Record<Language, any> = {
         },
         cases: {
             header: {
-                tag: "/ Trabalhos Selecionados",
-                title: "Artesanato Digital.",
-                subtitle: "Uma curadoria das nossas parcerias mais significativas. Não construímos apenas sites; construímos negócios."
+                tag: "/ Clientes",
+                title: "Parcerias de Valor.",
+                subtitle: "Uma curadoria das empresas que confiam na GHWD para construir o seu futuro digital."
             },
             client_index: {
                 tag: "/ Índice de Clientes",
@@ -962,9 +962,9 @@ export const translations: Record<Language, any> = {
         },
         cases: {
             header: {
-                tag: "/ Trabajos Seleccionados",
-                title: "Artesanía Digital.",
-                subtitle: "Una curaduría de nuestras asociaciones más significativas. No solo construimos sitios; construimos negocios."
+                tag: "/ Clientes",
+                title: "Alianzas de Valor.",
+                subtitle: "Una curaduría de empresas que confían en GHWD para construir su futuro digital."
             },
             client_index: {
                 tag: "/ Índice de Clientes",

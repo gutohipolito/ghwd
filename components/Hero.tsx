@@ -70,10 +70,10 @@ export function Hero() {
                         Agendar Briefing
                     </Link>
                     <Link
-                        href="/cases"
+                        href="/clients"
                         className="group flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors backdrop-blur-sm"
                     >
-                        Explorar Cases
+                        Explorar Clientes
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </motion.div>

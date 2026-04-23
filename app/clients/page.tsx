@@ -106,7 +106,7 @@ const regions = [
     }
 ];
 
-export default function CasesPage() {
+export default function ClientsPage() {
     const { t } = useLanguage();
     const [selectedState, setSelectedState] = useState<string | null>(null);
 

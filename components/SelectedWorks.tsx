@@ -13,7 +13,7 @@ const projects = [
         title: "Digital Ecosystem Architecture",
         description: "Replatforming a global footwear giant for 50+ markets.",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
-        link: "/cases/grendene"
+        link: "/clients/grendene"
     },
     {
         id: "02",
@@ -21,7 +21,7 @@ const projects = [
         title: "Experience Commerce",
         description: "Digitizing the legendary rock & roll dining experience.",
         image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2670&auto=format&fit=crop",
-        link: "/cases/hard-rock"
+        link: "/clients/hard-rock"
     },
     {
         id: "03",
@@ -29,7 +29,7 @@ const projects = [
         title: "Omnichannel Retail Core",
         description: "Connecting 40+ physical stores with high-velocity e-commerce.",
         image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop",
-        link: "/cases/besni"
+        link: "/clients/besni"
     }
 ];
 
@@ -37,9 +37,9 @@ export function SelectedWorks() {
     const { t } = useLanguage();
 
     const translatedProjects = [
-        { id: "01", key: "grendene", client: "Grendene Global", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop", link: "/cases/grendene" },
-        { id: "02", key: "hardrock", client: "Hard Rock Cafe", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2670&auto=format&fit=crop", link: "/cases/hard-rock" },
-        { id: "03", key: "besni", client: "Besni", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop", link: "/cases/besni" }
+        { id: "01", key: "grendene", client: "Grendene Global", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop", link: "/clients/grendene" },
+        { id: "02", key: "hardrock", client: "Hard Rock Cafe", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2670&auto=format&fit=crop", link: "/clients/hard-rock" },
+        { id: "03", key: "besni", client: "Besni", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop", link: "/clients/besni" }
     ];
 
     return (
@@ -59,7 +59,7 @@ export function SelectedWorks() {
                     </div>
 
                     <Link
-                        href="/cases"
+                        href="/clients"
                         className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-emerald-500 transition-colors"
                     >
                         {t('home.selected_works.view_archive')}

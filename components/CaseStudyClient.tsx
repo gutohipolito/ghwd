@@ -91,7 +91,7 @@ export function CaseStudyClient({ data }: { data: any }) {
             <section className="py-32 border-t border-white/5 bg-zinc-900/20">
                 <div className="container mx-auto px-6 md:px-24 text-center">
                     <span className="text-xs uppercase tracking-widest text-zinc-500 mb-6 block">Next Case Study</span>
-                    <Link href={`/cases/${data.next}`} className="inline-flex items-center gap-4 text-4xl md:text-6xl font-serif hover:text-emerald-500 transition-colors group">
+                    <Link href={`/clients/${data.next}`} className="inline-flex items-center gap-4 text-4xl md:text-6xl font-serif hover:text-emerald-500 transition-colors group">
                         <span>View Next Project</span>
                         <ArrowRight className="w-12 h-12 group-hover:translate-x-4 transition-transform" />
                     </Link>
