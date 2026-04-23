@@ -1,7 +1,8 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { NavbarOrchestra } from "@/components/NavbarOrchestra";
+import { MegaFooter } from "@/components/MegaFooter";
 
 interface LegalLayoutProps {
     title: string;
@@ -17,34 +18,38 @@ export function LegalLayout({
     subtitle,
     lastUpdated,
     children,
-    startColor = "from-emerald-900/20",
-    endColor = "to-black"
+    startColor = "from-emerald-900/10",
+    endColor = "to-zinc-950"
 }: LegalLayoutProps) {
     return (
         <main className="min-h-screen bg-zinc-950 text-zinc-300 selection:bg-emerald-500 selection:text-black">
+            <NavbarOrchestra />
 
-            {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                {/* Background Gradient/Image Placeholder */}
-                <div className={`absolute inset-0 bg-gradient-to-b ${startColor} ${endColor} z-0`} />
+            {/* Hero Section - Reduced Height for Minimalism */}
+            <section className="relative h-[45vh] flex items-end justify-start overflow-hidden border-b border-white/5">
+                {/* Background Modern Texture */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${startColor} ${endColor} z-0`} />
+                
+                {/* Subtle Grain/Noise instead of Squares */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                
+                {/* Animated Radial Glow */}
+                <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[80%] bg-emerald-500/10 blur-[120px] rounded-full z-0 animate-pulse" />
 
-                {/* Grid Pattern Overlay */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-10"></div>
-
-                <div className="container mx-auto px-6 md:px-24 relative z-20 pt-20">
+                <div className="container mx-auto px-6 md:px-24 relative z-20 pb-16">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="max-w-4xl"
                     >
-                        <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-6 block border-l-2 border-emerald-500 pl-4">
-                            Jurídico & Compliance
+                        <span className="text-emerald-500 font-mono text-[10px] uppercase tracking-[0.3em] mb-4 block">
+                            Legal & Compliance
                         </span>
-                        <h1 className="text-6xl md:text-8xl font-heading font-black italic uppercase tracking-tighter text-white mb-8 leading-[0.9]">
+                        <h1 className="text-5xl md:text-7xl font-serif font-light text-white mb-6 leading-tight">
                             {title}
                         </h1>
-                        <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl font-light">
+                        <p className="text-lg md:text-xl text-zinc-500 max-w-xl font-light leading-relaxed">
                             {subtitle}
                         </p>
                     </motion.div>
@@ -52,42 +57,50 @@ export function LegalLayout({
             </section>
 
             {/* Content Section */}
-            <section className="container mx-auto px-6 md:px-24 py-24 relative z-20">
-                <div className="flex flex-col md:flex-row gap-12">
+            <section className="container mx-auto px-6 md:px-24 py-20 relative z-20">
+                <div className="flex flex-col lg:flex-row gap-16">
                     {/* Meta Sidebar */}
-                    <aside className="md:w-1/4">
-                        <div className="sticky top-32 p-6 border border-white/5 rounded-2xl bg-white/5 backdrop-blur-sm">
-                            <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-4">Meta Informação</h4>
-                            <div className="space-y-4">
-                                <div>
-                                    <span className="text-zinc-500 text-xs uppercase block mb-1">Última Atualização</span>
-                                    <span className="text-zinc-300 font-mono text-sm">{lastUpdated}</span>
+                    <aside className="lg:w-1/4">
+                        <div className="sticky top-32 space-y-8">
+                            <div className="p-8 border border-white/5 rounded-3xl bg-zinc-900/20 backdrop-blur-xl">
+                                <h4 className="text-white text-[10px] font-mono uppercase tracking-[0.2em] mb-6 opacity-50">Document Details</h4>
+                                <div className="space-y-6">
+                                    <div>
+                                        <span className="text-zinc-600 text-[10px] uppercase block mb-2 tracking-widest">Last Updated</span>
+                                        <span className="text-zinc-300 font-mono text-xs">{lastUpdated}</span>
+                                    </div>
+                                    <div>
+                                        <span className="text-zinc-600 text-[10px] uppercase block mb-2 tracking-widest">Version</span>
+                                        <span className="text-zinc-300 font-mono text-xs">v2.5.0</span>
+                                    </div>
+                                    <div>
+                                        <span className="text-zinc-600 text-[10px] uppercase block mb-2 tracking-widest">Status</span>
+                                        <span className="text-emerald-500 font-mono text-[10px] uppercase px-2 py-1 bg-emerald-500/10 rounded inline-block">Active</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span className="text-zinc-500 text-xs uppercase block mb-1">Versão</span>
-                                    <span className="text-zinc-300 font-mono text-sm">2.4.0-LEGAL</span>
-                                </div>
-                                <div>
-                                    <span className="text-zinc-500 text-xs uppercase block mb-1">Status</span>
-                                    <span className="text-emerald-500 font-mono text-xs uppercase px-2 py-1 bg-emerald-500/10 rounded inline-block">Vigente</span>
-                                </div>
+                            </div>
+                            
+                            <div className="px-4">
+                                <p className="text-[11px] text-zinc-600 leading-relaxed font-mono italic">
+                                    "Forjando autoridade digital através de conformidade e transparência técnica."
+                                </p>
                             </div>
                         </div>
                     </aside>
 
                     {/* Main Content */}
-                    <div className="md:w-3/4">
+                    <div className="lg:w-3/4">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="prose prose-invert prose-lg max-w-none 
-                                prose-headings:font-heading prose-headings:uppercase prose-headings:italic prose-headings:font-bold
-                                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-white
-                                prose-h3:text-xl prose-h3:text-emerald-500/80 prose-h3:font-mono prose-h3:tracking-wider prose-h3:uppercase
-                                prose-p:text-zinc-400 prose-p:leading-relaxed
+                                prose-headings:font-serif prose-headings:font-light
+                                prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:text-white prose-h2:border-b prose-h2:border-white/5 prose-h2:pb-4
+                                prose-h3:text-xl prose-h3:text-emerald-500/80 prose-h3:mt-12 prose-h3:mb-4
+                                prose-p:text-zinc-400 prose-p:leading-relaxed prose-p:mb-6
                                 prose-li:text-zinc-400
-                                prose-strong:text-white prose-strong:font-bold
+                                prose-strong:text-white prose-strong:font-medium
                                 prose-a:text-emerald-500 hover:prose-a:text-emerald-400 transition-colors"
                         >
                             {children}
@@ -95,6 +108,9 @@ export function LegalLayout({
                     </div>
                 </div>
             </section>
+
+            <MegaFooter />
         </main>
     );
 }
+
