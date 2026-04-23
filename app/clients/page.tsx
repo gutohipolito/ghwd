@@ -30,6 +30,8 @@ export default function ClientsPage() {
                         { name: "Joseph Teperman", color: "#71717a", image: "https://ghwd.com.br/lista-clientes/cliente-joseph-teperman-ghwd.png" },
                         { name: "Vivi Sanches", color: "#00c4cc", image: "https://ghwd.com.br/lista-clientes/cliente-vivi-sanches-ghwd.png" },
                         { name: "Divórcios Já", color: "#2c3e50", image: "https://ghwd.com.br/lista-clientes/cliente-divorciosja-ghwd.png" },
+                        { name: "The Joy School", color: "#ffcc00" },
+                        { name: "Ludy's", color: "#ec4899" },
                     ]
                 }
             ]
@@ -64,6 +66,18 @@ export default function ClientsPage() {
                         { name: "Enfoque Palestrantes", color: "#f97316", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-enfoque-palestrantes.png" },
                         { name: "Nascimento Pinturas", color: "#6366f1", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-nascimento-pinturas.png" },
                         { name: "Dra Rosana de Nardi", color: "#8b5cf6", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-rosana-denardi.png" },
+                        { name: "Aromas & Luz", color: "#fcd34d" },
+                        { name: "Azua", color: "#60a5fa" },
+                    ]
+                },
+                {
+                    name: "Caxias do Sul",
+                    clients: [
+                        { name: "SER Caxias", color: "#800000" },
+                        { name: "Wert Place", color: "#1e3a8a" },
+                        { name: "BeWacher", color: "#000000" },
+                        { name: "Beemôn", color: "#f59e0b" },
+                        { name: "Mônaco", color: "#3b82f6" },
                     ]
                 },
                 {
@@ -85,6 +99,19 @@ export default function ClientsPage() {
                     name: "Bento Gonçalves",
                     clients: [
                         { name: "Fasolo", color: "#4b5563", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-fasolo.png" },
+                        { name: "By Boots", color: "#78350f" },
+                    ]
+                }
+            ]
+        },
+        {
+            name: t('cases.regions.sc'),
+            siglas: ["SC"],
+            cities: [
+                {
+                    name: "São José / Florianópolis",
+                    clients: [
+                        { name: "Ceani", color: "#10b981", image: "https://ghwd.com.br/lista-clientes/cliente-ceani-ghwd.png" },
                     ]
                 }
             ]

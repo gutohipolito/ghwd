@@ -76,6 +76,7 @@ export const translations: Record<Language, any> = {
             regions: {
                 sp: "São Paulo",
                 rs: "Rio Grande do Sul",
+                sc: "Santa Catarina",
                 ac_national: "Acre & National"
             }
         },
@@ -385,6 +386,7 @@ export const translations: Record<Language, any> = {
             regions: {
                 sp: "São Paulo",
                 rs: "Rio Grande do Sul",
+                sc: "Santa Catarina",
                 ac_national: "Acre & Nacional"
             }
         },
@@ -694,6 +696,7 @@ export const translations: Record<Language, any> = {
             regions: {
                 sp: "São Paulo",
                 rs: "Rio Grande do Sul",
+                sc: "Santa Catarina",
                 ac_national: "Acre & Nacional"
             }
         },
@@ -1003,6 +1006,7 @@ export const translations: Record<Language, any> = {
             regions: {
                 sp: "São Paulo",
                 rs: "Río Grande del Sur",
+                sc: "Santa Catarina",
                 ac_national: "Acre & Nacional"
             }
         },
