@@ -1,13 +1,15 @@
 "use client";
 
 import { LegalLayout } from "@/components/LegalLayout";
+import { useLanguage } from "@/lib/i18n-context";
 
 export default function PrivacyPolicy() {
+    const { t } = useLanguage();
     return (
         <LegalLayout
-            title="Política de Privacidade"
-            subtitle="Nosso compromisso com a proteção dos dados que impulsionam sua transformação digital."
-            lastUpdated="17 de Fevereiro de 2026"
+            title={t('legal.privacy.title')}
+            subtitle={t('legal.privacy.subtitle')}
+            lastUpdated={t('legal.last_update_date')}
         >
             <p>
                 A <strong>GHWD Global Digital Partner</strong> ("nós", "nosso" ou "GHWD") está comprometida em proteger a sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você visita nosso site ou utiliza nossos serviços.

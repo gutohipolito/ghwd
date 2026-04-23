@@ -250,6 +250,7 @@ export const translations: Record<Language, any> = {
         },
         legal: {
             updated: "Last Updated",
+            last_update_date: "April 2026",
             version: "Version",
             status: "Status",
             active: "Active",
@@ -560,6 +561,7 @@ export const translations: Record<Language, any> = {
         },
         legal: {
             updated: "Última Atualização",
+            last_update_date: "Abril de 2026",
             version: "Versão",
             status: "Status",
             active: "Vigente",
@@ -870,6 +872,7 @@ export const translations: Record<Language, any> = {
         },
         legal: {
             updated: "Última Atualização",
+            last_update_date: "Abril de 2026",
             version: "Versão",
             status: "Estado",
             active: "Vigente",
@@ -1180,6 +1183,7 @@ export const translations: Record<Language, any> = {
         },
         legal: {
             updated: "Última Actualización",
+            last_update_date: "Abril de 2026",
             version: "Versión",
             status: "Estado",
             active: "Vigente",

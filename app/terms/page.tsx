@@ -1,13 +1,15 @@
 "use client";
 
 import { LegalLayout } from "@/components/LegalLayout";
+import { useLanguage } from "@/lib/i18n-context";
 
 export default function TermsOfService() {
+    const { t } = useLanguage();
     return (
         <LegalLayout
-            title="Termos de Serviço"
-            subtitle="As regras que regem nossa parceria digital e o uso de nossas plataformas."
-            lastUpdated="17 de Fevereiro de 2026"
+            title={t('legal.terms.title')}
+            subtitle={t('legal.terms.subtitle')}
+            lastUpdated={t('legal.last_update_date')}
         >
             <p>
                 Bem-vindo à <strong>GHWD Global Digital Partner</strong>. Ao acessar nosso site ou contratar nossos serviços, você concorda em cumprir estes Termos de Serviço. Se você não concordar com alguma parte destes termos, não deverá acessar o serviço.

@@ -45,7 +45,7 @@ export default function CookieSettings() {
         <LegalLayout
             title={t('legal.cookies.title')}
             subtitle={t('legal.cookies.subtitle')}
-            lastUpdated={t('legal.updated')}
+            lastUpdated={t('legal.last_update_date')}
         >
             <p className="mb-8">
                 {t('legal.cookies.desc')}
