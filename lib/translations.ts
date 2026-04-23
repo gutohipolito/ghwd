@@ -260,39 +260,43 @@ export const translations: Record<Language, any> = {
                 intro: "GHWD Global Digital Partner is committed to protecting your privacy. This policy explains how we process data in compliance with GDPR and international standards.",
                 sections: [
                     {
-                        title: "1. Data Collection",
-                        content: "We collect information to provide better services. This includes direct inputs (forms), navigational data (IP, browser) and cookies. Under GDPR, we act as Data Controllers for our direct clients."
+                        title: "1. Information Collection",
+                        content: "We collect information to provide better services to all our users. This includes information you provide (name, email, company) and navigation data (IP, browser, cookies) gathered under LGPD/GDPR compliance."
                     },
                     {
-                        title: "2. Usage of Information",
-                        content: "We use data to operate our digital services, optimize performance, and for legitimate business interests such as marketing (with consent). We do not sell personal data."
+                        title: "2. Purpose of Processing",
+                        content: "We use data to operate our digital services, personalize experiences, and for continuous performance improvement. We do not sell user data to third parties."
                     },
                     {
-                        title: "3. International Transfers",
-                        content: "As a global entity, data may be processed in regions outside the EEA. We ensure appropriate safeguards (Standard Contractual Clauses) are in place."
+                        title: "3. Data Sharing",
+                        content: "We operate globally. Data may be shared with infrastructure partners (AWS, Vercel) under strict confidentiality and security agreements, only as necessary to provide our services."
                     },
                     {
-                        title: "4. Your Rights (GDPR)",
-                        content: "You have the right to access, rectify, erase, restrict processing, and portability of your data. Contact legal@ghwd.digital to exercise these rights."
+                        title: "4. Data Security",
+                        content: "We implement robust technical and organizational security measures to protect your data against unauthorized access, alteration, or disclosure."
+                    },
+                    {
+                        title: "5. Your Rights (LGPD/GDPR)",
+                        content: "You have the right to access, correct, delete, or limit the processing of your personal data. Contact our DPO at legal@ghwd.digital to exercise these rights."
                     }
                 ]
             },
             terms: {
                 title: "Terms of Service",
-                subtitle: "The rules governing our digital partnership and platform usage.",
-                intro: "By accessing our services, you agree to these terms. If you represent an organization, you certify you have the authority to bind it.",
+                subtitle: "The rules governing our digital partnership and the use of our platforms.",
+                intro: "By accessing our services, you agree to these terms. Use of our IP and technology is subject to specific commercial licenses.",
                 sections: [
                     {
                         title: "1. Intellectual Property",
-                        content: "All code, methodologies ('The Method'), and assets are GHWD property unless explicitly transferred via contract. 'Authority forged in code' is our registered trademark."
+                        content: "All code, design, and GHWD's proprietary methodology are protected. The expression 'Authority forged in code' and our visual assets are exclusive property."
                     },
                     {
-                        title: "2. Liability",
-                        content: "GHWD provides services 'as is'. We adhere to a 99.9% SLA for managed services but are not liable for indirect damages or force majeure events."
+                        title: "2. Liability Limitation",
+                        content: "Our services are provided with technical excellence, but we do not guarantee third-party results. Liability is limited to the established contract value."
                     },
                     {
-                        title: "3. Governing Law",
-                        content: "These terms are governed by international trade laws and strict confidentiality agreements signed per project."
+                        title: "3. Jurisdiction",
+                        content: "These terms are governed by Brazilian law. Any disputes will be resolved in the courts of São Paulo/SP, Brazil."
                     }
                 ]
             },
@@ -571,31 +575,35 @@ export const translations: Record<Language, any> = {
                 intro: "A GHWD Global Digital Partner está comprometida com sua privacidade. Esta política detalha o processamento de dados em conformidade com a Lei nº 13.709/2018 (LGPD).",
                 sections: [
                     {
-                        title: "1. Coleta e Bases Legais",
-                        content: "Coletamos dados pessoais (nome, e-mail, corporativo) baseados no Consentimento e Legítimo Interesse para prover nossos serviços de consultoria e engenharia."
+                        title: "1. Coleta de Informações",
+                        content: "Coletamos informações para fornecer serviços melhores a todos os nossos usuários. Isso inclui informações que você fornece (nome, e-mail, empresa) e dados de navegação (IP, navegador, cookies) coletados sob conformidade com a LGPD."
                     },
                     {
-                        title: "2. Finalidade do Uso",
-                        content: "Utilizamos as informações para operar nossos serviços digitais, personalizar ofertas e melhoria contínua de performance. Não comercializamos dados de usuários."
+                        title: "2. Finalidade do Tratamento",
+                        content: "Utilizamos os dados para operar nossos serviços digitais, personalizar experiências e para melhoria contínua de performance. Não comercializamos dados de usuários para terceiros."
                     },
                     {
-                        title: "3. Compartilhamento",
-                        content: "Operamos globalmente. Dados podem ser compartilhados com parceiros de infraestrutura (AWS, Vercel) sob estritos acordos de confidencialidade e segurança."
+                        title: "3. Compartilhamento de Dados",
+                        content: "Operamos globalmente. Os dados podem ser compartilhados com parceiros de infraestrutura (AWS, Vercel) sob estritos acordos de confidencialidade e segurança, apenas conforme necessário para prestação de nossos serviços."
                     },
                     {
-                        title: "4. Seus Direitos (LGPD)",
-                        content: "Você tem direito à confirmação, acesso, correção, anonimização, portabilidade e eliminação de seus dados. Encarregado (DPO): dpo@ghwd.digital."
+                        title: "4. Segurança de Dados",
+                        content: "Implementamos medidas de segurança técnicas e organizacionais robustas para proteger seus dados contra acesso não autorizado, alteração ou divulgação."
+                    },
+                    {
+                        title: "5. Seus Direitos (LGPD)",
+                        content: "Você tem o direito de acessar, corrigir, excluir ou limitar o processamento de seus dados pessoais. Entre em contato com nosso DPO em legal@ghwd.digital para exercer esses direitos."
                     }
                 ]
             },
             terms: {
                 title: "Termos de Serviço",
                 subtitle: "As regras que regem nossa parceria digital e o uso de nossas plataformas.",
-                intro: "Ao acessar nossos serviços, você concorda com estes termos. O uso de nossas APIs e boilerplates obedece a licenças comerciais específicas.",
+                intro: "Ao acessar nossos serviços, você concorda com estes termos. O uso de nossa PI e tecnologia obedece a licenças comerciais específicas.",
                 sections: [
                     {
                         title: "1. Propriedade Intelectual",
-                        content: "Todo código, design, e a metodologia proprietária da GHWD são protegidos. A expressão 'Autoridade forjada em código' e nossos assets visuais são exclusivos."
+                        content: "Todo código, design, e a metodologia proprietária da GHWD são protegidos. A expressão 'Autoridade forjada em código' e nossos assets visuais são propriedade exclusiva."
                     },
                     {
                         title: "2. Limitação de Responsabilidade",
@@ -603,7 +611,7 @@ export const translations: Record<Language, any> = {
                     },
                     {
                         title: "3. Foro",
-                        content: "Fica eleito o foro da Comarca de São Paulo/SP para dirimir questões oriundas destes termos, renunciando a qualquer outro."
+                        content: "Estes termos são regidos pelas leis brasileiras. Quaisquer disputas serão resolvidas no foro da Comarca de São Paulo/SP, Brasil."
                     }
                 ]
             },
@@ -882,39 +890,43 @@ export const translations: Record<Language, any> = {
                 intro: "A GHWD Global Digital Partner está comprometida com a sua privacidade. Esta política detalha o processamento de dados em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD).",
                 sections: [
                     {
-                        title: "1. Recolha de Dados",
-                        content: "Recolhemos informações para prestar melhores serviços. Isto inclui entradas diretas (formulários), dados de navegação (IP, browser) e cookies. Sob o RGPD, atuamos como Responsáveis pelo Tratamento para os nossos clientes diretos."
+                        title: "1. Recolha de Informações",
+                        content: "Recolhemos informações para fornecer melhores serviços a todos os nossos utilizadores. Isto inclui informações que você fornece (nome, e-mail, empresa) e dados de navegação (IP, browser, cookies) recolhidos sob conformidade com o RGPD."
                     },
                     {
-                        title: "2. Utilização da Informação",
-                        content: "Utilizamos os dados para operar os nossos serviços digitais, otimizar a performance e para interesses comerciais legítimos, como marketing (com consentimento). Não comercializamos dados pessoais."
+                        title: "2. Finalidade do Tratamento",
+                        content: "Utilizamos os dados para operar os nossos serviços digitais, personalizar experiências e para melhoria contínua de performance. Não comercializamos dados de utilizadores para terceiros."
                     },
                     {
-                        title: "3. Transferências Internacionais",
-                        content: "Como entidade global, os dados podem ser processados em regiões fora do Espaço Económico Europeu. Garantimos a existência de salvaguardas adequadas (Cláusulas Contratuais Tipo)."
+                        title: "3. Partilha de Dados",
+                        content: "Operamos globalmente. Os dados podem ser partilhados com parceiros de infraestrutura (AWS, Vercel) sob estritos acordos de confidencialidade e segurança, apenas conforme necessário para prestação de nossos serviços."
                     },
                     {
-                        title: "4. Os Seus Direitos (RGPD)",
-                        content: "Tem o direito de aceder, retificar, apagar, limitar o tratamento e a portabilidade dos seus dados. Contacte legal@ghwd.digital para exercer estes direitos."
+                        title: "4. Segurança de Dados",
+                        content: "Implementamos medidas de segurança técnicas e organizativas robustas para proteger os seus dados contra acesso não autorizado, alteração ou divulgação."
+                    },
+                    {
+                        title: "5. Os Seus Direitos (RGPD)",
+                        content: "Tem o direito de aceder, retificar, apagar ou limitar o tratamento dos seus dados pessoais. Contacte o nosso DPO em legal@ghwd.digital para exercer estes direitos."
                     }
                 ]
             },
             terms: {
                 title: "Termos de Serviço",
                 subtitle: "As regras que regem a nossa parceria digital e a utilização das nossas plataformas.",
-                intro: "Ao aceder aos nossos serviços, concorda com estes termos. Se representa uma organização, certifica que tem autoridade para a vincular.",
+                intro: "Ao aceder aos nossos serviços, concorda com estes termos. O uso da nossa PI e tecnologia obedece a licenças comerciais específicas.",
                 sections: [
                     {
                         title: "1. Propriedade Intelectual",
-                        content: "Todo o código, metodologias ('The Method') e ativos são propriedade da GHWD, a menos que explicitamente transferidos via contrato. 'Autoridade forjada em código' é a nossa marca registada."
+                        content: "Todo código, design, e a metodologia proprietária da GHWD são protegidos. A expressão 'Autoridade forjada em código' e os nossos assets visuais são propriedade exclusiva."
                     },
                     {
-                        title: "2. Responsabilidade",
-                        content: "A GHWD presta serviços 'tal como estão'. Aderimos a um SLA de 99,9% para serviços geridos, mas não somos responsáveis por danos indiretos ou eventos de força maior."
+                        title: "2. Limitação de Responsabilidade",
+                        content: "Os nossos serviços são prestados com excelência técnica, mas não garantimos resultados de terceiros. A responsabilidade limita-se ao valor do contrato estabelecido."
                     },
                     {
-                        title: "3. Lei Aplicável",
-                        content: "Estes termos são regidos pelas leis de comércio internacional e acordos de confidencialidade estritos assinados por projeto."
+                        title: "3. Foro",
+                        content: "Estes termos são regidos pelas leis brasileiras. Quaisquer disputas serão resolvidas no foro da Comarca de São Paulo/SP, Brasil."
                     }
                 ]
             },
@@ -1193,39 +1205,43 @@ export const translations: Record<Language, any> = {
                 intro: "GHWD Global Digital Partner está comprometida con su privacidad. Esta política explica cómo procesamos los datos en cumplimiento con GDPR y normas internacionales.",
                 sections: [
                     {
-                        title: "1. Recolección de Datos",
-                        content: "Recopilamos información para mejorar nuestros servicios. Esto incluye entradas directas, datos de navegación y cookies."
+                        title: "1. Recopilación de Información",
+                        content: "Recopilamos información para brindar mejores servicios a todos nuestros usuarios. Esto incluye información que usted proporciona (nombre, correo electrónico, empresa) y datos de navegación (IP, navegador, cookies) recopilados en cumplimiento con la LGPD/GDPR."
                     },
                     {
-                        title: "2. Uso de la Información",
-                        content: "Utilizamos los datos para operar nuestros servicios digitales y para intereses comerciales legítimos. No vendemos datos personales."
+                        title: "2. Finalidad del Tratamiento",
+                        content: "Utilizamos los datos para operar nuestros servicios digitales, personalizar experiencias y para la mejora continua del rendimiento. No comercializamos datos de usuarios con terceros."
                     },
                     {
-                        title: "3. Transferencias Internacionales",
-                        content: "Como entidad global, los datos pueden procesarse en varias regiones. Aseguramos salvaguardas adecuadas en todas las transferencias."
+                        title: "3. Intercambio de Datos",
+                        content: "Operamos globalmente. Los datos pueden compartirse con socios de infraestructura (AWS, Vercel) bajo estrictos acuerdos de confidencialidad y seguridad, solo según sea necesario para la prestación de nuestros servicios."
                     },
                     {
-                        title: "4. Sus Derechos",
-                        content: "Tiene derecho a acceder, rectificar, borrar y portar sus datos. Contacte a legal@ghwd.digital para ejercer estos derechos."
+                        title: "4. Seguridad de Datos",
+                        content: "Implementamos medidas de seguridad técnicas y organizativas robustas para proteger sus datos contra el acceso no autorizado, la alteración o la divulgación."
+                    },
+                    {
+                        title: "5. Sus Derechos (LGPD/GDPR)",
+                        content: "Tiene derecho a acceder, corregir, eliminar o limitar el tratamiento de sus datos personales. Comuníquese con nuestro DPO en legal@ghwd.digital para ejercer estos derechos."
                     }
                 ]
             },
             terms: {
                 title: "Términos de Servicio",
-                subtitle: "Las reglas que rigen nuestra asociación digital y el uso de la plataforma.",
-                intro: "Al acceder a nuestros servicios, acepta estos términos. Si representa a una organización, certifica que tiene la autoridad para vincularla.",
+                subtitle: "Las reglas que rigen nuestra asociación digital y el uso de nuestras plataformas.",
+                intro: "Al acceder a nuestros servicios, usted acepta estos términos. El uso de nuestra PI y tecnología está sujeto a licencias comerciales específicas.",
                 sections: [
                     {
                         title: "1. Propiedad Intelectual",
-                        content: "Todo el código, metodologías y activos son propiedad de GHWD a menos que se transfieran explícitamente. 'Autoridad forjada en código' es nuestra marca registrada."
+                        content: "Todo el código, diseño y la metodología propiedad de GHWD están protegidos. La expresión 'Autoridad forjada en código' y nuestros activos visuales son propiedad exclusiva."
                     },
                     {
-                        title: "2. Responsabilidad",
-                        content: "GHWD proporciona servicios con excelencia técnica. No somos responsables por daños indirectos o eventos de fuerza mayor."
+                        title: "2. Limitación de Responsabilidad",
+                        content: "Nuestros servicios se brindan con excelencia técnica, pero no garantizamos resultados de terceros. La responsabilidad se limita al valor del contrato establecido."
                     },
                     {
-                        title: "3. Ley Aplicable",
-                        content: "Estos términos se rigen por las leyes de comercio internacional y acuerdos de confidencialidad estrictos."
+                        title: "3. Jurisdicción",
+                        content: "Estos términos se rigen por las leyes brasileñas. Cualquier disputa se resolverá en los tribunais de São Paulo/SP, Brasil."
                     }
                 ]
             },
