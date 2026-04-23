@@ -277,7 +277,7 @@ export const translations: Record<Language, any> = {
                     },
                     {
                         title: "5. Your Rights (LGPD/GDPR)",
-                        content: "You have the right to access, correct, delete, or limit the processing of your personal data. Contact our DPO at legal@ghwd.digital to exercise these rights."
+                        content: "You have the right to access, correct, delete, or limit the processing of your personal data. Contact our DPO at legal@ghwd.com.br to exercise these rights."
                     }
                 ]
             },
@@ -592,7 +592,7 @@ export const translations: Record<Language, any> = {
                     },
                     {
                         title: "5. Seus Direitos (LGPD)",
-                        content: "Você tem o direito de acessar, corrigir, excluir ou limitar o processamento de seus dados pessoais. Entre em contato com nosso DPO em legal@ghwd.digital para exercer esses direitos."
+                        content: "Você tem o direito de acessar, corrigir, excluir ou limitar o processamento de seus dados pessoais. Entre em contato com nosso DPO em legal@ghwd.com.br para exercer esses direitos."
                     }
                 ]
             },
@@ -907,7 +907,7 @@ export const translations: Record<Language, any> = {
                     },
                     {
                         title: "5. Os Seus Direitos (RGPD)",
-                        content: "Tem o direito de aceder, retificar, apagar ou limitar o tratamento dos seus dados pessoais. Contacte o nosso DPO em legal@ghwd.digital para exercer estes direitos."
+                        content: "Tem o direito de aceder, retificar, apagar ou limitar o tratamento dos seus dados pessoais. Contacte o nosso DPO em legal@ghwd.com.br para exercer estes direitos."
                     }
                 ]
             },
@@ -1222,7 +1222,7 @@ export const translations: Record<Language, any> = {
                     },
                     {
                         title: "5. Sus Derechos (LGPD/GDPR)",
-                        content: "Tiene derecho a acceder, corregir, eliminar o limitar el tratamiento de sus datos personales. Comuníquese con nuestro DPO en legal@ghwd.digital para ejercer estos derechos."
+                        content: "Tiene derecho a acceder, corregir, eliminar o limitar el tratamiento de sus datos personales. Comuníquese con nuestro DPO en legal@ghwd.com.br para ejercer estos derechos."
                     }
                 ]
             },

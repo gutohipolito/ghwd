@@ -37,7 +37,7 @@ export default function TermsOfService() {
                         {t('contact.direct_contact')}
                     </h3>
                     <p className="text-zinc-400 font-light text-lg">
-                        legal@ghwd.digital
+                        legal@ghwd.com.br
                     </p>
                 </div>
             </div>
