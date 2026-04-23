@@ -59,13 +59,6 @@ export default function ClientsPage() {
                         { name: "Metal Jeta", color: "#71717a", image: "https://ghwd.com.br/lista-clientes/cliente-metal-jeta-ghwd.png" },
                         { name: "Bonacina & Massens", color: "#4f46e5", image: "https://ghwd.com.br/lista-clientes/cliente-bonacina-massens-ghwd.png" },
                         { name: "Márcia Esteticista", color: "#db2777", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-marcia-esteticista.png" },
-                        { name: "Amendoeira Chocolaterie", color: "#78350f", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-amendoeira.png" },
-                        { name: "Verse", color: "#000000", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-verse.png" },
-                        { name: "Arte Dente", color: "#22d3ee", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-arte-dente.png" },
-                        { name: "Guenoa", color: "#15803d", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-guenoa.png" },
-                        { name: "Enfoque Palestrantes", color: "#f97316", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-enfoque-palestrantes.png" },
-                        { name: "Nascimento Pinturas", color: "#6366f1", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-nascimento-pinturas.png" },
-                        { name: "Dra Rosana de Nardi", color: "#8b5cf6", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-rosana-denardi.png" },
                         { name: "Aromas & Luz", color: "#fcd34d" },
                         { name: "Azua", color: "#60a5fa" },
                     ]
@@ -78,6 +71,10 @@ export default function ClientsPage() {
                         { name: "BeWacher", color: "#000000" },
                         { name: "Beemôn", color: "#f59e0b" },
                         { name: "Mônaco", color: "#3b82f6" },
+                        { name: "Amendoeira Chocolaterie", color: "#78350f", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-amendoeira.png" },
+                        { name: "Verse", color: "#000000", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-verse.png" },
+                        { name: "Arte Dente", color: "#22d3ee", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-arte-dente.png" },
+                        { name: "Guenoa", color: "#15803d", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-guenoa.png" },
                     ]
                 },
                 {
@@ -86,6 +83,13 @@ export default function ClientsPage() {
                         { name: "Austral Incorporadora", color: "#1e3a8a", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-austral.png" },
                         { name: "Cyrela", color: "#002d58", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-cyrela.png" },
                         { name: "By Tinga", color: "#eab308", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-bytinga.png" },
+                        { name: "Enfoque Palestrantes", color: "#f97316", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-enfoque-palestrantes.png" },
+                    ]
+                },
+                {
+                    name: "Passo Fundo",
+                    clients: [
+                        { name: "Dra Rosana de Nardi", color: "#8b5cf6", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-rosana-denardi.png" },
                     ]
                 },
                 {
@@ -100,6 +104,7 @@ export default function ClientsPage() {
                     clients: [
                         { name: "Fasolo", color: "#4b5563", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-fasolo.png" },
                         { name: "By Boots", color: "#78350f" },
+                        { name: "Nascimento Pinturas", color: "#6366f1", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-nascimento-pinturas.png" },
                     ]
                 }
             ]
