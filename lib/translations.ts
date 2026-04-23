@@ -65,10 +65,18 @@ export const translations: Record<Language, any> = {
             },
             client_index: {
                 tag: "/ Client Index",
-                title: "Trusted by Leaders"
+                title: "Trusted by Leaders",
+                map_title: "Our Digital Presence Across Brazil",
+                map_subtitle: "Select one of the highlighted states on the map to see the brands and organizations that trust GHWD in each region.",
+                partners: "partners"
             },
             cta: {
                 read_case: "Read Case Study"
+            },
+            regions: {
+                sp: "São Paulo",
+                rs: "Rio Grande do Sul",
+                ac_national: "Acre & National"
             }
         },
         services: {
@@ -366,10 +374,18 @@ export const translations: Record<Language, any> = {
             },
             client_index: {
                 tag: "/ Índice de Clientes",
-                title: "Confiado por Líderes"
+                title: "Confiado por Líderes",
+                map_title: "Nossa Presença Digital pelo Brasil",
+                map_subtitle: "Selecione um dos estados destacados no mapa para ver as marcas e organizações que confiam na GHWD em cada região do país.",
+                partners: "parceiros"
             },
             cta: {
                 read_case: "Ver Estudo de Caso"
+            },
+            regions: {
+                sp: "São Paulo",
+                rs: "Rio Grande do Sul",
+                ac_national: "Acre & Nacional"
             }
         },
         services: {
@@ -667,10 +683,18 @@ export const translations: Record<Language, any> = {
             },
             client_index: {
                 tag: "/ Índice de Clientes",
-                title: "Confiado por Líderes"
+                title: "Confiado por Líderes",
+                map_title: "A Nossa Presença Digital no Brasil",
+                map_subtitle: "Selecione um dos estados destacados no mapa para ver as marcas e organizações que confiam na GHWD em cada região do país.",
+                partners: "parceiros"
             },
             cta: {
                 read_case: "Ver Estudo de Caso"
+            },
+            regions: {
+                sp: "São Paulo",
+                rs: "Rio Grande do Sul",
+                ac_national: "Acre & Nacional"
             }
         },
         services: {
@@ -968,10 +992,18 @@ export const translations: Record<Language, any> = {
             },
             client_index: {
                 tag: "/ Índice de Clientes",
-                title: "Confiado por Líderes"
+                title: "Confiado por Líderes",
+                map_title: "Nuestra Presencia Digital en Brasil",
+                map_subtitle: "Seleccione uno de los estados destacados en el mapa para ver las marcas y organizaciones que confían en GHWD en cada región del país.",
+                partners: "socios"
             },
             cta: {
                 read_case: "Ver Estudio de Caso"
+            },
+            regions: {
+                sp: "São Paulo",
+                rs: "Río Grande del Sur",
+                ac_national: "Acre & Nacional"
             }
         },
         services: {
