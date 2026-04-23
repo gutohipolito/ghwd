@@ -4,7 +4,7 @@ export type Language = 'en' | 'pt' | 'es' | 'pt-pt';
 export const translations: Record<Language, any> = {
     en: {
         nav: {
-            cases: 'Work',
+            clients: 'Clients',
             products: 'Products',
             services: 'Expertise',
             about: 'About',
@@ -305,7 +305,7 @@ export const translations: Record<Language, any> = {
     },
     pt: {
         nav: {
-            cases: 'Projetos',
+            clients: 'Clientes',
             products: 'Produtos',
             services: 'Expertise',
             about: 'Sobre',
@@ -606,7 +606,7 @@ export const translations: Record<Language, any> = {
     },
     'pt-pt': {
         nav: {
-            cases: 'Projetos',
+            clients: 'Clientes',
             products: 'Produtos',
             services: 'Especialização',
             about: 'Sobre',
@@ -907,7 +907,7 @@ export const translations: Record<Language, any> = {
     },
     es: {
         nav: {
-            cases: 'Proyectos',
+            clients: 'Clientes',
             products: 'Productos',
             services: 'Expertise',
             about: 'Sobre',
