@@ -76,12 +76,12 @@ export default function ClientsPage() {
                         { name: "Verse", color: "#000000", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-verse.png" },
                         { name: "Arte Dente", color: "#22d3ee", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-arte-dente.png" },
                         { name: "Guenoa", color: "#15803d", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-guenoa.png" },
+                        { name: "Austral Incorporadora", color: "#1e3a8a", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-austral.png" },
                     ]
                 },
                 {
                     name: "Porto Alegre",
                     clients: [
-                        { name: "Austral Incorporadora", color: "#1e3a8a", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-austral.png" },
                         { name: "Cyrela", color: "#002d58", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-cyrela.png" },
                         { name: "By Tinga", color: "#eab308", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-bytinga.png" },
                         { name: "Enfoque Palestrantes", color: "#f97316", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-enfoque-palestrantes.png" },
