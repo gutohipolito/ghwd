@@ -186,10 +186,12 @@ export function QualificationForm() {
     if (isSubmitted) {
         const result = getResult();
         const waLink = `https://wa.me/5554999221230?text=${encodeURIComponent(
-            `Olá! Me chamo ${formData.nome}${formData.negocio ? ` e represento ${formData.negocio}` : ""}.\n` +
-            `Preenchi o formulário do site e meu projeto é: ${t(answers[0]?.labelKey) || "-"}.\n` +
-            `Budget considerado: ${t(answers[3]?.labelKey) || "-"}.\n` +
-            `${result.waMsg}`
+            t('contact.qualification.wa_template')
+                .replace('{name}', formData.nome)
+                .replace('{company}', formData.negocio ? t('contact.qualification.wa_company_part').replace('{company}', formData.negocio) : "")
+                .replace('{project}', t(answers[0]?.labelKey) || "-")
+                .replace('{budget}', t(answers[3]?.labelKey) || "-")
+                .replace('{msg}', result.waMsg)
         )}`;
 
         return (

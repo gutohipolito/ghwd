@@ -162,7 +162,7 @@ export function MegaFooter() {
                                 {[
                                     { name: t('nav.home'), href: "/" },
                                     { name: t('nav.services'), href: "/services" },
-                                    { name: t('nav.clients'), href: "/clients" },
+                                    { name: t('nav.clients'), href: "/partners" },
                                     { name: t('nav.about'), href: "/about" }
                                 ].map((item) => (
                                     <Link key={item.name} href={item.href} className="text-zinc-400 hover:text-white transition-colors text-sm">
@@ -218,8 +218,6 @@ export function MegaFooter() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/[0.05] text-[10px] text-zinc-600 font-medium uppercase tracking-[0.15em]">
                     <div className="flex items-center gap-4">
                         <span>© 2026 GHWD. ALL RIGHTS RESERVED.</span>
-                        <span className="hidden md:block opacity-20">|</span>
-                        <span>AUTHORITY FORGED IN CODE</span>
                     </div>
 
                     <div className="flex flex-wrap items-center justify-center md:justify-end gap-6">

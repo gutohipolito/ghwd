@@ -82,7 +82,7 @@ export function HeroRadical() {
                     href="https://api.whatsapp.com/send?phone=5554999221230"
                     className="group flex items-center gap-4 bg-white text-black px-10 py-5 rounded-none uppercase font-black text-xl tracking-tighter hover:bg-emerald-500 hover:text-black transition-all duration-300 transform hover:-skew-x-12"
                 >
-                    <span>START PROJECT</span>
+                    <span>{t('nav.start_project')}</span>
                     <MoveRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                 </Link>
             </motion.div>

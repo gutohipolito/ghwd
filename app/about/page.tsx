@@ -40,25 +40,11 @@ export default function AboutPage() {
             <section className="w-full py-20 bg-zinc-950">
                 <div className="container mx-auto px-6 md:px-24">
                     <div className="flex flex-col gap-8 text-xl md:text-2xl text-zinc-400 font-light leading-relaxed max-w-4xl mx-auto text-center">
-                        {language === 'pt' ? (
-                            <>
-                                <p>Nascemos de uma observação simples: a maioria das agências tradicionais lucra com a complexidade e prazos prolongados. Operamos na lógica inversa.</p>
-                                <p>Somos uma <strong className="text-white font-normal">unidade digital global</strong> — um coletivo de elite composto pelos melhores estrategistas e especialistas, sem as barreiras e custos de uma sede física.</p>
-                                <p>Atuamos com transparência radical e execução cirúrgica. Não construímos apenas sites; projetamos a infraestrutura digital onde o futuro dos negócios acontece.</p>
-                            </>
-                        ) : language === 'es' ? (
-                            <>
-                                <p>Nacimos de una observación simple: la mayoría de las agencias tradicionales se benefician de la complejidad y los plazos prolongados. Operamos con la lógica inversa.</p>
-                                <p>Somos una <strong className="text-white font-normal">unidad digital global</strong> — un colectivo de élite compuesto por los mejores estrategas y especialistas, sin las barreras y costos de una sede física.</p>
-                                <p>Operamos con transparencia radical y ejecución quirúrgica. No solo construimos sitios; diseñamos la infraestructura digital donde sucede el futuro de los negocios.</p>
-                            </>
-                        ) : (
-                            <>
-                                <p>Born from a simple observation: most traditional agencies profit from complexity and prolonged timelines. We operate on the opposite logic.</p>
-                                <p>We are a <strong className="text-white font-normal">global digital unit</strong> — an elite collective of top-tier strategists and specialists, free from the constraints and overhead of a physical headquarters.</p>
-                                <p>We operate with radical transparency and surgical execution. We don't just build websites; we engineer the digital infrastructure where the future of business lives.</p>
-                            </>
-                        )}
+                    <div className="flex flex-col gap-8 text-xl md:text-2xl text-zinc-400 font-light leading-relaxed max-w-4xl mx-auto text-center">
+                        <p dangerouslySetInnerHTML={{ __html: t('about.header.mission_p1') }} />
+                        <p dangerouslySetInnerHTML={{ __html: t('about.header.mission_p2') }} />
+                        <p dangerouslySetInnerHTML={{ __html: t('about.header.mission_p3') }} />
+                    </div>
                     </div>
                 </div>
             </section>

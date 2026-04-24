@@ -110,7 +110,10 @@ export const translations: Record<Language, any> = {
                 vision_tag: "/ Global Network",
                 vision_title: "Global Intelligence. Local Focus.",
                 vision_p1: "We are a distributed collective. By removing geographical constraints, we access the top 1% of talent in strategy, design, and engineering across 4 time zones to elevate the Brazilian market.",
-                vision_p2: "No overhead. No offices. Just international intellectual capital dedicated to scaling your national operation."
+                vision_p2: "No overhead. No offices. Just international intellectual capital dedicated to scaling your national operation.",
+                mission_p1: "Born from a simple observation: most traditional agencies profit from complexity and prolonged timelines. We operate on the opposite logic.",
+                mission_p2: "We are a <strong className=\"text-white font-normal\">global digital unit</strong> — an elite collective of top-tier strategists and specialists, free from the constraints and overhead of a physical headquarters.",
+                mission_p3: "We operate with radical transparency and surgical execution. We don't just build websites; we engineer the digital infrastructure where the future of business lives."
             }
         },
         contact: {
@@ -136,6 +139,8 @@ export const translations: Record<Language, any> = {
                 last_step: "Last step 🎉",
                 contact_data_title: "Your contact details",
                 contact_data_subtitle: "Promise: zero spam. We'll only use this to get back to you about the project.",
+                wa_template: "Hello! My name is {name}{company}.\nI filled out the form on the site and my project is: {project}.\nBudget considered: {budget}.\n{msg}",
+                wa_company_part: " and I represent {company}",
                 fields: {
                     name: "Full name *",
                     name_placeholder: "What do you prefer to be called?",
@@ -185,8 +190,8 @@ export const translations: Record<Language, any> = {
             },
             selected_works: {
                 tag: "/ Selected Works",
-                title: "Authority",
-                title_italic: "proven in code.",
+                title: "Selected",
+                title_italic: "Projects.",
                 view_archive: "View Archive",
                 case_study: "Case Study"
             },
@@ -288,7 +293,7 @@ export const translations: Record<Language, any> = {
                 sections: [
                     {
                         title: "1. Intellectual Property",
-                        content: "All code, design, and GHWD's proprietary methodology are protected. The expression 'Authority forged in code' and our visual assets are exclusive property."
+                        content: "All code, design, and GHWD's proprietary methodology are protected. Our visual assets and technical implementations are exclusive property."
                     },
                     {
                         title: "2. Liability Limitation",
@@ -425,7 +430,10 @@ export const translations: Record<Language, any> = {
                 vision_tag: "/ Rede Global",
                 vision_title: "Inteligência Global. Foco Local.",
                 vision_p1: "Somos um coletivo distribuído. Ao remover restrições geográficas, acessamos o top 1% de talentos em estratégia, design e engenharia em 4 fusos horários para elevar o nível do mercado brasileiro.",
-                vision_p2: "Sem custo fixo. Sem escritórios. Apenas capital intelectual internacional dedicado a alavancar a sua operação nacional."
+                vision_p2: "Sem custo fixo. Sem escritórios. Apenas capital intelectual internacional dedicado a alavancar a sua operação nacional.",
+                mission_p1: "Nascemos de uma observação simples: a maioria das agências tradicionais lucra com a complexidade e prazos prolongados. Operamos na lógica inversa.",
+                mission_p2: "Somos uma <strong className=\"text-white font-normal\">unidade digital global</strong> — um coletivo de elite composto pelos melhores estrategistas e especialistas, sem as barreiras e custos de uma sede física.",
+                mission_p3: "Atuamos com transparência radical e execução cirúrgica. Não construímos apenas sites; projetamos a infraestrutura digital onde o futuro dos negócios acontece."
             }
         },
         contact: {
@@ -451,6 +459,8 @@ export const translations: Record<Language, any> = {
                 last_step: "Última etapa 🎉",
                 contact_data_title: "Seus dados de contato",
                 contact_data_subtitle: "Promessa: zero spam. Vamos usar isso só para te retornar sobre o projeto.",
+                wa_template: "Olá! Me chamo {name}{company}.\nPreenchi o formulário do site e meu projeto é: {project}.\nBudget considerado: {budget}.\n{msg}",
+                wa_company_part: " e represento {company}",
                 fields: {
                     name: "Nome completo *",
                     name_placeholder: "Como prefere ser chamado?",
@@ -500,8 +510,8 @@ export const translations: Record<Language, any> = {
             },
             selected_works: {
                 tag: "/ Trabalhos Selecionados",
-                title: "Autoridade",
-                title_italic: "forjada em código.",
+                title: "Projetos",
+                title_italic: "Selecionados.",
                 view_archive: "Ver Arquivo",
                 case_study: "Estudo de Caso"
             },
@@ -603,7 +613,7 @@ export const translations: Record<Language, any> = {
                 sections: [
                     {
                         title: "1. Propriedade Intelectual",
-                        content: "Todo código, design, e a metodologia proprietária da GHWD são protegidos. A expressão 'Autoridade forjada em código' e nossos assets visuais são propriedade exclusiva."
+                        content: "Todo código, design, e a metodologia proprietária da GHWD são protegidos. Nossos assets visuais e implementações técnicas são propriedade exclusiva."
                     },
                     {
                         title: "2. Limitação de Responsabilidade",
@@ -740,7 +750,10 @@ export const translations: Record<Language, any> = {
                 vision_tag: "/ Rede Global",
                 vision_title: "Inteligência Global. Foco Local.",
                 vision_p1: "Somos um coletivo distribuído. Ao remover restrições geográficas, acedemos ao top 1% de talentos em estratégia, design e engenharia em 4 fusos horários para elevar o nível do mercado brasileiro.",
-                vision_p2: "Sem custos fixos. Sem escritórios. Apenas capital intelectual internacional dedicado a alavancar a sua operação nacional."
+                vision_p2: "Sem custos fixos. Sem escritórios. Apenas capital intelectual internacional dedicado a alavancar a sua operação nacional.",
+                mission_p1: "Nascemos de uma observação simples: a maioria das agências tradicionais lucra com a complexidade e prazos prolongados. Operamos na lógica inversa.",
+                mission_p2: "Somos uma <strong className=\"text-white font-normal\">unidade digital global</strong> — um coletivo de elite composto pelos melhores estrategistas e especialistas, sem as barreiras e custos de uma sede física.",
+                mission_p3: "Atuamos com transparência radical e execução cirúrgica. Não construímos apenas sites; projetamos a infraestrutura digital onde o futuro dos negócios acontece."
             }
         },
         contact: {
@@ -766,6 +779,8 @@ export const translations: Record<Language, any> = {
                 last_step: "Última etapa 🎉",
                 contact_data_title: "Os seus dados de contacto",
                 contact_data_subtitle: "Promessa: zero spam. Vamos usar isto apenas para lhe responder sobre o projeto.",
+                wa_template: "Olá! Chamo-me {name}{company}.\nPreenchi o formulário do site e o meu projeto é: {project}.\nBudget considerado: {budget}.\n{msg}",
+                wa_company_part: " e represento a {company}",
                 fields: {
                     name: "Nome completo *",
                     name_placeholder: "Como prefere ser chamado?",
@@ -815,8 +830,8 @@ export const translations: Record<Language, any> = {
             },
             selected_works: {
                 tag: "/ Trabalhos Selecionados",
-                title: "Autoridade",
-                title_italic: "forjada em código.",
+                title: "Projetos",
+                title_italic: "Selecionados.",
                 view_archive: "Ver Arquivo",
                 case_study: "Estudo de Caso"
             },
@@ -918,7 +933,7 @@ export const translations: Record<Language, any> = {
                 sections: [
                     {
                         title: "1. Propriedade Intelectual",
-                        content: "Todo código, design, e a metodologia proprietária da GHWD são protegidos. A expressão 'Autoridade forjada em código' e os nossos assets visuais são propriedade exclusiva."
+                        content: "Todo código, design, e a metodologia proprietária da GHWD são protegidos. Os nossos assets visuais e implementações técnicas são propriedade exclusiva."
                     },
                     {
                         title: "2. Limitação de Responsabilidade",
@@ -1130,8 +1145,8 @@ export const translations: Record<Language, any> = {
             },
             selected_works: {
                 tag: "/ Trabajos Seleccionados",
-                title: "Autoridad",
-                title_italic: "probada en código.",
+                title: "Proyectos",
+                title_italic: "Seleccionados.",
                 view_archive: "Ver Archivo",
                 case_study: "Estudio de Caso"
             },
@@ -1233,7 +1248,7 @@ export const translations: Record<Language, any> = {
                 sections: [
                     {
                         title: "1. Propiedad Intelectual",
-                        content: "Todo el código, diseño y la metodología propiedad de GHWD están protegidos. La expresión 'Autoridad forjada en código' y nuestros activos visuales son propiedad exclusiva."
+                        content: "Todo el código, diseño y la metodología propiedad de GHWD están protegidos. Nuestros activos visuales e implementaciones técnicas son propiedad exclusiva."
                     },
                     {
                         title: "2. Limitación de Responsabilidad",

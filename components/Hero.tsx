@@ -70,7 +70,7 @@ export function Hero() {
                         Agendar Briefing
                     </Link>
                     <Link
-                        href="/clients"
+                        href="/partners"
                         className="group flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors backdrop-blur-sm"
                     >
                         Explorar Clientes

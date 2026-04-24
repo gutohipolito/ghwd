@@ -85,7 +85,7 @@ export function HeroModern() {
                         </Link>
 
                         <Link
-                            href="/clients"
+                            href="/partners"
                             className="group flex items-center justify-between gap-6 px-10 py-8 border border-white/10 text-white hover:bg-white/5 transition-colors w-full md:min-w-[320px] backdrop-blur-md rounded-full"
                         >
                             <span className="text-lg font-medium tracking-tight">{t('hero.view_work')}</span>

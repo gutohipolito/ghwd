@@ -61,6 +61,7 @@ export default function ClientsPage() {
                         { name: "Márcia Esteticista", color: "#db2777", image: "https://ghwd.com.br/lista-clientes/clientes-ghwd-marcia-esteticista.png" },
                         { name: "Aromas & Luz", color: "#fcd34d" },
                         { name: "Azua", color: "#60a5fa" },
+                        { name: "La Primera Studio", color: "#8b5cf6" },
                     ]
                 },
                 {
@@ -175,25 +176,43 @@ export default function ClientsPage() {
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start transition-all duration-700">
                         {/* Map Column */}
                         <div 
-                            className={`relative border border-white/10 rounded-3xl bg-zinc-900/50 overflow-hidden flex flex-col pt-8 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] ${selectedState ? 'w-full lg:w-5/12' : 'w-full lg:w-8/12 mx-auto min-h-[500px] lg:min-h-[600px]'}`}
+                            className={`relative border border-white/10 rounded-3xl bg-zinc-900/50 overflow-hidden flex flex-col pt-8 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] ${selectedState ? 'w-full lg:w-[35%] lg:sticky lg:top-32 h-fit' : 'w-full lg:w-9/12 mx-auto min-h-[500px] lg:min-h-[650px]'}`}
                         >
-                            <div className={`p-4 flex-grow w-full ${selectedState ? 'h-[400px] md:h-[600px]' : 'h-full min-h-[500px] flex items-center justify-center'}`}>
+                            {selectedState && (
+                                <button 
+                                    onClick={() => setSelectedState(null)}
+                                    className="absolute top-6 right-6 z-20 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-4 py-2 text-[10px] font-mono uppercase tracking-widest transition-all group flex items-center gap-2"
+                                >
+                                    <span className="opacity-50 group-hover:opacity-100">✕</span> Clear Map
+                                </button>
+                            )}
+                            
+                            <div className={`p-4 flex-grow w-full ${selectedState ? 'h-[350px] md:h-[450px]' : 'h-full min-h-[500px] flex items-center justify-center'}`}>
                                 <BrazilMap 
                                     activeStates={activeStates} 
                                     selectedState={selectedState} 
                                     onStateClick={(sigla) => setSelectedState(prev => prev === sigla ? null : sigla)} 
                                 />
                             </div>
+
+                            {selectedState && (
+                                <div className="p-8 border-t border-white/5 bg-black/20">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                                        <span className="text-xs font-mono text-emerald-500 uppercase tracking-widest">Region Active</span>
+                                    </div>
+                                    <h4 className="text-2xl font-serif text-white">{displayedRegions[0]?.name}</h4>
+                                </div>
+                            )}
                         </div>
 
                         {/* Clients Column */}
                         {selectedState && (
                             <motion.div 
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: 20 }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
-                                className="w-full lg:w-7/12 space-y-12"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, ease: "easeOut" }}
+                                className="w-full lg:w-[65%] space-y-16"
                             >
                                 {displayedRegions.map((region, idx) => (
                                     <div key={region.name} className="space-y-16">

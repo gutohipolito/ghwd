@@ -57,7 +57,7 @@ export function NavbarOrchestra() {
                     {[
                         { href: '/products', label: t('nav.products') },
                         { href: '/services', label: t('nav.services') },
-                        { href: '/clients', label: t('nav.clients') },
+                        { href: '/partners', label: t('nav.clients') },
                         { href: '/about', label: t('nav.about') }
                     ].map((item) => (
                         <li key={item.href}>
@@ -124,7 +124,7 @@ export function NavbarOrchestra() {
                             <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.home')}</Link>
                             <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.products')}</Link>
                             <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.services')}</Link>
-                            <Link href="/clients" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.clients')}</Link>
+                            <Link href="/partners" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.clients')}</Link>
                             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.about')}</Link>
 
                             <div className="mt-8">

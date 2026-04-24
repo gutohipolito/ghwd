@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MoveDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/lib/i18n-context";
 
 interface PageHeroProps {
     pretitle: string;
@@ -21,6 +22,7 @@ export function PageHero({
     videoClassName,
     showVideo = true
 }: PageHeroProps) {
+    const { t } = useLanguage();
     const { scrollY } = useScroll();
 
     // Parallax effects
@@ -100,7 +102,7 @@ export function PageHero({
                 className="absolute bottom-12 left-6 md:left-24 z-20"
             >
                 <div className="flex items-center gap-4 text-xs font-mono text-zinc-500 uppercase tracking-widest">
-                    <span>Scroll</span>
+                    <span>{t('hero.scroll')}</span>
                     <motion.div
                         animate={{ y: [0, 5, 0] }}
                         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
