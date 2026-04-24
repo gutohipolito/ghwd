@@ -84,27 +84,6 @@ export function BrazilMap({ activeStates, selectedState, onStateClick }: BrazilM
         </Geographies>
       </ComposableMap>
 
-      {/* Decorative Label for Selected State (Overlay) */}
-      {selectedState && (
-        <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="absolute bottom-10 right-10 bg-black/60 backdrop-blur-xl border border-white/10 p-4 rounded-2xl pointer-events-none z-30"
-        >
-            <span className="text-4xl font-black text-white/20 absolute -top-6 -left-4 select-none">
-                {selectedState}
-            </span>
-            <div className="relative z-10">
-                <p className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-1">Target Region</p>
-                <p className="text-xl font-bold text-white tracking-tight uppercase">
-                    {selectedState === 'RS' ? 'Rio Grande do Sul' : 
-                     selectedState === 'SP' ? 'São Paulo' : 
-                     selectedState === 'SC' ? 'Santa Catarina' : 
-                     selectedState === 'AC' ? 'Acre' : selectedState}
-                </p>
-            </div>
-        </motion.div>
-      )}
     </div>
   );
 }
