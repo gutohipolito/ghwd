@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { MoveDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/lib/i18n-context";
@@ -23,11 +23,6 @@ export function PageHero({
     showVideo = true
 }: PageHeroProps) {
     const { t } = useLanguage();
-    const { scrollY } = useScroll();
-
-    // Parallax effects
-    const yText = useTransform(scrollY, [0, 500], [0, 100]);
-    const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
     return (
         <section className="relative h-[65vh] min-h-[500px] flex flex-col justify-center px-6 md:px-24 pt-16 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
@@ -70,7 +65,6 @@ export function PageHero({
 
                 {/* Headline */}
                 <motion.h1
-                    style={{ y: yText }}
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
@@ -95,7 +89,6 @@ export function PageHero({
 
             {/* Scroll Indicator */}
             <motion.div
-                style={{ opacity }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n-context";
@@ -8,11 +8,6 @@ import { TextScramble } from "@/components/ui/text-scramble";
 
 export function HeroRadical() {
     const { t } = useLanguage();
-    const { scrollY } = useScroll();
-
-    // Parallax effects
-    const yText = useTransform(scrollY, [0, 500], [0, 200]);
-    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
     return (
         <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-black">
@@ -37,7 +32,6 @@ export function HeroRadical() {
 
                 {/* Line 1: WE ENGINEER */}
                 <motion.div
-                    style={{ y: yText }}
                     className="flex flex-col md:flex-row items-center gap-2 leading-[0.8] will-change-transform mix-blend-difference"
                 >
                     <span className="text-[16vw] md:text-[14vw] font-black text-white tracking-tighter select-none">
@@ -57,7 +51,6 @@ export function HeroRadical() {
 
                 {/* Line 3: NERVOUS SYSTEMS */}
                 <motion.div
-                    style={{ y: yText }}
                     className="flex flex-col items-center mt-4 w-full mix-blend-difference will-change-transform"
                 >
                     <span className="text-[9vw] md:text-[8vw] font-bold text-white tracking-widest uppercase opacity-90 hover:tracking-[0.2em] transition-all duration-700 select-none">
@@ -75,7 +68,6 @@ export function HeroRadical() {
 
             {/* Radical CTA: Bottom Centered */}
             <motion.div
-                style={{ opacity }}
                 className="fixed bottom-12 z-40 mix-blend-difference will-change-opacity pointer-events-auto"
             >
                 <Link
