@@ -15,15 +15,15 @@ interface BrazilMapProps {
 export function BrazilMap({ activeStates, selectedState, onStateClick }: BrazilMapProps) {
   // Define state-specific coordinates and scales for native map zoom
   const stateConfigs: Record<string, { scale: number; center: [number, number] }> = {
-    RS: { scale: 3200, center: [-53.5, -30] },
-    SC: { scale: 4500, center: [-50.5, -27.2] },
-    SP: { scale: 3500, center: [-48.5, -23.5] },
-    AC: { scale: 3000, center: [-70, -9.5] },
+    RS: { scale: 3200, center: [-53.5, -30] as [number, number] },
+    SC: { scale: 4500, center: [-50.5, -27.2] as [number, number] },
+    SP: { scale: 3500, center: [-48.5, -23.5] as [number, number] },
+    AC: { scale: 3000, center: [-70, -9.5] as [number, number] },
   };
 
-  const currentConfig = selectedState && stateConfigs[selectedState] 
+  const currentConfig: { scale: number; center: [number, number] } = selectedState && stateConfigs[selectedState] 
     ? stateConfigs[selectedState] 
-    : { scale: 850, center: [-54, -15] };
+    : { scale: 850, center: [-54, -15] as [number, number] };
 
   return (
     <div className="w-full h-full flex items-center justify-center relative">
