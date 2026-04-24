@@ -61,13 +61,13 @@ export const translations: Record<Language, any> = {
             header: {
                 tag: "/ Partners",
                 title: "Valued Partnerships.",
-                subtitle: "A curation of companies that trust GHWD to build their digital future."
+                subtitle: "A curation of companies that trust us to build their digital future."
             },
             client_index: {
                 tag: "/ Partner Index",
                 title: "Trusted by Leaders",
                 map_title: "Our Digital Presence Across Brazil",
-                map_subtitle: "Select one of the highlighted states on the map to see the brands and organizations that trust GHWD in each region.",
+                map_subtitle: "Select one of the highlighted states on the map to see the brands and organizations that trust us in each region.",
                 partners: "partners"
             },
             cta: {
@@ -381,13 +381,13 @@ export const translations: Record<Language, any> = {
             header: {
                 tag: "/ Parceiros",
                 title: "Parcerias de Valor.",
-                subtitle: "Uma curadoria das empresas que confiam na GHWD para construir seu futuro digital."
+                subtitle: "Uma curadoria das empresas que confiam em nós para construir seu futuro digital."
             },
             client_index: {
                 tag: "/ Índice de Parceiros",
                 title: "Confiado por Líderes",
                 map_title: "Nossa Presença Digital pelo Brasil",
-                map_subtitle: "Selecione um dos estados destacados no mapa para ver as marcas e organizações que confiam na GHWD em cada região do país.",
+                map_subtitle: "Selecione um dos estados destacados no mapa para ver as marcas e organizações que confiam em nós em cada região do país.",
                 partners: "parceiros"
             },
             cta: {
@@ -701,13 +701,13 @@ export const translations: Record<Language, any> = {
             header: {
                 tag: "/ Parceiros",
                 title: "Parcerias de Valor.",
-                subtitle: "Uma curadoria das empresas que confiam na GHWD para construir o seu futuro digital."
+                subtitle: "Uma curadoria das empresas que confiam em nós para construir o seu futuro digital."
             },
             client_index: {
                 tag: "/ Índice de Parceiros",
                 title: "Confiado por Líderes",
                 map_title: "A Nossa Presença Digital no Brasil",
-                map_subtitle: "Selecione um dos estados destacados no mapa para ver as marcas e organizações que confiam na GHWD em cada região do país.",
+                map_subtitle: "Selecione um dos estados destacados no mapa para ver as marcas e organizações que confiam em nós em cada região do país.",
                 partners: "parceiros"
             },
             cta: {
@@ -1021,13 +1021,13 @@ export const translations: Record<Language, any> = {
             header: {
                 tag: "/ Socios",
                 title: "Alianzas de Valor.",
-                subtitle: "Una curaduría de empresas que confían en GHWD para construir su futuro digital."
+                subtitle: "Una curaduría de empresas que confían en nosotros para construir su futuro digital."
             },
             client_index: {
                 tag: "/ Índice de Socios",
                 title: "Confiado por Líderes",
                 map_title: "Nuestra Presencia Digital en Brasil",
-                map_subtitle: "Seleccione uno de los estados destacados en el mapa para ver las marcas y organizaciones que confían en GHWD en cada región del país.",
+                map_subtitle: "Seleccione uno de los estados destacados en el mapa para ver las marcas y organizaciones que confían en nosotros en cada región del país.",
                 partners: "socios"
             },
             cta: {
