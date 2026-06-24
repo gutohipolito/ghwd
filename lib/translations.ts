@@ -101,6 +101,19 @@ export const translations: Record<Language, any> = {
                 title: "Ready to engineer your digital empire?",
                 subtitle: "We are selective with our partnerships. Tell us about your ambition, not just your requirements.",
                 button: "Start a Conversation"
+            },
+            comparison: {
+                tag: "/ Efficiency",
+                title: "Why GHWD?",
+                subtitle: "A side-by-side comparison of speed, architecture, and reliability.",
+                headers: ["Criteria", "GHWD (Next.js Edge)", "Traditional Agency", "Freelancer"],
+                rows: [
+                    { label: "Performance (LCP)", c1: "< 1.2s (Ultra Fast)", c2: "3s - 5s (Slow / Bloated)", c3: "Variable (Unoptimized)" },
+                    { label: "Architecture", c1: "Headless & Serverless", c2: "Monolithic (WordPress/PHP)", c3: "Template-based / Ad-hoc" },
+                    { label: "Code & DOM Quality", c1: "Surgical & Clean (Low DOM)", c2: "Heavy Plugin Dependency", c3: "Inconsistent Quality" },
+                    { label: "Support & SLA", c1: "24/7 Dedicated Support", c2: "Business Hours Only", c3: "No SLA Guarantee" },
+                    { label: "Scalability", c1: "Unlimited Edge CDN Scale", c2: "Server CPU-Bound", c3: "Limited Capability" }
+                ]
             }
         },
         about: {
@@ -326,7 +339,7 @@ export const translations: Record<Language, any> = {
         nav: {
             clients: 'Parceiros',
             products: 'Produtos',
-            services: 'Expertise',
+            services: 'O que fazemos',
             about: 'Sobre',
             contact: 'Contato',
             start: "Iniciar",
@@ -337,14 +350,14 @@ export const translations: Record<Language, any> = {
             tagline: 'Talento Global. Foco no Brasil.',
             we_build: 'NÓS ENTREGAMOS',
             results: 'RESULTADOS.',
-            description: "Acessamos o top 1% da engenharia e design mundial para construir o futuro digital das empresas brasileiras mais ambiciosas.",
+            description: "Buscamos profissionais excepcionais de engenharia e design para criar o futuro de marcas brasileiras que querem ir além.",
             start_project: 'INICIAR PROJETO',
             view_work: 'VER PROJETOS',
             scroll: 'Role para Explorar',
-            headline_html: 'Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />no Brasil.'
+            headline_html: 'Projetamos <br /><span className="text-zinc-500">sites e sistemas</span> <br />de alto nível.'
         },
         footer: {
-            tagline: 'Transformando visão estratégica em domínio digital.',
+            tagline: 'Tecnologia de alta performance para fazer sua empresa crescer.',
             compliance: 'LGPD',
             legal: 'Legal',
             privacy: 'Política de Privacidade',
@@ -353,11 +366,11 @@ export const translations: Record<Language, any> = {
             sitemap: "Sitemap",
             products: "Produtos",
             presence: "Presença",
-            method: "O Método",
-            intelligence: "Inteligência",
-            newsletter_desc: "Junte-se ao círculo interno. Sem spam, apenas domínio.",
-            email_placeholder: "Endereço de E-mail",
-            join: "ENTRAR"
+            method: "Como trabalhamos",
+            intelligence: "Tecnologia",
+            newsletter_desc: "Inscreva-se para receber atualizações do nosso time. Direto e sem spam.",
+            email_placeholder: "Seu melhor e-mail",
+            join: "INSCREVER"
         },
         products: {
             nav: "Produtos",
@@ -366,15 +379,15 @@ export const translations: Record<Language, any> = {
                 tag: "/ O Repositório",
                 title_1: "Ativos",
                 title_2: "Digitais & IP.",
-                description: "Não apenas construímos para clientes; construímos as ferramentas que moldam o futuro. Licencie nossa tecnologia proprietária para acelerar seu roadmap."
+                description: "Além de desenvolver projetos do zero, construímos ferramentas prontas. Você pode usar nossa tecnologia pronta para colocar seu projeto no ar muito mais rápido."
             },
             items: {
-                velocity: { type: "Acelerador", description: "Um boilerplate de Next.js + Headless Commerce testado em batalha. Pré-configurado para Vtex, Shopify e Wake. Reduz o time-to-market em 60%." },
-                synapse: { type: "Middleware", description: "A cola entre ERPs legados e frontends modernos. Motor de sincronização de dados em tempo real com lógica de retry e tratamento de erros nativo." },
-                obsidian: { type: "Design System", description: "Nossa biblioteca de componentes proprietária. Um conjunto coeso de componentes React e tokens Figma garantindo consistência pixel-perfect em todos os projetos." },
-                xray: { type: "Ferramenta de Auditoria", description: "Scanner automatizado de performance e heurísticas. Gera relatórios acionáveis sobre Core Web Vitals, Acessibilidade e bloqueadores de Conversão." },
-                wholesale: { type: "Plataforma SaaS", description: "Um portal B2B white-label para pedidos de alto volume. Gerencia faixas de preço complexas, re-pedidos e limites de crédito nativamente." },
-                edge: { type: "Infraestrutura", description: "Configuração global de CDN e pipeline de otimização de imagens. Garante que seus ativos sejam servidos do nó mais próximo ao usuário, instantaneamente." }
+                velocity: { type: "Acelerador", description: "Base sólida de Next.js + Headless Commerce testada em projetos reais. Pré-configurada para Vtex, Shopify e Wake. Reduz o tempo de desenvolvimento em mais da metade." },
+                synapse: { type: "Integração", description: "Sincroniza seus sistemas internos (ERPs) com o site de forma automática, segura e sem quedas." },
+                obsidian: { type: "Design System", description: "Nossa biblioteca de componentes pronta. Garante um visual bonito, padronizado e profissional em todas as páginas." },
+                xray: { type: "Auditoria", description: "Scanner automático de velocidade e erros. Gera relatórios práticos sobre o que está deixando seu site lento ou atrapalhando suas vendas." },
+                wholesale: { type: "Portal B2B", description: "Área de compras por atacado. Resolve preços por volume, compras repetidas e limites de crédito de forma simples." },
+                edge: { type: "Infraestrutura", description: "Configuração global de CDN e otimização de imagens. Garante que as imagens e o site carreguem na hora, de qualquer lugar." }
             }
         },
         cases: {
@@ -403,24 +416,37 @@ export const translations: Record<Language, any> = {
         services: {
             header: {
                 tag: "/ Soluções",
-                title: "Engenharia de precisão para escala global.",
-                subtitle: "Um conjunto abrangente de serviços digitais projetados para levar sua marca do conceito à liderança de mercado."
+                title: "Sites ultra-rápidos e sistemas sob medida que fazem seu negócio crescer.",
+                subtitle: "Criamos a tecnologia que sua empresa precisa para vender mais e atender melhor, sem complicação ou jargões corporativos."
             },
-            core_capabilities: "Principais Capacidades",
+            core_capabilities: "O que fazemos",
             method: {
                 tag: "/ O Método",
-                title: "Como entregamos excelência.",
+                title: "Como trabalhamos.",
                 steps: [
-                    { id: "01", title: "Imersão & Diagnóstico", desc: "Mergulhamos fundo nas métricas do seu negócio, posicionamento e gargalos técnicos para identificar alavancas reais de crescimento." },
-                    { id: "02", title: "Estratégia & Arquitetura", desc: "Um blueprint para o sucesso. Desenhamos a fundação técnica e estratégica necessária para sustentar sua ambição de longo prazo." },
-                    { id: "03", title: "Execução de Alta Fidelidade", desc: "Nossos especialistas e designers constroem com precisão cirúrgica, garantindo que cada pixel e linha de código tenha um propósito." },
-                    { id: "04", title: "Escala & Otimização", desc: "O lançamento é apenas o começo. Implementamos ciclos contínuos de melhorias baseadas em dados para maximizar seu ROI." }
+                    { id: "01", title: "1. Entendemos seu negócio", desc: "Analisamos onde seu site ou sistema está lento ou travando para aplicar soluções diretas que tragam resultados reais." },
+                    { id: "02", title: "2. Planejamos a solução", desc: "Desenhamos o site ou sistema ideal para as suas necessidades de hoje, preparado para aguentar o crescimento do amanhã." },
+                    { id: "03", title: "3. Desenvolvemos com foco", desc: "Escrevemos código extremamente limpo e fazemos telas bonitas que funcionam perfeitamente em qualquer tela ou celular." },
+                    { id: "04", title: "4. Acompanhamos e evoluímos", desc: "Depois que o projeto vai ao ar, continuamos melhorando a velocidade e o design com dados de uso reais para trazer mais clientes para você." }
                 ]
             },
             services_cta: {
-                title: "Pronto para construir seu império digital?",
-                subtitle: "Somos seletivos com nossas parcerias. Conte-nos sobre sua ambição, não apenas seus requisitos.",
-                button: "Iniciar uma Conversa"
+                title: "Quer levar seu projeto para o próximo nível?",
+                subtitle: "Gostamos de trabalhar com negócios sérios e focados em crescimento. Nos conte o que você planeja para seu projeto.",
+                button: "Falar com o Especialista"
+            },
+            comparison: {
+                tag: "/ Eficiência",
+                title: "Por que a GHWD?",
+                subtitle: "Uma comparação direta de velocidade, arquitetura e confiabilidade.",
+                headers: ["Critério", "GHWD (Next.js Edge)", "Agência Tradicional", "Freelancer"],
+                rows: [
+                    { label: "Performance (LCP)", c1: "< 1.2s (Ultra Rápido)", c2: "3s - 5s (Lento / Bloated)", c3: "Variável (Sem otimização)" },
+                    { label: "Arquitetura", c1: "Headless & Serverless", c2: "Monolítica (WordPress/PHP)", c3: "Baseada em templates / Ad-hoc" },
+                    { label: "Qualidade do Código e DOM", c1: "Limpo e Estático (Baixo DOM)", c2: "Dependência pesada de plugins", c3: "Qualidade Inconsistente" },
+                    { label: "Suporte & SLA", c1: "Suporte Dedicado 24/7", c2: "Apenas Horário Comercial", c3: "Sem Garantia de SLA" },
+                    { label: "Escalabilidade", c1: "Escala Ilimitada via Edge CDN", c2: "Limitado pela CPU do Servidor", c3: "Capacidade Limitada" }
+                ]
             }
         },
         about: {

@@ -85,6 +85,53 @@ export default function ServicesPage() {
                 </div>
             </section>
 
+            {/* Comparison Table Section */}
+            <section className="py-24 px-6 md:px-24 bg-zinc-950 border-t border-white/5 relative overflow-hidden">
+                <div className="container mx-auto max-w-6xl relative z-10">
+                    <span className="font-mono text-emerald-500 text-xs uppercase tracking-widest mb-4 block">
+                        {t('services.comparison.tag')}
+                    </span>
+                    <h2 className="text-4xl md:text-6xl font-heading font-black italic uppercase tracking-tighter mb-4">
+                        {t('services.comparison.title')}
+                    </h2>
+                    <p className="text-zinc-400 text-lg md:text-xl font-light mb-16 max-w-2xl">
+                        {t('services.comparison.subtitle')}
+                    </p>
+
+                    <div className="overflow-x-auto border border-white/10 rounded-2xl bg-zinc-900/30 backdrop-blur-md">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="border-b border-white/10">
+                                    {(t('services.comparison.headers') as string[]).map((header, idx) => (
+                                        <th key={idx} className="p-6 font-heading font-black italic uppercase text-xs tracking-wider text-zinc-500 select-none">
+                                            {header}
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {(t('services.comparison.rows') as any[]).map((row, idx) => (
+                                    <tr key={idx} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors last:border-b-0">
+                                        <td className="p-6 text-sm font-semibold text-white border-r border-white/5 font-mono select-all">
+                                            {row.label}
+                                        </td>
+                                        <td className="p-6 text-sm text-emerald-400 font-bold border-r border-white/5 select-all">
+                                            {row.c1}
+                                        </td>
+                                        <td className="p-6 text-sm text-zinc-400 border-r border-white/5 select-all">
+                                            {row.c2}
+                                        </td>
+                                        <td className="p-6 text-sm text-zinc-500 select-all">
+                                            {row.c3}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
             {/* Methodology & CTA */}
             <Methodology />
             <ServicesCTA />

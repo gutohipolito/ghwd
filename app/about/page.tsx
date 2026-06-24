@@ -40,11 +40,9 @@ export default function AboutPage() {
             <section className="w-full py-20 bg-zinc-950">
                 <div className="container mx-auto px-6 md:px-24">
                     <div className="flex flex-col gap-8 text-xl md:text-2xl text-zinc-400 font-light leading-relaxed max-w-4xl mx-auto text-center">
-                    <div className="flex flex-col gap-8 text-xl md:text-2xl text-zinc-400 font-light leading-relaxed max-w-4xl mx-auto text-center">
                         <p dangerouslySetInnerHTML={{ __html: t('about.header.mission_p1') }} />
                         <p dangerouslySetInnerHTML={{ __html: t('about.header.mission_p2') }} />
                         <p dangerouslySetInnerHTML={{ __html: t('about.header.mission_p3') }} />
-                    </div>
                     </div>
                 </div>
             </section>

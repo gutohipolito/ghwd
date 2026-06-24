@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
@@ -15,10 +15,81 @@ export function NavbarOrchestra() {
     const [isScrolled, setIsScrolled] = useState(false);
     const { t } = useLanguage();
     const { openModal } = useModal();
+    const mobileMenuRef = useRef<HTMLDivElement>(null);
+    const triggerRef = useRef<HTMLButtonElement>(null);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 50);
     });
+
+    // Handle body scroll and focus when mobile menu opens/closes
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            setTimeout(() => {
+                if (mobileMenuRef.current) {
+                    const focusable = mobileMenuRef.current.querySelectorAll<HTMLElement>(
+                        'a[href], button'
+                    );
+                    if (focusable.length > 0) {
+                        focusable[0].focus();
+                    } else {
+                        mobileMenuRef.current.focus();
+                    }
+                }
+            }, 50);
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, [mobileMenuOpen]);
+
+    // Handle keydown events for Accessibility inside the mobile menu
+    useEffect(() => {
+        if (!mobileMenuOpen) return;
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setMobileMenuOpen(false);
+                if (triggerRef.current) {
+                    triggerRef.current.focus();
+                }
+                return;
+            }
+
+            if (e.key === "Tab" && mobileMenuRef.current) {
+                const focusable = Array.from(
+                    mobileMenuRef.current.querySelectorAll<HTMLElement>(
+                        'a[href], button'
+                    )
+                );
+                
+                if (focusable.length === 0) return;
+
+                const firstElement = focusable[0];
+                const lastElement = focusable[focusable.length - 1];
+
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        lastElement.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        firstElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [mobileMenuOpen]);
 
     return (
         <>
@@ -99,7 +170,8 @@ export function NavbarOrchestra() {
                     </div>
 
                     <button
-                        aria-label="Toggle Menu"
+                        ref={triggerRef}
+                        aria-label={mobileMenuOpen ? "Fechar menu principal" : "Abrir menu principal"}
                         className={cn(
                             "md:hidden z-50 relative p-2 transition-colors",
                             isScrolled ? "text-black" : "text-white"
@@ -115,10 +187,12 @@ export function NavbarOrchestra() {
             <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
+                        ref={mobileMenuRef}
+                        tabIndex={-1}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl flex flex-col justify-center items-center md:hidden"
+                        className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl flex flex-col justify-center items-center md:hidden outline-none"
                     >
                         <div className="flex flex-col gap-8 text-center">
                             <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.home')}</Link>

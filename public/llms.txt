@@ -1,0 +1,28 @@
+# GHWD - Global Digital Partner
+
+GHWD is a high-performance digital collective specializing in engineering premium digital nervous systems, custom web applications, and high-fidelity interfaces for ambitious brands.
+
+## Core Expertise & Services
+- **Next.js & Headless Commerce:** Designing fast, secure commerce interfaces integrated with systems like VTEX, Shopify, and Wake.
+- **Digital Infrastructure:** Edge hosting, global CDN setup, and performance-first architectures (SSG/SSR) targeted at zero-latency Core Web Vitals.
+- **Custom Software Engineering:** Tailored middleware and integration tools.
+- **Premium Design Systems:** High-end UI/UX and motion graphics designed to build brand authority.
+
+## Specialist & Author
+- **Principal Strategist:** Gustavo Hipólito (strategist, principal engineer, and founder).
+
+## Key Products & Proprietary IP
+- **Velocity Core:** High-performance Next.js + Headless Commerce accelerator/boilerplate.
+- **Synapse:** Custom middleware for real-time ERP data synchronization.
+- **Obsidian UI:** High-fidelity UI/UX design token system and component library.
+- **X-Ray:** Automated performance, accessibility (WCAG), and search engine compatibility diagnostic tool.
+- **Wholesale OS:** B2B e-commerce platform for high-volume ordering tiers.
+- **Edge Delivery:** Global CDN pipeline optimization configs.
+
+## Key URLs
+- **Main Website:** https://ghwd.com.br
+- **Expertise & Services:** https://ghwd.com.br/services
+- **Products & Technology Repository:** https://ghwd.com.br/products
+- **Client & Partner Index:** https://ghwd.com.br/partners
+- **About the Unit:** https://ghwd.com.br/about
+- **Start Project Form:** https://ghwd.com.br/contact

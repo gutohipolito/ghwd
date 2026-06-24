@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     description: "We engineer digital nervous systems for the world's most ambitious brands. Experts in Next.js, Headless Commerce, and High-Performance Digital Ecosystems.",
     keywords: ["Digital Agency", "Next.js Experts", "Headless Commerce", "Digital Transformation", "GHWD", "Web Development Brazil", "Global Talent"],
-    authors: [{ name: "GHWD Team" }],
-    creator: "GHWD",
+    authors: [{ name: "Gustavo Hipolito", url: "https://ghwd.com.br/about" }, { name: "GHWD Team" }],
+    creator: "Gustavo Hipolito",
     publisher: "GHWD",
     formatDetection: {
         email: false,
