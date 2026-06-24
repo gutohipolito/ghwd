@@ -250,7 +250,7 @@ export function QualificationForm() {
     return (
         <div className="max-w-2xl mx-auto w-full">
             {/* Progress Bar & Navigation Header */}
-            <div className="flex flex-col gap-4 mb-8">
+            <div className="flex flex-col gap-3 mb-6 md:gap-4 md:mb-8">
                 {/* Progress bullets */}
                 <div className="flex items-center gap-1.5 w-full">
                     {[0, 1, 2, 3, 4, 5].map((s) => (
@@ -279,7 +279,7 @@ export function QualificationForm() {
                         <div className="w-10 h-4" />
                     )}
                     
-                    <span className="uppercase tracking-widest text-zinc-500 text-[10px]">
+                    <span className="uppercase tracking-widest text-zinc-500 text-[10px] whitespace-nowrap">
                         {t('contact.qualification.step_label')} {currentStep + 1} {t('contact.qualification.of_label')} 6
                     </span>
                 </div>
@@ -293,7 +293,7 @@ export function QualificationForm() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="bg-zinc-900/50 border border-white/10 p-5 md:p-12 rounded-2xl md:rounded-3xl backdrop-blur-xl"
+                        className="bg-zinc-900/50 border border-white/10 py-6 px-4 md:p-12 rounded-2xl md:rounded-3xl backdrop-blur-xl"
                     >
                         <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-4 block">
                             {t('contact.qualification.question_label')} 0{currentStep + 1}
@@ -307,7 +307,7 @@ export function QualificationForm() {
                                     key={option.value}
                                     onClick={() => handleSelect(option)}
                                     className={cn(
-                                        "w-full flex items-center justify-between p-5 rounded-2xl border transition-all duration-300 text-left group",
+                                        "w-full flex items-center justify-between py-3.5 px-4 md:p-5 rounded-2xl border transition-all duration-300 text-left group",
                                         answers[currentStep]?.value === option.value
                                             ? "bg-emerald-500/10 border-emerald-500/50 text-white"
                                             : "bg-white/5 border-white/5 hover:border-white/20 text-zinc-400"
@@ -344,7 +344,7 @@ export function QualificationForm() {
                         key="contact-data"
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="bg-zinc-900/50 border border-white/10 p-5 md:p-12 rounded-2xl md:rounded-3xl backdrop-blur-xl"
+                        className="bg-zinc-900/50 border border-white/10 py-6 px-4 md:p-12 rounded-2xl md:rounded-3xl backdrop-blur-xl"
                     >
                         <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-4 block">
                             {t('contact.qualification.last_step')}

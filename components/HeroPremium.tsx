@@ -65,7 +65,7 @@ export function HeroPremium() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="relative z-20 flex flex-col md:flex-row gap-6 items-start"
+                    className="relative z-30 transform-gpu flex flex-col md:flex-row gap-6 items-start"
                 >
                     <button
                         onClick={openModal}

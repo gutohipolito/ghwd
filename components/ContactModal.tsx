@@ -132,7 +132,7 @@ export function ContactModal() {
                             <X className="w-6 h-6 text-zinc-500 group-hover:text-white transition-colors" />
                         </button>
 
-                        <div className="relative z-10 p-4 sm:p-6 md:p-12">
+                        <div className="relative z-10 pt-20 px-5 pb-6 sm:p-6 md:p-12">
                             <QualificationForm />
                         </div>
                     </motion.div>

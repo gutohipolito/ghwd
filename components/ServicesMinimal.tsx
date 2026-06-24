@@ -52,7 +52,7 @@ export function ServicesMinimal() {
     ];
 
     return (
-        <section className="py-24 bg-zinc-950 text-white" id="services">
+        <section className="relative z-30 py-24 bg-zinc-950 text-white" id="services">
             <div className="container mx-auto px-6 md:px-24">
 
                 {/* Header */}

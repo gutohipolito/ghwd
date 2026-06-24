@@ -129,7 +129,7 @@ export function MegaFooter() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-[11vw] sm:text-6xl md:text-[8rem] font-heading font-black text-white leading-[0.9] tracking-tightest mb-8"
+                            className="text-[8.5vw] sm:text-6xl md:text-[8rem] font-heading font-black text-white leading-[0.9] tracking-tightest mb-8"
                         >
                             {t('hero.we_build')}<br />
                             <span className="text-emerald-500">{t('hero.results')}</span>
