@@ -25,7 +25,7 @@ export function PageHero({
     const { t } = useLanguage();
 
     return (
-        <section className="relative h-[65vh] min-h-[500px] flex flex-col justify-center px-6 md:px-24 pt-16 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
+        <section className="relative h-[65vh] min-h-[500px] flex flex-col justify-center px-6 md:px-24 pt-28 md:pt-36 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
 
             {/* Background - Video Texture */}
             <div className="absolute inset-0 z-0">
@@ -92,7 +92,7 @@ export function PageHero({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-12 left-6 md:left-24 z-20"
+                className="relative bottom-auto left-auto mt-8 z-20 md:absolute md:bottom-12 md:left-24"
             >
                 <div className="flex items-center gap-4 text-xs font-mono text-zinc-500 uppercase tracking-widest">
                     <span>{t('hero.scroll')}</span>

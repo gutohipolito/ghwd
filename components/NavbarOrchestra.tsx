@@ -195,11 +195,10 @@ export function NavbarOrchestra() {
                         className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl flex flex-col justify-center items-center md:hidden outline-none"
                     >
                         <div className="flex flex-col gap-8 text-center">
-                            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.home')}</Link>
-                            <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.products')}</Link>
-                            <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.services')}</Link>
-                            <Link href="/partners" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.clients')}</Link>
-                            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">{t('nav.about')}</Link>
+                            <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.products')}</Link>
+                            <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.services')}</Link>
+                            <Link href="/partners" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.clients')}</Link>
+                            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.about')}</Link>
 
                             <div className="mt-8">
                                 <button
