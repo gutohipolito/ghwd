@@ -249,21 +249,40 @@ export function QualificationForm() {
 
     return (
         <div className="max-w-2xl mx-auto w-full">
-            {/* Progress */}
-            <div className="flex items-center gap-2 mb-12">
-                {[0, 1, 2, 3, 4, 5].map((s) => (
-                    <div 
-                        key={s}
-                        className={cn(
-                            "h-1.5 transition-all duration-500 rounded-full",
-                            s < currentStep ? "bg-emerald-500 w-8" :
-                            s === currentStep ? "bg-white w-12" : "bg-white/10 w-4"
-                        )}
-                    />
-                ))}
-                <span className="ml-auto text-[10px] font-mono uppercase tracking-widest text-zinc-500">
-                    {t('contact.qualification.step_label')} {currentStep + 1} {t('contact.qualification.of_label')} 6
-                </span>
+            {/* Progress Bar & Navigation Header */}
+            <div className="flex flex-col gap-4 mb-8">
+                {/* Progress bullets */}
+                <div className="flex items-center gap-1.5 w-full">
+                    {[0, 1, 2, 3, 4, 5].map((s) => (
+                        <div 
+                            key={s}
+                            className={cn(
+                                "h-1 transition-all duration-500 rounded-full flex-grow",
+                                s < currentStep ? "bg-emerald-500" :
+                                s === currentStep ? "bg-white" : "bg-white/10"
+                            )}
+                        />
+                    ))}
+                </div>
+                
+                {/* Sub-header step info and back button */}
+                <div className="flex items-center justify-between text-xs font-mono min-h-[24px]">
+                    {currentStep > 0 ? (
+                        <button 
+                            type="button"
+                            onClick={prevStep}
+                            className="text-zinc-500 hover:text-white transition-colors flex items-center gap-1 font-medium cursor-pointer"
+                        >
+                            ← {t('contact.qualification.buttons.back')}
+                        </button>
+                    ) : (
+                        <div className="w-10 h-4" />
+                    )}
+                    
+                    <span className="uppercase tracking-widest text-zinc-500 text-[10px]">
+                        {t('contact.qualification.step_label')} {currentStep + 1} {t('contact.qualification.of_label')} 6
+                    </span>
+                </div>
             </div>
 
             <AnimatePresence mode="wait">
@@ -274,7 +293,7 @@ export function QualificationForm() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="bg-zinc-900/50 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-xl"
+                        className="bg-zinc-900/50 border border-white/10 p-5 md:p-12 rounded-2xl md:rounded-3xl backdrop-blur-xl"
                     >
                         <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-4 block">
                             {t('contact.qualification.question_label')} 0{currentStep + 1}
@@ -294,11 +313,11 @@ export function QualificationForm() {
                                             : "bg-white/5 border-white/5 hover:border-white/20 text-zinc-400"
                                     )}
                                 >
-                                    <div className="flex items-center gap-4">
+                                    <div className="flex items-center gap-4 mr-4">
                                         <span className="text-base font-medium">{t(option.labelKey)}</span>
                                     </div>
                                     <div className={cn(
-                                        "w-5 h-5 rounded-full border flex items-center justify-center transition-all",
+                                        "w-5 h-5 rounded-full border flex items-center justify-center transition-all shrink-0",
                                         answers[currentStep]?.value === option.value
                                             ? "bg-emerald-500 border-emerald-500"
                                             : "border-white/20 group-hover:border-white/40"
@@ -309,20 +328,11 @@ export function QualificationForm() {
                             ))}
                         </div>
 
-                        <div className="flex items-center justify-between mt-12 pt-8 border-t border-white/5">
-                            <button 
-                                onClick={prevStep}
-                                className={cn(
-                                    "text-zinc-500 hover:text-white transition-colors text-sm font-medium",
-                                    currentStep === 0 && "opacity-0 pointer-events-none"
-                                )}
-                            >
-                                ← {t('contact.qualification.buttons.back')}
-                            </button>
+                        <div className="flex justify-end mt-8 pt-6 border-t border-white/5 w-full">
                             <button 
                                 onClick={nextStep}
                                 disabled={!answers[currentStep]}
-                                className="flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-emerald-500 hover:text-white transition-all disabled:opacity-30"
+                                className="flex items-center justify-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-emerald-500 hover:text-white transition-all disabled:opacity-30 w-full md:w-auto text-center whitespace-nowrap text-sm cursor-pointer"
                             >
                                 {t('contact.qualification.buttons.continue')}
                                 <ArrowRight className="w-4 h-4" />
@@ -334,7 +344,7 @@ export function QualificationForm() {
                         key="contact-data"
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="bg-zinc-900/50 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-xl"
+                        className="bg-zinc-900/50 border border-white/10 p-5 md:p-12 rounded-2xl md:rounded-3xl backdrop-blur-xl"
                     >
                         <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.2em] mb-4 block">
                             {t('contact.qualification.last_step')}
@@ -405,17 +415,10 @@ export function QualificationForm() {
                                 />
                             </div>
 
-                            <div className="flex items-center justify-between mt-12 pt-8 border-t border-white/5">
-                                <button 
-                                    type="button"
-                                    onClick={prevStep}
-                                    className="text-zinc-500 hover:text-white transition-colors text-sm font-medium"
-                                >
-                                    ← {t('contact.qualification.buttons.back')}
-                                </button>
+                            <div className="flex justify-end mt-8 pt-6 border-t border-white/5 w-full">
                                 <button 
                                     type="submit"
-                                    className="flex items-center gap-2 bg-emerald-500 text-black px-8 py-3 rounded-full font-bold hover:bg-white transition-all shadow-lg shadow-emerald-500/20"
+                                    className="flex items-center justify-center gap-2 bg-emerald-500 text-black px-8 py-3 rounded-full font-bold hover:bg-white transition-all shadow-lg shadow-emerald-500/20 w-full md:w-auto text-center whitespace-nowrap text-sm cursor-pointer"
                                 >
                                     {t('contact.qualification.buttons.submit')}
                                     <ArrowRight className="w-4 h-4" />

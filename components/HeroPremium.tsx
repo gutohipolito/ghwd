@@ -54,17 +54,18 @@ export function HeroPremium() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                    className="font-heading font-black italic uppercase text-5xl md:text-8xl leading-[0.9] tracking-tighter mb-12"
+                    className="relative z-10 font-heading font-black italic uppercase text-5xl md:text-8xl leading-[0.9] tracking-tighter mb-12"
                 >
                     <span dangerouslySetInnerHTML={{ __html: t('hero.headline_html') }} />
                 </motion.h1>
 
                 {/* Actions */}
                 <motion.div
+                    style={{ y: yText }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex flex-col md:flex-row gap-6 items-start"
+                    className="relative z-20 flex flex-col md:flex-row gap-6 items-start"
                 >
                     <button
                         onClick={openModal}

@@ -107,7 +107,7 @@ export function ContactModal() {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
                         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-zinc-950 border border-white/10 rounded-[2rem] shadow-2xl shadow-emerald-500/10 custom-scrollbar outline-none"
+                        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-zinc-950 border border-white/10 rounded-[2rem] shadow-2xl shadow-emerald-500/10 custom-scrollbar outline-none overscroll-contain"
                     >
                         {/* Video Background (Optional, like the page had) */}
                         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
@@ -132,7 +132,7 @@ export function ContactModal() {
                             <X className="w-6 h-6 text-zinc-500 group-hover:text-white transition-colors" />
                         </button>
 
-                        <div className="relative z-10 p-6 md:p-12">
+                        <div className="relative z-10 p-4 sm:p-6 md:p-12">
                             <QualificationForm />
                         </div>
                     </motion.div>
