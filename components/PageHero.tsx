@@ -25,7 +25,7 @@ export function PageHero({
     const { t } = useLanguage();
 
     return (
-        <section className="relative h-[65vh] min-h-[500px] flex flex-col justify-center px-6 md:px-24 pt-28 md:pt-36 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
+        <section className="relative h-auto py-16 pt-28 md:h-[65vh] md:min-h-[500px] md:py-0 md:pt-36 flex flex-col justify-start md:justify-center px-6 md:px-24 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
 
             {/* Background - Video Texture */}
             <div className="absolute inset-0 z-0">
