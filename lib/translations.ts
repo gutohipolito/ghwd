@@ -11,7 +11,8 @@ export const translations: Record<Language, any> = {
             contact: 'Contact',
             start: "Start",
             home: "Home",
-            start_project: "Start Project"
+            start_project: "Start Project",
+            faq: "FAQ"
         },
         hero: {
             tagline: 'Global Talent. Focus on Brazil.',
@@ -333,6 +334,49 @@ export const translations: Record<Language, any> = {
                 reject: "Reject All",
                 retention: "Retention Policy: Data is kept only as long as necessary."
             }
+        },
+        faq: {
+            header: {
+                tag: "/ Intelligence",
+                title: "Frequently Asked Questions.",
+                subtitle: "Everything you need to know about our high-performance engineering, methodology, and pricing tiers."
+            },
+            author_section: {
+                author_title: "Curated by",
+                author_name: "Gustavo Hipólito",
+                author_role: "Lead Software Architect",
+                last_updated: "Last updated"
+            },
+            questions: [
+                {
+                    q: "What is GHWD and what does the agency specialize in?",
+                    a: "GHWD is a high-performance software engineering and digital design studio. We specialize in developing fast websites, scalable custom applications, and custom APIs designed to support high transaction volumes, accelerate operations, and convert visitors into active customers."
+                },
+                {
+                    q: "What is the GHWD Velocity ecosystem and how does it optimize speed?",
+                    a: "GHWD Velocity is our proprietary boilerplates and optimization ecosystem. It leverages linear DOM structures, Edge Caching CDN configurations, and assets optimizations that consistently deliver perfect Lighthouse performance audits (LCP < 1.2s, INP < 50ms, and 100/100 score metrics)."
+                },
+                {
+                    q: "What technologies and frameworks does GHWD use?",
+                    a: "Our core tech stack includes Next.js, React, Tailwind CSS, TypeScript, Node.js, and serverless infrastructure (Cloudflare, AWS). We focus on using modern, static-first technologies (SSG/SSR) to guarantee speed, SEO/GEO indexing, and security."
+                },
+                {
+                    q: "How does GHWD guarantee data security and privacy?",
+                    a: "We implement advanced encryption, secure authentication layers (OAuth/OpenID), automated vulnerability scanning, and isolated database schemas. All our systems are fully compliant with GDPR and LGPD data protection guidelines."
+                },
+                {
+                    q: "What is the average timeline for developing a custom software project?",
+                    a: "The development timeline averages between 4 to 12 weeks depending on complexity. A dedicated landing page can be delivered in 2 to 3 weeks, while complex platforms, ERP integrations, or complete SaaS portals require a structured roadmap of 8 to 12 weeks."
+                },
+                {
+                    q: "How much does it cost to build a custom project with GHWD?",
+                    a: "Our custom projects start at R$ 4,000 for high-converting landing pages, ranging to R$ 15,000+ for complex systems, custom e-commerce interfaces, or integrated ERP software. We work with transparent pricing models aligned with your business goals."
+                },
+                {
+                    q: "Does GHWD offer ongoing support, maintenance, and post-launch updates?",
+                    a: "Yes. We offer preventive maintenance, continuous security patches, and performance optimization retainers. We also monitor traffic and user behavior data to suggest CRO (conversion rate optimization) and SEO/GEO enhancements."
+                }
+            ]
         }
     },
     pt: {
@@ -344,7 +388,8 @@ export const translations: Record<Language, any> = {
             contact: 'Contato',
             start: "Iniciar",
             home: "Home",
-            start_project: "Iniciar Projeto"
+            start_project: "Iniciar Projeto",
+            faq: "FAQ"
         },
         hero: {
             tagline: 'Talento Global. Foco no Brasil.',
@@ -666,6 +711,49 @@ export const translations: Record<Language, any> = {
                 reject: "Rejeitar Todos",
                 retention: "Política de Retenção: Dados são mantidos apenas pelo tempo necessário."
             }
+        },
+        faq: {
+            header: {
+                tag: "/ Inteligência",
+                title: "Perguntas Frequentes.",
+                subtitle: "Tudo o que você precisa saber sobre nossa engenharia de alta performance, metodologia de trabalho e faixas de investimento."
+            },
+            author_section: {
+                author_title: "Curado por",
+                author_name: "Gustavo Hipólito",
+                author_role: "Lead Software Architect",
+                last_updated: "Última atualização"
+            },
+            questions: [
+                {
+                    q: "O que é a GHWD e em quais tipos de projetos a agência se especializa?",
+                    a: "A GHWD é um estúdio de engenharia de software de alta performance e design digital. Somos especializados no desenvolvimento de sites ultra-rápidos, sistemas sob medida escaláveis e APIs personalizadas que suportam altos volumes de tráfego, eliminando gargalos de carregamento e aumentando a conversão de leads e vendas."
+                },
+                {
+                    q: "O que é o ecossistema \"GHWD Velocity\" e como ele garante a velocidade das páginas?",
+                    a: "O GHWD Velocity é nosso conjunto de boilerplates e otimizações proprietárias para Next.js e Headless Commerce. Ele estrutura o DOM de forma linear (sem elementos desnecessários), implementa Edge Caching na CDN e otimiza assets para entregar notas máximas no Lighthouse (LCP < 1.2s, INP < 50ms)."
+                },
+                {
+                    q: "Quais tecnologias e frameworks a GHWD utiliza nos projetos?",
+                    a: "Nossa stack principal é baseada em Next.js, React, Tailwind CSS, TypeScript, Node.js e infraestrutura na nuvem (Cloudflare, AWS). Priorizamos tecnologias modernas que permitem renderização estática completa (SSG) ou híbrida (SSR), garantindo excelente SEO/GEO e segurança."
+                },
+                {
+                    q: "Como a GHWD garante a segurança e privacidade dos dados nos sistemas desenvolvidos?",
+                    a: "Implementamos criptografia avançada nos dados, autenticação segura (OAuth/OpenID), varreduras automáticas de vulnerabilidade e isolamento de banco de dados. Todos os nossos projetos são desenvolvidos em conformidade com as diretrizes da LGPD (Lei Geral de Proteção de Dados) e GDPR."
+                },
+                {
+                    q: "Qual é o tempo médio para o desenvolvimento de um site ou sistema sob medida?",
+                    a: "O prazo médio varia de 4 a 12 semanas, dependendo da composição do escopo. Páginas de conversão (Landing Pages) podem ser entregues em 2 a 3 semanas. Sistemas integrados, e-commerce customizados ou portais B2B exigem um planejamento robusto de 8 a 12 semanas."
+                },
+                {
+                    q: "Quanto custa desenvolver um projeto de software ou site personalizado com a GHWD?",
+                    a: "Nossos projetos personalizados iniciam na faixa de R$ 4.000 para páginas de alta conversão, variando a R$ 15.000+ para sistemas complexos sob medida e portais corporativos. Trabalhamos com orçamentos transparentes baseados no escopo de entrega e valor de negócios."
+                },
+                {
+                    q: "A GHWD oferece suporte, manutenção e evolução contínua pós-lançamento?",
+                    a: "Sim. Oferecemos pacotes pós-lançamento de manutenção preventiva, monitoramento de performance e atualizações periódicas de segurança. Também analisamos métricas de comportamento para propor melhorias de CRO (otimização de conversão) e SEO/GEO."
+                }
+            ]
         }
     },
     'pt-pt': {
@@ -677,7 +765,8 @@ export const translations: Record<Language, any> = {
             contact: 'Contacto',
             start: "Iniciar",
             home: "Início",
-            start_project: "Iniciar Projeto"
+            start_project: "Iniciar Projeto",
+            faq: "FAQ"
         },
         hero: {
             tagline: 'Talento Global. Foco no Brasil.',
@@ -986,6 +1075,49 @@ export const translations: Record<Language, any> = {
                 reject: "Rejeitar Todos",
                 retention: "Política de Retenção: Os dados são mantidos apenas pelo tempo necessário."
             }
+        },
+        faq: {
+            header: {
+                tag: "/ Inteligência",
+                title: "Perguntas Frequentes.",
+                subtitle: "Tudo o que precisa de saber sobre a nossa engenharia de alta performance, metodologia de trabalho e faixas de investimento."
+            },
+            author_section: {
+                author_title: "Curado por",
+                author_name: "Gustavo Hipólito",
+                author_role: "Lead Software Architect",
+                last_updated: "Última atualização"
+            },
+            questions: [
+                {
+                    q: "O que é a GHWD e em que tipos de projetos a agência se especializa?",
+                    a: "A GHWD é um estúdio de engenharia de software de alta performance e design digital. Somos especializados no desenvolvimento de websites ultra-rápidos, sistemas à medida escaláveis e APIs personalizadas que suportam elevados volumes de tráfego, eliminando lentidões e aumentando a conversão."
+                },
+                {
+                    q: "O que é o ecossistema \"GHWD Velocity\" e como garante a velocidade das páginas?",
+                    a: "O GHWD Velocity é o nosso conjunto de boilerplates e otimizações proprietárias para Next.js. Estrutura o DOM de forma linear, implementa Edge Caching na CDN e otimiza assets para entregar notas máximas no Lighthouse (LCP < 1.2s, INP < 50ms)."
+                },
+                {
+                    q: "Quais tecnologias e frameworks a GHWD utiliza nos projetos?",
+                    a: "A nossa stack principal é baseada em Next.js, React, Tailwind CSS, TypeScript, Node.js e infraestrutura na nuvem (Cloudflare, AWS). Priorizamos tecnologias modernas que permitem renderização estática completa (SSG), garantindo excelente SEO/GEO."
+                },
+                {
+                    q: "Como a GHWD garante a segurança e privacidade dos dados nos sistemas desenvolvidos?",
+                    a: "Implementamos criptografia avançada nos dados, autenticação segura (OAuth/OpenID), varreduras automáticas de vulnerabilidade e isolamento de base de dados. Todos os nossos projetos cumprem com a RGPD e a LGPD."
+                },
+                {
+                    q: "Qual é o tempo médio para o desenvolvimento de um website ou sistema à medida?",
+                    a: "O prazo médio varia de 4 a 12 semanas, dependendo da complexidade. Páginas de conversão (Landing Pages) podem ser entregues em 2 a 3 semanas. Sistemas integrados ou portais B2B exigem um planeamento robusto de 8 a 12 semanas."
+                },
+                {
+                    q: "Quanto custa desenvolver um projeto de software ou website personalizado com a GHWD?",
+                    a: "Os nossos projetos personalizados iniciam na faixa de R$ 4.000 para páginas de alta conversão, variando a R$ 15.000+ para sistemas complexos à medida. Trabalhamos com orçamentos transparentes baseados no escopo de entrega."
+                },
+                {
+                    q: "A GHWD oferece suporte, manutenção e evolução contínua pós-lançamento?",
+                    a: "Sim. Oferecemos pacotes pós-lançamento de manutenção preventiva, monitorização de performance e atualizações periódicas de segurança. Sugerimos também melhorias de CRO e SEO/GEO com base em dados de utilização reais."
+                }
+            ]
         }
     },
     es: {
@@ -997,7 +1129,8 @@ export const translations: Record<Language, any> = {
             contact: 'Contacto',
             start: "Iniciar",
             home: "Home",
-            start_project: "Iniciar Proyecto"
+            start_project: "Iniciar Proyecto",
+            faq: "FAQ"
         },
         hero: {
             tagline: 'Talento Global. Foco en Brasil.',
@@ -1301,6 +1434,49 @@ export const translations: Record<Language, any> = {
                 reject: "Rechazar Todo",
                 retention: "Política de Retención: Los datos se conservan solo el tiempo necesario."
             }
+        },
+        faq: {
+            header: {
+                tag: "/ Inteligencia",
+                title: "Preguntas Frecuentes.",
+                subtitle: "Todo lo que necesita saber sobre nuestra ingeniería de alto rendimiento, metodología de trabajo y rangos de inversión."
+            },
+            author_section: {
+                author_title: "Curado por",
+                author_name: "Gustavo Hipólito",
+                author_role: "Lead Software Architect",
+                last_updated: "Última actualización"
+            },
+            questions: [
+                {
+                    q: "¿Qué es GHWD y en qué se especializa la agencia?",
+                    a: "GHWD es un estudio de ingeniería de software de alto rendimiento y diseño digital. Nos especializamos en el desarrollo de sitios web ultrarrápidos, sistemas a medida escalables y APIs personalizadas que soportan altos volúmenes de tráfico, eliminando problemas de carga y aumentando la conversión."
+                },
+                {
+                    q: "¿Qué es el ecosistema \"GHWD Velocity\" y cómo optimiza la velocidad?",
+                    a: "GHWD Velocity es nuestro conjunto de plantillas y optimizaciones propietarias. Implementa una estructura DOM lineal y optimización avanzada en Edge CDN para ofrecer un rendimiento perfecto en auditorías Lighthouse (LCP < 1.2s, INP < 50ms)."
+                },
+                {
+                    q: "¿Qué tecnologías y frameworks utiliza GHWD?",
+                    a: "Nuestra pila principal está compuesta por Next.js, React, Tailwind CSS, TypeScript, Node.js e infraestructura serverless (Cloudflare, AWS). Priorizamos tecnologías modernas que garantizan una velocidad extrema, posicionamiento SEO/GEO y máxima seguridad."
+                },
+                {
+                    q: "¿Cómo garantiza GHWD la seguridad y privacidad de los datos?",
+                    a: "Implementamos cifrado avanzado, capas de autenticación segura (OAuth/OpenID), escaneos automáticos de vulnerabilidad y esquemas de base de datos aislados. Todos nuestros sistemas cumplen plenamente con las normativas GDPR y LGPD."
+                },
+                {
+                    q: "¿Cuál es el plazo medio para el desarrollo de un proyecto a medida?",
+                    a: "El plazo medio es de 4 a 12 semanas según la complejidad. Una página de destino dedicada puede entregarse en 2-3 semanas, mientras que las plataformas complejas, integraciones ERP o portales SaaS completos requieren de 8 a 12 semanas."
+                },
+                {
+                    q: "¿Cuánto cuesta desarrollar un proyecto personalizado con GHWD?",
+                    a: "Nuestros proyectos a medida comienzan en R$ 4.000 para páginas de destino de alta conversión, y ascienden a R$ 15.000+ para sistemas complejos e interfaces de comercio electrónico. Ofrecemos presupuestos transparentes alineados con sus objetivos."
+                },
+                {
+                    q: "¿Ofrece GHWD soporte, mantenimiento y actualización continua después del lanzamiento?",
+                    a: "Sí. Ofrecemos mantenimiento preventivo, actualizaciones de seguridad continuas y optimización de rendimiento. También monitoreamos los datos de tráfico y comportamiento para sugerir mejoras de CRO y SEO/GEO."
+                }
+            ]
         }
     }
 };
