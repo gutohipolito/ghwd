@@ -238,7 +238,7 @@ export const translations: Record<Language, any> = {
                 },
                 ai: {
                     title: "AI Engineering",
-                    desc: "GHWD builds custom AI agents integrated with ChatGPT, Claude, Gemini, and corporate databases to automate sales, support, and complex business workflows.",
+                    desc: "We develop AI agents integrated with ChatGPT, Claude, Gemini, and enterprise systems to automate customer service, sales, support, and operations.",
                     caps: ["LLM Integration", "Custom AI Agents", "RAG Systems", "AI Workflows"]
                 },
                 automation: {
@@ -651,7 +651,7 @@ export const translations: Record<Language, any> = {
                 },
                 ai: {
                     title: "Engenharia de IA",
-                    desc: "A GHWD desenvolve agentes de IA integrados ao ChatGPT, Claude, Gemini e sistemas corporativos para automatizar vendas, suporte e operações operacionais complexas.",
+                    desc: "Desenvolvemos agentes de IA integrados ao ChatGPT, Claude, Gemini e sistemas empresariais para automatizar atendimento, vendas, suporte e operações.",
                     caps: ["Integração de LLM", "Agentes de IA", "Sistemas RAG", "Fluxos de Trabalho IA"]
                 },
                 automation: {
@@ -1051,7 +1051,7 @@ export const translations: Record<Language, any> = {
                 },
                 ai: {
                     title: "Engenharia de IA",
-                    desc: "A GHWD desenvolve agentes de IA integrados com o ChatGPT, Claude, Gemini e sistemas corporativos para automatizar vendas, suporte e operações empresariais.",
+                    desc: "Desenvolvemos agentes de IA integrados ao ChatGPT, Claude, Gemini e sistemas empresariais para automatizar atendimento, vendas, suporte e operações.",
                     caps: ["Integração de LLM", "Agentes de IA", "Sistemas RAG", "Fluxos de Trabalho IA"]
                 },
                 automation: {
@@ -1446,7 +1446,7 @@ export const translations: Record<Language, any> = {
                 },
                 ai: {
                     title: "Ingeniería de IA",
-                    desc: "GHWD desarrolla agentes de IA integrados con ChatGPT, Claude, Gemini y sistemas corporativos para automatizar ventas, soporte y flujos de trabajo empresariales complejos.",
+                    desc: "Desarrollamos agentes de IA integrados a ChatGPT, Claude, Gemini y sistemas empresariales para automatizar atención, ventas, soporte y operaciones.",
                     caps: ["Integración de LLM", "Agentes de IA", "Sistemas RAG", "Flujos de Trabajo IA"]
                 },
                 automation: {
