@@ -266,8 +266,35 @@ export const translations: Record<Language, any> = {
                 title: "Page Not Found",
                 subtitle: "The page you're looking for has been moved or doesn't exist.",
                 back_home: "Back to Home"
+            },
+            editorial: {
+                tag: "/ Technical Editorial",
+                title: "Engineering Premium Digital Nervous Systems & AI Infrastructures",
+                subtitle: "How we build custom web platforms, automated data pipelines, and secure cognitive integrations for high-growth enterprises.",
+                sections: [
+                    {
+                        title: "01 / Web Engineering & Decoupled Performance",
+                        content: `Traditional monolithic website architectures, such as classic WordPress setups or visual drag-and-drop builders, have introduced significant code overhead and heavy DOM tree nesting (DOM bloating). For high-scale B2B organizations, this inefficiency directly harms organic indexability and lead conversions. At GHWD, we eliminate these friction points by designing static-first, highly modular frontend architectures using Next.js, React, and Tailwind CSS v4. By generating optimized static pages (SSG) and serving them globally via Edge CDNs, we consistently deliver instant loading states with Largest Contentful Paint (LCP) under 1.0 second and Interaction to Next Paint (INP) under 50 milliseconds. This level of technical execution ensures that our client's platforms score a perfect 100/100 on Google Lighthouse performance audits, maximizing lead retention and organic acquisition.`
+                    },
+                    {
+                        title: "02 / Cognitive AI Integration & Secure RAG Architectures",
+                        content: `Generative Artificial Intelligence is transforming business operations, moving from simple chat widgets to advanced workflow-integrated systems. We develop secure, custom cognitive agents powered by large language models like GPT-4, Claude, and Google Gemini, configured with Retrieval-Augmented Generation (RAG) pipelines. These agents safely connect to private databases, legacy ERPs, and CRMs, allowing natural language queries without exposing sensitive credentials or keys. Our setups allow corporate systems to perform tasks like real-time customer support queries, automated drafting of targeted sales pitches, and complex analytics reports compiled directly from natural language prompts, all under strict data privacy protocols.`
+                    },
+                    {
+                        title: "03 / Process Automation & Integrated Workflows",
+                        content: `Manual tasks like retyping customer data, delayed invoice generation, and decoupled inventory sheets cause bottlenecks that hinder company growth. GHWD designs and implements automated process pipelines that integrate CRM platforms (Salesforce, HubSpot, RD Station), ERP systems (SAP, TOTVS, Bling), databases, and channels (WhatsApp, Slack, Email). Using integration platforms like n8n and Make or custom-built Node.js microservices, we build reliable, automated workflows where invoices, data updates, and lead assignments execute in under 3 seconds. This reduces operational overhead by up to 80% and allows internal teams to focus on strategy.`
+                    },
+                    {
+                        title: "04 / Headless Commerce & B2B Wholesale Channels",
+                        content: `Decoupled architectures represent the future of digital transactions. By separating the visual presentation layer (frontend) from the backend transactional database (VTEX, Shopify Plus), headless commerce provides total design flexibility, robust security, and the ability to process high transaction volumes without slowdowns. We specialize in building tailored shopping experiences and B2B wholesale portals (Wholesale OS) that support complex price rules, bulk buying, credit limit validations, and real-time inventory updates, providing a seamless buying experience for distributors and end consumers alike.`
+                    },
+                    {
+                        title: "05 / Generative Engine Optimization (GEO) & Semantic AI Search",
+                        content: `Traditional search engine optimization (SEO) focused mainly on placing search keywords on pages to rank on search engine results pages. In the era of generative AI, users get synthesized, direct answers from virtual search assistants (ChatGPT Search, Gemini, and Perplexity). To make your company the primary source cited in these search summaries, websites must be optimized with GEO strategies. We inject custom structured metadata (Schema.org JSON-LD graph configurations) directly into pre-rendered HTML pages, format content with factual, clear summaries (TL;DR sections) easy for RAG engines to scan, and structure text around real user intent, securing visibility in the next generation of web search.`
+                    }
+                ]
             }
-        },
+},
         legal: {
             updated: "Last Updated",
             last_update_date: "April 2026",
@@ -652,8 +679,35 @@ export const translations: Record<Language, any> = {
                 title: "Página Não Encontrada",
                 subtitle: "A página que você está procurando foi movida ou não existe.",
                 back_home: "Voltar para o Início"
+            },
+            editorial: {
+                tag: "/ Editorial Técnico",
+                title: "Engenharia de Sistemas Digitais de Alta Performance & Infraestrutura de IA",
+                subtitle: "Como projetamos plataformas web sob medida, esteiras de automação de dados e integrações cognitivas de inteligência artificial.",
+                sections: [
+                    {
+                        title: "01 / Engenharia Web & Performance Desacoplada",
+                        content: `As arquiteturas tradicionais de websites monolíticos, como os setups clássicos do WordPress ou construtores de arrastar e soltar visuais, introduziram uma sobrecarga de código significativa e ninhos excessivamente profundos de divs (DOM bloating). Para organizações B2B de escala corporativa, essa ineficiência prejudica diretamente a indexabilidade orgânica e as taxas de conversão de leads de negócios. Na GHWD, eliminamos esses pontos de fricção desenvolvendo arquiteturas frontend estáticas e altamente modulares usando Next.js, React e Tailwind CSS v4. Ao gerar páginas estáticas otimizadas (SSG) e distribuí-las globalmente através de CDNs na Edge, entregamos tempos de carregamento instantâneos com LCP (Largest Contentful Paint) abaixo de 1.0 segundo e INP (Interaction to Next Paint) inferior a 50 milissegundos. Este nível de execução técnica garante nota máxima de 100/100 em auditorias de desempenho do Google Lighthouse, maximizando a retenção de usuários e a aquisição orgânica de novos leads.`
+                    },
+                    {
+                        title: "02 / Integração de IA Cognitiva & Arquiteturas RAG Seguras",
+                        content: `A Inteligência Artificial generativa está transformando as operações de negócios, deixando de ser apenas um widget de chat básico para se tornar um sistema integrado ao fluxo de trabalho corporativo. Desenvolvemos agentes cognitivos seguros e customizados alimentados por modelos de linguagem robustos como GPT-4, Claude e Google Gemini, configurados com pipelines de RAG (Retrieval-Augmented Generation). Esses agentes inteligentes se conectam de forma segura a bancos de dados privados, ERPs legados e CRMs, permitindo consultas em linguagem natural sem expor credenciais ou chaves confidenciais. Nossas arquiteturas de orquestração de IA realizam tarefas como consultas de suporte a clientes com leitura do ERP em tempo real, redação automática de propostas comerciais de vendas personalizadas baseadas no histórico do lead, e compilação de relatórios analíticos de faturamento a partir de comandos simples em linguagem natural.`
+                    },
+                    {
+                        title: "03 / Automação de Processos & Fluxos de Dados Integrados",
+                        content: `Tarefas manuais como redigitação de informações de clientes, atrasos na emissão de notas fiscais de vendas e planilhas de estoque desconectadas geram gargalos que barram o crescimento escalável das empresas. A GHWD desenha e implementa esteiras automáticas de processos corporativos que integram plataformas de CRM (Salesforce, HubSpot, RD Station), sistemas de ERP (SAP, TOTVS, Bling), bancos de dados e canais de atendimento (WhatsApp, Slack, Email). Utilizando camadas modernas de integração como n8n e Make ou microsserviços customizados em Node.js, construímos fluxos de dados confiáveis onde faturamentos, atualizações e roteamento de contatos ocorrem em menos de 3 segundos, reduzindo os custos operacionais em até 80% e liberando a equipe interna para atividades estratégicas.`
+                    },
+                    {
+                        title: "04 / Headless Commerce & Canais de Venda B2B por Atacado",
+                        content: `As arquiteturas desacopladas representam o futuro das transações comerciais digitais. Ao separar a camada de apresentação visual (frontend) do banco de dados transacional traseiro (como VTEX ou Shopify Plus), o headless commerce entrega flexibilidade total de design, segurança robusta e capacidade de processar altos volumes de transações simultâneas sem lentidão. Somos especialistas na construção de experiências de compra sob medida e portais de venda B2B por atacado (Wholesale OS) que suportam tabelas de preços complexas, compras repetidas em lote por planilhas, validações de limites de crédito financeiro e atualizações automáticas de estoque de produtos, fornecendo uma jornada sem atritos para distribuidores e consumidores finais.`
+                    },
+                    {
+                        title: "05 / GEO (Generative Engine Optimization) & Busca Semântica de IA",
+                        content: `O SEO tradicional focava principalmente em posicionar palavras-chave específicas em páginas web para subir no ranking de resultados do Google. Na era da Inteligência Artificial generativa, os usuários recebem respostas sintetizadas e diretas de assistentes virtuais de busca (como o ChatGPT Search, Gemini e Perplexity). Para que a sua empresa seja a fonte citada e recomendada nesses resumos cognitivos, os websites precisam ser otimizados com estratégias de GEO. Injetamos metadados estruturados (grafo de Schemas.org em JSON-LD) diretamente no HTML pré-renderizado, formatamos conteúdos com resumos diretos baseados em fatos (seções TL;DR) fáceis de serem escaneados por motores RAG, e estruturamos textos focados em responder à real intenção de pesquisa do usuário corporativo.`
+                    }
+                ]
             }
-        },
+},
         legal: {
             updated: "Última Atualização",
             last_update_date: "Abril de 2026",
@@ -1025,8 +1079,35 @@ export const translations: Record<Language, any> = {
                 title: "Página Não Encontrada",
                 subtitle: "A página que procura foi movida ou não existe.",
                 back_home: "Voltar ao Início"
+            },
+            editorial: {
+                tag: "/ Editorial Técnico",
+                title: "Engenharia de Sistemas Digitais de Alta Performance & Infraestrutura de IA",
+                subtitle: "Como projetamos plataformas web sob medida, esteiras de automação de dados e integrações cognitivas de inteligência artificial.",
+                sections: [
+                    {
+                        title: "01 / Engenharia Web & Performance Desacoplada",
+                        content: `As arquiteturas tradicionais de websites monolíticos, como os setups clássicos do WordPress ou construtores de arrastar e soltar visuais, introduziram uma sobrecarga de código significativa e ninhos excessivamente profundos de divs (DOM bloating). Para organizações B2B de escala corporativa, essa ineficiência prejudica diretamente a indexabilidade orgânica e as taxas de conversão de leads de negócios. Na GHWD, eliminamos esses pontos de fricção desenvolvendo arquiteturas frontend estáticas e altamente modulares usando Next.js, React e Tailwind CSS v4. Ao gerar páginas estáticas otimizadas (SSG) e distribuí-las globalmente através de CDNs na Edge, entregamos tempos de carregamento instantâneos com LCP (Largest Contentful Paint) abaixo de 1.0 segundo e INP (Interaction to Next Paint) inferior a 50 milissegundos. Este nível de execução técnica garante nota máxima de 100/100 em auditorias de desempenho do Google Lighthouse, maximizando a retenção de utilizadores e a aquisição orgânica de novos leads.`
+                    },
+                    {
+                        title: "02 / Integração de IA Cognitiva & Arquiteturas RAG Seguras",
+                        content: `A Inteligência Artificial generativa está a transformar as operações de negócios, deixando de ser apenas um widget de chat básico para se tornar um sistema integrado ao fluxo de trabalho corporativo. Desenvolvemos agentes cognitivos seguros e personalizados alimentados por modelos de linguagem robustos como GPT-4, Claude e Google Gemini, configurados com pipelines de RAG (Retrieval-Augmented Generation). Esses agentes inteligentes ligam-se de forma segura a bases de dados privadas, ERPs legados e CRMs, permitindo consultas em linguagem natural sem expor credenciais ou chaves confidenciais. As nossas arquiteturas de orquestração de IA realizam tarefas como consultas de suporte a clientes com leitura do ERP em tempo real, redação automática de propostas comerciais de vendas personalizadas baseadas no histórico do lead, e compilação de relatórios analíticos de faturação a partir de comandos simples em linguagem natural.`
+                    },
+                    {
+                        title: "03 / Automação de Processos & Fluxos de Dados Integrados",
+                        content: `Tarefas manuais como redigitação de informações de clientes, atrasos na emissão de faturas de vendas e planilhas de stock desconectadas geram gargalos que barram o crescimento escalável das empresas. A GHWD desenha e implementa esteiras automáticas de processos corporativos que integram plataformas de CRM (Salesforce, HubSpot, RD Station), sistemas de ERP (SAP, TOTVS, Bling), bases de dados e canais de atendimento (WhatsApp, Slack, Email). Utilizando camadas modernas de integração como n8n e Make ou microsserviços personalizados em Node.js, construímos fluxos de dados confiáveis onde faturamentos, atualizações e roteamento de contactos ocorrem em menos de 3 segundos, reduzindo os custos operacionais em até 80% e libertando a equipa interna para atividades estratégicas.`
+                    },
+                    {
+                        title: "04 / Headless Commerce & Canais de Venda B2B por Atacado",
+                        content: `As arquiteturas desacopladas representam o futuro das transações comerciais digitais. Ao separar a camada de apresentação visual (frontend) do banco de dados transacional traseiro (como VTEX ou Shopify Plus), o headless commerce entrega flexibilidade total de design, segurança robusta e capacidade de processar altos volumes de transações simultâneas sem lentidão. Somos especialistas na construção de experiências de compra sob medida e portais de venda B2B por atacado (Wholesale OS) que suportam tabelas de preços complexas, compras repetidas em lote por planilhas, validações de limites de crédito financeiro e atualizações automáticas de stock de produtos, fornecendo uma jornada sem atritos para distribuidores e consumidores finais.`
+                    },
+                    {
+                        title: "05 / GEO (Generative Engine Optimization) & Busca Semântica de IA",
+                        content: `O SEO tradicional focava principalmente em posicionar palavras-chave específicas em páginas web para subir no ranking de resultados do Google. Na era da Inteligência Artificial generativa, os utilizadores recebem respostas sintetizadas e diretas de assistentes virtuais de busca (como o ChatGPT Search, Gemini e Perplexity). Para que a sua empresa seja a fonte citada e recomendada nesses resumos cognitivos, os websites precisam de ser otimizados com estratégias de GEO. Injetamos metadados estruturados (grafo de Schemas.org em JSON-LD) diretamente no HTML pré-renderizado, formatamos conteúdos com resumos diretos baseados em factos (seções TL;DR) fáceis de serem digitalizados por motores RAG, e estruturamos textos focados em responder à real intenção de pesquisa do utilizador corporativo.`
+                    }
+                ]
             }
-        },
+},
         legal: {
             updated: "Última Atualização",
             last_update_date: "Abril de 2026",
@@ -1393,8 +1474,35 @@ export const translations: Record<Language, any> = {
                 title: "Página No Encontrada",
                 subtitle: "La página que buscas ha sido movida o no existe.",
                 back_home: "Volver al Inicio"
+            },
+            editorial: {
+                tag: "/ Editorial Técnico",
+                title: "Ingeniería de Sistemas Digitales de Alto Rendimiento e Infraestructura de IA",
+                subtitle: "Cómo diseñamos plataformas web a medida, flujos automatizados de datos e integraciones cognitivas de inteligencia artificial.",
+                sections: [
+                    {
+                        title: "01 / Ingeniería Web & Rendimiento Desacoplado",
+                        content: `Las arquitecturas tradicionales de sitios web monolíticos, como las configuraciones clásicas de WordPress o los constructores visuales de arrastrar y soltar, han introducido una sobrecarga de código significativa y nidos excesivamente profundos de divs (DOM bloating). Para organizaciones B2B de escala corporativa, esta ineficiencia perjudica directamente la indexabilidad orgánica y las tasas de conversión de clientes potenciales. En GHWD, eliminamos estos puntos de fricción desarrollando frontend estáticos y altamente modulares utilizando Next.js, React y Tailwind CSS v4. Al generar páginas estáticas optimizadas (SSG) y distribuirlas globalmente a través de CDNs en Edge, entregamos tiempos de carga instantáneos con LCP (Largest Contentful Paint) por debajo de 1.0 segundo e INP (Interaction to Next Paint) inferior a 50 milisegundos. Este nivel de ejecución técnica garantiza una puntuación de 100/100 en las auditorías de rendimiento de Google Lighthouse, maximizando la retención de usuarios y la adquisición orgánica de nuevos leads.`
+                    },
+                    {
+                        title: "02 / Integración de IA Cognitiva & Arquitecturas RAG Seguras",
+                        content: `La Inteligencia Artificial generativa está transformando las operaciones comerciales, dejando de ser un simple widget de chat para convertirse en un sistema integrado en el flujo de trabajo corporativo. Desarrollamos agentes cognitivos seguros y personalizados alimentados por modelos de lenguaje robustos como GPT-4, Claude y Google Gemini, configurados con pipelines de RAG (Retrieval-Augmented Generation). Estos agentes inteligentes se conectan de forma segura a bases de datos privadas, ERPs heredados y CRMs, lo que permite realizar consultas en lenguaje natural sin exponer credenciales ni claves confidenciales. Nuestras arquitecturas de orquestación de IA realizan tareas como consultas de soporte a clientes con lectura del ERP en tiempo real, redacción automática de propuestas comerciales personalizadas basadas en el historial del lead, y generación de informes analíticos de facturación.`
+                    },
+                    {
+                        title: "03 / Automatización de Procesos & Flujos de Datos Integrados",
+                        content: `Las tareas manuales como la reescritura de información de los clientes, los retrasos en la facturación y las hojas de inventario desconectadas generan cuellos de botella que frenan el crecimiento escalable de las empresas. En GHWD diseñamos e implementamos flujos automatizados de procesos corporativos que integran plataformas de CRM (Salesforce, HubSpot, RD Station), sistemas de ERP (SAP, TOTVS, Bling), bases de datos y canales de atención (WhatsApp, Slack, Correo). Utilizando capas modernas de integración como n8n y Make o microservicios personalizados en Node.js, construimos flujos de datos confiables donde la facturación, las actualizaciones y el enrutamiento de contactos ocurren en menos de 3 segundos, reduciendo los costos operativos en hasta un 80% y liberando al equipo interno para actividades estratégicas.`
+                    },
+                    {
+                        title: "04 / Headless Commerce & Canales de Venta B2B por Mayor",
+                        content: `Las arquitecturas desacopladas representan el futuro de las transacciones comerciales digitales. Al separar la capa de presentación visual (frontend) de la base de datos transaccional trasera (como VTEX o Shopify Plus), el headless commerce entrega flexibilidad total de diseño, seguridad robusta y capacidad de procesar altos volúmenes de transacciones simultáneas sin ralentizaciones. Somos especialistas en la construcción de experiencias de compra a medida y portales de venta B2B por mayor (Wholesale OS) que soportan tablas de precios complejas, compras repetidas en lote, validaciones de límites de crédito financiero y actualizaciones automáticas de stock de productos, proporcionando una jornada sin fricciones para distribuidores y consumidores finales.`
+                    },
+                    {
+                        title: "05 / GEO (Generative Engine Optimization) & Búsqueda Semántica de IA",
+                        content: `El SEO tradicional se centraba principalmente en posicionar palabras clave específicas en páginas web para subir en los resultados de Google. En la era de la IA generativa, los usuarios reciben respuestas sintetizadas y directas de asistentes virtuales de búsqueda (como ChatGPT Search, Gemini y Perplexity). Para que su empresa sea la fuente citada y recomendada en estos resúmenes cognitivos, los sitios web deben optimizarse con estrategias de GEO. Inyectamos metadados estructurados (grafo de Schemas.org en JSON-LD) directamente en el HTML prerenderizado, formateamos contenidos con resúmenes directos basados en hechos (secciones TL;DR) fáciles de escanear por motores RAG, y estructuramos textos enfocados en responder a la real intención de búsqueda del usuario corporativo.`
+                    }
+                ]
             }
-        },
+},
         legal: {
             updated: "Última Actualización",
             last_update_date: "Abril de 2026",

@@ -4,6 +4,7 @@ import { ServicesMinimal } from "@/components/ServicesMinimal";
 import { SelectedWorks } from "@/components/SelectedWorks";
 import { MegaFooter } from "@/components/MegaFooter";
 import { DashboardsShowcase } from "@/components/DashboardsShowcase";
+import { EditorialContent } from "@/components/EditorialContent";
 
 export default function Home() {
   const jsonLd = {
@@ -101,6 +102,8 @@ export default function Home() {
       <DashboardsShowcase />
 
       {/* <SelectedWorks /> */}
+
+      <EditorialContent />
 
       <MegaFooter />
     </main>
