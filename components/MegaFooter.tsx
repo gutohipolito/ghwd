@@ -167,6 +167,8 @@ export function MegaFooter() {
                                     { name: t('nav.home'), href: "/" },
                                     { name: t('nav.services'), href: "/services" },
                                     { name: t('nav.clients'), href: "/partners" },
+                                    { name: t('nav.kb'), href: "/kb" },
+                                    { name: t('nav.glossary'), href: "/kb/glossary" },
                                     { name: t('nav.about'), href: "/about" },
                                     { name: t('nav.faq'), href: "/faq" }
                                 ].map((item) => (

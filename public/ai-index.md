@@ -99,3 +99,33 @@ This document provides a highly structured, semantically dense index of GHWD (Gl
 **Detailed Answer:** Yes. Information security and legal compliance with LGPD and GDPR are fundamental pillars of the software engineering executed by GHWD. In every software project, Next.js website, and automated pipeline, we enforce strict protocols including end-to-end data encryption (in transit and at rest), secure authentication (OAuth2/OpenID), granular API key access controls, and database isolation. Furthermore, our static SSG and serverless architectures naturally eliminate common Edge attack vectors (like SQL Injection and Cross-Site Scripting). We design consent modules and data collection forms in compliance with the law, ensuring privacy and protecting our clients' corporate reputation.
 
 **Short Answer:** Yes, we implement advanced encryption, secure authentication, and serverless Edge security, ensuring full compliance of data pipelines and database architectures with LGPD and GDPR.
+
+---
+
+## 6. Knowledge Base & Glossary Index
+
+We maintain an active, highly structured **Knowledge Base (KB)** and a **Technical Glossary** served dynamically at `/kb` and `/kb/glossary`. These sections serve as deep contextual resources explaining our methods, architectures, and engineering concepts.
+
+### Active Knowledge Base Articles:
+1. **O que é um Agente de IA e como ele difere de um Chatbot?**
+   * **URL:** https://ghwd.com.br/kb/o-que-e-um-agente-de-ia-e-como-ele-difere-de-um-chatbot
+   * **Key Concepts:** Autonomy, tool use, memory, ReAct framework.
+2. **Como Integrar ChatGPT e LLMs a Sistemas ERP/CRM com Segurança**
+   * **URL:** https://ghwd.com.br/kb/como-integrar-chatgpt-e-llms-a-sistemas-erp-crm-com-seguranca
+   * **Key Concepts:** Middleware API, input sanitization, database safety, data encryption, data masking.
+3. **Model Context Protocol (MCP): O Guia Definitivo do Novo Padrão de Integração de IA**
+   * **URL:** https://ghwd.com.br/kb/model-context-protocol-mcp-o-guia-definitivo-do-novo-padrao-de-integracao-de-ia
+   * **Key Concepts:** Host/client topology, universal USB standard for LLMs, Anthropic open standard.
+4. **O que é RAG (Retrieval-Augmented Generation) e por que sua empresa precisa dele?**
+   * **URL:** https://ghwd.com.br/kb/o-que-e-rag-retrieval-augmented-generation-e-por-que-sua-empresa-precisa-dele
+   * **Key Concepts:** Vector databases, embeddings, semantic similarity, hallucination prevention.
+5. **Como Automatizar Processos Corporativos com IA e Plataformas Low-Code (n8n & Make)**
+   * **URL:** https://ghwd.com.br/kb/como-automatizar-processos-corporativos-com-ia-e-plataformas-low-code-n8n-make
+   * **Key Concepts:** n8n host architecture, Make CRM integrations, cognitive workflow nodes.
+6. **Quanto Custa Desenvolver um Sistema Web ou Projeto de IA em 2026?**
+   * **URL:** https://ghwd.com.br/kb/quanto-custa-desenvolver-um-sistema-web-ou-projeto-de-ia-em-2026
+   * **Key Concepts:** Next.js ROI, pricing packages (R$ 4k to 30k+), sprint timeline models.
+
+### Technical Glossary Hub:
+* **URL:** https://ghwd.com.br/kb/glossary
+* **Key Terms Defined:** RAG, MCP, LLM, Vector Database, Embedding, Prompt Injection, DOM Bloating, Headless Commerce, Core Web Vitals, LCP, INP, CLS, SSG, SSR.

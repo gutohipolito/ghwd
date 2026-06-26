@@ -12,6 +12,7 @@ interface PageHeroProps {
     videoSrc?: string;
     videoClassName?: string;
     showVideo?: boolean;
+    titleClassName?: string;
 }
 
 export function PageHero({
@@ -20,9 +21,18 @@ export function PageHero({
     subtitle,
     videoSrc = "https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4",
     videoClassName,
-    showVideo = true
+    showVideo = true,
+    titleClassName
 }: PageHeroProps) {
     const { t } = useLanguage();
+
+    // Detecção dinâmica de título longo para evitar quebra de layout
+    const titleString = typeof title === 'string' ? title : '';
+    const isLongTitle = titleString.length > 25;
+    
+    const resolvedTitleClass = titleClassName || (isLongTitle 
+        ? "text-3xl sm:text-4xl md:text-6xl leading-[1.15]" 
+        : "text-5xl md:text-8xl leading-[1.1]");
 
     return (
         <section className="relative h-auto py-16 pt-28 md:h-[65vh] md:min-h-[500px] md:py-0 md:pt-36 flex flex-col justify-start md:justify-center px-6 md:px-24 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
@@ -68,7 +78,10 @@ export function PageHero({
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                    className="font-heading text-5xl md:text-8xl leading-[1.1] font-black tracking-tighter mb-8 uppercase"
+                    className={cn(
+                        "font-heading font-black tracking-tighter mb-8 uppercase",
+                        resolvedTitleClass
+                    )}
                 >
                     {title}
                 </motion.h1>

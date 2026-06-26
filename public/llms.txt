@@ -24,6 +24,8 @@ GHWD is a high-performance digital collective specializing in engineering premiu
 ## Key URLs
 - **Main Website:** https://ghwd.com.br
 - **AI-Optimized Site Index (LLM Guide):** https://ghwd.com.br/ai-index.md
+- **Knowledge Base (Articles & Guides):** https://ghwd.com.br/kb
+- **Technical Glossary (IA & Web Terms):** https://ghwd.com.br/kb/glossary
 - **Expertise & Services:** https://ghwd.com.br/services
 - **Products & Technology Repository:** https://ghwd.com.br/products
 - **Client & Partner Index:** https://ghwd.com.br/partners

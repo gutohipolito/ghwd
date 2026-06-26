@@ -129,6 +129,7 @@ export function NavbarOrchestra() {
                         { href: '/products', label: t('nav.products') },
                         { href: '/services', label: t('nav.services') },
                         { href: '/partners', label: t('nav.clients') },
+                        { href: '/kb', label: t('nav.kb') },
                         { href: '/about', label: t('nav.about') },
                         { href: '/faq', label: t('nav.faq') }
                     ].map((item) => (
@@ -199,6 +200,7 @@ export function NavbarOrchestra() {
                             <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.products')}</Link>
                             <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.services')}</Link>
                             <Link href="/partners" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.clients')}</Link>
+                            <Link href="/kb" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.kb')}</Link>
                             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.about')}</Link>
                             <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-heading font-black italic uppercase tracking-tighter text-white hover:text-emerald-400 transition-colors">{t('nav.faq')}</Link>
 

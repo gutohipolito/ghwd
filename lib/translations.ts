@@ -12,7 +12,9 @@ export const translations: Record<Language, any> = {
             start: "Start",
             home: "Home",
             start_project: "Talk to Specialist",
-            faq: "FAQ"
+            faq: "FAQ",
+            kb: "KB",
+            glossary: "Glossary"
         },
         hero: {
             tagline: 'Global Talent. Focus on Brazil.',
@@ -425,7 +427,9 @@ export const translations: Record<Language, any> = {
             start: "Iniciar",
             home: "Home",
             start_project: "Falar com Especialista",
-            faq: "FAQ"
+            faq: "FAQ",
+            kb: "Conhecimento",
+            glossary: "Glossário"
         },
         hero: {
             tagline: 'Talento Global. Foco no Brasil.',
@@ -838,7 +842,9 @@ export const translations: Record<Language, any> = {
             start: "Iniciar",
             home: "Início",
             start_project: "Falar com Especialista",
-            faq: "FAQ"
+            faq: "FAQ",
+            kb: "Conhecimento",
+            glossary: "Glossário"
         },
         hero: {
             tagline: 'Talento Global. Foco no Brasil.',
@@ -1238,7 +1244,9 @@ export const translations: Record<Language, any> = {
             start: "Iniciar",
             home: "Home",
             start_project: "Hablar con Especialista",
-            faq: "FAQ"
+            faq: "FAQ",
+            kb: "Conocimiento",
+            glossary: "Glosario"
         },
         hero: {
             tagline: 'Talento Global. Foco en Brasil.',

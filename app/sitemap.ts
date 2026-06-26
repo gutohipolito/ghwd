@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { servicesData } from '@/lib/services-data'
 import { citiesData } from '@/lib/local-data'
+import { kbArticles } from '@/lib/kb-data'
 
 export const dynamic = 'force-static';
  
@@ -68,6 +69,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/kb`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/kb/glossary`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
 
   // Adiciona serviços normais dinamicamente (incluindo todos os aliases/idiomas em servicesData)
@@ -94,5 +107,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return [...staticRoutes, ...serviceRoutes, ...localRoutes];
+  // Adiciona rotas do Knowledge Base dinamicamente
+  const kbRoutes = kbArticles.map(article => ({
+    url: `${baseUrl}/kb/${article.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...localRoutes, ...kbRoutes];
 }
