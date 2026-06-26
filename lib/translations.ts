@@ -22,7 +22,7 @@ export const translations: Record<Language, any> = {
             start_project: 'TALK TO SPECIALIST',
             view_work: 'VIEW WORK',
             scroll: 'Scroll to Explore',
-            headline_html: 'We build <br /><span className="text-zinc-500">Websites, Custom AI & SaaS</span> <br />for global scale.'
+            headline_html: 'Web Development, <br /><span className="text-zinc-500">AI & Automation</span> <br />for Businesses.'
         },
         footer: {
             tagline: 'Engineering the future of digital business.',
@@ -398,7 +398,7 @@ export const translations: Record<Language, any> = {
             start_project: 'FALAR COM ESPECIALISTA',
             view_work: 'VER PROJETOS',
             scroll: 'Role para Explorar',
-            headline_html: 'Desenvolvemos <br /><span className="text-zinc-500">Sites, Sistemas de IA & SaaS</span> <br />de Alta Performance.'
+            headline_html: 'Desenvolvimento Web, <br /><span className="text-zinc-500">IA & Automação</span> <br />para Empresas.'
         },
         footer: {
             tagline: 'Tecnologia de alta performance para fazer sua empresa crescer.',
@@ -774,7 +774,7 @@ export const translations: Record<Language, any> = {
             start_project: 'FALAR COM ESPECIALISTA',
             view_work: 'VER PROJETOS',
             scroll: 'Percorra para Explorar',
-            headline_html: 'Desenvolvemos <br /><span className="text-zinc-500">Websites, Sistemas de IA & SaaS</span> <br />de Alta Performance.'
+            headline_html: 'Desenvolvimento Web, <br /><span className="text-zinc-500">IA & Automação</span> <br />para Empresas.'
         },
         footer: {
             tagline: 'Transformando visão estratégica em domínio digital.',
@@ -1137,7 +1137,7 @@ export const translations: Record<Language, any> = {
             start_project: 'HABLAR CON ESPECIALISTA',
             view_work: 'VER PROYECTOS',
             scroll: 'Desplazarse para Explorar',
-            headline_html: 'Desarrollamos <br /><span className="text-zinc-500">Sitios Web, IA & SaaS</span> <br />de Alto Rendimiento.'
+            headline_html: 'Desarrollo Web, <br /><span className="text-zinc-500">IA y Automatización</span> <br />para Empresas.'
         },
         footer: {
             tagline: 'Transformando la visión estratégica en dominio digital.',
