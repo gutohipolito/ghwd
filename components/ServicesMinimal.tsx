@@ -38,7 +38,7 @@ const services = [
 ];
 
 export function ServicesMinimal() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     const translatedServices = [
@@ -50,6 +50,22 @@ export function ServicesMinimal() {
         { id: "06", key: "geo", tags: ["GEO", "Citations", "SEO"], image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" },
         { id: "07", key: "commerce", tags: ["Shopify", "VTEX", "B2B"], image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop" }
     ];
+
+    const getServiceLink = (key: string, lang: string) => {
+        const isPt = lang === 'pt' || lang === 'pt-pt';
+        const mapping: Record<string, { pt: string; en: string }> = {
+            saas: { pt: '/services/consultoria-digital', en: '/services/digital-strategy' },
+            dev: { pt: '/services/desenvolvimento-web', en: '/services/web-development' },
+            ai: { pt: '/services/inteligencia-artificial', en: '/services/artificial-intelligence' },
+            automation: { pt: '/services/automacao-empresarial', en: '/services/business-automation' },
+            commerce: { pt: '/services/integracoes', en: '/services/integrations' }
+        };
+        
+        if (mapping[key]) {
+            return isPt ? mapping[key].pt : mapping[key].en;
+        }
+        return '/services'; // Fallback para design ou outros
+    };
 
     return (
         <section className="relative z-30 py-24 bg-zinc-950 text-white" id="services">
@@ -70,40 +86,42 @@ export function ServicesMinimal() {
                 <div className="flex flex-col">
                     {translatedServices.map((service, index) => {
                         const content = t(`home.services_items.${service.key}`) as any;
+                        const linkHref = getServiceLink(service.key, language);
                         return (
-                            <motion.div
-                                key={service.id}
-                                className="group relative border-t border-white/10 py-12 flex flex-col md:flex-row items-baseline justify-between cursor-pointer transition-colors hover:bg-zinc-900/50 px-4"
-                                onMouseEnter={() => setHoveredIndex(index)}
-                                onMouseLeave={() => setHoveredIndex(null)}
-                            >
-                                {/* Counter */}
-                                <span className="font-mono text-xs text-zinc-500 mb-4 md:mb-0 w-24">
-                                    {service.id} /
-                                </span>
+                            <Link key={service.id} href={linkHref} className="block group">
+                                <motion.div
+                                    className="relative border-t border-white/10 py-12 flex flex-col md:flex-row items-baseline justify-between cursor-pointer transition-colors hover:bg-zinc-900/50 px-4"
+                                    onMouseEnter={() => setHoveredIndex(index)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                >
+                                    {/* Counter */}
+                                    <span className="font-mono text-xs text-zinc-500 mb-4 md:mb-0 w-24">
+                                        {service.id} /
+                                    </span>
 
-                                {/* Title */}
-                                <h3 className="font-heading font-black italic uppercase text-4xl md:text-6xl flex-1 group-hover:translate-x-4 transition-transform duration-300 tracking-tighter">
-                                    {content.title}
-                                </h3>
+                                    {/* Title */}
+                                    <h3 className="font-heading font-black italic uppercase text-4xl md:text-6xl flex-1 group-hover:translate-x-4 transition-transform duration-300 tracking-tighter">
+                                        {content.title}
+                                    </h3>
 
-                                {/* Description (Visible on Desktop Hover or Mobile) */}
-                                <div className="md:w-1/3 mt-4 md:mt-0 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                    <p className="text-zinc-400 mb-4 leading-relaxed">
-                                        {content.desc}
-                                    </p>
-                                    <div className="flex gap-2">
-                                        {(content.tags || service.tags).map((tag: string) => (
-                                            <span key={tag} className="text-[10px] uppercase font-bold tracking-widest border border-white/10 px-2 py-1 rounded-full text-zinc-400">
-                                                {tag}
-                                            </span>
-                                        ))}
+                                    {/* Description (Visible on Desktop Hover or Mobile) */}
+                                    <div className="md:w-1/3 mt-4 md:mt-0 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <p className="text-zinc-400 mb-4 leading-relaxed">
+                                            {content.desc}
+                                        </p>
+                                        <div className="flex gap-2">
+                                            {(content.tags || service.tags).map((tag: string) => (
+                                                <span key={tag} className="text-[10px] uppercase font-bold tracking-widest border border-white/10 px-2 py-1 rounded-full text-zinc-400">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
 
-                                {/* Arrow */}
-                                <ArrowUpRight className="absolute right-4 top-12 w-6 h-6 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300 text-emerald-500" />
-                            </motion.div>
+                                    {/* Arrow */}
+                                    <ArrowUpRight className="absolute right-4 top-12 w-6 h-6 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300 text-emerald-500" />
+                                </motion.div>
+                            </Link>
                         );
                     })}
                     <div className="border-t border-white/10"></div>
