@@ -9,14 +9,18 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
 
 const CITIES = [
-    { name: "São Paulo", lat: -23.5505, lon: -46.6333, timeZone: "America/Sao_Paulo" },
-    { name: "New York", lat: 40.7128, lon: -74.0060, timeZone: "America/New_York" },
-    { name: "Lisbon", lat: 38.7223, lon: -9.1393, timeZone: "Europe/Lisbon" },
-    { name: "Madrid", lat: 40.4168, lon: -3.7038, timeZone: "Europe/Madrid" },
+    { name: "Farroupilha", slug: "farroupilha", lat: -29.2249, lon: -51.3482, timeZone: "America/Sao_Paulo" },
+    { name: "Caxias do Sul", slug: "caxias-do-sul", lat: -29.1681, lon: -51.1794, timeZone: "America/Sao_Paulo" },
+    { name: "Bento Gonçalves", slug: "bento-goncalves", lat: -29.1706, lon: -51.5208, timeZone: "America/Sao_Paulo" },
+    { name: "Porto Alegre", slug: "porto-alegre", lat: -30.0346, lon: -51.2177, timeZone: "America/Sao_Paulo" },
+    { name: "São Paulo", slug: "sao-paulo", lat: -23.5505, lon: -46.6333, timeZone: "America/Sao_Paulo" },
+    { name: "New York", slug: "new-york", lat: 40.7128, lon: -74.0060, timeZone: "America/New_York" },
+    { name: "Lisbon", slug: "lisbon", lat: 38.7223, lon: -9.1393, timeZone: "Europe/Lisbon" },
+    { name: "Madrid", slug: "madrid", lat: 40.4168, lon: -3.7038, timeZone: "Europe/Madrid" },
 ];
 
 export function MegaFooter() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const { openModal } = useModal();
     const [now, setNow] = useState<Date | null>(null);
     const [cityIndex, setCityIndex] = useState(0);
@@ -188,12 +192,16 @@ export function MegaFooter() {
                         {/* Presence */}
                         <div className="space-y-6">
                             <h4 className="text-zinc-600 font-bold text-[10px] uppercase tracking-[0.2em]">{t('footer.presence')}</h4>
-                            <div className="flex flex-col gap-4">
-                                {CITIES.map((city) => (
-                                    <div key={city.name} className="flex flex-col gap-1">
-                                        <span className="text-zinc-400 text-sm">{city.name}</span>
-                                    </div>
-                                ))}
+                            <div className="flex flex-col gap-3">
+                                {CITIES.map((city) => {
+                                    const devSlug = language === 'en' ? 'web-development' : 'desenvolvimento-web';
+                                    return (
+                                        <Link key={city.name} href={`/services/${devSlug}/${city.slug}`} className="text-zinc-400 hover:text-white transition-colors text-sm flex items-center justify-between group/presence">
+                                            <span>{city.name}</span>
+                                            <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover/presence:opacity-100 transition-opacity text-emerald-500 shrink-0" />
+                                        </Link>
+                                    );
+                                })}
                             </div>
                         </div>
 
