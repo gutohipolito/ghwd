@@ -146,9 +146,9 @@ export function MegaFooter() {
                     <div className="flex flex-col items-end gap-6 md:pt-4">
                         <button
                             onClick={openModal}
-                            className="group flex items-center gap-4 bg-emerald-500 text-black px-12 py-5 rounded-full text-lg font-bold hover:bg-white transition-all duration-300 shadow-xl shadow-emerald-500/10"
+                            className="group flex items-center gap-4 bg-emerald-500 text-black px-12 py-5 rounded-full text-lg font-bold hover:bg-white transition-all duration-300 shadow-xl shadow-emerald-500/10 whitespace-nowrap"
                         >
-                            <span>{t('hero.start_project')}</span>
+                            <span className="whitespace-nowrap">{t('hero.start_project')}</span>
                             <ArrowUpRight className="group-hover:rotate-45 transition-transform duration-300" />
                         </button>
                         <LanguageSwitcher />

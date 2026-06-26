@@ -69,9 +69,9 @@ export function HeroPremium() {
                 >
                     <button
                         onClick={openModal}
-                        className="group flex items-center gap-4 text-white text-lg tracking-wide hover:ml-4 transition-all duration-300"
+                        className="group flex items-center gap-4 text-white text-lg tracking-wide hover:ml-4 transition-all duration-300 whitespace-nowrap"
                     >
-                        <span className="border-b border-white pb-1 group-hover:border-emerald-500 transition-colors">{t('hero.start_project')}</span>
+                        <span className="border-b border-white pb-1 group-hover:border-emerald-500 transition-colors whitespace-nowrap">{t('hero.start_project')}</span>
                         <ArrowRight className="w-5 h-5 group-hover:text-emerald-500 transition-colors" />
                     </button>
                 </motion.div>

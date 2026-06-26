@@ -208,7 +208,7 @@ export function NavbarOrchestra() {
                                         setMobileMenuOpen(false);
                                         openModal();
                                     }}
-                                    className="px-8 py-3 bg-emerald-400 text-black rounded-full text-xl font-bold inline-block"
+                                    className="px-8 py-3 bg-emerald-400 text-black rounded-full text-xl font-bold inline-block whitespace-nowrap"
                                 >
                                     {t('nav.start_project')}
                                 </button>

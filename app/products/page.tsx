@@ -118,10 +118,10 @@ export default function ProductsPage() {
                                 <div className={`lg:col-span-5 flex flex-col justify-center ${idx % 2 === 1 ? 'lg:order-1 lg:items-start' : 'lg:items-end'} mt-8 lg:mt-0`}>
                                     <button
                                         onClick={openModal}
-                                        className="group relative inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full uppercase font-black text-sm tracking-widest overflow-hidden transition-all duration-300 w-full md:w-auto
+                                        className="group relative inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full uppercase font-black text-sm tracking-widest overflow-hidden transition-all duration-300 w-full md:w-auto whitespace-nowrap
                                         before:absolute before:inset-0 before:bg-emerald-500 before:translate-x-[-100%] hover:before:translate-x-0 before:transition-transform before:duration-500 before:ease-[cubic-bezier(0.19,1,0.22,1)]"
                                     >
-                                        <span className="relative z-10">{t('nav.start_project')}</span>
+                                        <span className="relative z-10 whitespace-nowrap">{t('nav.start_project')}</span>
                                         <ArrowUpRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                     </button>
                                 </div>

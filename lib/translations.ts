@@ -11,7 +11,7 @@ export const translations: Record<Language, any> = {
             contact: 'Contact',
             start: "Start",
             home: "Home",
-            start_project: "Start Project",
+            start_project: "Talk to Specialist",
             faq: "FAQ"
         },
         hero: {
@@ -19,7 +19,7 @@ export const translations: Record<Language, any> = {
             we_build: 'WE BUILD',
             results: 'RESULTS.',
             description: "We access the top 1% of global engineering and design to build the digital future of the most ambitious Brazilian companies.",
-            start_project: 'START PROJECT',
+            start_project: 'TALK TO SPECIALIST',
             view_work: 'VIEW WORK',
             scroll: 'Scroll to Explore',
             headline_html: 'We build <br /><span className="text-zinc-500">Websites, Custom AI & SaaS</span> <br />for global scale.'
@@ -387,7 +387,7 @@ export const translations: Record<Language, any> = {
             contact: 'Contato',
             start: "Iniciar",
             home: "Home",
-            start_project: "Iniciar Projeto",
+            start_project: "Falar com Especialista",
             faq: "FAQ"
         },
         hero: {
@@ -395,7 +395,7 @@ export const translations: Record<Language, any> = {
             we_build: 'NÓS ENTREGAMOS',
             results: 'RESULTADOS.',
             description: "Buscamos profissionais excepcionais de engenharia e design para criar o futuro de marcas brasileiras que querem ir além.",
-            start_project: 'INICIAR PROJETO',
+            start_project: 'FALAR COM ESPECIALISTA',
             view_work: 'VER PROJETOS',
             scroll: 'Role para Explorar',
             headline_html: 'Desenvolvemos <br /><span className="text-zinc-500">Sites, Sistemas de IA & SaaS</span> <br />de Alta Performance.'
@@ -763,7 +763,7 @@ export const translations: Record<Language, any> = {
             contact: 'Contacto',
             start: "Iniciar",
             home: "Início",
-            start_project: "Iniciar Projeto",
+            start_project: "Falar com Especialista",
             faq: "FAQ"
         },
         hero: {
@@ -771,7 +771,7 @@ export const translations: Record<Language, any> = {
             we_build: 'NÓS ENTREGAMOS',
             results: 'RESULTADOS.',
             description: "Acedemos ao top 1% da engenharia e design mundial para construir o futuro digital das empresas brasileiras mais ambiciosas.",
-            start_project: 'INICIAR PROJETO',
+            start_project: 'FALAR COM ESPECIALISTA',
             view_work: 'VER PROJETOS',
             scroll: 'Percorra para Explorar',
             headline_html: 'Desenvolvemos <br /><span className="text-zinc-500">Websites, Sistemas de IA & SaaS</span> <br />de Alta Performance.'
@@ -1126,7 +1126,7 @@ export const translations: Record<Language, any> = {
             contact: 'Contacto',
             start: "Iniciar",
             home: "Home",
-            start_project: "Iniciar Proyecto",
+            start_project: "Hablar con Especialista",
             faq: "FAQ"
         },
         hero: {
@@ -1134,7 +1134,7 @@ export const translations: Record<Language, any> = {
             we_build: 'NOSOTROS CREAMOS',
             results: 'RESULTADOS.',
             description: "Accedemos al top 1% de la ingeniería y diseño mundial para construir el futuro digital de las empresas brasileñas más ambiciosas.",
-            start_project: 'INICIAR PROYECTO',
+            start_project: 'HABLAR CON ESPECIALISTA',
             view_work: 'VER PROYECTOS',
             scroll: 'Desplazarse para Explorar',
             headline_html: 'Desarrollamos <br /><span className="text-zinc-500">Sitios Web, IA & SaaS</span> <br />de Alto Rendimiento.'

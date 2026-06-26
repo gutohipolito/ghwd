@@ -78,7 +78,7 @@ export function HeroModern() {
                         >
                             <div className="absolute inset-0 translate-y-[100%] bg-emerald-400 transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-y-0" />
 
-                            <span className="relative z-10 text-lg font-bold tracking-tight group-hover:text-black transition-colors">
+                            <span className="relative z-10 text-lg font-bold tracking-tight group-hover:text-black transition-colors whitespace-nowrap">
                                 {t('hero.start_project')}
                             </span>
                             <MoveRight className="relative z-10 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
