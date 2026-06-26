@@ -25,6 +25,8 @@ export const translations: Record<Language, any> = {
             headline_html: 'Web Development, <br /><span className="text-zinc-500">AI & Automation</span> <br />for Businesses.'
         },
         footer: {
+            title_1: "AI Automation &",
+            title_2: "System Integration.",
             tagline: 'Engineering the future of digital business.',
             compliance: 'Compliance',
             legal: 'Legal',
@@ -199,7 +201,7 @@ export const translations: Record<Language, any> = {
         },
         home: {
             services: {
-                title: "Our Expertise",
+                title: "Corporate Web Development",
                 view_inventory: "Full Inventory"
             },
             selected_works: {
@@ -211,8 +213,8 @@ export const translations: Record<Language, any> = {
             },
             dashboards: {
                 tag: "/ Impact Analysis",
-                title_1: "Control your",
-                title_2: "growth trajectory.",
+                title_1: "SEO &",
+                title_2: "Digital Growth.",
                 description: "We implement high-fidelity tracking and automation systems that turn raw data into executable strategy.",
                 feature_1: { title: "Real-time Visibility", desc: "See your entire operation in a single pane of glass." },
                 feature_2: { title: "Predictive Models", desc: "Forecast demand and revenue with algorithmic precision." },
@@ -401,6 +403,8 @@ export const translations: Record<Language, any> = {
             headline_html: 'Desenvolvimento Web, <br /><span className="text-zinc-500">IA & Automação</span> <br />para Empresas.'
         },
         footer: {
+            title_1: "Automação com IA &",
+            title_2: "Integração de Sistemas.",
             tagline: 'Tecnologia de alta performance para fazer sua empresa crescer.',
             compliance: 'LGPD',
             legal: 'Legal',
@@ -575,7 +579,7 @@ export const translations: Record<Language, any> = {
         },
         home: {
             services: {
-                title: "Nossa Expertise",
+                title: "Desenvolvimento Web Corporativo",
                 view_inventory: "Inventário Completo"
             },
             selected_works: {
@@ -587,8 +591,8 @@ export const translations: Record<Language, any> = {
             },
             dashboards: {
                 tag: "/ Análise de Impacto",
-                title_1: "Controle sua",
-                title_2: "trajetória de crescimento.",
+                title_1: "SEO e",
+                title_2: "Crescimento Digital.",
                 description: "Implementamos sistemas de rastreamento e automação de alta fidelidade que transformam dados brutos em estratégia executável.",
                 feature_1: { title: "Visibilidade em Tempo Real", desc: "Veja toda a sua operação em um único painel." },
                 feature_2: { title: "Modelos Preditivos", desc: "Preveja demanda e receita com precisão algorítmica." },
@@ -777,6 +781,8 @@ export const translations: Record<Language, any> = {
             headline_html: 'Desenvolvimento Web, <br /><span className="text-zinc-500">IA & Automação</span> <br />para Empresas.'
         },
         footer: {
+            title_1: "Automação com IA &",
+            title_2: "Integração de Sistemas.",
             tagline: 'Transformando visão estratégica em domínio digital.',
             compliance: 'LGPD',
             legal: 'Jurídico',
@@ -938,7 +944,7 @@ export const translations: Record<Language, any> = {
         },
         home: {
             services: {
-                title: "A Nossa Expertise",
+                title: "Desenvolvimento Web Corporativo",
                 view_inventory: "Inventário Completo"
             },
             selected_works: {
@@ -950,8 +956,8 @@ export const translations: Record<Language, any> = {
             },
             dashboards: {
                 tag: "/ Análise de Impacto",
-                title_1: "Controle a sua",
-                title_2: "trajetória de crescimento.",
+                title_1: "SEO e",
+                title_2: "Crescimento Digital.",
                 description: "Implementamos sistemas de rastreio e automação de alta fidelidade que transformam dados brutos em estratégia executável.",
                 feature_1: { title: "Visibilidade em Tempo Real", desc: "Veja toda a sua operação num único painel." },
                 feature_2: { title: "Modelos Preditivos", desc: "Preveja a procura e a receita com precisão algorítmica." },
@@ -1140,6 +1146,8 @@ export const translations: Record<Language, any> = {
             headline_html: 'Desarrollo Web, <br /><span className="text-zinc-500">IA y Automatización</span> <br />para Empresas.'
         },
         footer: {
+            title_1: "Automatización con IA &",
+            title_2: "Integración de Sistemas.",
             tagline: 'Transformando la visión estratégica en dominio digital.',
             compliance: 'Legal',
             legal: 'Legal',
@@ -1296,7 +1304,7 @@ export const translations: Record<Language, any> = {
         },
         home: {
             services: {
-                title: "Nuestra Expertise",
+                title: "Desarrollo Web Corporativo",
                 view_inventory: "Inventario Completo"
             },
             selected_works: {
@@ -1308,8 +1316,8 @@ export const translations: Record<Language, any> = {
             },
             dashboards: {
                 tag: "/ Análisis de Impacto",
-                title_1: "Controle su",
-                title_2: "trayectoria de crecimiento.",
+                title_1: "SEO y",
+                title_2: "Crecimiento Digital.",
                 description: "Implementamos sistemas de seguimiento y automatización de alta fidelidad que convierten los datos brutos en estrategia ejecutable.",
                 feature_1: { title: "Visibilidad en Tiempo Real", desc: "Vea toda su operación en un solo panel." },
                 feature_2: { title: "Modelos Predictivos", desc: "Prevea la demanda y los ingresos con precisión algorítmica." },
