@@ -1,11 +1,13 @@
 # GHWD - Global Digital Partner
 
-GHWD is a high-performance digital collective specializing in engineering premium digital nervous systems, custom web applications, and high-fidelity interfaces for ambitious brands.
+GHWD is a high-performance digital collective specializing in engineering premium digital nervous systems, custom web applications, AI cognitive integrations, and high-fidelity interfaces for ambitious brands.
 
 ## Core Expertise & Services
 - **Next.js & Headless Commerce:** Designing fast, secure commerce interfaces integrated with systems like VTEX, Shopify, and Wake.
+- **AI Engineering & LLM Integrations:** Secure Retrieval-Augmented Generation (RAG) architectures, custom cognitive agents (ChatGPT, Claude, Gemini), and vector database integration.
+- **Process & Workflow Automation:** Automated process pipelines connecting isolated platforms (CRM, ERP, database) via n8n, Make, or custom microservices.
+- **GEO & AI Search Optimization:** Generative Engine Optimization strategies to ensure brand citation and semantic relevance across AI answer engines (ChatGPT Search, Gemini, Perplexity).
 - **Digital Infrastructure:** Edge hosting, global CDN setup, and performance-first architectures (SSG/SSR) targeted at zero-latency Core Web Vitals.
-- **Custom Software Engineering:** Tailored middleware and integration tools.
 - **Premium Design Systems:** High-end UI/UX and motion graphics designed to build brand authority.
 
 ## Specialist & Author
@@ -21,6 +23,7 @@ GHWD is a high-performance digital collective specializing in engineering premiu
 
 ## Key URLs
 - **Main Website:** https://ghwd.com.br
+- **AI-Optimized Site Index (LLM Guide):** https://ghwd.com.br/ai-index.md
 - **Expertise & Services:** https://ghwd.com.br/services
 - **Products & Technology Repository:** https://ghwd.com.br/products
 - **Client & Partner Index:** https://ghwd.com.br/partners
