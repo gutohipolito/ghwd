@@ -1,7 +1,6 @@
 import { LanguageProvider } from "@/lib/i18n-context";
 import { ModalProvider } from "@/lib/modal-context";
 import { ContactModal } from "@/components/ContactModal";
-import { StructuredData } from "@/components/StructuredData";
 import type { Metadata } from "next";
 import { Inter, Outfit, Playfair_Display } from "next/font/google"; // Import fonts
 import "./globals.css";
@@ -99,7 +98,6 @@ export default function RootLayout({
                 className={`${inter.variable} ${outfit.variable} ${playfair.variable} antialiased`}
             >
                 <LanguageProvider>
-                    <StructuredData />
                     <GoogleAnalytics gaId="G-9MVP22YZZM" />
                     <GoogleTagManager gtmId="GT-PHWW6DQ" />
                     <ModalProvider>

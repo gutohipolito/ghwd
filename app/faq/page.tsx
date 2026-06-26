@@ -9,7 +9,7 @@ import { useState } from "react";
 import { ChevronDown, Calendar, Award, ShieldCheck } from "lucide-react";
 
 export default function FAQPage() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     // Obtém as traduções do FAQ
@@ -17,18 +17,44 @@ export default function FAQPage() {
     const author = t('faq.author_section') as any || { author_title: "Curado por", author_name: "Gustavo Hipólito", author_role: "Lead Software Architect", last_updated: "Última atualização" };
     const questions = (t('faq.questions') as any[]) || [];
 
-    // Gerador de JSON-LD estático para RAG/SEO/GEO
+    // Gerador de JSON-LD estático para RAG/SEO/GEO com Grafo de FAQ e Breadcrumb
+    const homeTitle = (language === 'pt' || language === 'pt-pt') ? "Início" : "Home";
+    const faqTitle = language === 'en' ? "FAQ" : (language === 'es' ? "Preguntas Frecuentes" : "Perguntas Frequentes");
+    
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": questions.map((item) => ({
-            "@type": "Question",
-            "name": item.q,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": item.a
+        "@graph": [
+            {
+                "@type": "FAQPage",
+                "@id": "https://ghwd.com.br/faq#faq",
+                "mainEntity": questions.map((item) => ({
+                    "@type": "Question",
+                    "name": item.q,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item.a
+                    }
+                }))
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://ghwd.com.br/faq#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": homeTitle,
+                        "item": "https://ghwd.com.br"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": faqTitle,
+                        "item": "https://ghwd.com.br/faq"
+                    }
+                ]
             }
-        }))
+        ]
     };
 
     const toggleQuestion = (idx: number) => {

@@ -4,13 +4,43 @@ import { LegalLayout } from "@/components/LegalLayout";
 import { useLanguage } from "@/lib/i18n-context";
 
 export default function PrivacyPolicy() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const homeTitle = isPt ? "Início" : "Home";
+    const privacyTitle = language === 'en' ? "Privacy Policy" : (language === 'es' ? "Política de Privacidad" : "Política de Privacidade");
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://ghwd.com.br/privacy#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": homeTitle,
+                "item": "https://ghwd.com.br"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": privacyTitle,
+                "item": "https://ghwd.com.br/privacy"
+            }
+        ]
+    };
+
     return (
-        <LegalLayout
-            title={t('legal.privacy.title')}
-            subtitle={t('legal.privacy.subtitle')}
-            lastUpdated={t('legal.last_update_date')}
-        >
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <LegalLayout
+                title={t('legal.privacy.title')}
+                subtitle={t('legal.privacy.subtitle')}
+                lastUpdated={t('legal.last_update_date')}
+            >
             <div className="space-y-12">
                 <p className="text-xl text-white/80 leading-relaxed max-w-3xl border-l-2 border-emerald-500 pl-8 py-2">
                     {t('legal.privacy.intro')}
@@ -42,5 +72,6 @@ export default function PrivacyPolicy() {
                 </div>
             </div>
         </LegalLayout>
+        </>
     );
 }

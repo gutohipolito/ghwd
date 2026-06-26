@@ -3,11 +3,42 @@
 import { NavbarOrchestra } from "@/components/NavbarOrchestra";
 import { MegaFooter } from "@/components/MegaFooter";
 import { QualificationForm } from "@/components/QualificationForm";
+import { useLanguage } from "@/lib/i18n-context";
 import { motion } from "framer-motion";
 
 export default function ContactPage() {
+    const { language } = useLanguage();
+
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const homeTitle = isPt ? "Início" : "Home";
+    const contactTitle = language === 'en' ? "Contact" : (language === 'es' ? "Contacto" : (language === 'pt-pt' ? "Contacto" : "Contato"));
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://ghwd.com.br/contact#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": homeTitle,
+                "item": "https://ghwd.com.br"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": contactTitle,
+                "item": "https://ghwd.com.br/contact"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <NavbarOrchestra />
 
             {/* Background Video (Same as Hero) */}

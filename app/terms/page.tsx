@@ -4,13 +4,43 @@ import { LegalLayout } from "@/components/LegalLayout";
 import { useLanguage } from "@/lib/i18n-context";
 
 export default function TermsOfService() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const homeTitle = isPt ? "Início" : "Home";
+    const termsTitle = language === 'en' ? "Terms of Service" : (language === 'es' ? "Términos de Servicio" : "Termos de Serviço");
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://ghwd.com.br/terms#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": homeTitle,
+                "item": "https://ghwd.com.br"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": termsTitle,
+                "item": "https://ghwd.com.br/terms"
+            }
+        ]
+    };
+
     return (
-        <LegalLayout
-            title={t('legal.terms.title')}
-            subtitle={t('legal.terms.subtitle')}
-            lastUpdated={t('legal.last_update_date')}
-        >
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <LegalLayout
+                title={t('legal.terms.title')}
+                subtitle={t('legal.terms.subtitle')}
+                lastUpdated={t('legal.last_update_date')}
+            >
             <div className="space-y-12">
                 <p className="text-xl text-white/80 leading-relaxed max-w-3xl border-l-2 border-emerald-500 pl-8 py-2">
                     {t('legal.terms.intro')}
@@ -42,5 +72,6 @@ export default function TermsOfService() {
                 </div>
             </div>
         </LegalLayout>
+        </>
     );
 }

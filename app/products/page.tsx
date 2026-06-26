@@ -61,11 +61,39 @@ const productMetadata = [
 ];
 
 export default function ProductsPage() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const { openModal } = useModal();
+
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const homeTitle = isPt ? "Início" : "Home";
+    const productsTitle = language === 'en' ? "Products" : (language === 'es' ? "Productos" : "Produtos");
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://ghwd.com.br/products#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": homeTitle,
+                "item": "https://ghwd.com.br"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": productsTitle,
+                "item": "https://ghwd.com.br/products"
+            }
+        ]
+    };
 
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <NavbarOrchestra />
 
             {/* Header */}

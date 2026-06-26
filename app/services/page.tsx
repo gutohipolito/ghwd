@@ -22,8 +22,32 @@ const translatedServices = [
 export default function ServicesPage() {
     const { t, language } = useLanguage();
 
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const homeTitle = isPt ? "Início" : "Home";
+    const servicesTitle = language === 'en' ? "Services" : (language === 'es' ? "Servicios" : "Serviços");
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://ghwd.com.br/services#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": homeTitle,
+                "item": "https://ghwd.com.br"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": servicesTitle,
+                "item": "https://ghwd.com.br/services"
+            }
+        ]
+    };
+
     const getServiceLink = (key: string, lang: string) => {
-        const isPt = lang === 'pt' || lang === 'pt-pt';
+        const isPtLink = lang === 'pt' || lang === 'pt-pt';
         const mapping: Record<string, { pt: string; en: string }> = {
             saas: { pt: '/services/consultoria-digital', en: '/services/digital-strategy' },
             dev: { pt: '/services/desenvolvimento-web', en: '/services/web-development' },
@@ -33,13 +57,17 @@ export default function ServicesPage() {
         };
         
         if (mapping[key]) {
-            return isPt ? mapping[key].pt : mapping[key].en;
+            return isPtLink ? mapping[key].pt : mapping[key].en;
         }
         return '/services';
     };
 
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <NavbarOrchestra />
 
             {/* Header */}

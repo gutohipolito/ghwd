@@ -23,8 +23,36 @@ const leaders = [
 export default function AboutPage() {
     const { t, language } = useLanguage();
 
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const homeTitle = isPt ? "Início" : "Home";
+    const aboutTitle = language === 'en' ? "About" : (language === 'es' ? "Sobre Nosotros" : "Sobre");
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://ghwd.com.br/about#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": homeTitle,
+                "item": "https://ghwd.com.br"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": aboutTitle,
+                "item": "https://ghwd.com.br/about"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <NavbarOrchestra />
 
             {/* Header / Manifesto */}

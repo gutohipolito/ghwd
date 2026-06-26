@@ -16,13 +16,37 @@ interface CookieValues {
 }
 
 export default function CookieSettings() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [cookies, setCookies] = useState<CookieValues>({
         essential: true, // Always true and disabled
         analytics: true,
         marketing: false,
         functional: true
     });
+
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const homeTitle = isPt ? "Início" : "Home";
+    const cookiesTitle = language === 'en' ? "Cookie Settings" : (language === 'es' ? "Configuración de Cookies" : "Configurações de Cookies");
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://ghwd.com.br/cookies#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": homeTitle,
+                "item": "https://ghwd.com.br"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": cookiesTitle,
+                "item": "https://ghwd.com.br/cookies"
+            }
+        ]
+    };
 
     const [isSaved, setIsSaved] = useState(false);
 
@@ -42,7 +66,12 @@ export default function CookieSettings() {
     };
 
     return (
-        <LegalLayout
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <LegalLayout
             title={t('legal.cookies.title')}
             subtitle={t('legal.cookies.subtitle')}
             lastUpdated={t('legal.last_update_date')}
@@ -111,6 +140,7 @@ export default function CookieSettings() {
                 {t('legal.cookies.retention')}
             </p>
         </LegalLayout>
+        </>
     );
 }
 

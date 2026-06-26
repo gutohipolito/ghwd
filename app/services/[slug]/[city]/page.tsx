@@ -138,5 +138,113 @@ export default async function LocalServiceSlugPage({ params }: PageProps) {
         notFound();
     }
 
-    return <ServiceDetailClient data={localized} />;
+    const cityObj = citiesData[city];
+    const isEn = [
+        "web-development",
+        "business-automation",
+        "artificial-intelligence",
+        "integrations",
+        "digital-strategy"
+    ].includes(slug);
+
+    const pageUrl = `https://ghwd.com.br/services/${slug}/${city}`;
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": localized.schemaType || "Service",
+                "@id": `${pageUrl}#service`,
+                "name": localized.title,
+                "description": localized.tldr || localized.metaDesc,
+                "provider": {
+                    "@type": "ProfessionalService",
+                    "@id": "https://ghwd.com.br/#professional-service",
+                    "name": "GHWD",
+                    "url": "https://ghwd.com.br",
+                    "image": "https://ghwd.com.br/og-image.png"
+                },
+                "areaServed": {
+                    "@type": "AdministrativeArea",
+                    "name": cityObj.name
+                }
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": `${pageUrl}#localbusiness`,
+                "name": `GHWD ${cityObj.name} - ${localized.title}`,
+                "image": "https://ghwd.com.br/og-image.png",
+                "url": pageUrl,
+                "telephone": "+555499999999",
+                "priceRange": "$$",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": cityObj.name,
+                    "addressRegion": cityObj.state || cityObj.region,
+                    "addressCountry": cityObj.country === "EUA" ? "US" : (cityObj.country === "Espanha" ? "ES" : (cityObj.country === "Portugal" ? "PT" : "BR"))
+                },
+                "geo": cityObj.geoCoordinates ? {
+                    "@type": "GeoCoordinates",
+                    "latitude": cityObj.geoCoordinates.latitude,
+                    "longitude": cityObj.geoCoordinates.longitude
+                } : undefined,
+                "areaServed": {
+                    "@type": "AdministrativeArea",
+                    "name": cityObj.name
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": `${pageUrl}#breadcrumb`,
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": isEn ? "Home" : "Início",
+                        "item": "https://ghwd.com.br"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": isEn ? "Services" : "Serviços",
+                        "item": "https://ghwd.com.br/services"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": localized.title.split(" em ")[0].split(" in ")[0],
+                        "item": `https://ghwd.com.br/services/${slug}`
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": cityObj.name,
+                        "item": pageUrl
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": `${pageUrl}#faq`,
+                "mainEntity": localized.faqItems.map((faq) => ({
+                    "@type": "Question",
+                    "name": faq.q,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.a
+                    }
+                }))
+            }
+        ]
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <ServiceDetailClient data={localized} />
+        </>
+    );
 }
