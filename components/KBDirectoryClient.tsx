@@ -90,7 +90,7 @@ export function KBDirectoryClient({ articles }: KBDirectoryClientProps) {
             </div>
 
             {/* Banner do Glossário */}
-            <div className="relative group overflow-hidden border border-white/5 bg-zinc-900/20 rounded-3xl p-8 backdrop-blur-md flex flex-col md:flex-row items-start md:items-center justify-between gap-8 transition-all duration-300 hover:border-emerald-500/25">
+            <div className="relative group overflow-hidden border border-white/5 bg-zinc-900/20 rounded-3xl p-6 md:p-8 backdrop-blur-md flex flex-col md:flex-row items-start md:items-center justify-between gap-8 transition-all duration-300 hover:border-emerald-500/25">
                 {/* Glow decorativo de fundo */}
                 <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-emerald-500/5 rounded-full filter blur-[80px] pointer-events-none group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
                 
@@ -127,7 +127,7 @@ export function KBDirectoryClient({ articles }: KBDirectoryClientProps) {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
                                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                                className="group relative border border-white/5 bg-zinc-900/10 hover:bg-zinc-900/30 rounded-3xl p-8 backdrop-blur-md transition-all duration-500 hover:border-emerald-500/30 flex flex-col justify-between min-h-[320px] overflow-hidden"
+                                className="group relative border border-white/5 bg-zinc-900/10 hover:bg-zinc-900/30 rounded-3xl p-6 md:p-8 backdrop-blur-md transition-all duration-500 hover:border-emerald-500/30 flex flex-col justify-between min-h-[320px] overflow-hidden"
                             >
                                 {/* Card Border Glow em Hover */}
                                 <div className="absolute inset-0 border border-emerald-500/0 group-hover:border-emerald-500/10 rounded-3xl transition-all duration-500"></div>

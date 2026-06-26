@@ -183,7 +183,7 @@ export default async function KBArticlePage({ params }: PageProps) {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                         
                         {/* Lado Esquerdo (Sticky): Resumo Rápido para RAG, Autor, Tags */}
-                        <aside className="lg:col-span-4 lg:sticky lg:top-32 self-start space-y-8">
+                        <aside className="lg:col-span-4 lg:sticky lg:top-32 self-start space-y-8 w-full min-w-0 order-2 lg:order-1">
                             
                             {/* Bloco TL;DR (Foco em GEO / Sumarização por IA) */}
                             <div className="border border-white/5 bg-zinc-900/30 rounded-3xl p-6 backdrop-blur-md space-y-4">
@@ -235,7 +235,7 @@ export default async function KBArticlePage({ params }: PageProps) {
                         </aside>
 
                         {/* Lado Direito: Conteúdo e Seções */}
-                        <div className="lg:col-span-8 space-y-16">
+                        <div className="lg:col-span-8 space-y-16 w-full min-w-0 overflow-hidden order-1 lg:order-2">
                             
                             {/* Renderização de Seções do Artigo */}
                             <div className="space-y-12">

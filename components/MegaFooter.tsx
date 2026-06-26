@@ -25,6 +25,7 @@ export function MegaFooter() {
     const [now, setNow] = useState<Date | null>(null);
     const [cityIndex, setCityIndex] = useState(0);
     const [weatherData, setWeatherData] = useState<{ [key: string]: string }>({});
+    const [isDesktop, setIsDesktop] = useState(false);
     const footerRef = useRef<HTMLElement>(null);
 
     // Mouse Tracking for Parallax
@@ -46,6 +47,12 @@ export function MegaFooter() {
     useEffect(() => {
         setNow(new Date());
         const timeInterval = setInterval(() => setNow(new Date()), 1000);
+
+        setIsDesktop(window.innerWidth >= 768);
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 768);
+        };
+        window.addEventListener('resize', handleResize);
 
         const fetchWeather = async () => {
             const newWeatherData: { [key: string]: string } = { ...weatherData };
@@ -87,6 +94,7 @@ export function MegaFooter() {
             clearInterval(timeInterval);
             clearInterval(weatherInterval);
             clearInterval(rotationInterval);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
@@ -109,15 +117,17 @@ export function MegaFooter() {
             {/* Parallax Background Branding */}
             {/* Background Video - Geometric Particles & Plexus */}
             <div className="absolute inset-0 z-0">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover opacity-20 grayscale brightness-125 contrast-125"
-                >
-                    <source src="https://videos.pexels.com/video-files/3130182/3130182-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-                </video>
+                {isDesktop && (
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-20 grayscale brightness-125 contrast-125"
+                    >
+                        <source src="https://videos.pexels.com/video-files/3130182/3130182-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+                    </video>
+                )}
                 <div className="absolute inset-0 bg-zinc-950/40" /> {/* Dark overlay for contrast */}
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />
             </div>

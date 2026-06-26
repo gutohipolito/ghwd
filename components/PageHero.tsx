@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MoveDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -25,6 +26,16 @@ export function PageHero({
     titleClassName
 }: PageHeroProps) {
     const { t } = useLanguage();
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        setIsDesktop(window.innerWidth >= 768);
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 768);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     // Detecção dinâmica de título longo para evitar quebra de layout
     const titleString = typeof title === 'string' ? title : '';
@@ -39,7 +50,7 @@ export function PageHero({
 
             {/* Background - Video Texture */}
             <div className="absolute inset-0 z-0">
-                {showVideo && (
+                {showVideo && isDesktop && (
                     <video
                         autoPlay
                         loop
