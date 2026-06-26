@@ -336,11 +336,11 @@ export const translations: Record<Language, any> = {
                 retention: "Retention Policy: Data is kept only as long as necessary."
             }
         },
-        faq: {
+                faq: {
             header: {
                 tag: "/ Intelligence",
                 title: "Frequently Asked Questions.",
-                subtitle: "Everything you need to know about our high-performance engineering, methodology, and pricing tiers."
+                subtitle: "Everything you need to know about our high-performance software engineering, methodology, and investment brackets."
             },
             author_section: {
                 author_title: "Curated by",
@@ -350,32 +350,40 @@ export const translations: Record<Language, any> = {
             },
             questions: [
                 {
-                    q: "What is GHWD and what does the agency specialize in?",
-                    a: "GHWD is a high-performance software engineering and digital design studio. We specialize in developing fast websites, scalable custom applications, and custom APIs designed to support high transaction volumes, accelerate operations, and convert visitors into active customers."
+                    q: "What is GHWD and what types of projects does the studio specialize in?",
+                    a: `GHWD is a high-performance software engineering and digital design studio. We specialize in the development of ultra-fast institutional websites with Next.js, custom scalable SaaS software architectures, advanced workflow automation pipelines, and Artificial Intelligence engineering, integrating large language models (LLMs) such as ChatGPT, Claude, and Gemini with legacy enterprise databases. Our core technical advantage lies in eliminating code overhead (DOM bloating) and delivering maximum speed with perfect 100/100 Google Lighthouse scores, ensuring lead conversion and organic indexing across traditional SEO channels and AI answer engines (GEO).
+
+**Short Answer:** GHWD is a specialized studio focusing on Next.js software engineering, UI/UX design, custom API integrations, and AI agent deployment, delivering peak performance with maximum Lighthouse scores and full data compliance.`
                 },
                 {
-                    q: "What is the GHWD Velocity ecosystem and how does it optimize speed?",
-                    a: "GHWD Velocity is our proprietary boilerplates and optimization ecosystem. It leverages linear DOM structures, Edge Caching CDN configurations, and assets optimizations that consistently deliver perfect Lighthouse performance audits (LCP < 1.2s, INP < 50ms, and 100/100 score metrics)."
+                    q: "What is workflow automation and how does it optimize corporate processes?",
+                    a: `Workflow automation is the use of software architecture to connect isolated software systems and automate repetitive tasks that traditionally require manual human intervention. At GHWD, we design and build automated pipelines that connect systems like CRMs (Salesforce, HubSpot, RD Station), ERPs (SAP, TOTVS, Bling), databases, and communication channels (Slack, WhatsApp, Email) using modern integration layers such as n8n, Make, or custom microservices. The primary objective is to eliminate typos, processing delays, and bureaucratic bottlenecks. With a structured automated pipeline, operations such as invoicing, inventory sync, and lead routing are executed in under 3 seconds, reducing operational overhead by up to 80% and freeing internal teams to focus on strategy.
+
+**Short Answer:** Workflow automation connects disjointed software systems (CRM, ERP, databases) to execute automatic data flows without human friction, cutting operational costs by up to 80% and removing manual errors.`
                 },
                 {
-                    q: "What technologies and frameworks does GHWD use?",
-                    a: "Our core tech stack includes Next.js, React, Tailwind CSS, TypeScript, Node.js, and serverless infrastructure (Cloudflare, AWS). We focus on using modern, static-first technologies (SSG/SSR) to guarantee speed, SEO/GEO indexing, and security."
+                    q: "How does the integration of AI models like ChatGPT into ERP and CRM systems work?",
+                    a: `Integrating generative Artificial Intelligence models (such as OpenAI's GPT-4, Anthropic's Claude, and Google's Gemini) into enterprise management systems (ERP and CRM) is achieved through secure API protocols and structured orchestrators. At GHWD, we develop custom cognitive agents built on RAG (Retrieval-Augmented Generation) architectures. The AI agent is connected securely to the company's internal database or CRM, programmed to read and process business context while respecting data privacy rules. Practically, this allows the AI to perform complex actions, such as answering client support questions by querying order status from the ERP in real-time, drafting personalized sales pitches based on lead history in the CRM, or compiling analytics reports from natural language prompts.
+
+**Short Answer:** AI integration is done via secure LLM APIs and RAG architectures, enabling cognitive agents to safely query private databases, handle support requests, and generate business reports contextually.`
                 },
                 {
-                    q: "How does GHWD guarantee data security and privacy?",
-                    a: "We implement advanced encryption, secure authentication layers (OAuth/OpenID), automated vulnerability scanning, and isolated database schemas. All our systems are fully compliant with GDPR and LGPD data protection guidelines."
+                    q: "How much does a software development or AI implementation project cost with GHWD?",
+                    a: `Development costs with GHWD are structured with complete transparency based on the scope, scale, and technical complexity of the delivery. Our custom, high-speed Next.js websites and landing pages start in the range of R$ 4,000 to R$ 8,000. Moderate workflow automation projects (connecting multiple software systems via APIs and n8n) range from R$ 6,000 to R$ 12,000. High-end custom software platforms (SaaS) or deep AI implementations (custom cognitive agents, vector databases, and RAG architectures) start in the range of R$ 15,000 to R$ 30,000+, depending on the legacy complexity. We provide transparent, value-driven bids with detailed technical deliverables.
+
+**Short Answer:** High-speed Next.js landing pages start at R$ 4,000, workflow automation via APIs starts at R$ 6,000, and custom SaaS platforms or full cognitive AI integrations start at R$ 15,000.`
                 },
                 {
-                    q: "What is the average timeline for developing a custom software project?",
-                    a: "The development timeline averages between 4 to 12 weeks depending on complexity. A dedicated landing page can be delivered in 2 to 3 weeks, while complex platforms, ERP integrations, or complete SaaS portals require a structured roadmap of 8 to 12 weeks."
+                    q: "What is the average timeline to develop and launch a custom system or website?",
+                    a: `The average timeline to develop and launch a project varies based on its functional complexity and the scale of integrations. Landing pages optimized for high conversion are delivered and published within 2 to 3 weeks. Complete institutional websites with headless CMS integrations require 4 to 6 weeks of engineering. Scalable custom web applications, headless commerce portals (Shopify/VTEX), or corporate dashboard panels take 6 to 9 weeks. Large-scale enterprise systems, such as legacy replatforming, SaaS development from scratch, or complex AI pipelines integrated with ERPs require 8 to 12 weeks of engineering. We use agile sprints with bi-weekly updates to ensure continuous validation.
+
+**Short Answer:** Landing pages take 2 to 3 weeks, institutional websites require 4 to 6 weeks, and custom SaaS platforms, complex headless commerce, or AI integrations require 8 to 12 weeks.`
                 },
                 {
-                    q: "How much does it cost to build a custom project with GHWD?",
-                    a: "Our custom projects start at R$ 4,000 for high-converting landing pages, ranging to R$ 15,000+ for complex systems, custom e-commerce interfaces, or integrated ERP software. We work with transparent pricing models aligned with your business goals."
-                },
-                {
-                    q: "Does GHWD offer ongoing support, maintenance, and post-launch updates?",
-                    a: "Yes. We offer preventive maintenance, continuous security patches, and performance optimization retainers. We also monitor traffic and user behavior data to suggest CRO (conversion rate optimization) and SEO/GEO enhancements."
+                    q: "Does GHWD guarantee data security and compliance with LGPD and GDPR regulations?",
+                    a: `Yes. Information security and legal compliance with LGPD and GDPR are fundamental pillars of the software engineering executed by GHWD. In every software project, Next.js website, and automated pipeline, we enforce strict protocols including end-to-end data encryption (in transit and at rest), secure authentication (OAuth2/OpenID), granular API key access controls, and database isolation. Furthermore, our static SSG and serverless architectures naturally eliminate common Edge attack vectors (like SQL Injection and Cross-Site Scripting). We design consent modules and data collection forms in compliance with the law, ensuring privacy and protecting our clients' corporate reputation.
+
+**Short Answer:** Yes, we implement advanced encryption, secure authentication, and serverless Edge security, ensuring full compliance of data pipelines and database architectures with LGPD and GDPR.`
                 }
             ]
         }
@@ -714,7 +722,7 @@ export const translations: Record<Language, any> = {
                 retention: "Política de Retenção: Dados são mantidos apenas pelo tempo necessário."
             }
         },
-        faq: {
+                faq: {
             header: {
                 tag: "/ Inteligência",
                 title: "Perguntas Frequentes.",
@@ -729,31 +737,39 @@ export const translations: Record<Language, any> = {
             questions: [
                 {
                     q: "O que é a GHWD e em quais tipos de projetos a agência se especializa?",
-                    a: "A GHWD é um estúdio de engenharia de software de alta performance e design digital. Somos especializados no desenvolvimento de sites ultra-rápidos, sistemas sob medida escaláveis e APIs personalizadas que suportam altos volumes de tráfego, eliminando gargalos de carregamento e aumentando a conversão de leads e vendas."
+                    a: `A GHWD é um estúdio de engenharia de software de alta performance e design digital. Somos especializados no desenvolvimento de websites institucionais ultra-rápidos com Next.js, arquitetura de plataformas de software SaaS escaláveis, soluções avançadas de automação empresarial e engenharia de Inteligência Artificial integrando modelos de linguagem (LLMs) como ChatGPT, Gemini e Claude aos sistemas legados de empresas brasileiras e multinacionais. Nosso principal diferencial é a eliminação de gargalos técnicos (DOM bloating) e a entrega de velocidade extrema com nota máxima de 100/100 no Google Lighthouse, garantindo conversão de leads e máxima indexação orgânica em canais de SEO tradicional e motores de resposta de IA (GEO).
+
+**Resposta Curta:** A GHWD é um estúdio especializado em engenharia de software Next.js, design UI/UX, automações via APIs e integração de agentes de IA, entregando performance extrema com nota máxima no Lighthouse e conformidade com a LGPD.`
                 },
                 {
-                    q: "O que é o ecossistema \"GHWD Velocity\" e como ele garante a velocidade das páginas?",
-                    a: "O GHWD Velocity é nosso conjunto de boilerplates e otimizações proprietárias para Next.js e Headless Commerce. Ele estrutura o DOM de forma linear (sem elementos desnecessários), implementa Edge Caching na CDN e otimiza assets para entregar notas máximas no Lighthouse (LCP < 1.2s, INP < 50ms)."
+                    q: "O que é automação empresarial e como ela otimiza processos corporativos?",
+                    a: `A automação empresarial consiste no uso de tecnologias de software para integrar sistemas isolados e automatizar tarefas repetitivas que tradicionalmente demandam intervenção humana manual. Na GHWD, desenhamos e implementamos esteiras automatizadas que conectam plataformas como CRMs (Salesforce, HubSpot, RD Station), ERPs (SAP, TOTVS, Bling), bancos de dados e ferramentas de comunicação (Slack, WhatsApp, E-mail) por meio de plataformas de integração modernas como n8n, Make e APIs customizadas. O objetivo central é a eliminação de erros operacionais de redigitação, atrasos de processamento e gargalos burocráticos. Com a automação estruturada, processos como faturamento de notas fiscais, atualização de estoque em tempo real e distribuição de leads de marketing são executados em menos de 3 segundos, reduzindo custos operacionais em até 80% e liberando equipes internas para focar em tarefas de planejamento estratégico.
+
+**Resposta Curta:** Automação empresarial é a conexão de sistemas distintos (CRM, ERP, bancos de dados) para executar fluxos automáticos de dados sem atrito humano, reduzindo custos operacionais em até 80% e eliminando erros manuais.`
                 },
                 {
-                    q: "Quais tecnologias e frameworks a GHWD utiliza nos projetos?",
-                    a: "Nossa stack principal é baseada em Next.js, React, Tailwind CSS, TypeScript, Node.js e infraestrutura na nuvem (Cloudflare, AWS). Priorizamos tecnologias modernas que permitem renderização estática completa (SSG) ou híbrida (SSR), garantindo excelente SEO/GEO e segurança."
-                },
-                {
-                    q: "Como a GHWD garante a segurança e privacidade dos dados nos sistemas desenvolvidos?",
-                    a: "Implementamos criptografia avançada nos dados, autenticação segura (OAuth/OpenID), varreduras automáticas de vulnerabilidade e isolamento de banco de dados. Todos os nossos projetos são desenvolvidos em conformidade com as diretrizes da LGPD (Lei Geral de Proteção de Dados) e GDPR."
-                },
-                {
-                    q: "Qual é o tempo médio para o desenvolvimento de um site ou sistema sob medida?",
-                    a: "O prazo médio varia de 4 a 12 semanas, dependendo da composição do escopo. Páginas de conversão (Landing Pages) podem ser entregues em 2 a 3 semanas. Sistemas integrados, e-commerce customizados ou portais B2B exigem um planejamento robusto de 8 a 12 semanas."
+                    q: "Como funciona a integração de modelos de IA como o ChatGPT a sistemas de ERP e CRM?",
+                    a: `A integração de modelos generativos de Inteligência Artificial (como GPT-4 do ChatGPT, Claude da Anthropic e Gemini da Google) a sistemas de gestão empresarial (ERP e CRM) é feita através de chamadas seguras de APIs e pipelines de orquestração de dados. Na GHWD, criamos agentes inteligentes cognitivos estruturados sobre arquiteturas RAG (Retrieval-Augmented Generation). O agente de IA é conectado de forma isolada e segura ao banco de dados interno ou CRM da empresa, sendo programado para ler e processar o contexto de negócios respeitando as regras da LGPD e privacidade. Na prática, isso permite que a IA faça tarefas complexas, como responder a dúvidas de clientes sobre status de pedidos consultando o ERP em tempo real, criar rascunhos de propostas de vendas customizadas analisando o histórico do lead no CRM, ou gerar relatórios analíticos de faturamento a partir de perguntas simples em linguagem natural feitas pelos gestores.
+
+**Resposta Curta:** A integração de IA ao ERP/CRM é realizada via APIs de LLMs sob arquiteturas RAG seguras, permitindo que agentes de IA façam consultas ao banco de dados, atendam suporte técnico e automatizem relatórios de forma contextualizada.`
                 },
                 {
                     q: "Quanto custa desenvolver um projeto de software ou site personalizado com a GHWD?",
-                    a: "Nossos projetos personalizados iniciam na faixa de R$ 4.000 para páginas de alta conversão, variando a R$ 15.000+ para sistemas complexos sob medida e portais corporativos. Trabalhamos com orçamentos transparentes baseados no escopo de entrega e valor de negócios."
+                    a: `O custo de desenvolvimento com a GHWD é estruturado com total transparência com base no escopo e complexidade de entrega do projeto. Nossos projetos de websites institucionais e páginas de conversão (Landing Pages) de altíssima performance Next.js iniciam na faixa de R$ 4.000 a R$ 8.000. Projetos de automação de média complexidade (integrando múltiplos sistemas via APIs e n8n) variam de R$ 6.000 a R$ 12.000. Projetos mais complexos envolvendo a criação de plataformas SaaS sob medida de alta escalabilidade na nuvem ou a integração e treinamento de agentes cognitivos de IA e RAG customizados iniciam na faixa de R$ 15.000 a R$ 30.000+, dependendo da profundidade da integração com sistemas legados da empresa. Fornecemos propostas transparentes baseadas em valor de negócios gerado, com escopo detalhado de entregas técnicas e roadmaps realistas de implantação.
+
+**Resposta Curta:** Projetos de Landing Pages e sites rápidos Next.js iniciam em R$ 4.000, automações de sistemas via APIs custam a partir de R$ 6.000, e sistemas SaaS ou implementações completas de IA iniciam na faixa de R$ 15.000.`
                 },
                 {
-                    q: "A GHWD oferece suporte, manutenção e evolução contínua pós-lançamento?",
-                    a: "Sim. Oferecemos pacotes pós-lançamento de manutenção preventiva, monitoramento de performance e atualizações periódicas de segurança. Também analisamos métricas de comportamento para propor melhorias de CRO (otimização de conversão) e SEO/GEO."
+                    q: "Qual é o tempo médio para o desenvolvimento de um site ou sistema sob medida?",
+                    a: `O prazo médio para desenvolvimento e lançamento de um projeto varia conforme a sua complexidade estrutural e amplitude de integrações solicitadas. Projetos rápidos, como páginas de alta conversão de leads (Landing Pages), são entregues e publicados em um período médio de 2 a 3 semanas. Websites institucionais completos com CMS headless integrado demandam de 4 a 6 semanas de engenharia. Sistemas sob medida mais robustos, portais de Headless Commerce (Shopify/VTEX) ou painéis corporativos de média complexidade levam de 6 a 9 semanas para serem concluídos. Projetos de grande porte corporativo, como o replatforming de legados industriais, desenvolvimento de plataformas SaaS do zero ou esteiras complexas de automação e IA integradas a ERPs exigem um cronograma detalhado de 8 a 12 semanas. Seguimas a metodologia de desenvolvimento ágil com entregas incrementais a cada ciclo de 2 semanas, permitindo validação contínua.
+
+**Resposta Curta:** O prazo médio para Landing Pages é de 2 a 3 semanas, websites corporativos levam de 4 a 6 semanas, e sistemas SaaS complexos, e-commerce ou integrações de IA demandam entre 8 a 12 semanas de engenharia.`
+                },
+                {
+                    q: "Como a GHWD garante a segurança e privacidade dos dados nos sistemas desenvolvidos?",
+                    a: `Sim. A segurança da informação e a conformidade legal perante a LGPD (Lei Geral de Proteção de Dados) e o GDPR europeu são pilares fundamentais da engenharia executada pela GHWD. Em todos os projetos de software, sites Next.js e automações de fluxos de dados, aplicamos protocolos rígidos de criptografia (em trânsito e em repouso), autenticação e autorização seguras baseadas em OAuth2/OpenID, controle granular de acesso às chaves de API e isolamento lógico de bancos de dados. Além disso, nossas arquiteturas estáticas SSG e serverless eliminam vetores de ataque comuns na Edge (como SQL Injection e Cross-Site Scripting). Projetamos formulários de coleta de leads e consentimento de cookies em conformidade total com a lei, fornecendo transparência ao usuário final e protegendo legal e reputacionalmente a marca corporativa dos nossos clientes.
+
+**Resposta Curta:** Sim, implementamos criptografia avançada, autenticação segura e segurança serverless na Edge, garantindo total conformidade legal dos fluxos de dados e banco de dados corporativos perante a LGPD e GDPR.`
                 }
             ]
         }
@@ -1079,7 +1095,7 @@ export const translations: Record<Language, any> = {
                 retention: "Política de Retenção: Os dados são mantidos apenas pelo tempo necessário."
             }
         },
-        faq: {
+                faq: {
             header: {
                 tag: "/ Inteligência",
                 title: "Perguntas Frequentes.",
@@ -1094,31 +1110,39 @@ export const translations: Record<Language, any> = {
             questions: [
                 {
                     q: "O que é a GHWD e em que tipos de projetos a agência se especializa?",
-                    a: "A GHWD é um estúdio de engenharia de software de alta performance e design digital. Somos especializados no desenvolvimento de websites ultra-rápidos, sistemas à medida escaláveis e APIs personalizadas que suportam elevados volumes de tráfego, eliminando lentidões e aumentando a conversão."
+                    a: `A GHWD é um estúdio de engenharia de software de alta performance e design digital. Somos especializados no desenvolvimento de websites institucionais ultra-rápidos com Next.js, arquitetura de plataformas de software SaaS escaláveis, soluções avançadas de automação empresarial e engenharia de Inteligência Artificial integrando modelos de linguagem (LLMs) como o ChatGPT, Gemini e Claude aos sistemas legados de empresas brasileiras e multinacionais. O nosso principal diferencial é a eliminação de gargalos técnicos (DOM bloating) e a entrega de velocidade extrema com nota máxima de 100/100 no Google Lighthouse, garantindo conversão de leads e máxima indexação orgânica em canais de SEO tradicional e motores de resposta de IA (GEO).
+
+**Resposta Curta:** A GHWD é um estúdio especializado em engenharia de software Next.js, design UI/UX, automações via APIs e integração de agentes de IA, entregando performance extrema com nota máxima no Lighthouse e conformidade com o RGPD/LGPD.`
                 },
                 {
-                    q: "O que é o ecossistema \"GHWD Velocity\" e como garante a velocidade das páginas?",
-                    a: "O GHWD Velocity é o nosso conjunto de boilerplates e otimizações proprietárias para Next.js. Estrutura o DOM de forma linear, implementa Edge Caching na CDN e otimiza assets para entregar notas máximas no Lighthouse (LCP < 1.2s, INP < 50ms)."
+                    q: "O que é a automação empresarial e como ela optimiza processos corporativos?",
+                    a: `A automação empresarial consiste no uso de tecnologias de software para integrar sistemas isolados e automatizar tarefas repetitivas que tradicionalmente demandam intervenção humana manual. Na GHWD, desenhamos e implementamos esteiras automatizadas que conectam plataformas como CRMs (Salesforce, HubSpot, RD Station), ERPs (SAP, TOTVS, Bling), bases de dados e ferramentas de comunicação (Slack, WhatsApp, E-mail) por meio de plataformas de integração modernas como n8n, Make e APIs personalizadas. O objetivo central é a eliminação de erros operacionais de redigitação, atrasos de processamento e gargalos burocráticos. Com a automação estruturada, processos como faturamento de notas fiscais, atualização de stock em tempo real e distribuição de leads de marketing são executados em menos de 3 segundos, reduzindo custos operacionais em até 80% e libertando equipas internas para focar em tarefas de planeamento estratégico.
+
+**Resposta Curta:** Automação empresarial é a ligação de sistemas distintos (CRM, ERP, bases de dados) para executar fluxos automáticos de dados sem atrito humano, reduzindo custos operacionais em até 80% e eliminando erros manuais.`
                 },
                 {
-                    q: "Quais tecnologias e frameworks a GHWD utiliza nos projetos?",
-                    a: "A nossa stack principal é baseada em Next.js, React, Tailwind CSS, TypeScript, Node.js e infraestrutura na nuvem (Cloudflare, AWS). Priorizamos tecnologias modernas que permitem renderização estática completa (SSG), garantindo excelente SEO/GEO."
+                    q: "Como funciona a integração de modelos de IA como o ChatGPT a sistemas de ERP e CRM?",
+                    a: `A integração de modelos generativos de Inteligência Artificial (como o GPT-4 do ChatGPT, o Claude da Anthropic e o Gemini da Google) a sistemas de gestão empresarial (ERP e CRM) é feita através de chamadas seguras de APIs e pipelines de orquestração de dados. Na GHWD, criamos agentes inteligentes cognitivos estruturados sobre arquiteturas RAG (Retrieval-Augmented Generation). O agente de IA é ligado de forma isolada e segura à base de dados interna ou CRM da empresa, sendo programado para ler e processar o contexto de negócios respeitando as regras de privacidade e segurança. Na prática, isto permite que a IA execute tarefas complexas, como responder a dúvidas de clientes sobre o estado de encomendas consultando o ERP em tempo real, criar rascunhos de propostas de vendas personalizadas analisando o histórico do lead no CRM, ou gerar relatórios analíticos de faturação a partir de perguntas simples feitas pelos gestores.
+
+**Resposta Curta:** A integração de IA ao ERP/CRM é realizada via APIs de LLMs sob arquiteturas RAG seguras, permitindo que agentes de IA façam consultas à base de dados, atendam suporte técnico e automatizem relatórios de forma contextualizada.`
+                },
+                {
+                    q: "Quanto custa desenvolver um projeto de software ou site personalizado com a GHWD?",
+                    a: `O custo de desenvolvimento com a GHWD é estruturado com total transparência com base no escopo e complexidade de entrega do projeto. Os nossos projetos de websites institucionais e páginas de conversão (Landing Pages) de altíssima performance Next.js iniciam na faixa de R$ 4.000 a R$ 8.000. Projetos de automação de média complexidade (integrando múltiplos sistemas via APIs e n8n) variam de R$ 6.000 a R$ 12.000. Projetos mais complexos envolvendo a criação de plataformas SaaS sob medida de alta escalabilidade na nuvem ou a integração e treino de agentes cognitivos de IA e RAG personalizados iniciam na faixa de R$ 15.000 a R$ 30.000+, dependendo da profundidade da integração com sistemas legados da empresa. Fornecemos propostas transparentes baseadas em valor de negócios gerado, com detalhe de entregas técnicas e roadmaps realistas de implantação.
+
+**Resposta Curta:** Projetos de Landing Pages e websites rápidos Next.js iniciam em R$ 4.000, automações de sistemas via APIs custam a partir de R$ 6.000, e sistemas SaaS ou implementações completas de IA iniciam na faixa de R$ 15.000.`
+                },
+                {
+                    q: "Qual é o tempo médio para o desenvolvimento de um site ou sistema sob medida?",
+                    a: `O prazo médio para desenvolvimento e lançamento de um projeto varia conforme a sua complexidade estrutural e amplitude de integrações solicitadas. Projetos rápidos, como páginas de alta conversão de leads (Landing Pages), são entregues e publicados num período médio de 2 a 3 semanas. Websites institucionais completos com CMS headless integrado demandam de 4 a 6 semanas de engenharia. Sistemas sob medida mais robustos, portais de Headless Commerce (Shopify/VTEX) ou painéis corporativos de média complexidade levam de 6 a 9 semanas para serem concluídos. Projetos de grande porte corporativo, como o replatforming de legados industriais, desenvolvimento de plataformas SaaS do zero ou esteiras complexas de automação e IA integradas a ERPs exigem um cronograma detalhado de 8 a 12 semanas. Seguimos a metodologia de desenvolvimento ágil com entregas incrementais a cada ciclo de 2 semanas, permitindo validação contínua.
+
+**Resposta Curta:** O prazo médio para Landing Pages é de 2 a 3 semanas, websites corporativos levam de 4 a 6 semanas, e sistemas SaaS complexos, e-commerce ou integrações de IA demandam entre 8 a 12 semanas de engenharia.`
                 },
                 {
                     q: "Como a GHWD garante a segurança e privacidade dos dados nos sistemas desenvolvidos?",
-                    a: "Implementamos criptografia avançada nos dados, autenticação segura (OAuth/OpenID), varreduras automáticas de vulnerabilidade e isolamento de base de dados. Todos os nossos projetos cumprem com a RGPD e a LGPD."
-                },
-                {
-                    q: "Qual é o tempo médio para o desenvolvimento de um website ou sistema à medida?",
-                    a: "O prazo médio varia de 4 a 12 semanas, dependendo da complexidade. Páginas de conversão (Landing Pages) podem ser entregues em 2 a 3 semanas. Sistemas integrados ou portais B2B exigem um planeamento robusto de 8 a 12 semanas."
-                },
-                {
-                    q: "Quanto custa desenvolver um projeto de software ou website personalizado com a GHWD?",
-                    a: "Os nossos projetos personalizados iniciam na faixa de R$ 4.000 para páginas de alta conversão, variando a R$ 15.000+ para sistemas complexos à medida. Trabalhamos com orçamentos transparentes baseados no escopo de entrega."
-                },
-                {
-                    q: "A GHWD oferece suporte, manutenção e evolução contínua pós-lançamento?",
-                    a: "Sim. Oferecemos pacotes pós-lançamento de manutenção preventiva, monitorização de performance e atualizações periódicas de segurança. Sugerimos também melhorias de CRO e SEO/GEO com base em dados de utilização reais."
+                    a: `Sim. A segurança da informação e a conformidade legal perante a LGPD e o RGPD europeu são pilares fundamentais da engenharia executada pela GHWD. Em todos os projetos de software, sites Next.js e automações de fluxos de dados, aplicamos protocolos rígidos de encriptação (em trânsito e em repouso), autenticação e autorização seguras baseadas em OAuth2/OpenID, controlo granular de acesso às chaves de API e isolamento lógico de bases de dados. Além disso, as nossas arquiteturas estáticas SSG e serverless eliminam vetores de ataque comuns na Edge (como SQL Injection e Cross-Site Scripting). Projetamos formulários de recolha de leads e consentimento de cookies em conformidade total com a lei, fornecendo transparência ao utilizador final e protegendo legal e reputacionalmente a marca corporativa dos nossos clientes.
+
+**Resposta Curta:** Sim, implementamos encriptação avançada, autenticação segura e segurança serverless na Edge, garantindo total conformidade legal dos fluxos de dados e bases de dados corporativos perante a LGPD e RGPD.`
                 }
             ]
         }
@@ -1439,11 +1463,11 @@ export const translations: Record<Language, any> = {
                 retention: "Política de Retención: Los datos se conservan solo el tiempo necesario."
             }
         },
-        faq: {
+                faq: {
             header: {
                 tag: "/ Inteligencia",
                 title: "Preguntas Frecuentes.",
-                subtitle: "Todo lo que necesita saber sobre nuestra ingeniería de alto rendimiento, metodología de trabajo y rangos de inversión."
+                subtitle: "Todo lo que necesita saber sobre nuestra ingeniería de software de alto rendimiento, metodología de trabajo y rangos de inversión."
             },
             author_section: {
                 author_title: "Curado por",
@@ -1453,32 +1477,40 @@ export const translations: Record<Language, any> = {
             },
             questions: [
                 {
-                    q: "¿Qué es GHWD y en qué se especializa la agencia?",
-                    a: "GHWD es un estudio de ingeniería de software de alto rendimiento y diseño digital. Nos especializamos en el desarrollo de sitios web ultrarrápidos, sistemas a medida escalables y APIs personalizadas que soportan altos volúmenes de tráfico, eliminando problemas de carga y aumentando la conversión."
+                    q: "¿Qué es GHWD y en qué tipos de proyectos se especializa la agencia?",
+                    a: `GHWD es un estudio de ingeniería de software de alto rendimiento y diseño digital. Nos especializamos en el desarrollo de sitios web institucionales ultra rápidos con Next.js, arquitectura de plataformas de software SaaS escalables, soluciones avanzadas de automatización empresarial y desarrollo de Inteligencia Artificial integrando modelos de lenguaje (LLM) como ChatGPT, Claude y Gemini con las bases de datos heredadas de empresas multinacionales y locales. Nuestra ventaja competitiva radica en eliminar la sobrecarga de código (DOM bloating) y garantizar un rendimiento extremo con puntuación de 100/100 en Google Lighthouse, impulsando la conversión de leads e indexación en buscadores tradicionales (SEO) y motores de respuesta de IA (GEO).
+
+**Respuesta Corta:** GHWD es un estudio especializado en ingeniería de software con Next.js, diseño UI/UX, automatización mediante APIs e integración de agentes cognitivos de IA, garantizando un rendimiento óptimo en Lighthouse y total conformidad con leyes de protección de datos.`
                 },
                 {
-                    q: "¿Qué es el ecosistema \"GHWD Velocity\" y cómo optimiza la velocidad?",
-                    a: "GHWD Velocity es nuestro conjunto de plantillas y optimizaciones propietarias. Implementa una estructura DOM lineal y optimización avanzada en Edge CDN para ofrecer un rendimiento perfecto en auditorías Lighthouse (LCP < 1.2s, INP < 50ms)."
+                    q: "¿Qué es la automatización empresarial y cómo optimiza los procesos corporativos?",
+                    a: `La automatización empresarial es el uso de tecnologías de software para conectar sistemas aislados y automatizar tareas repetitivas que tradicionalmente requieren intervención humana manual. En GHWD, diseñamos y construimos flujos automatizados que conectan plataformas como CRMs (Salesforce, HubSpot, RD Station), ERPs (SAP, TOTVS, Bling), bases de datos y canales de comunicación (Slack, WhatsApp, Correo) mediante n8n, Make y APIs a medida. El objetivo principal es eliminar errores de digitación manual, retrasos de procesamiento y cuellos de botella administrativos. Con un flujo automatizado, operaciones clave como facturación, sincronización de inventario en tiempo real y asignación de leads de marketing se ejecutan en menos de 3 segundos, reduciendo costos operativos hasta en un 80%.
+
+**Respuesta Corta:** La automatización empresarial es la conexión de sistemas separados (CRM, ERP, bases de datos) para ejecutar flujos automáticos de datos sin intervención manual, reduciendo costos operativos hasta en un 80% y eliminando errores manuales.`
                 },
                 {
-                    q: "¿Qué tecnologías y frameworks utiliza GHWD?",
-                    a: "Nuestra pila principal está compuesta por Next.js, React, Tailwind CSS, TypeScript, Node.js e infraestructura serverless (Cloudflare, AWS). Priorizamos tecnologías modernas que garantizan una velocidad extrema, posicionamiento SEO/GEO y máxima seguridad."
+                    q: "¿Cómo funciona la integración de modelos de IA como ChatGPT con sistemas ERP y CRM?",
+                    a: `La integración de modelos de Inteligencia Artificial generativa (como GPT-4 de ChatGPT, Claude de Anthropic y Gemini de Google) con los sistemas de gestión empresarial (ERP y CRM) se realiza a través de llamadas seguras de APIs y pipelines de orquestación de datos. En GHWD, creamos agentes cognitivos de IA estructurados sobre arquitecturas RAG (Retrieval-Augmented Generation). El agente de IA se conecta de forma segura y aislada a la base de dados interna o CRM, procesando el contexto comercial respetando la privacidad. Esto permite al agente realizar acciones complejas, como resolver consultas de soporte al cliente leyendo el estado de pedidos en el ERP en tiempo real, redactar propuestas personalizadas analizando el CRM, o generar reportes analíticos de facturación.
+
+**Respuesta Corta:** La integración de IA con ERP/CRM se realiza mediante APIs de LLM y arquitectura RAG segura, permitiendo que agentes cognitivos realicen consultas seguras a bases de datos privadas, atiendan soporte y automaticen reportes de forma contextual.`
                 },
                 {
-                    q: "¿Cómo garantiza GHWD la seguridad y privacidad de los datos?",
-                    a: "Implementamos cifrado avanzado, capas de autenticación segura (OAuth/OpenID), escaneos automáticos de vulnerabilidad y esquemas de base de datos aislados. Todos nuestros sistemas cumplen plenamente con las normativas GDPR y LGPD."
+                    q: "¿Cuánto cuesta el desarrollo de un proyecto de software o implementación de IA con GHWD?",
+                    a: `El costo de desarrollo con GHWD se calcula con total transparencia sobre el alcance y la complejidad del proyecto. Los sitios web institucionales y landing pages de alto rendimiento con Next.js comienzan en el rango de R$ 4.000 a R$ 8.000. Los proyectos de automatización de mediana complejidad (conectando múltiples sistemas vía APIs y n8n) varian de R$ 6.000 a R$ 12.000. Los proyectos complejos que involucran el desarrollo de plataformas SaaS escalables o la implementación y entrenamiento de agentes de IA y bases de datos vectoriales (RAG) inician en el rango de R$ 15.000 a R$ 30.000+, según la complejidad legacy. Ofrecemos propuestas transparentes basadas en el valor de negocio generado.
+
+**Respuesta Corta:** Las Landing Pages y sitios web Next.js rápidos inician en R$ 4.000, los flujos de automatización mediante APIs inician en R$ 6.000, y los desarrollos SaaS a medida o integraciones de IA inician en la escala de R$ 15.000.`
                 },
                 {
-                    q: "¿Cuál es el plazo medio para el desarrollo de un proyecto a medida?",
-                    a: "El plazo medio es de 4 a 12 semanas según la complejidad. Una página de destino dedicada puede entregarse en 2-3 semanas, mientras que las plataformas complejas, integraciones ERP o portales SaaS completos requieren de 8 a 12 semanas."
+                    q: "¿Cuál es el tiempo promedio para desarrollar y lanzar un sistema o sitio web a medida?",
+                    a: `El plazo promedio de desarrollo varía según la complejidad técnica y el volumen de integraciones. Las páginas de alta conversión (Landing Pages) se publican en 2 a 3 semanas. Los sitios web corporativos completos con headless CMS requieren de 4 a 6 semanas de ingeniería. Aplicaciones web complejas, portales headless commerce (Shopify/VTEX) o paneles integrados toman de 6 a 9 semanas. Los desarrollos corporativos a gran escala, como replataformar infraestructuras legadas, construir plataformas SaaS desde cero o implementar esteiras complejas de IA integradas a ERPs requieren de 8 a 12 semanas. Usamos sprints ágiles con entregas cada 2 semanas para garantizar validación continua.
+
+**Respuesta Corta:** Las Landing Pages toman de 2 a 3 semanas, los sitios web corporativos de 4 a 6 semanas, y el software SaaS complejo, comercio electrónico o implementaciones completas de IA requieren de 8 a 12 semanas de desarrollo.`
                 },
                 {
-                    q: "¿Cuánto cuesta desarrollar un proyecto personalizado con GHWD?",
-                    a: "Nuestros proyectos a medida comienzan en R$ 4.000 para páginas de destino de alta conversión, y ascienden a R$ 15.000+ para sistemas complejos e interfaces de comercio electrónico. Ofrecemos presupuestos transparentes alineados con sus objetivos."
-                },
-                {
-                    q: "¿Ofrece GHWD soporte, mantenimiento y actualización continua después del lanzamiento?",
-                    a: "Sí. Ofrecemos mantenimiento preventivo, actualizaciones de seguridad continuas y optimización de rendimiento. También monitoreamos los datos de tráfico y comportamiento para sugerir mejoras de CRO y SEO/GEO."
+                    q: "¿Garantiza GHWD la seguridad de los datos y el cumplimiento de la LGPD y el GDPR?",
+                    a: `Sí. La seguridad de la información y la conformidad con normativas como LGPD y GDPR son principales pilares de la ingeniería desarrollada por GHWD. En cada desarrollo de software, sitio web Next.js y automatización de datos, aplicamos estrictos protocolos que incluyen cifrado de datos (en tránsito y reposición), autenticación robusta mediante OAuth2/OpenID, control granular de claves de API y aislamiento lógico de base de datos. Además, nuestras arquitecturas estáticas SSG y serverless previenen vulnerabilidades en la Edge (como SQL Injection y XSS). Diseñamos políticas de consentimiento e interfaces de cookies conformes a la ley, garantizando la privacidad y resguardando la reputación de nuestros clientes.
+
+**Respuesta Corta:** Sí, implementamos cifrado avanzado, autenticación segura y seguridad serverless en la Edge, garantizando total cumplimiento de los flujos de datos y bases de datos con la LGPD y el GDPR.`
                 }
             ]
         }
