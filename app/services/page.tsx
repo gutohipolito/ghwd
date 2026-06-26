@@ -9,12 +9,12 @@ import { Methodology } from "@/components/Methodology";
 import { ServicesCTA } from "@/components/ServicesCTA";
 
 const translatedServices = [
-    { id: "01", key: "strategy" },
+    { id: "01", key: "saas" },
     { id: "02", key: "design" },
     { id: "03", key: "dev" },
     { id: "04", key: "ai" },
-    { id: "05", key: "data" },
-    { id: "06", key: "growth" },
+    { id: "05", key: "automation" },
+    { id: "06", key: "geo" },
     { id: "07", key: "commerce" }
 ];
 

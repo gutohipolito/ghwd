@@ -42,13 +42,13 @@ export function ServicesMinimal() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     const translatedServices = [
-        { id: "01", key: "strategy", tags: ["Audit", "Planning", "Consulting"], image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop" },
-        { id: "02", key: "design", tags: ["UI/UX", "Branding", "Motion"], image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2664&auto=format&fit=crop" },
-        { id: "03", key: "dev", tags: ["Next.js", "App", "Commerce"], image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2670&auto=format&fit=crop" },
-        { id: "04", key: "ai", tags: ["LLM", "Agent", "Automation"], image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2664&auto=format&fit=crop" },
-        { id: "05", key: "data", tags: ["Tracking", "Analytics", "ROI"], image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2669&auto=format&fit=crop" },
-        { id: "06", key: "growth", tags: ["Ads", "SEO", "CRO"], image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" },
-        { id: "07", key: "commerce", tags: ["B2B", "Retail", "Global"], image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop" }
+        { id: "01", key: "saas", tags: ["SaaS", "Cloud", "APIs"], image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop" },
+        { id: "02", key: "design", tags: ["UI/UX", "Branding", "System"], image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2664&auto=format&fit=crop" },
+        { id: "03", key: "dev", tags: ["Next.js", "Websites", "SSG/SSR"], image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2670&auto=format&fit=crop" },
+        { id: "04", key: "ai", tags: ["LLM", "Agents", "RAG"], image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2664&auto=format&fit=crop" },
+        { id: "05", key: "automation", tags: ["n8n", "Make", "APIs"], image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2669&auto=format&fit=crop" },
+        { id: "06", key: "geo", tags: ["GEO", "Citations", "SEO"], image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" },
+        { id: "07", key: "commerce", tags: ["Shopify", "VTEX", "B2B"], image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop" }
     ];
 
     return (

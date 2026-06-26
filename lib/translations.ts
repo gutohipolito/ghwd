@@ -22,7 +22,7 @@ export const translations: Record<Language, any> = {
             start_project: 'START PROJECT',
             view_work: 'VIEW WORK',
             scroll: 'Scroll to Explore',
-            headline_html: 'We engineer <br /><span className="text-zinc-500">digital empires</span> <br />in Brazil.'
+            headline_html: 'We build <br /><span className="text-zinc-500">Websites, Custom AI & SaaS</span> <br />for global scale.'
         },
         footer: {
             tagline: 'Engineering the future of digital business.',
@@ -219,41 +219,40 @@ export const translations: Record<Language, any> = {
                 feature_3: { title: "Automated Scale", desc: "Systems that expand autonomously as you grow." }
             },
             services_items: {
-                strategy: {
-                    title: "Digital Strategy",
-                    desc: "Market positioning, brand diagnosis, and growth roadmaps.",
-                    caps: ["Market Analysis", "Brand Strategy", "Growth Consulting", "Business Modeling"]
+                saas: {
+                    title: "SaaS Engineering",
+                    desc: "Scalable cloud architectures, secure APIs, and custom software platforms.",
+                    caps: ["Custom SaaS", "Cloud Architecture", "Secure APIs", "Database Systems"]
                 },
                 design: {
                     title: "UI/UX Design",
-                    desc: "High-end interfaces that build trust and authority.",
+                    desc: "High-end user interfaces and custom design systems that build trust and authority.",
                     caps: ["Product Design", "Design Systems", "Prototyping", "Interaction Design"]
                 },
                 dev: {
-                    title: "Platform Engineering",
-                    desc: "Robust, scalable engineering for complex platforms.",
-                    caps: ["Next.js / React", "Headless Commerce", "API Architecture", "Cloud Infrastructure"]
+                    title: "Web Development",
+                    desc: "Robust, dynamic websites optimized for speed, accessibility, and high conversion.",
+                    caps: ["Next.js / React", "Websites", "SSG/SSR Dynamic Render", "Performance Auditing"]
                 },
                 ai: {
-                    title: "AI & Automation",
-                    desc: "Intelligent workflows and LLM integration for efficiency.",
-                    caps: ["LLM Integration", "Workflow Automation", "Custom AI Agents", "Process Optimization"]
+                    title: "AI Engineering",
+                    desc: "Intelligent systems with custom LLMs, autonomous agents, and RAG databases.",
+                    caps: ["LLM Integration", "Custom AI Agents", "RAG Systems", "AI Workflows"]
                 },
-                data: {
-                    title: "Data Intelligence",
-                    desc: "High-fidelity tracking and predictive analysis.",
-                    caps: ["Precision Tracking", "Predictive Modeling", "Custom Dashboards", "ROI Analysis"]
+                automation: {
+                    title: "Workflow Automation",
+                    desc: "Connecting tools and APIs to automate operations without human friction.",
+                    caps: ["n8n & Make", "API Integrations", "Database Automation", "Process Optimization"]
                 },
-                growth: {
-                    title: "Performance & Growth",
-                    desc: "Converting traffic into high-velocity revenue.",
-                    caps: ["CRO", "Technical SEO", "Retention Strategy", "Funnel Optimization"]
+                geo: {
+                    title: "GEO & AI Search SEO",
+                    desc: "Optimizing content to be cited by AI search engines like ChatGPT, Gemini, and Perplexity.",
+                    caps: ["AI Search Optimization", "GEO Strategy", "Semantic Data", "Core Web Vitals"]
                 },
                 commerce: {
-                    title: "Commerce Experience",
-                    desc: "Global systems for retail and B2B scale.",
-                    caps: ["Omnichannel Core", "Global Logistics", "Wholesale Portal", "Subscription Models"],
-                    tags: ["B2B", "Retail", "Global"]
+                    title: "Headless Commerce",
+                    desc: "High-velocity custom e-commerce systems built for massive scaling.",
+                    caps: ["Custom Commerce", "B2B wholesale Portal", "Shopify / VTEX", "Subscription Engines"]
                 }
             },
             projects_items: {
@@ -399,7 +398,7 @@ export const translations: Record<Language, any> = {
             start_project: 'INICIAR PROJETO',
             view_work: 'VER PROJETOS',
             scroll: 'Role para Explorar',
-            headline_html: 'Projetamos <br /><span className="text-zinc-500">sites e sistemas</span> <br />de alto nível.'
+            headline_html: 'Desenvolvemos <br /><span className="text-zinc-500">Sites, Sistemas de IA & SaaS</span> <br />de Alta Performance.'
         },
         footer: {
             tagline: 'Tecnologia de alta performance para fazer sua empresa crescer.',
@@ -596,41 +595,40 @@ export const translations: Record<Language, any> = {
                 feature_3: { title: "Escala Automatizada", desc: "Sistemas que se expandem autonomamente à medida que você cresce." }
             },
             services_items: {
-                strategy: {
-                    title: "Estratégia Digital",
-                    desc: "Posicionamento de mercado, diagnóstico de marca e roteiros de crescimento.",
-                    caps: ["Análise de Mercado", "Estratégia de Marca", "Consultoria de Crescimento", "Modelagem de Negócios"]
+                saas: {
+                    title: "Engenharia de SaaS",
+                    desc: "Arquitetura em nuvem escalável, APIs seguras e plataformas de software sob medida.",
+                    caps: ["SaaS Sob Medida", "Arquitetura Cloud", "APIs Seguras", "Banco de Dados"]
                 },
                 design: {
                     title: "UI/UX Design",
-                    desc: "Interfaces de alto padrão que constroem confiança e autoridade.",
-                    caps: ["Design de Produto", "Design Systems", "Prototipagem", "Design de Interação"]
+                    desc: "Interfaces de alto padrão e design systems personalizados que geram autoridade.",
+                    caps: ["Design de Produto", "Design Systems", "Prototypagem", "Design de Interação"]
                 },
                 dev: {
-                    title: "Engenharia de Plataforma",
-                    desc: "Engenharia robusta e escalável para plataformas complexas.",
-                    caps: ["Next.js / React", "Headless Commerce", "Arquitetura de API", "Infraestrutura em Nuvem"]
+                    title: "Desenvolvimento Web",
+                    desc: "Desenvolvimento de sites robustos, ultra-rápidos e focados em alta conversão.",
+                    caps: ["Next.js / React", "Websites", "SSG/SSR Dinâmico", "Auditoria Lighthouse"]
                 },
                 ai: {
-                    title: "IA & Automação",
-                    desc: "Workflows inteligentes e integração de LLM para máxima eficiência.",
-                    caps: ["Integração de LLM", "Automação de Workflow", "Agentes de IA Customizados", "Otimização de Processos"]
+                    title: "Engenharia de IA",
+                    desc: "Sistemas cognitivos com LLMs customizados, agentes autônomos e bases de dados RAG.",
+                    caps: ["Integração de LLM", "Agentes de IA", "Sistemas RAG", "Fluxos de Trabalho IA"]
                 },
-                data: {
-                    title: "Inteligência de Dados",
-                    desc: "Tracking de alta fidelidade e análise preditiva de performance.",
-                    caps: ["Tracking de Precisão", "Modelagem Preditiva", "Dashboards Customizados", "Análise de ROI"]
+                automation: {
+                    title: "Automação de Processos",
+                    desc: "Conexão de APIs e ferramentas para eliminar gargalos e erros operacionais.",
+                    caps: ["n8n & Make", "Integração de APIs", "Automações com IA", "Otimização de Processos"]
                 },
-                growth: {
-                    title: "Performance & Growth",
-                    desc: "Convertendo tráfego em receita de alta velocidade.",
-                    caps: ["CRO", "SEO Técnico", "Estratégia de Retenção", "Otimização de Funil"]
+                geo: {
+                    title: "GEO e SEO de IA",
+                    desc: "Otimização técnica para fazer seu negócio ser citado no ChatGPT, Gemini e Perplexity.",
+                    caps: ["Otimização para IA", "Estratégia de GEO", "Dados Semânticos", "Core Web Vitals"]
                 },
                 commerce: {
-                    title: "Commerce Experience",
-                    desc: "Sistemas globais para escala de varejo e B2B.",
-                    caps: ["Núcleo Omnichannel", "Logística Global", "Portal de Atacado", "Modelos de Assinatura"],
-                    tags: ["B2B", "Varejo", "Global"]
+                    title: "Headless Commerce",
+                    desc: "Sistemas customizados de comércio digital de altíssima velocidade para B2B e varejo.",
+                    caps: ["E-commerce Customizado", "Portal B2B Atacado", "Shopify / VTEX", "Assinaturas"]
                 }
             },
             projects_items: {
@@ -776,7 +774,7 @@ export const translations: Record<Language, any> = {
             start_project: 'INICIAR PROJETO',
             view_work: 'VER PROJETOS',
             scroll: 'Percorra para Explorar',
-            headline_html: 'Projetamos <br /><span className="text-zinc-500">impérios digitais</span> <br />no Brasil.'
+            headline_html: 'Desenvolvemos <br /><span className="text-zinc-500">Websites, Sistemas de IA & SaaS</span> <br />de Alta Performance.'
         },
         footer: {
             tagline: 'Transformando visão estratégica em domínio digital.',
@@ -960,41 +958,40 @@ export const translations: Record<Language, any> = {
                 feature_3: { title: "Escala Automatizada", desc: "Sistemas que se expandem autonomamente à medida que cresce." }
             },
             services_items: {
-                strategy: {
-                    title: "Estratégia Digital",
-                    desc: "Posicionamento de mercado, diagnóstico de marca e roadmaps de crescimento.",
-                    caps: ["Análise de Mercado", "Estratégia de Marca", "Consultoria de Crescimento", "Modelação de Negócios"]
+                saas: {
+                    title: "Engenharia de SaaS",
+                    desc: "Arquitetura na nuvem escalável, APIs seguras e plataformas de software sob medida.",
+                    caps: ["SaaS Sob Medida", "Arquitetura Cloud", "APIs Seguras", "Bases de Dados"]
                 },
                 design: {
                     title: "Design UI/UX",
-                    desc: "Interfaces de alto padrão que constroem confiança e autoridade.",
+                    desc: "Interfaces de alto padrão e design systems personalizados que geram autoridade.",
                     caps: ["Design de Produto", "Design Systems", "Prototipagem", "Design de Interação"]
                 },
                 dev: {
-                    title: "Engenharia de Plataforma",
-                    desc: "Engenharia robusta e escalável para plataformas complexas.",
-                    caps: ["Next.js / React", "Headless Commerce", "Arquitetura de API", "Infraestrutura na Nuvem"]
+                    title: "Desenvolvimento Web",
+                    desc: "Desenvolvimento de websites robustos, ultra-rápidos e focados em alta conversão.",
+                    caps: ["Next.js / React", "Websites", "SSG/SSR Dinâmico", "Auditoria Lighthouse"]
                 },
                 ai: {
-                    title: "IA & Automação",
-                    desc: "Workflows inteligentes e integração de LLM para máxima eficiência.",
-                    caps: ["Integração de LLM", "Automação de Workflow", "Agentes de IA Personalizados", "Otimização de Processos"]
+                    title: "Engenharia de IA",
+                    desc: "Sistemas cognitivos com LLMs customizados, agentes autónomos e bases de dados RAG.",
+                    caps: ["Integração de LLM", "Agentes de IA", "Sistemas RAG", "Fluxos de Trabalho IA"]
                 },
-                data: {
-                    title: "Inteligência de Dados",
-                    desc: "Rastreio de alta fidelidade e análise preditiva de performance.",
-                    caps: ["Rastreio de Precisão", "Modelação Preditiva", "Dashboards Personalizados", "Análise de ROI"]
+                automation: {
+                    title: "Automação de Processos",
+                    desc: "Conexão de APIs e ferramentas para eliminar gargalos e erros operacionais.",
+                    caps: ["n8n & Make", "Integração de APIs", "Automações com IA", "Otimização de Processos"]
                 },
-                growth: {
-                    title: "Performance & Growth",
-                    desc: "Convertendo tráfego em receita de alta velocidade.",
-                    caps: ["CRO", "SEO Técnico", "Estratégia de Retenção", "Otimização de Funil"]
+                geo: {
+                    title: "GEO e SEO de IA",
+                    desc: "Otimização técnica para fazer o seu negócio ser citado no ChatGPT, Gemini e Perplexity.",
+                    caps: ["Otimização para IA", "Estratégia de GEO", "Dados Semânticos", "Core Web Vitals"]
                 },
                 commerce: {
-                    title: "Experiência de Comércio",
-                    desc: "Sistemas globais para escala de retalho e B2B.",
-                    caps: ["Núcleo Omnichannel", "Logística Global", "Portal de Revenda", "Modelos de Subscrição"],
-                    tags: ["B2B", "Retalho", "Global"]
+                    title: "Headless Commerce",
+                    desc: "Sistemas customizados de comércio digital de altíssima velocidade para B2B e retalho.",
+                    caps: ["E-commerce Customizado", "Portal B2B Atacado", "Shopify / VTEX", "Subscrições"]
                 }
             },
             projects_items: {
@@ -1140,7 +1137,7 @@ export const translations: Record<Language, any> = {
             start_project: 'INICIAR PROYECTO',
             view_work: 'VER PROYECTOS',
             scroll: 'Desplazarse para Explorar',
-            headline_html: 'Diseñamos <br /><span className="text-zinc-500">imperios digitales</span> <br />en Brasil.'
+            headline_html: 'Desarrollamos <br /><span className="text-zinc-500">Sitios Web, IA & SaaS</span> <br />de Alto Rendimiento.'
         },
         footer: {
             tagline: 'Transformando la visión estratégica en dominio digital.',
@@ -1319,41 +1316,40 @@ export const translations: Record<Language, any> = {
                 feature_3: { title: "Escala Automatizada", desc: "Sistemas que se expanden de forma autónoma a medida que crece." }
             },
             services_items: {
-                strategy: {
-                    title: "Estrategia Digital",
-                    desc: "Posicionamiento de mercado, diagnóstico de marca y planes de crecimiento.",
-                    caps: ["Análisis de Mercado", "Estrategia de Marca", "Consultoría de Crecimiento", "Modelado de Negocios"]
+                saas: {
+                    title: "Ingeniería de SaaS",
+                    desc: "Arquitectura en la nube escalable, APIs seguras y plataformas de software a medida.",
+                    caps: ["SaaS a Medida", "Arquitectura Cloud", "APIs Securas", "Bases de Datos"]
                 },
                 design: {
                     title: "Diseño UI/UX",
-                    desc: "Interfaces de alta gama que generan confianza y autoridad.",
+                    desc: "Interfaces de alta gama y sistemas de diseño personalizados que generan autoridad.",
                     caps: ["Diseño de Producto", "Sistemas de Diseño", "Prototipado", "Diseño de Interacción"]
                 },
                 dev: {
-                    title: "Ingeniería de Plataforma",
-                    desc: "Ingeniería robusta y escalable para plataformas complejas.",
-                    caps: ["Next.js / React", "Comercio Headless", "Arquitectura de API", "Infraestructura Cloud"]
+                    title: "Desarrollo Web",
+                    desc: "Desarrollo de sitios web robustos, ultra rápidos y enfocados en alta conversión.",
+                    caps: ["Next.js / React", "Sitios Web", "SSG/SSR Dinámico", "Auditoría Lighthouse"]
                 },
                 ai: {
-                    title: "IA & Automatización",
-                    desc: "Flujos de trabajo inteligentes e integración de LLM para máxima eficiencia.",
-                    caps: ["Integración de LLM", "Automatización de Flujos", "Agentes de IA", "Optimización de Procesos"]
+                    title: "Ingeniería de IA",
+                    desc: "Sistemas cognitivos con LLMs personalizados, agentes autónomos y bases de datos RAG.",
+                    caps: ["Integración de LLM", "Agentes de IA", "Sistemas RAG", "Flujos de Trabajo IA"]
                 },
-                data: {
-                    title: "Inteligencia de Datos",
-                    desc: "Seguimiento de alta fidelidad y análisis predictivo del rendimiento.",
-                    caps: ["Tracking de Precisión", "Modelado Predictivo", "Dashboards", "Análisis de ROI"]
+                automation: {
+                    title: "Automatización de Procesos",
+                    desc: "Conexión de APIs y herramientas para eliminar cuellos de botella y errores operacionales.",
+                    caps: ["n8n & Make", "Integración de APIs", "Automatizaciones con IA", "Optimización de Procesos"]
                 },
-                growth: {
-                    title: "Performance & Growth",
-                    desc: "Convirtiendo el tráfico en ingresos de alta velocidad.",
-                    caps: ["CRO", "SEO Técnico", "Estrategia de Retención", "Optimización de Embudo"]
+                geo: {
+                    title: "GEO y SEO de IA",
+                    desc: "Optimización técnica para hacer que su negocio sea citado en ChatGPT, Gemini y Perplexity.",
+                    caps: ["Optimización para IA", "Estratégia de GEO", "Datos Semánticos", "Core Web Vitals"]
                 },
                 commerce: {
-                    title: "Commerce Experience",
-                    desc: "Sistemas globales para escala minorista y B2B.",
-                    caps: ["Core Omnicanal", "Logística Global", "Portal B2B", "Modelos de Suscripción"],
-                    tags: ["B2B", "Retail", "Global"]
+                    title: "Headless Commerce",
+                    desc: "Sistemas personalizados de comercio digital de altísima velocidad para B2B y retail.",
+                    caps: ["E-commerce a Medida", "Portal B2B Mayorista", "Shopify / VTEX", "Suscripciones"]
                 }
             },
             projects_items: {
