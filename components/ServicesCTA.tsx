@@ -18,7 +18,7 @@ export function ServicesCTA() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
-                        className="text-5xl md:text-8xl font-heading font-black leading-[0.9] tracking-tighter uppercase"
+                        className="text-3xl sm:text-5xl md:text-8xl font-heading font-black leading-none md:leading-[0.9] tracking-tighter uppercase break-words"
                     >
                         {ctaData.title}
                     </motion.h2>

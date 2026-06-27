@@ -29,7 +29,7 @@ export function DashboardsShowcase() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
-                                className="text-4xl md:text-[4.3rem] font-heading font-black italic uppercase tracking-tighter leading-[0.9] mb-8"
+                                className="text-3xl sm:text-4xl md:text-[4.3rem] font-heading font-black italic uppercase tracking-tighter leading-none md:leading-[0.9] mb-8 break-words"
                             >
                                 {t('home.dashboards.title_1')} <br />
                                 <span className="text-zinc-600">{t('home.dashboards.title_2')}</span>

@@ -143,7 +143,7 @@ export function MegaFooter() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-[8.5vw] sm:text-6xl md:text-[8rem] font-heading font-black text-white leading-[0.9] tracking-tightest mb-8 uppercase"
+                            className="text-[7.5vw] sm:text-6xl md:text-[8rem] font-heading font-black text-white leading-none md:leading-[0.9] tracking-tightest mb-8 uppercase break-words"
                         >
                             {t('footer.title_1')}<br />
                             <span className="text-emerald-500">{t('footer.title_2')}</span>

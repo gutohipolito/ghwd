@@ -73,7 +73,7 @@ export function ServicesMinimal() {
 
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-end mb-20">
-                    <h2 className="font-heading font-black italic uppercase text-5xl md:text-7xl tracking-tighter text-white">
+                    <h2 className="font-heading font-black italic uppercase text-3xl sm:text-5xl md:text-7xl tracking-tighter text-white break-words">
                         {t('home.services.title')}
                     </h2>
                     <Link href="/services" className="hidden md:flex items-center gap-2 border-b border-white/20 pb-1 hover:text-zinc-400 transition-colors">
@@ -100,7 +100,7 @@ export function ServicesMinimal() {
                                     </span>
 
                                     {/* Title */}
-                                    <h3 className="font-heading font-black italic uppercase text-4xl md:text-6xl flex-1 group-hover:translate-x-4 transition-transform duration-300 tracking-tighter">
+                                    <h3 className="font-heading font-black italic uppercase text-2xl sm:text-4xl md:text-6xl flex-1 group-hover:translate-x-4 transition-transform duration-300 tracking-tighter break-words">
                                         {content.title}
                                     </h3>
 

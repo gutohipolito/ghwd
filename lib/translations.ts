@@ -27,8 +27,8 @@ export const translations: Record<Language, any> = {
             headline_html: 'Web Development, <br /><span className="text-zinc-500">AI & Automation</span> <br />for Businesses.'
         },
         footer: {
-            title_1: "AI Automation &",
-            title_2: "System Integration.",
+            title_1: "AI Automation",
+            title_2: "& System Integration.",
             tagline: 'Engineering the future of digital business.',
             compliance: 'Compliance',
             legal: 'Legal',
@@ -442,8 +442,8 @@ export const translations: Record<Language, any> = {
             headline_html: 'Desenvolvimento Web, <br /><span className="text-zinc-500">IA & Automação</span> <br />para Empresas.'
         },
         footer: {
-            title_1: "Automação com IA &",
-            title_2: "Integração de Sistemas.",
+            title_1: "Automação com IA",
+            title_2: "& Integração de Sistemas.",
             tagline: 'Tecnologia de alta performance para fazer sua empresa crescer.',
             compliance: 'LGPD',
             legal: 'Legal',
@@ -857,8 +857,8 @@ export const translations: Record<Language, any> = {
             headline_html: 'Desenvolvimento Web, <br /><span className="text-zinc-500">IA & Automação</span> <br />para Empresas.'
         },
         footer: {
-            title_1: "Automação com IA &",
-            title_2: "Integração de Sistemas.",
+            title_1: "Automação com IA",
+            title_2: "& Integração de Sistemas.",
             tagline: 'Transformando visão estratégica em domínio digital.',
             compliance: 'LGPD',
             legal: 'Jurídico',
@@ -1259,8 +1259,8 @@ export const translations: Record<Language, any> = {
             headline_html: 'Desarrollo Web, <br /><span className="text-zinc-500">IA y Automatización</span> <br />para Empresas.'
         },
         footer: {
-            title_1: "Automatización con IA &",
-            title_2: "Integración de Sistemas.",
+            title_1: "Automatización con IA",
+            title_2: "& Integración de Sistemas.",
             tagline: 'Transformando la visión estratégica en dominio digital.',
             compliance: 'Legal',
             legal: 'Legal',
