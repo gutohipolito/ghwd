@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, MoveDown } from "lucide-react";
@@ -10,6 +11,16 @@ export function HeroPremium() {
     const { t, language } = useLanguage();
     const { openModal } = useModal();
     const { scrollY } = useScroll();
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        setIsDesktop(window.innerWidth >= 768);
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 768);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     // Smooth, slow parallax
     const yText = useTransform(scrollY, [0, 500], [0, 100]);
@@ -20,16 +31,18 @@ export function HeroPremium() {
 
             {/* Background - Clean & Premium */}
             <div className="absolute inset-0 z-0">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster="https://images.pexels.com/videos/3163534/pictures/preview-0.jpg"
-                    className="w-full h-full object-cover opacity-50 grayscale"
-                >
-                    <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-                </video>
+                {isDesktop && (
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        poster="https://images.pexels.com/videos/3163534/pictures/preview-0.jpg"
+                        className="w-full h-full object-cover opacity-50 grayscale"
+                    >
+                        <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+                    </video>
+                )}
                 <div className="absolute inset-0 bg-black/60" /> {/* Dark overlay for text contrast */}
             </div>
 
@@ -54,7 +67,7 @@ export function HeroPremium() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                    className="relative z-10 font-heading font-black italic uppercase text-5xl md:text-8xl leading-[0.9] tracking-tighter mb-12"
+                    className="relative z-10 font-heading font-black italic uppercase text-3xl sm:text-5xl md:text-8xl leading-[0.9] tracking-tighter mb-12 break-words"
                 >
                     <span dangerouslySetInnerHTML={{ __html: t('hero.headline_html') }} />
                 </motion.h1>

@@ -170,7 +170,7 @@ export const kbArticles: KBArticle[] = [
                             Para entender a mudança de paradigma, observe como as duas tecnologias se comportam diante de solicitações reais de negócios:
                         </p>
                         <div className="overflow-x-auto border border-white/10 rounded-xl">
-                            <table className="w-full text-left text-sm border-collapse">
+                            <table className="w-full min-w-[550px] text-left text-sm border-collapse">
                                 <thead>
                                     <tr className="bg-zinc-900 border-b border-white/10">
                                         <th className="p-4 font-bold text-white">Característica</th>
@@ -322,7 +322,7 @@ export const kbArticles: KBArticle[] = [
                         <p className="text-zinc-300 leading-relaxed">
                             Abaixo, demonstramos a implementação de um conector de integração segura em TypeScript. O código recebe a intenção de busca semântica da IA, mas aplica filtros de escopo e higienização estritos antes de disparar a chamada HTTP para o ERP de faturamento:
                         </p>
-                        <pre className="bg-zinc-900 border border-white/5 rounded-xl p-6 font-mono text-xs text-zinc-300 overflow-x-auto leading-relaxed">
+                        <pre className="bg-zinc-900 border border-white/5 rounded-xl p-6 font-mono text-xs text-zinc-300 w-full max-w-full block overflow-x-auto leading-relaxed">
 {`import axios from 'axios';
 
 interface QueryParameters {
@@ -466,7 +466,7 @@ export async function getSecureOrderData(params: QueryParameters) {
                         <p className="text-zinc-300 leading-relaxed">
                             Abaixo, exemplificamos a criação de um servidor MCP básico em Node.js utilizando a biblioteca SDK oficial do Model Context Protocol para expor uma ferramenta de consulta meteorológica/geográfica segura:
                         </p>
-                        <pre className="bg-zinc-900 border border-white/5 rounded-xl p-6 font-mono text-xs text-zinc-300 overflow-x-auto leading-relaxed">
+                        <pre className="bg-zinc-900 border border-white/5 rounded-xl p-6 font-mono text-xs text-zinc-300 w-full max-w-full block overflow-x-auto leading-relaxed">
 {`import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
@@ -741,7 +741,7 @@ await server.connect(transport);`}
                 content: (
                     <div className="space-y-6">
                         <div className="overflow-x-auto border border-white/10 rounded-xl">
-                            <table className="w-full text-left text-sm border-collapse">
+                            <table className="w-full min-w-[550px] text-left text-sm border-collapse">
                                 <thead>
                                     <tr className="bg-zinc-900 border-b border-white/10">
                                         <th className="p-4 font-bold text-white">Categoria do Projeto</th>

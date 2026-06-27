@@ -149,7 +149,7 @@ export default async function KBArticlePage({ params }: PageProps) {
             <PageHero
                 pretitle={`/ ${article.category}`}
                 title={article.title}
-                titleClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] font-black italic tracking-tighter"
+                titleClassName="text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] font-black italic tracking-tighter break-words"
                 subtitle={
                     <div className="flex flex-wrap items-center gap-6 mt-6 text-zinc-500 font-mono text-xs">
                         <div className="flex items-center gap-2">
