@@ -670,7 +670,7 @@ export const translations: Record<Language, any> = {
                 },
                 commerce: {
                     title: "Headless Commerce",
-                    desc: "Engenhamos plataformas de e-commerce headless e portais de venda B2B integrando Shopify Plus, VTEX e APIs customizadas para garantir vendas robustas e estoque sincronizado em tempo real.",
+                    desc: "Desenvolvemos plataformas de e-commerce headless e portais de venda B2B de alta performance, integrando Shopify Plus, VTEX e APIs sob medida para garantir estabilidade e sincronização de estoque em tempo real.",
                     caps: ["E-commerce Customizado", "Portal B2B Atacado", "Shopify / VTEX", "Assinaturas"]
                 }
             },
@@ -1072,7 +1072,7 @@ export const translations: Record<Language, any> = {
                 },
                 commerce: {
                     title: "Headless Commerce",
-                    desc: "Engenhamos plataformas de e-commerce headless e portais B2B integrando Shopify Plus, VTEX e APIs personalizadas para garantir vendas robustas e stock sincronizado em tempo real.",
+                    desc: "Desenvolvemos plataformas de e-commerce headless e portais B2B de alta performance, integrando Shopify Plus, VTEX e APIs personalizadas para garantir estabilidade e sincronização de stock em tempo real.",
                     caps: ["E-commerce Customizado", "Portal B2B Atacado", "Shopify / VTEX", "Subscrições"]
                 }
             },

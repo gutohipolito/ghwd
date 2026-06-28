@@ -44,7 +44,7 @@ const casesDict: Record<string, CaseData> = {
             pt: {
                 title: "Migração de Plataforma de E-Commerce",
                 challenge: "A Grendene precisava unificar mais de 50 mercados internacionais sob uma única arquitetura de headless commerce, sem perder a autonomia local de cada região.",
-                solution: "Engenhamos uma infraestrutura de comércio combinável (composable commerce) usando VTEX IO, permitindo a implantação rápida de vitrines regionais enquanto mantemos o núcleo operacional centralizado.",
+                solution: "Desenvolvemos uma infraestrutura de comércio combinável (composable commerce) usando VTEX IO, permitindo a implantação rápida de vitrines regionais enquanto mantemos a gestão operacional centralizada.",
                 metrics: [
                     { label: "Performance", value: "+400%" },
                     { label: "Mercados", value: "50+" },
@@ -54,7 +54,7 @@ const casesDict: Record<string, CaseData> = {
             "pt-pt": {
                 title: "Migração de Plataforma de E-Commerce",
                 challenge: "A Grendene precisava de unificar mais de 50 mercados internacionais sob uma única arquitetura de headless commerce, sem perder a autonomia local de cada região.",
-                solution: "Engenhamos uma infraestrutura de comércio combinável (composable commerce) usando VTEX IO, permitindo a implementação rápida de montras regionais enquanto mantemos o núcleo operacional centralizado.",
+                solution: "Desenvolvemos uma infraestrutura de comércio combinável (composable commerce) usando VTEX IO, permitindo a implementação rápida de montras regionais enquanto mantemos a gestão operacional centralizada.",
                 metrics: [
                     { label: "Performance", value: "+400%" },
                     { label: "Mercados", value: "50+" },

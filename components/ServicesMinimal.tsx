@@ -72,12 +72,12 @@ export function ServicesMinimal() {
             <div className="container mx-auto px-6 md:px-24">
 
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-20">
                     <h2 className="font-heading font-black italic uppercase text-3xl sm:text-5xl md:text-7xl tracking-tighter text-white break-words">
                         {t('home.services.title')}
                     </h2>
-                    <Link href="/services" className="hidden md:flex items-center gap-2 border-b border-white/20 pb-1 hover:text-zinc-400 transition-colors">
-                        <span className="uppercase tracking-widest text-sm font-bold">{t('home.services.view_inventory')}</span>
+                    <Link href="/services" className="hidden md:flex items-center gap-2 border-b border-white/20 pb-1 hover:text-zinc-400 transition-colors shrink-0 whitespace-nowrap">
+                        <span className="uppercase tracking-widest text-sm font-bold whitespace-nowrap">{t('home.services.view_inventory')}</span>
                         <ArrowUpRight className="w-4 h-4" />
                     </Link>
                 </div>
