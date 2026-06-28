@@ -572,7 +572,7 @@ export const translations: Record<Language, any> = {
                 last_step: "Última etapa 🎉",
                 contact_data_title: "Seus dados de contato",
                 contact_data_subtitle: "Promessa: zero spam. Vamos usar isso só para te retornar sobre o projeto.",
-                wa_template: "Olá! Me chamo {name}{company}.\nPreenchi o formulário do site e meu projeto é: {project}.\nBudget considerado: {budget}.\n{msg}",
+                wa_template: "Olá! Me chamo {name}{company}.\nPreenchi o formulário do site e meu projeto é: {project}.\nOrçamento considerado: {budget}.\n{msg}",
                 wa_company_part: " e represento {company}",
                 fields: {
                     name: "Nome completo *",
@@ -675,7 +675,7 @@ export const translations: Record<Language, any> = {
                 }
             },
             projects_items: {
-                grendene: { title: "Arquitetura de Ecossistema Digital", desc: "Replatforming de uma gigante global de calçados para mais de 50 mercados." },
+                grendene: { title: "Arquitetura de Ecossistema Digital", desc: "Migração de plataforma de uma gigante global de calçados para mais de 50 mercados." },
                 hardrock: { title: "Commerce de Experiência", desc: "Digitalizando a lendária experiência gastronômica do rock & roll." },
                 besni: { title: "Núcleo de Varejo Omnichannel", desc: "Conectando mais de 40 lojas físicas com e-commerce de alta velocidade." }
             },
@@ -819,7 +819,7 @@ export const translations: Record<Language, any> = {
                 },
                 {
                     q: "Qual é o tempo médio para o desenvolvimento de um site ou sistema sob medida?",
-                    a: `O prazo médio para desenvolvimento e lançamento de um projeto varia conforme a sua complexidade estrutural e amplitude de integrações solicitadas. Projetos rápidos, como páginas de alta conversão de leads (Landing Pages), são entregues e publicados em um período médio de 2 a 3 semanas. Websites institucionais completos com CMS headless integrado demandam de 4 a 6 semanas de engenharia. Sistemas sob medida mais robustos, portais de Headless Commerce (Shopify/VTEX) ou painéis corporativos de média complexidade levam de 6 a 9 semanas para serem concluídos. Projetos de grande porte corporativo, como o replatforming de legados industriais, desenvolvimento de plataformas SaaS do zero ou esteiras complexas de automação e IA integradas a ERPs exigem um cronograma detalhado de 8 a 12 semanas. Seguimas a metodologia de desenvolvimento ágil com entregas incrementais a cada ciclo de 2 semanas, permitindo validação contínua.
+                    a: `O prazo médio para desenvolvimento e lançamento de um projeto varia conforme a sua complexidade estrutural e amplitude de integrações solicitadas. Projetos rápidos, como páginas de alta conversão de leads (Landing Pages), são entregues e publicados em um período médio de 2 a 3 semanas. Websites institucionais completos com CMS headless integrado demandam de 4 a 6 semanas de engenharia. Sistemas sob medida mais robustos, portais de Headless Commerce (Shopify/VTEX) ou painéis corporativos de média complexidade levam de 6 a 9 semanas para serem concluídos. Projetos de grande porte corporativo, como a migração de plataforma de legados industriais, desenvolvimento de plataformas SaaS do zero ou esteiras complexas de automação e IA integradas a ERPs exigem um cronograma detalhado de 8 a 12 semanas. Seguimos a metodologia de desenvolvimento ágil com entregas incrementais a cada ciclo de 2 semanas, permitindo validação contínua.
 
 **Resposta Curta:** O prazo médio para Landing Pages é de 2 a 3 semanas, websites corporativos levam de 4 a 6 semanas, e sistemas SaaS complexos, e-commerce ou integrações de IA demandam entre 8 a 12 semanas de engenharia.`
                 },
@@ -974,7 +974,7 @@ export const translations: Record<Language, any> = {
                 last_step: "Última etapa 🎉",
                 contact_data_title: "Os seus dados de contacto",
                 contact_data_subtitle: "Promessa: zero spam. Vamos usar isto apenas para lhe responder sobre o projeto.",
-                wa_template: "Olá! Chamo-me {name}{company}.\nPreenchi o formulário do site e o meu projeto é: {project}.\nBudget considerado: {budget}.\n{msg}",
+                wa_template: "Olá! Chamo-me {name}{company}.\nPreenchi o formulário do site e o meu projeto é: {project}.\nOrçamento considerado: {budget}.\n{msg}",
                 wa_company_part: " e represento a {company}",
                 fields: {
                     name: "Nome completo *",
@@ -1077,7 +1077,7 @@ export const translations: Record<Language, any> = {
                 }
             },
             projects_items: {
-                grendene: { title: "Arquitetura de Ecossistema Digital", desc: "Replatforming de uma gigante global de calçado para mais de 50 mercados." },
+                grendene: { title: "Arquitetura de Ecossistema Digital", desc: "Migração de plataforma de uma gigante global de calçado para mais de 50 mercados." },
                 hardrock: { title: "Comércio de Experiência", desc: "Digitalizando a lendária experiência gastronómica do rock & roll." },
                 besni: { title: "Núcleo de Retalho Omnichannel", desc: "Ligando mais de 40 lojas físicas com e-commerce de alta velocidade." }
             },
@@ -1221,7 +1221,7 @@ export const translations: Record<Language, any> = {
                 },
                 {
                     q: "Qual é o tempo médio para o desenvolvimento de um site ou sistema sob medida?",
-                    a: `O prazo médio para desenvolvimento e lançamento de um projeto varia conforme a sua complexidade estrutural e amplitude de integrações solicitadas. Projetos rápidos, como páginas de alta conversão de leads (Landing Pages), são entregues e publicados num período médio de 2 a 3 semanas. Websites institucionais completos com CMS headless integrado demandam de 4 a 6 semanas de engenharia. Sistemas sob medida mais robustos, portais de Headless Commerce (Shopify/VTEX) ou painéis corporativos de média complexidade levam de 6 a 9 semanas para serem concluídos. Projetos de grande porte corporativo, como o replatforming de legados industriais, desenvolvimento de plataformas SaaS do zero ou esteiras complexas de automação e IA integradas a ERPs exigem um cronograma detalhado de 8 a 12 semanas. Seguimos a metodologia de desenvolvimento ágil com entregas incrementais a cada ciclo de 2 semanas, permitindo validação contínua.
+                    a: `O prazo médio para desenvolvimento e lançamento de um projeto varia conforme a sua complexidade estrutural e amplitude de integrações solicitadas. Projetos rápidos, como páginas de alta conversão de leads (Landing Pages), são entregues e publicados num período médio de 2 a 3 semanas. Websites institucionais completos com CMS headless integrado demandam de 4 a 6 semanas de engenharia. Sistemas sob medida mais robustos, portais de Headless Commerce (Shopify/VTEX) ou painéis corporativos de média complexidade levam de 6 a 9 semanas para serem concluídos. Projetos de grande porte corporativo, como a migração de plataforma de legados industriais, desenvolvimento de plataformas SaaS do zero ou esteiras complexas de automação e IA integradas a ERPs exigem um cronograma detalhado de 8 a 12 semanas. Seguimos a metodologia de desenvolvimento ágil com entregas incrementais a cada ciclo de 2 semanas, permitindo validação contínua.
 
 **Resposta Curta:** O prazo médio para Landing Pages é de 2 a 3 semanas, websites corporativos levam de 4 a 6 semanas, e sistemas SaaS complexos, e-commerce ou integrações de IA demandam entre 8 a 12 semanas de engenharia.`
                 },
@@ -1265,7 +1265,7 @@ export const translations: Record<Language, any> = {
             compliance: 'Legal',
             legal: 'Legal',
             privacy: 'Política de Privacidad',
-            terms: 'Termos de Servicio',
+            terms: 'Términos de Servicio',
             cookies: 'Configuración de Cookies',
             sitemap: "Sitemap",
             products: "Productos",
@@ -1474,7 +1474,7 @@ export const translations: Record<Language, any> = {
                 }
             },
             projects_items: {
-                grendene: { title: "Arquitectura de Ecosistema Digital", desc: "Replataforma de un gigante mundial del calzado para más de 50 mercados." },
+                grendene: { title: "Arquitectura de Ecosistema Digital", desc: "Migración de plataforma de un gigante mundial del calzado para más de 50 mercados." },
                 hardrock: { title: "Commerce de Experiencia", desc: "Digitalizando la legendaria experiencia gastronómica del rock & roll." },
                 besni: { title: "Núcleo de Venta Omnicanal", desc: "Conectando más de 40 tiendas físicas con comercio electrónico de alta velocidad." }
             },
@@ -1606,25 +1606,25 @@ export const translations: Record<Language, any> = {
                 },
                 {
                     q: "¿Cómo funciona la integración de modelos de IA como ChatGPT con sistemas ERP y CRM?",
-                    a: `La integración de modelos de Inteligencia Artificial generativa (como GPT-4 de ChatGPT, Claude de Anthropic y Gemini de Google) con los sistemas de gestión empresarial (ERP y CRM) se realiza a través de llamadas seguras de APIs y pipelines de orquestación de datos. En GHWD, creamos agentes cognitivos de IA estructurados sobre arquitecturas RAG (Retrieval-Augmented Generation). El agente de IA se conecta de forma segura y aislada a la base de dados interna o CRM, procesando el contexto comercial respetando la privacidad. Esto permite al agente realizar acciones complejas, como resolver consultas de soporte al cliente leyendo el estado de pedidos en el ERP en tiempo real, redactar propuestas personalizadas analizando el CRM, o generar reportes analíticos de facturación.
+                    a: `La integración de modelos de Inteligencia Artificial generativa (como GPT-4 de ChatGPT, Claude de Anthropic y Gemini de Google) con los sistemas de gestión empresarial (ERP y CRM) se realiza a través de llamadas seguras de APIs y pipelines de orquestación de datos. En GHWD, creamos agentes cognitivos de IA estructurados sobre arquitecturas RAG (Retrieval-Augmented Generation). El agente de IA se conecta de forma segura y aislada a la base de datos interna o CRM, procesando el contexto comercial respetando la privacidad. Esto permite al agente realizar acciones complejas, como resolver consultas de soporte al cliente leyendo el estado de pedidos en el ERP en tiempo real, redactar propuestas personalizadas analizando el CRM, o generar reportes analíticos de facturación.
 
 **Respuesta Corta:** La integración de IA con ERP/CRM se realiza mediante APIs de LLM y arquitectura RAG segura, permitiendo que agentes cognitivos realicen consultas seguras a bases de datos privadas, atiendan soporte y automaticen reportes de forma contextual.`
                 },
                 {
                     q: "¿Cuánto cuesta el desarrollo de un proyecto de software o implementación de IA con GHWD?",
-                    a: `El costo de desarrollo con GHWD se calcula con total transparencia sobre el alcance y la complejidad del proyecto. Los sitios web institucionales y landing pages de alto rendimiento con Next.js comienzan en el rango de R$ 4.000 a R$ 8.000. Los proyectos de automatización de mediana complejidad (conectando múltiples sistemas vía APIs y n8n) varian de R$ 6.000 a R$ 12.000. Los proyectos complejos que involucran el desarrollo de plataformas SaaS escalables o la implementación y entrenamiento de agentes de IA y bases de datos vectoriales (RAG) inician en el rango de R$ 15.000 a R$ 30.000+, según la complejidad legacy. Ofrecemos propuestas transparentes basadas en el valor de negocio generado.
+                    a: `El costo de desarrollo con GHWD se calcula con total transparencia sobre el alcance y la complejidad del proyecto. Los sitios web institucionales y landing pages de alto rendimiento con Next.js comienzan en el rango de R$ 4.000 a R$ 8.000. Los proyectos de automatización de mediana complejidad (conectando múltiples sistemas vía APIs y n8n) varían de R$ 6.000 a R$ 12.000. Los proyectos complejos que involucran el desarrollo de plataformas SaaS escalables o la implementación y entrenamiento de agentes de IA y bases de datos vectoriales (RAG) inician en el rango de R$ 15.000 a R$ 30.000+, según la complejidad legacy. Ofrecemos propuestas transparentes basadas en el valor de negocio generado.
 
 **Respuesta Corta:** Las Landing Pages y sitios web Next.js rápidos inician en R$ 4.000, los flujos de automatización mediante APIs inician en R$ 6.000, y los desarrollos SaaS a medida o integraciones de IA inician en la escala de R$ 15.000.`
                 },
                 {
                     q: "¿Cuál es el tiempo promedio para desarrollar y lanzar un sistema o sitio web a medida?",
-                    a: `El plazo promedio de desarrollo varía según la complejidad técnica y el volumen de integraciones. Las páginas de alta conversión (Landing Pages) se publican en 2 a 3 semanas. Los sitios web corporativos completos con headless CMS requieren de 4 a 6 semanas de ingeniería. Aplicaciones web complejas, portales headless commerce (Shopify/VTEX) o paneles integrados toman de 6 a 9 semanas. Los desarrollos corporativos a gran escala, como replataformar infraestructuras legadas, construir plataformas SaaS desde cero o implementar esteiras complejas de IA integradas a ERPs requieren de 8 a 12 semanas. Usamos sprints ágiles con entregas cada 2 semanas para garantizar validación continua.
+                    a: `El plazo promedio de desarrollo varía según la complejidad técnica y el volumen de integraciones. Las páginas de alta conversión (Landing Pages) se publican en 2 a 3 semanas. Los sitios web corporativos completos con headless CMS requieren de 4 a 6 semanas de ingeniería. Aplicaciones web complejas, portales headless commerce (Shopify/VTEX) o paneles integrados toman de 6 a 9 semanas. Los desarrollos corporativos a gran escala, como migrar plataformas de infraestructuras legadas, construir plataformas SaaS desde cero o implementar esteiras complejas de IA integradas a ERPs requieren de 8 a 12 semanas. Usamos sprints ágiles con entregas cada 2 semanas para garantizar validación continua.
 
 **Respuesta Corta:** Las Landing Pages toman de 2 a 3 semanas, los sitios web corporativos de 4 a 6 semanas, y el software SaaS complejo, comercio electrónico o implementaciones completas de IA requieren de 8 a 12 semanas de desarrollo.`
                 },
                 {
                     q: "¿Garantiza GHWD la seguridad de los datos y el cumplimiento de la LGPD y el GDPR?",
-                    a: `Sí. La seguridad de la información y la conformidad con normativas como LGPD y GDPR son principales pilares de la ingeniería desarrollada por GHWD. En cada desarrollo de software, sitio web Next.js y automatización de datos, aplicamos estrictos protocolos que incluyen cifrado de datos (en tránsito y reposición), autenticación robusta mediante OAuth2/OpenID, control granular de claves de API y aislamiento lógico de base de datos. Además, nuestras arquitecturas estáticas SSG y serverless previenen vulnerabilidades en la Edge (como SQL Injection y XSS). Diseñamos políticas de consentimiento e interfaces de cookies conformes a la ley, garantizando la privacidad y resguardando la reputación de nuestros clientes.
+                    a: `Sí. La seguridad de la información y la conformidad con normativas como LGPD y GDPR son pilares fundamentales de la ingeniería desarrollada por GHWD. En cada desarrollo de software, sitio web Next.js y automatización de datos, aplicamos estrictos protocolos que incluyen cifrado de datos (en tránsito y en reposo), autenticación robusta mediante OAuth2/OpenID, control granular de claves de API y aislamiento lógico de base de datos. Además, nuestras arquitecturas estáticas SSG y serverless previenen vulnerabilidades en la Edge (como SQL Injection y XSS). Diseñamos políticas de consentimiento e interfaces de cookies conformes a la ley, garantizando la privacidad y resguardando la reputación de nuestros clientes.
 
 **Respuesta Corta:** Sí, implementamos cifrado avanzado, autenticación segura y seguridad serverless en la Edge, garantizando total cumplimiento de los flujos de datos y bases de datos con la LGPD y el GDPR.`
                 }

@@ -46,7 +46,7 @@ export function HeroPremium() {
                 <div className="absolute inset-0 bg-black/60" /> {/* Dark overlay for text contrast */}
             </div>
 
-            <div className="relative z-10 max-w-5xl">
+            <div className="relative z-10 w-full max-w-5xl lg:max-w-7xl">
 
                 {/* Pre-headline */}
                 <motion.div
@@ -67,7 +67,7 @@ export function HeroPremium() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                    className="relative z-10 font-heading font-black italic uppercase text-3xl sm:text-5xl md:text-8xl leading-none md:leading-[0.9] tracking-tighter mb-12 break-words"
+                    className="relative z-10 font-heading font-black italic uppercase text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-none md:leading-[0.9] tracking-tighter mb-12 break-words"
                 >
                     <span dangerouslySetInnerHTML={{ __html: t('hero.headline_html') }} />
                 </motion.h1>

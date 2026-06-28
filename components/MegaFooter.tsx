@@ -138,12 +138,12 @@ export function MegaFooter() {
             <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col h-full justify-between gap-20">
                 {/* Upper Section: Core CTA */}
                 <div className="flex flex-col md:flex-row justify-between items-start gap-12 border-b border-white/[0.05] pb-20">
-                    <div className="max-w-3xl">
+                    <div className="max-w-none md:max-w-4xl lg:max-w-5xl">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-[7.5vw] sm:text-6xl md:text-[8rem] font-heading font-black text-white leading-none md:leading-[0.9] tracking-tightest mb-8 uppercase break-words"
+                            className="text-[7.5vw] sm:text-6xl md:text-7xl lg:text-8xl font-heading font-black text-white leading-none md:leading-[0.9] tracking-tightest mb-8 uppercase break-words"
                         >
                             {t('footer.title_1')}<br />
                             <span className="text-emerald-500">{t('footer.title_2')}</span>

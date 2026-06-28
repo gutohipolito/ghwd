@@ -23,7 +23,7 @@ export function KBDirectoryClient({ articles }: KBDirectoryClientProps) {
     const textAll = isPt ? "Todos" : (isEs ? "Todos" : "All");
     const textSearchPlaceholder = isPt ? "Buscar artigos técnicos..." : (isEs ? "Buscar artículos técnicos..." : "Search technical articles...");
     const textGlossaryBannerTitle = isPt ? "Glossário Técnico Corporativo" : (isEs ? "Glosario Técnico Corporativo" : "Corporate Technical Glossary");
-    const textGlossaryBannerDesc = isPt ? "Precisa de uma definição rápida? Explore nosso dicionário interativo com conceitos de IA, RAG, MCP e engenharia." : (isEs ? "¿Necesita una definición rápida? Explore nuestro glosario con conceitos de IA, RAG, MCP y ingeniería." : "Need a quick definition? Explore our interactive glossary with concepts on AI, RAG, MCP, and web engineering.");
+    const textGlossaryBannerDesc = isPt ? "Precisa de uma definição rápida? Explore nosso dicionário interativo com conceitos de IA, RAG, MCP e engenharia." : (isEs ? "¿Necesita una definición rápida? Explore nuestro glosario con conceptos de IA, RAG, MCP e ingeniería." : "Need a quick definition? Explore our interactive glossary with concepts on AI, RAG, MCP, and web engineering.");
     const textGlossaryButton = isPt ? "Explorar Termos" : (isEs ? "Explorar Términos" : "Explore Terms");
     const textNoArticles = isPt ? "Nenhum artigo encontrado para os filtros selecionados." : (isEs ? "No se encontraron artículos para los filtros seleccionados." : "No articles found for the selected filters.");
     const textReadTime = isPt ? "leitura" : (isEs ? "lectura" : "read");
