@@ -14,7 +14,7 @@ export default function FAQPage() {
 
     // Obtém as traduções do FAQ
     const header = t('faq.header') as any || { tag: "/ Inteligência", title: "FAQ.", subtitle: "Perguntas Frequentes" };
-    const author = t('faq.author_section') as any || { author_title: "Curado por", author_name: "Gustavo Hipólito", author_role: "Lead Software Architect", last_updated: "Última atualização" };
+    const author = t('faq.author_section') as any || { author_title: "Curadoria de", author_name: "Gustavo Hipólito", author_role: "Lead Software Architect", last_updated: "Última atualização" };
     const questions = (t('faq.questions') as any[]) || [];
 
     // Gerador de JSON-LD estático para RAG/SEO/GEO com Grafo de FAQ e Breadcrumb

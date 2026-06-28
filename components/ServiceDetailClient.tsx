@@ -7,8 +7,10 @@ import { ServiceContent } from "@/lib/services-data";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown, Calendar, Award, ShieldCheck, Check } from "lucide-react";
+import { useLanguage } from "@/lib/i18n-context";
 
 export function ServiceDetailClient({ data }: { data: ServiceContent }) {
+    const { t, language } = useLanguage();
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     // Gerador de JSON-LD estático para RAG/SEO/GEO específico de serviço
@@ -80,7 +82,7 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
                             {/* Autor & Validação E-E-A-T */}
                             <div className="border-t border-white/10 pt-8 space-y-6">
                                 <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.2em] block">
-                                    Curado por
+                                    {language === 'en' ? 'Curated by' : (language === 'es' ? 'Curado por' : 'Curadoria de')}
                                 </span>
                                 <div className="flex items-start gap-4">
                                     <div className="w-12 h-12 bg-zinc-900 border border-white/10 rounded-full flex items-center justify-center text-zinc-400 font-bold shrink-0">

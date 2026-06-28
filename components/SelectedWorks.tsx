@@ -52,7 +52,7 @@ export function SelectedWorks() {
                         <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-4 block">
                             {t('home.selected_works.tag')}
                         </span>
-                        <h2 className="font-heading font-black italic uppercase text-3xl sm:text-5xl md:text-8xl tracking-tighter leading-none md:leading-[0.9] break-words">
+                        <h2 className="font-heading font-black italic uppercase text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-none md:leading-[0.9] break-words">
                             {t('home.selected_works.title')} <br />
                             <span className="text-zinc-600">{t('home.selected_works.title_italic')}</span>
                         </h2>

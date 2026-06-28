@@ -787,7 +787,7 @@ export const translations: Record<Language, any> = {
                 subtitle: "Tudo o que você precisa saber sobre nossa engenharia de alta performance, metodologia de trabalho e faixas de investimento."
             },
             author_section: {
-                author_title: "Curado por",
+                author_title: "Curadoria de",
                 author_name: "Gustavo Hipólito",
                 author_role: "Lead Software Architect",
                 last_updated: "Última atualização"
@@ -1189,7 +1189,7 @@ export const translations: Record<Language, any> = {
                 subtitle: "Tudo o que precisa de saber sobre a nossa engenharia de alta performance, metodologia de trabalho e faixas de investimento."
             },
             author_section: {
-                author_title: "Curado por",
+                author_title: "Curadoria de",
                 author_name: "Gustavo Hipólito",
                 author_role: "Lead Software Architect",
                 last_updated: "Última atualização"

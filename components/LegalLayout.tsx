@@ -56,7 +56,7 @@ export function LegalLayout({
                         <span className="text-emerald-500 font-mono text-[10px] uppercase tracking-[0.3em] mb-4 block">
                             Legal & Compliance
                         </span>
-                        <h1 className="text-6xl md:text-8xl font-heading font-black italic uppercase tracking-tighter text-white mb-6 leading-[0.85]">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black italic uppercase tracking-tighter text-white mb-6 leading-[0.85]">
                             {title}
                         </h1>
                         <p className="text-lg md:text-xl text-zinc-500 max-w-xl font-light leading-relaxed">

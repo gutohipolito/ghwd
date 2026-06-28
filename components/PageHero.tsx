@@ -42,8 +42,8 @@ export function PageHero({
     const isLongTitle = titleString.length > 25;
     
     const resolvedTitleClass = titleClassName || (isLongTitle 
-        ? "text-2xl sm:text-3xl md:text-6xl leading-[1.15] break-words" 
-        : "text-4xl sm:text-5xl md:text-8xl leading-[1.1] break-words");
+        ? "text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] break-words" 
+        : "text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] break-words");
 
     return (
         <section className="relative h-auto py-16 pt-28 md:h-[65vh] md:min-h-[500px] md:py-0 md:pt-36 flex flex-col justify-start md:justify-center px-6 md:px-24 overflow-hidden bg-zinc-950 text-white border-b border-white/5">
@@ -69,7 +69,7 @@ export function PageHero({
                 <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/50 to-zinc-950" />
             </div>
 
-            <div className="relative z-10 container mx-auto max-w-5xl">
+            <div className="relative z-10 container mx-auto max-w-5xl lg:max-w-6xl">
 
                 {/* Pre-headline */}
                 <motion.div
