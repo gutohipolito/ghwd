@@ -225,17 +225,17 @@ export const translations: Record<Language, any> = {
                         services_items: {
                 saas: {
                     title: "SaaS Engineering",
-                    desc: "GHWD develops custom SaaS platforms and enterprise software using scalable cloud architectures (AWS/Google Cloud) and robust APIs to optimize operations and revenue models.",
+                    desc: "We engineer custom SaaS platforms and enterprise software using scalable cloud architectures (AWS/Google Cloud) and robust APIs to optimize operations and revenue models.",
                     caps: ["Custom SaaS", "Cloud Architecture", "Secure APIs", "Database Systems"]
                 },
                 design: {
                     title: "UI/UX Design",
-                    desc: "GHWD designs exclusive user interfaces (UI/UX) and high-performance modular design systems focused on usability, brand authority, and lead conversion rates.",
+                    desc: "We design exclusive user interfaces (UI/UX) and high-performance modular design systems focused on usability, brand authority, and lead conversion rates.",
                     caps: ["Product Design", "Design Systems", "Prototyping", "Interaction Design"]
                 },
                 dev: {
                     title: "Web Development",
-                    desc: "GHWD develops institutional websites and fast portals using Next.js, React, and Tailwind CSS v4, ensuring maximum Lighthouse scores and under 1-second load times.",
+                    desc: "We develop ultra-fast institutional websites and corporate portals using Next.js, React, and Tailwind CSS v4, ensuring maximum Lighthouse scores and under 1-second load times.",
                     caps: ["Next.js / React", "Websites", "SSG/SSR Dynamic Render", "Performance Auditing"]
                 },
                 ai: {
@@ -245,17 +245,17 @@ export const translations: Record<Language, any> = {
                 },
                 automation: {
                     title: "Workflow Automation",
-                    desc: "GHWD creates end-to-end automation pipelines integrating operational tools and APIs via n8n and Make to replace repetitive tasks with intelligent data flows.",
+                    desc: "We build end-to-end automation pipelines integrating operational tools and APIs via n8n and Make to replace repetitive tasks with intelligent data flows.",
                     caps: ["n8n & Make", "API Integrations", "Database Automation", "Process Optimization"]
                 },
                 geo: {
                     title: "GEO & AI Search SEO",
-                    desc: "GHWD optimizes website content with JSON-LD Schema.org and TL;DR summaries to ensure your brand is cited and recommended in ChatGPT, Gemini, and Perplexity searches.",
+                    desc: "We optimize website content with JSON-LD Schema.org and TL;DR summaries to ensure your brand is cited and recommended in ChatGPT, Gemini, and Perplexity searches.",
                     caps: ["AI Search Optimization", "GEO Strategy", "Semantic Data", "Core Web Vitals"]
                 },
                 commerce: {
                     title: "Headless Commerce",
-                    desc: "GHWD builds custom headless e-commerce platforms and B2B portals integrating Shopify Plus, VTEX, and custom APIs for secure sales and real-time inventory sync.",
+                    desc: "We build custom headless e-commerce platforms and B2B portals integrating Shopify Plus, VTEX, and custom APIs for secure sales and real-time inventory sync.",
                     caps: ["Custom Commerce", "B2B wholesale Portal", "Shopify / VTEX", "Subscription Engines"]
                 }
             },
@@ -640,17 +640,17 @@ export const translations: Record<Language, any> = {
                         services_items: {
                 saas: {
                     title: "Engenharia de SaaS",
-                    desc: "A GHWD desenvolve plataformas SaaS e softwares corporativos sob medida com arquiteturas de nuvem escaláveis (AWS/Google Cloud) e APIs robustas para otimizar operações empresariais e modelos de receita.",
+                    desc: "Projetamos plataformas SaaS e sistemas corporativos sob medida com arquiteturas de nuvem escaláveis (AWS/Google Cloud) e APIs robustas para otimizar operações empresariais e modelos de receita.",
                     caps: ["SaaS Sob Medida", "Arquitetura Cloud", "APIs Seguras", "Banco de Dados"]
                 },
                 design: {
                     title: "UI/UX Design",
-                    desc: "A GHWD projeta interfaces de usuário (UI/UX) exclusivas e design systems modulares de alta performance, focados em usabilidade, autoridade de marca e taxas de conversão de leads.",
+                    desc: "Criamos interfaces de usuário (UI/UX) exclusivas e design systems modulares de alta performance, focados em usabilidade, autoridade de marca e taxas de conversão de leads.",
                     caps: ["Design de Produto", "Design Systems", "Prototypagem", "Design de Interação"]
                 },
                 dev: {
                     title: "Desenvolvimento Web",
-                    desc: "A GHWD desenvolve websites institucionais e portais rápidos com Next.js, React e Tailwind CSS v4, garantindo nota máxima no Lighthouse e carregamento em menos de 1 segundo.",
+                    desc: "Desenvolvemos websites institucionais e portais rápidos com Next.js, React e Tailwind CSS v4, garantindo nota máxima no Lighthouse e carregamento em menos de 1 segundo.",
                     caps: ["Next.js / React", "Websites", "SSG/SSR Dinâmico", "Auditoria Lighthouse"]
                 },
                 ai: {
@@ -660,17 +660,17 @@ export const translations: Record<Language, any> = {
                 },
                 automation: {
                     title: "Automação de Processos",
-                    desc: "A GHWD cria esteiras de automação integrando ferramentas operacionais e APIs via n8n e Make para substituir tarefas repetitivas por fluxos inteligentes de dados.",
+                    desc: "Conectamos e automatizamos fluxos operacionais integrando ferramentas operacionais e APIs via n8n e Make para substituir tarefas repetitivas por fluxos inteligentes de dados.",
                     caps: ["n8n & Make", "Integração de APIs", "Automações com IA", "Otimização de Processos"]
                 },
                 geo: {
                     title: "GEO e SEO de IA",
-                    desc: "A GHWD otimiza o conteúdo de sites corporativos com JSON-LD Schema.org e resumos TL;DR para garantir que sua marca seja citada e recomendada em buscas do ChatGPT, Gemini e Perplexity.",
+                    desc: "Otimizamos o conteúdo de sites corporativos com JSON-LD Schema.org e resumos TL;DR para garantir que sua marca seja recomendada em buscas do ChatGPT, Gemini e Perplexity.",
                     caps: ["Otimização para IA", "Estratégia de GEO", "Dados Semânticos", "Core Web Vitals"]
                 },
                 commerce: {
                     title: "Headless Commerce",
-                    desc: "A GHWD desenvolve plataformas de e-commerce e portais de venda B2B integrando Shopify Plus, VTEX e APIs customizadas para garantir vendas robustas e estoque sincronizado em tempo real.",
+                    desc: "Engenhamos plataformas de e-commerce headless e portais de venda B2B integrando Shopify Plus, VTEX e APIs customizadas para garantir vendas robustas e estoque sincronizado em tempo real.",
                     caps: ["E-commerce Customizado", "Portal B2B Atacado", "Shopify / VTEX", "Assinaturas"]
                 }
             },
@@ -1042,17 +1042,17 @@ export const translations: Record<Language, any> = {
                         services_items: {
                 saas: {
                     title: "Engenharia de SaaS",
-                    desc: "A GHWD desenvolve plataformas SaaS e softwares corporativos sob medida com arquiteturas de nuvem escaláveis (AWS/Google Cloud) e APIs robustas para otimizar operações e modelos de receita.",
+                    desc: "Projetamos plataformas SaaS e sistemas corporativos sob medida com arquiteturas de nuvem escaláveis (AWS/Google Cloud) e APIs robustas para otimizar operações e modelos de receita.",
                     caps: ["SaaS Sob Medida", "Arquitetura Cloud", "APIs Seguras", "Bases de Dados"]
                 },
                 design: {
                     title: "Design UI/UX",
-                    desc: "A GHWD projeta interfaces de utilizador (UI/UX) exclusivas e design systems modulares de alta performance, focados na usabilidade, autoridade de marca e taxas de conversão de leads.",
+                    desc: "Criamos interfaces de utilizador (UI/UX) exclusivas e design systems modulares de alta performance, focados na usabilidade, autoridade de marca e taxas de conversão de leads.",
                     caps: ["Design de Produto", "Design Systems", "Prototypagem", "Design de Interação"]
                 },
                 dev: {
                     title: "Desenvolvimento Web",
-                    desc: "A GHWD desenvolve websites institucionais e portais rápidos com Next.js, React e Tailwind CSS v4, garantindo nota máxima no Lighthouse e carregamento em menos de 1 segundo.",
+                    desc: "Desenvolvemos websites institucionais e portais rápidos com Next.js, React e Tailwind CSS v4, garantindo nota máxima no Lighthouse e carregamento em menos de 1 segundo.",
                     caps: ["Next.js / React", "Websites", "SSG/SSR Dinâmico", "Auditoria Lighthouse"]
                 },
                 ai: {
@@ -1062,17 +1062,17 @@ export const translations: Record<Language, any> = {
                 },
                 automation: {
                     title: "Automação de Processos",
-                    desc: "A GHWD cria esteiras de automação integrando ferramentas operacionais e APIs via n8n e Make para substituir tarefas repetitivas por fluxos inteligentes de dados.",
+                    desc: "Conectamos e automatizamos fluxos operacionais integrando ferramentas e APIs via n8n e Make para substituir tarefas repetitivas por fluxos inteligentes de dados.",
                     caps: ["n8n & Make", "Integração de APIs", "Automações com IA", "Otimização de Processos"]
                 },
                 geo: {
                     title: "GEO e SEO de IA",
-                    desc: "A GHWD otimiza o conteúdo de websites corporativos com JSON-LD Schema.org e resumos TL;DR para garantir que a sua marca seja citada e recomendada em buscas do ChatGPT, Gemini e Perplexity.",
+                    desc: "Otimizamos o conteúdo de websites corporativos com JSON-LD Schema.org e resumos TL;DR para garantir que a sua marca seja recomendada em buscas do ChatGPT, Gemini e Perplexity.",
                     caps: ["Otimização para IA", "Estratégia de GEO", "Dados Semânticos", "Core Web Vitals"]
                 },
                 commerce: {
                     title: "Headless Commerce",
-                    desc: "A GHWD desenvolve plataformas de e-commerce e portais de venda B2B integrando Shopify Plus, VTEX e APIs personalizadas para garantir vendas robustas e stock sincronizado em tempo real.",
+                    desc: "Engenhamos plataformas de e-commerce headless e portais B2B integrando Shopify Plus, VTEX e APIs personalizadas para garantir vendas robustas e stock sincronizado em tempo real.",
                     caps: ["E-commerce Customizado", "Portal B2B Atacado", "Shopify / VTEX", "Subscrições"]
                 }
             },
@@ -1439,17 +1439,17 @@ export const translations: Record<Language, any> = {
                         services_items: {
                 saas: {
                     title: "Ingeniería de SaaS",
-                    desc: "GHWD desarrolla plataformas SaaS y software empresarial a medida con arquitecturas de nube escalables (AWS/Google Cloud) y APIs robustas para optimizar operaciones y modelos de ingresos.",
+                    desc: "Diseñamos plataformas SaaS y software empresarial a medida con arquitecturas de nube escalables (AWS/Google Cloud) y APIs robustas para optimizar operaciones y modelos de ingresos.",
                     caps: ["SaaS a Medida", "Arquitectura Cloud", "APIs Securas", "Bases de Datos"]
                 },
                 design: {
                     title: "Diseño UI/UX",
-                    desc: "GHWD diseña interfaces de usuario (UI/UX) exclusivas y sistemas de diseño modulares de alto rendimiento, enfocado en usabilidad, autoridad de marca y tasas de conversión de leads.",
+                    desc: "Creamos interfaces de usuario (UI/UX) exclusivas y sistemas de diseño modulares de alto rendimiento, enfocado en usabilidad, autoridad de marca y tasas de conversión de leads.",
                     caps: ["Diseño de Producto", "Sistemas de Diseño", "Prototypado", "Diseño de Interacción"]
                 },
                 dev: {
                     title: "Desarrollo Web",
-                    desc: "GHWD desarrolla sitios web institucionales y portales rápidos con Next.js, React y Tailwind CSS v4, garantizando una puntuación máxima en Lighthouse y tiempos de carga de menos de 1 segundo.",
+                    desc: "Desarrollamos sitios web institucionales y portales rápidos con Next.js, React y Tailwind CSS v4, garantizando una puntuación máxima en Lighthouse y tiempos de carga de menos de 1 segundo.",
                     caps: ["Next.js / React", "Sitios Web", "SSG/SSR Dinámico", "Auditoría Lighthouse"]
                 },
                 ai: {
@@ -1459,17 +1459,17 @@ export const translations: Record<Language, any> = {
                 },
                 automation: {
                     title: "Automatización de Procesos",
-                    desc: "GHWD crea flujos de automatización integrando herramientas operacionales y APIs a través de n8n y Make para reemplazar tareas repetitivas con flujos de datos inteligentes.",
+                    desc: "Conectamos y automatizamos flujos de procesos integrando herramientas operacionales y APIs a través de n8n y Make para reemplazar tareas repetitivas con flujos de datos inteligentes.",
                     caps: ["n8n & Make", "Integración de APIs", "Automatizaciones con IA", "Optimización de Procesos"]
                 },
                 geo: {
                     title: "GEO y SEO de IA",
-                    desc: "GHWD optimiza el contenido de sitios web con JSON-LD Schema.org y resumen TL;DR para asegurar que su marca sea citada y recomendada en búsquedas de ChatGPT, Gemini y Perplexity.",
+                    desc: "Optimizamos el contenido de sitios web con JSON-LD Schema.org y resumen TL;DR para asegurar que su marca sea recomendada en búsquedas de ChatGPT, Gemini y Perplexity.",
                     caps: ["Optimización para IA", "Estratégia de GEO", "Datos Semánticos", "Core Web Vitals"]
                 },
                 commerce: {
                     title: "Headless Commerce",
-                    desc: "GHWD desarrolla plataformas de comercio electrónico personalizadas y portales de venta B2B integrando Shopify Plus, VTEX y APIs a medida para ventas robustas y stock sincronizado en tiempo real.",
+                    desc: "Desplegamos plataformas de comercio electrónico headless y portales B2B integrando Shopify Plus, VTEX y APIs a medida para ventas robustas y stock sincronizado en tiempo real.",
                     caps: ["E-commerce a Medida", "Portal B2B Mayorista", "Shopify / VTEX", "Suscripciones"]
                 }
             },
