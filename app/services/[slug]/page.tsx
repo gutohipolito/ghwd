@@ -95,7 +95,7 @@ export default async function ServiceSlugPage({ params }: PageProps) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <ServiceDetailClient data={data} />
+            <ServiceDetailClient data={data} slug={slug} />
         </>
     );
 }

@@ -7,6 +7,7 @@ import { NavbarOrchestra } from '@/components/NavbarOrchestra';
 import { MegaFooter } from '@/components/MegaFooter';
 import { PageHero } from '@/components/PageHero';
 import { KBArticle } from '@/lib/kb-data';
+import { kbArticlesTranslations } from '@/lib/kb-translations';
 import { useLanguage } from '@/lib/i18n-context';
 
 interface KBArticleDetailClientProps {
@@ -14,7 +15,21 @@ interface KBArticleDetailClientProps {
 }
 
 export function KBArticleDetailClient({ article }: KBArticleDetailClientProps) {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const langKey = isPt ? 'pt' : (language === 'es' ? 'es' : 'en');
+
+    const trans = kbArticlesTranslations[article.slug]?.[langKey];
+    const localized: KBArticle = trans ? {
+        ...article,
+        title: trans.title,
+        description: trans.description,
+        category: trans.category,
+        tldr: trans.tldr,
+        sections: trans.sections || article.sections,
+        faqItems: trans.faqItems || article.faqItems
+    } : article;
 
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
@@ -22,18 +37,18 @@ export function KBArticleDetailClient({ article }: KBArticleDetailClientProps) {
 
             {/* Cabeçalho do Artigo */}
             <PageHero
-                pretitle={`/ ${article.category}`}
-                title={article.title}
+                pretitle={`/ ${localized.category}`}
+                title={localized.title}
                 titleClassName="text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] font-black italic tracking-tighter break-words"
                 subtitle={
                     <div className="flex flex-wrap items-center gap-6 mt-6 text-zinc-500 font-mono text-xs">
                         <div className="flex items-center gap-2">
                             <Calendar className="w-4 h-4 text-zinc-600" />
-                            <span>{article.date}</span>
+                            <span>{localized.date}</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Clock className="w-4 h-4 text-zinc-600" />
-                            <span>{article.readTime} {t('kb.read_time')}</span>
+                            <span>{localized.readTime} {t('kb.read_time')}</span>
                         </div>
                     </div>
                 }
@@ -67,7 +82,7 @@ export function KBArticleDetailClient({ article }: KBArticleDetailClientProps) {
                                     // TL;DR (Resumo Técnico)
                                 </div>
                                 <p className="text-zinc-400 text-sm leading-relaxed font-light">
-                                    {article.tldr}
+                                    {localized.tldr}
                                 </p>
                             </div>
 
@@ -82,10 +97,10 @@ export function KBArticleDetailClient({ article }: KBArticleDetailClientProps) {
                                     </div>
                                     <div>
                                         <h4 className="text-white font-bold tracking-tight text-sm flex items-center gap-1">
-                                            {article.author}
+                                            {localized.author}
                                             <Award className="w-3.5 h-3.5 text-emerald-500" />
                                         </h4>
-                                        <p className="text-zinc-500 text-[11px] mt-0.5">{article.authorRole}</p>
+                                        <p className="text-zinc-500 text-[11px] mt-0.5">{localized.authorRole}</p>
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +111,7 @@ export function KBArticleDetailClient({ article }: KBArticleDetailClientProps) {
                                     {t('kb.related_topics')}
                                 </span>
                                 <div className="flex flex-wrap gap-2">
-                                    {article.tags.map((tag) => (
+                                    {localized.tags.map((tag) => (
                                         <span
                                             key={tag}
                                             className="text-[10px] font-mono text-zinc-400 bg-zinc-900/50 border border-white/5 px-2.5 py-1 rounded-full uppercase"
@@ -114,7 +129,7 @@ export function KBArticleDetailClient({ article }: KBArticleDetailClientProps) {
                             
                             {/* Renderização de Seções do Artigo */}
                             <div className="space-y-12">
-                                {article.sections.map((section, index) => (
+                                {localized.sections.map((section, index) => (
                                     <div key={index} className="space-y-4 scroll-mt-24">
                                         <h2 className="font-heading font-black italic uppercase text-2xl md:text-3xl tracking-tight text-white border-b border-white/5 pb-2">
                                             {section.title}
@@ -127,7 +142,7 @@ export function KBArticleDetailClient({ article }: KBArticleDetailClientProps) {
                             </div>
 
                             {/* Accordion de FAQs do Artigo */}
-                            {article.faqItems.length > 0 && (
+                            {localized.faqItems.length > 0 && (
                                 <div className="border-t border-white/10 pt-12 space-y-8">
                                     <div className="flex items-center gap-3">
                                         <HelpCircle className="w-6 h-6 text-emerald-500" />
@@ -137,7 +152,7 @@ export function KBArticleDetailClient({ article }: KBArticleDetailClientProps) {
                                     </div>
 
                                     <div className="space-y-4">
-                                        {article.faqItems.map((faq, index) => (
+                                        {localized.faqItems.map((faq, index) => (
                                             <details
                                                 key={index}
                                                 className="group border border-white/5 bg-zinc-900/10 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer"

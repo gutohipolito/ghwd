@@ -1,6 +1,7 @@
 import { ServiceDetailClient } from "@/components/ServiceDetailClient";
 import { servicesData } from "@/lib/services-data";
 import { citiesData } from "@/lib/local-data";
+import { servicesTranslations, citiesTranslations } from "@/lib/kb-translations";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -24,12 +25,37 @@ interface PageProps {
 }
 
 function getLocalizedData(slug: string, citySlug: string) {
-    const service = servicesData[slug];
-    const city = citiesData[citySlug];
+    const slugMap: Record<string, string> = {
+        "web-development": "desenvolvimento-web",
+        "desenvolvimento-web": "desenvolvimento-web",
+        "business-automation": "automacao-empresarial",
+        "automacao-empresarial": "automacao-empresarial",
+        "artificial-intelligence": "inteligencia-artificial",
+        "inteligencia-artificial": "inteligencia-artificial",
+        "integrations": "integracoes",
+        "integracoes": "integracoes",
+        "digital-strategy": "arquitetura-de-projetos",
+        "arquitetura-de-projetos": "arquitetura-de-projetos"
+    };
+
+    const ptServiceKey = slugMap[slug] || slug;
+    const service = servicesData[ptServiceKey];
+    
+    const cityMap: Record<string, string> = {
+        "lisbon": "lisboa",
+        "lisboa": "lisboa",
+        "new-york": "nova-york",
+        "nova-york": "nova-york",
+        "madrid-es": "madrid",
+        "madrid": "madrid",
+        "sao-paulo-br": "sao-paulo",
+        "sao-paulo": "sao-paulo"
+    };
+    const ptCityKey = cityMap[citySlug] || citySlug;
+    const city = citiesData[ptCityKey];
 
     if (!service || !city) return null;
 
-    // Se a cidade for um alias internacional, podemos ajustar o texto para inglês
     const isEnglishService = [
         "web-development",
         "business-automation",
@@ -38,7 +64,14 @@ function getLocalizedData(slug: string, citySlug: string) {
         "digital-strategy"
     ].includes(slug);
 
-    // Formatação de textos de acordo com o idioma do slug do serviço
+    const langKey = isEnglishService ? "en" : "pt";
+    
+    const serviceTrans = servicesTranslations[ptServiceKey]?.[langKey];
+    const localizedService = serviceTrans ? { ...service, ...serviceTrans } : service;
+
+    const cityTrans = citiesTranslations[ptCityKey]?.[langKey];
+    const localizedCity = cityTrans ? { ...city, ...cityTrans } : city;
+
     let localizedTitle = "";
     let localizedSubtitle = "";
     let localizedMetaTitle = "";
@@ -47,51 +80,49 @@ function getLocalizedData(slug: string, citySlug: string) {
     let localizedFaqItems = [];
 
     if (isEnglishService) {
-        // Textos em inglês para SEO local
-        localizedTitle = `${service.title} in ${city.name} - ${city.region === 'NYS' ? 'NY' : city.region}`;
-        localizedSubtitle = `${service.subtitle} Optimized for businesses in ${city.name} and surrounding region, aligning the ideal technology stack for the local economic context of ${city.businessContext}.`;
-        localizedMetaTitle = `${service.title} in ${city.name} | ${city.region === 'NYS' ? 'NY' : city.region} | GHWD`;
-        localizedMetaDesc = `Looking for ${service.title.toLowerCase()} in ${city.name}? GHWD designs and develops custom, high-speed websites and software optimized for ${city.businessContext}.`;
+        localizedTitle = `${localizedService.title} in ${localizedCity.name} - ${localizedCity.region === 'NYS' ? 'NY' : localizedCity.region}`;
+        localizedSubtitle = `${localizedService.subtitle} Optimized for businesses in ${localizedCity.name} and surrounding region, aligning the ideal technology stack for the local economic context of ${localizedCity.businessContext}.`;
+        localizedMetaTitle = `${localizedService.title} in ${localizedCity.name} | ${localizedCity.region === 'NYS' ? 'NY' : localizedCity.region} | GHWD`;
+        localizedMetaDesc = `Looking for ${localizedService.title.toLowerCase()} in ${localizedCity.name}? GHWD designs and develops custom, high-speed websites and software optimized for ${localizedCity.businessContext}.`;
         
         localSectionHtml = `
-            <h2>Software Engineering & Digital Solutions in ${city.name} - ${city.region}</h2>
-            <p>GHWD serves the <strong>${city.name} (${city.country})</strong> market, bringing the same high-performance software engineering and digital design standards applied to global and national enterprises. Understanding the business dynamics of the region, which is highlighted by its <strong>${city.businessContext}</strong>, we build custom systems that align modern stacks (Next.js, React, secure cloud integrations) with local needs for digital scale, automation, and market expansion.</p>
+            <h2>Software Engineering & Digital Solutions in ${localizedCity.name} - ${localizedCity.region}</h2>
+            <p>GHWD serves the <strong>${localizedCity.name} (${localizedCity.country})</strong> market, bringing the same high-performance software engineering and digital design standards applied to global and national enterprises. Understanding the business dynamics of the region, which is highlighted by its <strong>${localizedCity.businessContext}</strong>, we build custom systems that align modern stacks (Next.js, React, secure cloud integrations) with local needs for digital scale, automation, and market expansion.</p>
             <p>Our focus is on transforming the digital presence of local industries, e-commerce brands, and startups by implementing lightning-fast web portals and automation workflows that reduce acquisition costs and eliminate operational inefficiencies.</p>
         `;
         
         localizedFaqItems = [
             {
-                q: `Does GHWD deliver projects or offer support to companies located in ${city.name}?`,
-                a: `Yes, GHWD works with businesses in the ${city.name} region. Our partnership model blends high-velocity remote strategic alignment, agile project management, and on-site visits when required by the project scale, ensuring a global standard of delivery.`
+                q: `Does GHWD deliver projects or offer support to companies located in ${localizedCity.name}?`,
+                a: `Yes, GHWD works with businesses in the ${localizedCity.name} region. Our partnership model blends high-velocity remote strategic alignment, agile project management, and on-site visits when required by the project scale, ensuring a global standard of delivery.`
             },
-            ...service.faqItems
+            ...localizedService.faqItems
         ];
     } else {
-        // Textos em português para SEO local
-        localizedTitle = `${service.title} em ${city.name} - ${city.region}`;
-        localizedSubtitle = `${service.subtitle} Otimizado para empresas de ${city.name} e região, integrando a stack ideal para o contexto de ${city.businessContext}.`;
-        localizedMetaTitle = `${service.title} em ${city.name} | ${city.region} | GHWD`;
-        localizedMetaDesc = `Precisa de ${service.title.toLowerCase()} em ${city.name} (${city.region})? A GHWD projeta e desenvolve sistemas sob medida focados em alta velocidade e conversão para o setor de ${city.businessContext}.`;
+        localizedTitle = `${localizedService.title} em ${localizedCity.name} - ${localizedCity.region}`;
+        localizedSubtitle = `${localizedService.subtitle} Otimizado para empresas de ${localizedCity.name} e região, integrando a stack ideal para o contexto de ${localizedCity.businessContext}.`;
+        localizedMetaTitle = `${localizedService.title} em ${localizedCity.name} | ${localizedCity.region} | GHWD`;
+        localizedMetaDesc = `Precisa de ${localizedService.title.toLowerCase()} em ${localizedCity.name} (${localizedCity.region})? A GHWD projeta e desenvolve sistemas sob medida focados em alta velocidade e conversão para o setor de ${localizedCity.businessContext}.`;
         
         localSectionHtml = `
-            <h2>Engenharia de Software e Soluções Digitais em ${city.name} - ${city.region}</h2>
-            <p>A GHWD atende a região de <strong>${city.name} (${city.state})</strong> trazendo a mesma engenharia de alta performance e excelência digital aplicada a grandes marcas nacionais e globais. Compreendendo o dinamismo econômico local, caracterizado por seu <strong>${city.businessContext}</strong>, projetamos soluções que alinham a stack ideal (Next.js, React, APIs robustas na nuvem) às necessidades locais de competitividade, automação de vendas e expansão de mercado.</p>
+            <h2>Engenharia de Software e Soluções Digitais em ${localizedCity.name} - ${localizedCity.region}</h2>
+            <p>A GHWD atende a região de <strong>${localizedCity.name} (${localizedCity.country})</strong> trazendo a mesma engenharia de alta performance e excelência digital aplicada a grandes marcas nacionais e globais. Compreendendo o dinamismo econômico local, caracterizado por seu <strong>${localizedCity.businessContext}</strong>, projetamos soluções que alinham a stack ideal (Next.js, React, APIs robustas na nuvem) às necessidades locais de competitividade, automação de vendas e expansão de mercado.</p>
             <p>Nosso trabalho é focado em transformar a presença digital de indústrias, comércios e startups locais, implementando páginas ultra-rápidas e automações eficientes que reduzem o custo de captação de clientes e eliminam gargalos manuais operacionais comuns nas operações da Serra Gaúcha e capitais brasileiras.</p>
         `;
         
         localizedFaqItems = [
             {
-                q: `A GHWD atende presencialmente ou realiza projetos para empresas em ${city.name}?`,
+                q: `A GHWD atende presencialmente ou realiza projetos para empresas em ${localizedCity.name}?`,
                 a: `Sim. A GHWD atende de forma integrada empresas da região de ${city.name} (${city.state}). Nosso modelo de trabalho combina alinhamento estratégico, reuniões remotas altamente ágeis e visitas técnicas presenciais conforme a necessidade do projeto, garantindo uma entrega com padrão de excelência global.`
             },
-            ...service.faqItems
+            ...localizedService.faqItems
         ];
     }
 
-    const localizedContentHtml = localSectionHtml + service.fullContentHtml;
+    const localizedContentHtml = localSectionHtml + localizedService.fullContentHtml;
 
     return {
-        ...service,
+        ...localizedService,
         title: localizedTitle,
         subtitle: localizedSubtitle,
         metaTitle: localizedMetaTitle,
@@ -244,7 +275,7 @@ export default async function LocalServiceSlugPage({ params }: PageProps) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <ServiceDetailClient data={localized} />
+            <ServiceDetailClient data={localized} slug={slug} />
         </>
     );
 }

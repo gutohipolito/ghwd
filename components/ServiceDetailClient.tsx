@@ -4,21 +4,44 @@ import { NavbarOrchestra } from "@/components/NavbarOrchestra";
 import { MegaFooter } from "@/components/MegaFooter";
 import { PageHero } from "@/components/PageHero";
 import { ServiceContent } from "@/lib/services-data";
+import { servicesTranslations } from "@/lib/kb-translations";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown, Calendar, Award, ShieldCheck, Check } from "lucide-react";
 import { useLanguage } from "@/lib/i18n-context";
 
-export function ServiceDetailClient({ data }: { data: ServiceContent }) {
+export function ServiceDetailClient({ data, slug }: { data: ServiceContent; slug: string }) {
     const { t, language } = useLanguage();
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    // Map language
+    const isPt = language === 'pt' || language === 'pt-pt';
+    const langKey = isPt ? 'pt' : (language === 'es' ? 'es' : 'en');
+
+    // Slug-to-standard-PT-key mapping
+    const slugMap: Record<string, string> = {
+        "web-development": "desenvolvimento-web",
+        "desenvolvimento-web": "desenvolvimento-web",
+        "business-automation": "automacao-empresarial",
+        "automacao-empresarial": "automacao-empresarial",
+        "artificial-intelligence": "inteligencia-artificial",
+        "inteligencia-artificial": "inteligencia-artificial",
+        "integrations": "integracoes",
+        "integracoes": "integracoes",
+        "digital-strategy": "arquitetura-de-projetos",
+        "arquitetura-de-projetos": "arquitetura-de-projetos"
+    };
+
+    const ptKey = slugMap[slug] || slug;
+    const trans = servicesTranslations[ptKey]?.[langKey];
+    const localized: ServiceContent = trans ? { ...data, ...trans } : data;
 
     // Gerador de JSON-LD estático para RAG/SEO/GEO específico de serviço
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": data.title,
-        "description": data.metaDesc,
+        "name": localized.title,
+        "description": localized.metaDesc,
         "provider": {
             "@type": "Organization",
             "name": "GHWD",
@@ -27,8 +50,8 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
         "areaServed": "BR",
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": data.title,
-            "itemListElement": data.faqItems.map((item, idx) => ({
+            "name": localized.title,
+            "itemListElement": localized.faqItems.map((item, idx) => ({
                 "@type": "Question",
                 "name": item.q,
                 "acceptedAnswer": {
@@ -55,9 +78,9 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
 
             {/* Topo do Hub do Serviço */}
             <PageHero
-                pretitle={data.tag}
-                title={data.title + "."}
-                subtitle={data.subtitle}
+                pretitle={localized.tag}
+                title={localized.title + "."}
+                subtitle={localized.subtitle}
                 videoClassName="scale-110 opacity-20 brightness-50"
             />
 
@@ -75,7 +98,7 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
                                     // TL;DR / Resumo Rápido
                                 </span>
                                 <p className="text-zinc-400 text-sm leading-relaxed font-light">
-                                    {data.tldr}
+                                    {localized.tldr}
                                 </p>
                             </div>
 
@@ -90,27 +113,31 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
                                     </div>
                                     <div>
                                         <h4 className="text-white font-bold tracking-tight text-base flex items-center gap-1.5">
-                                            {data.author}
+                                            {localized.author}
                                             <Award className="w-4 h-4 text-emerald-500 shrink-0" />
                                         </h4>
-                                        <p className="text-zinc-500 text-xs mt-0.5">{data.authorRole}</p>
+                                        <p className="text-zinc-500 text-xs mt-0.5">{localized.authorRole}</p>
                                     </div>
                                 </div>
 
                                 <div className="space-y-3 pt-2 text-zinc-500 text-xs font-mono">
                                     <div className="flex items-center gap-2">
                                         <Calendar className="w-4 h-4 text-zinc-600 shrink-0" />
-                                        <span>Última atualização: {data.lastUpdated}</span>
+                                        <span>
+                                            {language === 'en' ? 'Last update' : (language === 'es' ? 'Última actualización' : 'Última atualização')}: {localized.lastUpdated}
+                                        </span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <ShieldCheck className="w-4 h-4 text-zinc-600 shrink-0" />
-                                        <span>Adequado à LGPD & Segurança WCAG</span>
+                                        <span>
+                                            {language === 'en' ? 'Complies with LGPD & WCAG Security' : (language === 'es' ? 'Adecuado a LGPD y Seguridad WCAG' : 'Adequado à LGPD & Segurança WCAG')}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Lado Direito: Texto Longo (800-1200 palavras) + Tabela Comparativa + FAQ */}
+                        {/* Lado Direito: Texto Longo + Tabela Comparativa + FAQ */}
                         <div className="lg:col-span-8 space-y-16">
                             
                             {/* Texto Principal */}
@@ -122,20 +149,20 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
                                            prose-strong:text-white prose-strong:font-semibold
                                            prose-ul:list-disc prose-ul:pl-6 prose-ul:space-y-2
                                            prose-li:marker:text-emerald-500"
-                                dangerouslySetInnerHTML={{ __html: data.fullContentHtml }}
+                                dangerouslySetInnerHTML={{ __html: localized.fullContentHtml }}
                             />
 
-                            {/* Tabela Comparativa (Excelente para GEO / Robôs de IA) */}
-                            {data.comparisonRows && data.comparisonRows.length > 0 && (
+                            {/* Tabela Comparativa */}
+                            {localized.comparisonRows && localized.comparisonRows.length > 0 && (
                                 <div className="space-y-6 pt-8">
                                     <h3 className="font-heading font-black italic uppercase text-2xl md:text-3xl tracking-tighter text-white">
-                                        {data.comparisonTitle}
+                                        {localized.comparisonTitle}
                                     </h3>
                                     <div className="overflow-x-auto border border-white/10 rounded-xl bg-zinc-900/10">
                                         <table className="w-full text-left border-collapse">
                                             <thead>
                                                 <tr className="border-b border-white/10 bg-white/[0.02]">
-                                                    {data.comparisonHeaders.map((header, idx) => (
+                                                    {localized.comparisonHeaders.map((header, idx) => (
                                                         <th key={idx} className="p-4 text-xs font-mono uppercase text-zinc-500 tracking-wider">
                                                             {header}
                                                         </th>
@@ -143,7 +170,7 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {data.comparisonRows.map((row, rIdx) => (
+                                                {localized.comparisonRows.map((row, rIdx) => (
                                                     <tr key={rIdx} className="border-b border-white/5 last:border-b-0 hover:bg-white/[0.01] transition-colors">
                                                         {row.map((cell, cIdx) => (
                                                             <td key={cIdx} className={`p-4 text-sm ${cIdx === 0 ? "font-bold text-white font-mono" : "text-zinc-400"} ${cIdx === 1 ? "text-emerald-400 font-medium" : ""}`}>
@@ -159,13 +186,13 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
                             )}
 
                             {/* FAQ Acordeão de Serviço */}
-                            {data.faqItems && data.faqItems.length > 0 && (
+                            {localized.faqItems && localized.faqItems.length > 0 && (
                                 <div className="space-y-6 pt-8 border-t border-white/10">
                                     <h3 className="font-heading font-black italic uppercase text-2xl md:text-3xl tracking-tighter text-white mb-8">
-                                        {data.faqTitle}
+                                        {localized.faqTitle}
                                     </h3>
                                     <div className="space-y-1">
-                                        {data.faqItems.map((item, idx) => {
+                                        {localized.faqItems.map((item, idx) => {
                                             const isOpen = openIndex === idx;
                                             return (
                                                 <div
@@ -180,23 +207,20 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
                                                         <h4 className="font-heading font-black italic uppercase text-lg md:text-xl tracking-tighter text-white group-hover:text-emerald-400 transition-colors duration-300">
                                                             {item.q}
                                                         </h4>
-                                                        <div className="mt-1 shrink-0 bg-white/5 border border-white/10 p-1 rounded-full group-hover:bg-emerald-500 group-hover:text-black transition-colors duration-300">
-                                                            <ChevronDown
-                                                                className={`w-3.5 h-3.5 text-zinc-400 group-hover:text-black transition-transform duration-500 ${isOpen ? "rotate-180" : ""}`}
-                                                            />
-                                                        </div>
+                                                        <span className="text-zinc-500 group-hover:text-white transition-colors shrink-0 pt-1">
+                                                            <ChevronDown className={`w-5 h-5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+                                                        </span>
                                                     </button>
-
                                                     <AnimatePresence initial={false}>
                                                         {isOpen && (
                                                             <motion.div
-                                                                initial={{ height: 0, opacity: 0, marginTop: 0 }}
-                                                                animate={{ height: "auto", opacity: 1, marginTop: 12 }}
-                                                                exit={{ height: 0, opacity: 0, marginTop: 0 }}
-                                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                                                initial={{ height: 0, opacity: 0 }}
+                                                                animate={{ height: "auto", opacity: 1 }}
+                                                                exit={{ height: 0, opacity: 0 }}
+                                                                transition={{ duration: 0.3, ease: "easeInOut" }}
                                                                 className="overflow-hidden"
                                                             >
-                                                                <p className="text-zinc-400 leading-relaxed font-light text-sm md:text-base">
+                                                                <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mt-4 pl-1">
                                                                     {item.a}
                                                                 </p>
                                                             </motion.div>
@@ -208,7 +232,6 @@ export function ServiceDetailClient({ data }: { data: ServiceContent }) {
                                     </div>
                                 </div>
                             )}
-
                         </div>
                     </div>
                 </div>
