@@ -574,7 +574,7 @@ await server.connect(transport);`}
                 content: (
                     <div className="space-y-4">
                         <p className="text-zinc-300 leading-relaxed">
-                            Para colocar uma arquitetura RAG para rodar, dividimos a operação do sistema em cinco etapas sucessivas na nossa esteira de software:
+                            Para colocar uma arquitetura RAG para rodar, dividimos a operação do sistema em cinco etapas sucessivas no nosso fluxo de processamento de software:
                         </p>
                         <ol className="list-decimal pl-6 space-y-3 text-zinc-300">
                             <li><strong>Ingestão e Fragmentação (Chunking):</strong> Documentos extensos (PDFs, manuais, planilhas) são lidos por scripts de backend e fatiados em pequenos blocos de texto semântico consistentes (geralmente entre 500 e 1000 caracteres) para não estourar o limite de tokens da IA.</li>
@@ -677,7 +677,7 @@ await server.connect(transport);`}
                 content: (
                     <div className="space-y-4">
                         <p className="text-zinc-300 leading-relaxed">
-                            Para exemplificar o poder da automação baseada em IA, veja a estrutura lógica de uma esteira desenvolvida pela GHWD para qualificação de oportunidades comerciais de ponta a ponta:
+                            Para exemplificar o poder da automação baseada em IA, veja a estrutura lógica de um fluxo desenvolvido pela GHWD para qualificação de oportunidades comerciais de ponta a ponta:
                         </p>
                         <ol className="list-decimal pl-6 space-y-3 text-zinc-300">
                             <li><strong>Gatilho (Trigger):</strong> O cliente envia uma mensagem de áudio ou texto descrevendo sua necessidade comercial no WhatsApp Business da empresa.</li>
@@ -693,7 +693,7 @@ await server.connect(transport);`}
                 content: (
                     <div className="space-y-4">
                         <p className="text-zinc-300 leading-relaxed">
-                            Diferente de scripts executados de forma isolada, as esteiras corporativas desenhadas pela GHWD contam com tratamento de exceções avançado. Se a API do CRM cair temporariamente no momento do envio, o orquestrador armazena a transação em uma fila de retentativas, aguarda um tempo seguro de estabilização da rede e reexecuta o fluxo sem gerar perda de dados comerciais ou operacionais.
+                            Diferente de scripts executados de forma isolada, as automações corporativas desenhadas pela GHWD contam com tratamento de exceções avançado. Se a API do CRM cair temporariamente no momento do envio, o orquestrador armazena a transação em uma fila de retentativas, aguarda um tempo seguro de estabilização da rede e reexecuta o fluxo sem gerar perda de dados comerciais ou operacionais.
                         </p>
                     </div>
                 )
@@ -701,7 +701,7 @@ await server.connect(transport);`}
         ],
         faqItems: [
             {
-                q: "Preciso saber programar para manter uma esteira na n8n ou Make?",
+                q: "Preciso saber programar para manter uma automação no n8n ou Make?",
                 a: "A manutenção básica (como alterar textos de emails ou criar pequenas ramificações de fluxos) pode ser feita por analistas de TI internos através da interface visual das plataformas. No entanto, integrações profundas de dados, manipulação de criptografias e calibração de modelos de IA exigem conhecimentos de engenharia de APIs e segurança que fornecemos na implementação e no suporte continuado."
             },
             {
@@ -761,7 +761,7 @@ await server.connect(transport);`}
                                         <td className="p-4 text-zinc-300">4 a 6 semanas</td>
                                     </tr>
                                     <tr className="border-b border-white/5">
-                                        <td className="p-4 font-semibold text-white">Esteiras de Automação de Processos (n8n/Make)</td>
+                                        <td className="p-4 font-semibold text-white">Fluxos de Automação de Processos (n8n/Make)</td>
                                         <td className="p-4 text-zinc-400">R$ 6.000 a R$ 12.000</td>
                                         <td className="p-4 text-zinc-300">4 a 6 semanas</td>
                                     </tr>

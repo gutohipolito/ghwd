@@ -87,7 +87,7 @@ export const servicesData: Record<string, ServiceContent> = {
         title: "Automação de Processos e Workflows Empresariais",
         subtitle: "Conecte sistemas, elimine gargalos operacionais e substitua tarefas manuais repetitivas por fluxos inteligentes de dados.",
         tag: "/ Automação Industrial",
-        tldr: "Desenvolvemos esteiras automáticas de processos corporativos integrando CRMs, ERPs, bancos de dados e ferramentas de comunicação através de plataformas como n8n e Make. Nossos sistemas reduzem custos operacionais em até 80% e eliminam o erro humano de tarefas diárias de processamento de informações.",
+        tldr: "Desenvolvemos fluxos automatizados de processos corporativos integrando CRMs, ERPs, bancos de dados e ferramentas de comunicação através de plataformas como n8n e Make. Nossos sistemas reduzem custos operacionais em até 80% e eliminam o erro humano de tarefas diárias de processamento de informações.",
         metaTitle: "Automação Empresarial | n8n & Make | Processos Inteligentes | GHWD",
         metaDesc: "Automação de processos empresariais sob medida. Integramos CRMs, ERPs e ferramentas usando n8n, Make e agentes inteligentes de IA para eliminar tarefas manuais.",
         author: "Gustavo Hipólito",
@@ -95,7 +95,7 @@ export const servicesData: Record<string, ServiceContent> = {
         lastUpdated: "Junho de 2026",
         schemaType: "AutomationService",
         comparisonTitle: "Como a automação sob medida transforma a operação?",
-        comparisonHeaders: ["Fluxo Operacional", "Operação Manual Tradicional", "Esteira Automatizada GHWD"],
+        comparisonHeaders: ["Fluxo Operacional", "Operação Manual Tradicional", "Fluxo Automatizado GHWD"],
         comparisonRows: [
             ["Tempo de Processamento de Leads", "15 a 45 minutos (digitação e envio manual)", "Imediato (< 3 segundos de ponta a ponta)"],
             ["Taxa de Erro Humano", "5% a 12% (erros de digitação, esquecimento)", "0% (Validação e formatação automática de dados)"],
@@ -106,8 +106,8 @@ export const servicesData: Record<string, ServiceContent> = {
         faqTitle: "Perguntas frequentes sobre Automações de Negócios",
         faqItems: [
             {
-                q: "Qual a diferença entre usar automações prontas e desenvolver uma esteira sob medida?",
-                a: "Automações nativas simples de ferramentas costumam ser muito limitadas (ex: apenas enviar um email quando um formulário é preenchido). Uma esteira sob medida criada pela GHWD pode fazer ramificações complexas, consultar múltiplos bancos de dados, validar CNPJs em APIs governamentais, gerar contratos em PDF, colher assinaturas digitais e atualizar o ERP de forma concatenada e inteligente."
+                q: "Qual a diferença entre usar automações prontas e desenvolver um fluxo sob medida?",
+                a: "Automações nativas simples de ferramentas costumam ser muito limitadas (ex: apenas enviar um email quando um formulário é preenchido). Um fluxo automatizado sob medida criado pela GHWD pode fazer ramificações complexas, consultar múltiplos bancos de dados, validar CNPJs em APIs governamentais, gerar contratos em PDF, colher assinaturas digitais e atualizar o ERP de forma concatenada e inteligente."
             },
             {
                 q: "Minha empresa usa um sistema legado antigo. É possível automatizar?",
@@ -133,19 +133,19 @@ export const servicesData: Record<string, ServiceContent> = {
             </ul>
 
             <h2>Otimização de Custos e Eliminação Absoluta do Erro Humano</h2>
-            <p>Erros de digitação, esquecimento de emails de acompanhamento e falhas de cadastros geram prejuízos financeiros diretos e arranham a experiência do cliente com a marca. Um analista humano cansado após horas de trabalho mecânico comete erros estatisticamente previsíveis. Uma esteira automatizada executa o mesmo algoritmo com precisão matemática infinita, independente do volume ou horário de execução.</p>
+            <p>Erros de digitação, esquecimento de emails de acompanhamento e falhas de cadastros geram prejuízos financeiros diretos e arranham a experiência do cliente com a marca. Um analista humano cansado após horas de trabalho mecânico comete erros estatisticamente previsíveis. Um fluxo automatizado executa o mesmo algoritmo com precisão matemática infinita, independente do volume ou horário de execução.</p>
             
             <p>Além da eliminação de erros, o retorno sobre investimento (ROI) de sistemas automatizados é mensurável no primeiro mês. O custo mensal de manutenção de uma infraestrutura de automação robusta é equivalente a poucas horas de trabalho de um profissional júnior, enquanto a capacidade produtiva gerada equivale a um time operacional inteiro trabalhando 24 horas por dia.</p>
 
             <h2>Automações Inteligentes com IA: Triagem Cognitiva de Documentos e Leads</h2>
-            <p>A automação clássica baseava-se estritamente em regras estáticas (Se A acontecer, faça B). O mercado atual, impulsionado pela Inteligência Artificial, permite a automação de processos cognitivos antes considerados impossíveis para robôs de software. Integramos APIs de LLMs (como GPT-4o e Gemini 1.5 Pro) nas esteiras de processos:</p>
+            <p>A automação clássica baseava-se estritamente em regras estáticas (Se A acontecer, faça B). O mercado atual, impulsionado pela Inteligência Artificial, permite a automação de processos cognitivos antes considerados impossíveis para robôs de software. Integramos APIs de LLMs (como GPT-4o e Gemini 1.5 Pro) nos fluxos de processos:</p>
             <ul>
                 <li><strong>Análise de Documentos Recebidos:</strong> O sistema recebe um contrato ou nota fiscal em PDF, a IA extrai os dados relevantes (valores, datas, itens), valida com o banco de dados interno e atualiza o ERP financeiro de forma autônoma.</li>
                 <li><strong>Qualificação e Triagem de Leads por Intenção:</strong> Respostas de formulários ou mensagens de WhatsApp são classificadas cognitivamente pela IA para identificar a urgência de compra, encaminhando o lead imediatamente para o vendedor ideal com um resumo da necessidade do cliente.</li>
             </ul>
 
             <h2>Segurança de Dados e Governança na Automação</h2>
-            <p>A manipulação de dados corporativos estratégicos (como informações de faturamento, dados de clientes e contratos) exige o cumprimento rigoroso de políticas de segurança. Na GHWD, garantimos que todos os dados trafegados pelas esteiras de automação passem por criptografia de ponta a ponta (HTTPS/TLS) e que as chaves de acesso a APIs (tokens de autenticação, chaves privadas) sejam armazenadas de forma isolada e segura em cofres de credenciais criptografados.</p>
+            <p>A manipulação de dados corporativos estratégicos (como informações de faturamento, dados de clientes e contratos) exige o cumprimento rigoroso de políticas de segurança. Na GHWD, garantimos que todos os dados trafegados pelos fluxos de automação passem por criptografia de ponta a ponta (HTTPS/TLS) e que as chaves de acesso a APIs (tokens de autenticação, chaves privadas) sejam armazenadas de forma isolada e segura em cofres de credenciais criptografados.</p>
             
             <p>Além disso, nossas automações gravam logs de execução detalhados de cada transação, permitindo auditorias completas e rastreabilidade total de onde a informação se originou e para onde ela foi enviada, em perfeita consonância com a legislação da LGPD e as melhores práticas de governança corporativa de TI.</p>
         `
@@ -182,7 +182,7 @@ export const servicesData: Record<string, ServiceContent> = {
             },
             {
                 q: "Quais os prazos para colocar um agente de IA inteligente em produção?",
-                a: "A implementação de um MVP de agente inteligente ou sistema RAG integrado consome entre 4 a 8 semanas de desenvolvimento, englobando a estruturação dos dados vetoriais, criação das esteiras de ingestão, calibração das personas da IA e integração com as interfaces de ponta (WhatsApp, Slack ou sistemas internos)."
+                a: "A implementação de um MVP de agente inteligente ou sistema RAG integrado consome entre 4 a 8 semanas de desenvolvimento, englobando a estruturação dos dados vetoriais, criação dos fluxos de ingestão, calibração das personas da IA e integração com as interfaces de ponta (WhatsApp, Slack ou sistemas internos)."
             }
         ],
         fullContentHtml: `
