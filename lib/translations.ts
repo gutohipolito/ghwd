@@ -224,9 +224,9 @@ export const translations: Record<Language, any> = {
             },
                         services_items: {
                 saas: {
-                    title: "SaaS Engineering",
-                    desc: "We engineer custom SaaS platforms and enterprise software using scalable cloud architectures (AWS/Google Cloud) and robust APIs to optimize operations and revenue models.",
-                    caps: ["Custom SaaS", "Cloud Architecture", "Secure APIs", "Database Systems"]
+                    title: "Architecture & Projects",
+                    desc: "We model software architecture and engineer complex cloud infrastructures, ensuring the delivery of scalable, secure, and high-performance digital projects.",
+                    caps: ["Cloud Architecture", "Software Engineering", "Custom Projects", "Data Security"]
                 },
                 design: {
                     title: "UI/UX Design",
@@ -639,9 +639,9 @@ export const translations: Record<Language, any> = {
             },
                         services_items: {
                 saas: {
-                    title: "Engenharia de SaaS",
-                    desc: "Projetamos plataformas SaaS e sistemas corporativos sob medida com arquiteturas de nuvem escaláveis (AWS/Google Cloud) e APIs robustas para otimizar operações empresariais e modelos de receita.",
-                    caps: ["SaaS Sob Medida", "Arquitetura Cloud", "APIs Seguras", "Banco de Dados"]
+                    title: "Projetos e Arquitetura",
+                    desc: "Modelamos a arquitetura de software e a engenharia de infraestruturas complexas em nuvem, garantindo a entrega de projetos digitais escaláveis, seguros e de alta performance.",
+                    caps: ["Arquitetura Cloud", "Engenharia de Software", "Projetos Sob Medida", "Segurança de Dados"]
                 },
                 design: {
                     title: "UI/UX Design",
@@ -1041,9 +1041,9 @@ export const translations: Record<Language, any> = {
             },
                         services_items: {
                 saas: {
-                    title: "Engenharia de SaaS",
-                    desc: "Projetamos plataformas SaaS e sistemas corporativos sob medida com arquiteturas de nuvem escaláveis (AWS/Google Cloud) e APIs robustas para otimizar operações e modelos de receita.",
-                    caps: ["SaaS Sob Medida", "Arquitetura Cloud", "APIs Seguras", "Bases de Dados"]
+                    title: "Projetos e Arquitetura",
+                    desc: "Modelamos a arquitetura de software e a engenharia de infraestruturas complexas na nuvem, garantindo a entrega de projetos digitais escaláveis, seguros e de alta performance.",
+                    caps: ["Arquitetura Cloud", "Engenharia de Software", "Projetos Sob Medida", "Segurança de Dados"]
                 },
                 design: {
                     title: "Design UI/UX",
@@ -1438,9 +1438,9 @@ export const translations: Record<Language, any> = {
             },
                         services_items: {
                 saas: {
-                    title: "Ingeniería de SaaS",
-                    desc: "Diseñamos plataformas SaaS y software empresarial a medida con arquitecturas de nube escalables (AWS/Google Cloud) y APIs robustas para optimizar operaciones y modelos de ingresos.",
-                    caps: ["SaaS a Medida", "Arquitectura Cloud", "APIs Securas", "Bases de Datos"]
+                    title: "Arquitectura y Proyectos",
+                    desc: "Modelamos la arquitectura de software y la ingeniería de infraestructuras complejas en la nube, garantizando la entrega de proyectos digitales escalables, seguros y de alto rendimiento.",
+                    caps: ["Arquitectura Cloud", "Ingeniería de Software", "Proyectos a Medida", "Seguridad de Datos"]
                 },
                 design: {
                     title: "Diseño UI/UX",

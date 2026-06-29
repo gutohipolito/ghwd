@@ -54,7 +54,7 @@ export function ServicesMinimal() {
     const getServiceLink = (key: string, lang: string) => {
         const isPt = lang === 'pt' || lang === 'pt-pt';
         const mapping: Record<string, { pt: string; en: string }> = {
-            saas: { pt: '/services/consultoria-digital', en: '/services/digital-strategy' },
+            saas: { pt: '/services/arquitetura-de-projetos', en: '/services/digital-strategy' },
             dev: { pt: '/services/desenvolvimento-web', en: '/services/web-development' },
             ai: { pt: '/services/inteligencia-artificial', en: '/services/artificial-intelligence' },
             automation: { pt: '/services/automacao-empresarial', en: '/services/business-automation' },

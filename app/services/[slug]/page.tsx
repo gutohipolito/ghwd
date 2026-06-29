@@ -15,7 +15,7 @@ export function generateStaticParams() {
         { slug: 'artificial-intelligence' },
         { slug: 'integracoes' },
         { slug: 'integrations' },
-        { slug: 'consultoria-digital' },
+        { slug: 'arquitetura-de-projetos' },
         { slug: 'digital-strategy' }
     ];
 }

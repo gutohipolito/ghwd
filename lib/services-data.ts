@@ -277,51 +277,51 @@ export const servicesData: Record<string, ServiceContent> = {
             <p>Além disso, mantemos logs de auditoria detalhados e estruturados na nuvem, registrando exatamente o timestamp de envio, o payload recebido e o status de resposta de cada chamada de API. Isso permite que equipes de segurança e auditoria financeira analisem e rastreiem transações de forma detalhada, garantindo conformidade e prevenindo fraudes operacionais.</p>
         `
     },
-    "consultoria-digital": {
-        title: "Consultoria e Arquitetura Digital de Alta Performance",
-        subtitle: "Planejamento tecnológico estratégico, governança de arquitetura, otimização de infraestrutura em nuvem e avaliação de ROI digital.",
-        tag: "/ Estratégia de Engenharia",
-        tldr: "Fornecemos consultoria estratégica de engenharia de software e arquitetura digital para empresas em escala. Desenhamos roadmaps tecnológicos realistas, auditamos infraestruturas de servidores em nuvem, estruturamos políticas de governança de dados e avaliamos o retorno financeiro real de investimentos em TI.",
-        metaTitle: "Consultoria e Arquitetura Digital de Alta Performance | GHWD",
-        metaDesc: "Consultoria estratégica de tecnologia e arquitetura de software para empresas. Desenhamos roadmaps de transformação digital, auditoria em nuvem e governança de dados.",
+    "arquitetura-de-projetos": {
+        title: "Arquitetura de Software e Projetos de Alta Performance",
+        subtitle: "Planejamento arquitetural, auditorias de infraestrutura em nuvem, segurança e roadmaps técnicos focados em entregar projetos sólidos e escaláveis.",
+        tag: "/ Projetos e Arquitetura",
+        tldr: "Estruturamos a fundação e arquitetura técnica para garantir a entrega de projetos digitais escaláveis. Realizamos auditorias de código e servidores em nuvem, planejamos roadmaps práticos de migração de plataformas legadas e estabelecemos governança e segurança de dados perante a LGPD/GDPR.",
+        metaTitle: "Arquitetura de Software e Projetos de Alta Performance | GHWD",
+        metaDesc: "Estruturação e planejamento arquitetural de software para garantir entregas de projetos escaláveis. Auditoria de nuvem, segurança e roadmaps de evolução técnica.",
         author: "Gustavo Hipólito",
         authorRole: "Lead Software Architect",
         lastUpdated: "Junho de 2026",
-        schemaType: "ConsultingService",
-        comparisonTitle: "Consultoria Tradicional vs Consultoria de Engenharia GHWD",
-        comparisonHeaders: ["Entregável", "Consultoria Tradicional (Slides e Teoria)", "Consultoria de Engenharia GHWD"],
+        schemaType: "Service",
+        comparisonTitle: "Outros Estúdios vs Engenharia de Projetos GHWD",
+        comparisonHeaders: ["Foco da Entrega", "Mercado Comum (Slides e Teoria)", "Engenharia de Projetos GHWD"],
         comparisonRows: [
-            ["Foco de Entrega", "Slides conceituais e jargões de gestão corporativa", "Roadmaps técnicos práticos, diagramas de arquitetura e código"],
-            ["Avaliação Técnica", "Feita por analistas gerais de negócios", "Auditoria profunda de código feita por arquitetos de software sênior"],
-            ["Nuvem e Custos", "Recomendações vagas de migración", "Análisis de desperdicios en la nube con plan de ahorro"],
-            ["Seguridad y Datos", "Checklists burocráticos genéricos", "Análisis de vulnerabilidades reales y gobernanza de datos"],
-            ["Resultados Prácticos", "Informes largos que quedan en el cajón", "Prototipado funcional rápido y seguimiento de la ejecución"]
+            ["Foco de Entrega", "Slides teóricos e planejamentos abstratos que raramente saem do papel", "Projetos de software reais, arquiteturas funcionais prontas para produção e código limpo"],
+            ["Avaliação Técnica", "Análises superficiais baseadas em templates e checklists padrão", "Auditoria aprofundada de base de código executada diretamente por engenheiros e arquitetos seniores"],
+            ["Nuvem e Infraestrutura", "Indicações de provedores sem análise de consumo real de tráfego", "Plano de arquitetura serverless com redução real de desperdícios de 30% a 50% em servidores"],
+            ["Segurança e Conformidade", "Modelos burocráticos genéricos de segurança", "Implementação prática de criptografia de ponta a ponta e governança de dados robusta"],
+            ["Resultados Reais", "Relatórios estáticos guardados em pastas", "Protótipos validados, entregas incrementais frequentes e acompanhamento até a publicação"]
         ],
-        faqTitle: "Perguntas comuns sobre Consultoria de Arquitetura Tecnológica",
+        faqTitle: "Dúvidas comuns sobre Engenharia e Arquitetura de Projetos",
         faqItems: [
             {
-                q: "Por que contratar uma consultoria de arquitetura se eu já tenho uma equipe interna de TI?",
-                a: "A equipe interna geralmente está absorta nas urgências do dia a dia operacional e na manutenção do sistema atual. A consultoria de arquitetura GHWD traz uma visão externa sênior, livre de vícios cotidianos, atualizada com os mais altos padrões globais da tecnologia, acelerando a tomada de decisões difíceis e evitando que o time interno cometa erros caros de escolha de stack."
+                q: "Por que investir em modelagem de arquitetura antes de iniciar o desenvolvimento do projeto?",
+                a: "A modelagem técnica desenha as fundações, o fluxo de dados e os limites de integração do sistema. Esse planejamento prévio impede que decisões de banco de dados ou escolha de stacks incorretas gerem atrasos no desenvolvimento, custos adicionais de servidores no futuro ou a necessidade de refazer o projeto do zero."
             },
             {
-                q: "Como a consultoria pode ajudar a reduzir meus custos de servidores na nuvem (AWS/Azure)?",
-                a: "Realizamos auditorias de custos e dimensionamento de servidores. É comum encontrarmos empresas pagando por instâncias subutilizadas, tráfego de dados ineficiente ou armazenamento desnecessário. Nosso diagnóstico aponta exatamente onde reestruturar para arquitetura serverless ou redimensionar recursos, reduzindo a conta de nuvem em média entre 30% a 50%."
+                q: "Como a modelagem arquitetural reduz a fatura mensal com nuvem (AWS/Azure/GCP)?",
+                a: "Identificamos e eliminamos desperdícios computacionais. Sugerimos migrações para estruturas serverless eficientes, configuramos caching e Edge Computing e redimensionamos instâncias. Com isso, otimizamos o processamento do sistema e conseguimos reduzir os custos de servidores em nuvem em média de 30% a 50%."
             },
             {
-                q: "Qual a metodologia de trabalho da consultoria da GHWD?",
-                a: "Trabalhamos em fases estruturadas: 1. Imersão e Diagnóstico (análise de sistemas e entrevistas com o time); 2. Modelagem e Desenho da Nova Arquitetura (criação de diagramas e roadmaps); 3. Validação e Handover (reuniões de alinhamento com a diretoria e entrega de protótipos funcionais com documentação robusta)."
+                q: "Qual é o fluxo de trabalho e entrega de projetos da GHWD?",
+                a: "Dividimos nossa engenharia em entregáveis práticos: 1. Imersão e Requisitos (alinhamento de escopo); 2. Desenho de Arquitetura (criação de diagramas e fluxo de dados); 3. Ciclo de Desenvolvimento Ágil (entregas incrementais de funcionalidades prontas a cada 2 semanas); 4. Homologação, auditorias de segurança e implantação em produção."
             }
         ],
         fullContentHtml: `
-            <h2>Engenharia de Negócios: O Elo entre Tecnologia e Retorno Financeiro</h2>
+            <h2>Engenharia de Projetos: Alinhamento entre Arquitetura e Negócios</h2>
             <p>O investimento corporativo em tecnologia não deve ser guiado por modismos ou tendências de ferramentas passageiras. Cada linha de código escrita, cada servidor provisionado na nuvem e cada integração de API realizada deve possuir uma justificativa econômica evidente: aumentar receitas (conversão, velocidade de comercialização), reduzir custos (automações, eficiência de processamento) ou mitigar riscos (segurança, conformidade regulatória).</p>
 
-            <p>A nossa consultoria de arquitetura digital atua como o elo estratégico de tradução entre a engenharia de software pura e os objetivos comerciais do C-Level. Auxiliamos diretores de tecnologia (CTOs) e CEOs a tomarem decisões de investimentos em infraestrutura digital fundamentadas em dados concretos de retorno sobre investimento (ROI), mitigando riscos de desenvolvimento e acelerando a inovação de forma sustentável.</p>
+            <p>O planejamento e a arquitetura técnica atuam como o elo estratégico de tradução entre as necessidades do negócio e a engenharia de software pura. Auxiliamos diretores de tecnologia (CTOs) e diretores operacionais a viabilizarem a entrega de sistemas complexos fundamentados em dados concretos de retorno técnico, mitigando riscos de desenvolvimento e garantindo previsibilidade de entrega de ponta a ponta.</p>
 
             <h2>Auditoria de Código, Performance de Servidores e Otimização de Custos em Nuvem</h2>
             <p>Um dos problemas mais silenciosos e caros enfrentados por empresas maduras é a ineficiência de suas infraestruturas em nuvem (AWS, Google Cloud ou Microsoft Azure). Aplicações desenvolvidas de forma apressada ou sem diretrizes de otimização consomem poder computacional desproporcional, resultando em contas de servidores infladas de forma insustentável.</p>
             
-            <p>O time de arquitetura sênior da GHWD realiza análises e auditorias profundas de código e infraestrutura:</p>
+            <p>O time de engenharia da GHWD realiza análises e auditorias profundas de código e infraestrutura nos projetos:</p>
             <ul>
                 <li><strong>Análise de Gargalos de Performance:</strong> Identificamos consultas a banco de dados mal estruturadas, vazamentos de memória (memory leaks) em microsserviços e APIs com alta latência de resposta que prejudicam a experiência do usuário final.</li>
                 <li><strong>FinOps e Otimização de Cloud:</strong> Auditamos minuciosamente o consumo de recursos na nuvem, sugerindo migrações para modelos serverless eficientes, redimensionamento de instâncias (right-sizing) e configurações de CDN com Edge Caching que diminuem drasticamente o tráfego pago de dados.</li>
@@ -330,7 +330,7 @@ export const servicesData: Record<string, ServiceContent> = {
             <h2>Governança de Dados Corporativa e Conformidade Legal Completa</h2>
             <p>A governança de dados corporativa deixou de ser um diferencial competitivo para se tornar uma obrigatoriedade operacional básica após a consolidação da LGPD no Brasil e do GDPR na União Europeia. O vazamento de dados de clientes ou falhas graves de privacidade podem acarretar multas milionárias e destruir permanentemente o valor de marca de uma organização.</p>
             
-            <p>Nossa consultoria assessora a sua empresa na estruturação de políticas sólidas de governança técnica. Analisamos como a informação é armazenada, quem possui privilégios de acesso aos dados confidenciais nos sistemas internos e como os dados trafegam entre integrações, desenhando processos de segurança para garantir a conformidade integral perante os auditores e órgãos de fiscalização governamentais.</p>
+            <p>Garantimos que cada projeto seja desenvolvido sob premissas de governança de dados robustas. Analisamos como a informação é armazenada, quem possui privilégios de acesso aos dados confidenciais nos sistemas internos e como os dados trafegam entre integrações, assegurando conformidade integral perante os auditores e órgãos de fiscalização governamentais.</p>
 
             <h2>Roadmaps Tecnológicos e Planejamento de Transformação Digital Realista</h2>
             <p>A transformação digital não ocorre da noite para o dia por meio de decretos corporativos; ela exige um plano de etapas realista, incremental e alinhado com a capacidade operacional do time técnico interno. Desenvolvemos roadmaps de transformação de arquiteturas monolíticas legadas para microsserviços modernos baseados em APIs e Edge Computing de forma faseada.</p>
@@ -345,4 +345,4 @@ servicesData["web-development"] = servicesData["desenvolvimento-web"];
 servicesData["business-automation"] = servicesData["automacao-empresarial"];
 servicesData["artificial-intelligence"] = servicesData["inteligencia-artificial"];
 servicesData["integrations"] = servicesData["integracoes"];
-servicesData["digital-strategy"] = servicesData["consultoria-digital"];
+servicesData["digital-strategy"] = servicesData["arquitetura-de-projetos"];
