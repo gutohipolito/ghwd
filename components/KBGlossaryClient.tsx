@@ -11,18 +11,15 @@ interface KBGlossaryClientProps {
 }
 
 export function KBGlossaryClient({ terms }: KBGlossaryClientProps) {
-    const { language } = useLanguage();
+    const { t, language } = useLanguage();
     const [searchTerm, setSearchTerm] = useState('');
     const [activeLetter, setActiveLetter] = useState<string | null>(null);
 
-    const isPt = language === 'pt' || language === 'pt-pt';
-    const isEs = language === 'es';
-
-    const textSearchPlaceholder = isPt ? "Buscar termo técnico ou definição..." : (isEs ? "Buscar término técnico o definición..." : "Search technical term or definition...");
-    const textAllLetters = isPt ? "Todos" : (isEs ? "Todos" : "All");
-    const textNoTerms = isPt ? "Nenhum termo técnico localizado para a busca atual." : (isEs ? "Ningún término técnico localizado para la búsqueda actual." : "No technical terms found for the current search.");
-    const textGlossaryTitle = isPt ? "Estrutura de Termos" : (isEs ? "Estructura de Términos" : "Terms Structure");
-    const textBackToKB = isPt ? "Voltar para o KB" : (isEs ? "Volver al KB" : "Back to KB");
+    const textSearchPlaceholder = t('glossary.search_placeholder');
+    const textAllLetters = t('glossary.all_letters');
+    const textNoTerms = t('glossary.no_terms');
+    const textGlossaryTitle = t('glossary.terms_structure');
+    const textBackToKB = t('glossary.back_to_kb');
 
     // Filtragem de termos
     const filteredTerms = terms.filter(item => {
@@ -48,8 +45,8 @@ export function KBGlossaryClient({ terms }: KBGlossaryClientProps) {
         "@context": "https://schema.org",
         "@type": "DefinedTermSet",
         "@id": "https://ghwd.com.br/kb/glossary#definedtermset",
-        "name": "Glossário Técnico GHWD - IA e Engenharia",
-        "description": "Dicionário de termos técnicos contendo conceitos fundamentais sobre inteligência artificial, desenvolvimento Next.js e automação corporativa.",
+        "name": t('glossary.schema_name'),
+        "description": t('glossary.schema_desc'),
         "hasDefinedTerm": terms.map((item) => ({
             "@type": "DefinedTerm",
             "name": item.term,

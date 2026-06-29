@@ -1,20 +1,23 @@
+"use client";
+
 import { NavbarOrchestra } from "@/components/NavbarOrchestra";
 import { MegaFooter } from "@/components/MegaFooter";
 import { PageHero } from "@/components/PageHero";
 import { KBDirectoryClient } from "@/components/KBDirectoryClient";
 import { kbArticles } from "@/lib/kb-data";
-
-export const dynamic = 'force-static';
+import { useLanguage } from "@/lib/i18n-context";
 
 export default function KBPage() {
+    const { t } = useLanguage();
+
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
             <NavbarOrchestra />
             
             <PageHero 
-                pretitle="/ Centro de IA e Engenharia"
-                title="KB."
-                subtitle="Artigos técnicos, guias de engenharia e referências detalhadas sobre inteligência artificial corporativa, RAG, protocolo MCP e automações B2B."
+                pretitle={t('kb.pretitle')}
+                title={t('kb.title')}
+                subtitle={t('kb.subtitle')}
                 videoClassName="scale-110 opacity-20 brightness-50"
             />
 

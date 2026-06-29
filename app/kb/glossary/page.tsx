@@ -1,20 +1,23 @@
+"use client";
+
 import { NavbarOrchestra } from "@/components/NavbarOrchestra";
 import { MegaFooter } from "@/components/MegaFooter";
 import { PageHero } from "@/components/PageHero";
 import { KBGlossaryClient } from "@/components/KBGlossaryClient";
 import { glossaryTerms } from "@/lib/kb-data";
-
-export const dynamic = 'force-static';
+import { useLanguage } from "@/lib/i18n-context";
 
 export default function GlossaryPage() {
+    const { t } = useLanguage();
+
     return (
         <main className="min-h-screen relative flex flex-col bg-zinc-950 text-white selection:bg-emerald-500 selection:text-black">
             <NavbarOrchestra />
             
             <PageHero 
-                pretitle="/ Referências Técnicas"
-                title="GLOSSÁRIO."
-                subtitle="Dicionário semântico e referências rápidas contendo os principais conceitos de inteligência artificial, integrações RAG, protocolo MCP, desenvolvimento Next.js e Core Web Vitals."
+                pretitle={t('glossary.pretitle')}
+                title={t('glossary.title')}
+                subtitle={t('glossary.subtitle')}
                 videoClassName="scale-110 opacity-20 brightness-50"
             />
 

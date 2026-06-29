@@ -7,7 +7,7 @@ import { useLanguage } from "@/lib/i18n-context";
 import { motion } from "framer-motion";
 
 export default function ContactPage() {
-    const { language } = useLanguage();
+    const { t, language } = useLanguage();
 
     const isPt = language === 'pt' || language === 'pt-pt';
     const homeTitle = isPt ? "Início" : "Home";
@@ -62,9 +62,11 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                         className="mb-12 text-center"
                     >
-                        <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-4 block">/ Contact</span>
+                        <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-4 block">
+                            {t('contact.header.tag')}
+                        </span>
                         <h1 className="text-5xl md:text-7xl font-heading font-black italic uppercase tracking-tighter leading-none mb-6">
-                            Start your <span className="text-zinc-500">evolution</span>
+                            {t('contact.header.title')}
                         </h1>
                     </motion.div>
 

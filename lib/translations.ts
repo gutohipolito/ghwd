@@ -415,6 +415,33 @@ export const translations: Record<Language, any> = {
 **Short Answer:** Yes, we implement advanced encryption, secure authentication, and serverless Edge security, ensuring full compliance of data pipelines and database architectures with LGPD and GDPR.`
                 }
             ]
+        },
+        kb: {
+            pretitle: "/ AI & Engineering Hub",
+            title: "KB.",
+            subtitle: "Technical articles, engineering guides, and deep-dive references on enterprise artificial intelligence, RAG, MCP protocol, and B2B automation.",
+            back_to_directory: "Back to Knowledge Base",
+            read_time: "read",
+            technical_author: "Technical Author",
+            related_topics: "Related Topics",
+            faq_title: "Frequently Asked Questions",
+            cta_title: "Want to implement AI in your company?",
+            cta_desc: "Schedule a free diagnosis and discover the automation potential of your business.",
+            cta_button: "Talk to Specialist",
+            not_found: "Article Not Found",
+            back_home: "Back to Home"
+        },
+        glossary: {
+            pretitle: "/ Technical References",
+            title: "GLOSSARY.",
+            subtitle: "Semantic dictionary and quick references containing key concepts on artificial intelligence, RAG integration, MCP protocol, Next.js development, and Core Web Vitals.",
+            schema_name: "GHWD Technical Glossary - AI & Engineering",
+            schema_desc: "Dictionary of technical terms containing core concepts on artificial intelligence, Next.js development, and enterprise automation.",
+            search_placeholder: "Search technical term or definition...",
+            all_letters: "All",
+            no_terms: "No technical terms found for the current search.",
+            terms_structure: "Terms Structure",
+            back_to_kb: "Back to KB"
         }
     },
     pt: {
@@ -830,6 +857,33 @@ export const translations: Record<Language, any> = {
 **Resposta Curta:** Sim, implementamos criptografia avançada, autenticação segura e segurança serverless na Edge, garantindo total conformidade legal dos fluxos de dados e banco de dados corporativos perante a LGPD e GDPR.`
                 }
             ]
+        },
+        kb: {
+            pretitle: "/ Centro de IA e Engenharia",
+            title: "KB.",
+            subtitle: "Artigos técnicos, guias de engenharia e referências detalhadas sobre inteligência artificial corporativa, RAG, protocolo MCP e automações B2B.",
+            back_to_directory: "Voltar para a Base de Conhecimento",
+            read_time: "de leitura",
+            technical_author: "Autor Técnico",
+            related_topics: "Tópicos Relacionados",
+            faq_title: "Dúvidas Frequentes do Tema",
+            cta_title: "Quer implementar IA na sua empresa?",
+            cta_desc: "Agende um diagnóstico gratuito e entenda o potencial de automação do seu negócio.",
+            cta_button: "Falar com Especialista",
+            not_found: "Artigo Não Encontrado",
+            back_home: "Voltar para o Início"
+        },
+        glossary: {
+            pretitle: "/ Referências Técnicas",
+            title: "GLOSSÁRIO.",
+            subtitle: "Dicionário semântico e referências rápidas contendo os principais conceitos de inteligência artificial, integrações RAG, protocolo MCP, desenvolvimento Next.js e Core Web Vitals.",
+            schema_name: "Glossário Técnico GHWD - IA e Engenharia",
+            schema_desc: "Dicionário de termos técnicos contendo conceitos fundamentais sobre inteligência artificial, desenvolvimento Next.js e automação corporativa.",
+            search_placeholder: "Buscar termo técnico ou definição...",
+            all_letters: "Todos",
+            no_terms: "Nenhum termo técnico localizado para a busca atual.",
+            terms_structure: "Estrutura de Termos",
+            back_to_kb: "Voltar para o KB"
         }
     },
     'pt-pt': {
@@ -1232,6 +1286,33 @@ export const translations: Record<Language, any> = {
 **Resposta Curta:** Sim, implementamos encriptação avançada, autenticação segura e segurança serverless na Edge, garantindo total conformidade legal dos fluxos de dados e bases de dados corporativos perante a LGPD e RGPD.`
                 }
             ]
+        },
+        kb: {
+            pretitle: "/ Centro de IA e Engenharia",
+            title: "KB.",
+            subtitle: "Artigos técnicos, guias de engenharia e referências detalhadas sobre inteligência artificial corporativa, RAG, protocolo MCP e automações B2B.",
+            back_to_directory: "Voltar para a Base de Conhecimento",
+            read_time: "de leitura",
+            technical_author: "Autor Técnico",
+            related_topics: "Tópicos Relacionados",
+            faq_title: "Dúvidas Frequentes do Tema",
+            cta_title: "Quer implementar IA na sua empresa?",
+            cta_desc: "Agende um diagnóstico gratuito e entenda o potencial de automação do seu negócio.",
+            cta_button: "Falar com Especialista",
+            not_found: "Artigo Não Encontrado",
+            back_home: "Voltar ao Início"
+        },
+        glossary: {
+            pretitle: "/ Referências Técnicas",
+            title: "GLOSSÁRIO.",
+            subtitle: "Dicionário semântico e referências rápidas contendo os principais conceitos de inteligência artificial, integrações RAG, protocolo MCP, desenvolvimento Next.js e Core Web Vitals.",
+            schema_name: "Glossário Técnico GHWD - IA e Engenharia",
+            schema_desc: "Dicionário de termos técnicos contendo conceitos fundamentais sobre inteligência artificial, desenvolvimento Next.js e automação corporativa.",
+            search_placeholder: "Buscar termo técnico ou definição...",
+            all_letters: "Todos",
+            no_terms: "Nenhum termo técnico localizado para a busca atual.",
+            terms_structure: "Estrutura de Termos",
+            back_to_kb: "Voltar para o KB"
         }
     },
     es: {
@@ -1629,6 +1710,33 @@ export const translations: Record<Language, any> = {
 **Respuesta Corta:** Sí, implementamos cifrado avanzado, autenticación segura y seguridad serverless en la Edge, garantizando total cumplimiento de los flujos de datos y bases de datos con la LGPD y el GDPR.`
                 }
             ]
+        },
+        kb: {
+            pretitle: "/ Centro de IA e Ingeniería",
+            title: "KB.",
+            subtitle: "Artículos técnicos, guías de ingeniería y referencias detalladas sobre inteligencia artificial corporativa, RAG, protocolo MCP y automatizaciones B2B.",
+            back_to_directory: "Volver a la Base de Conocimiento",
+            read_time: "de lectura",
+            technical_author: "Autor Técnico",
+            related_topics: "Temas Relacionados",
+            faq_title: "Preguntas Frecuentes del Tema",
+            cta_title: "¿Quiere implementar IA en su empresa?",
+            cta_desc: "Programe un diagnóstico gratuito y comprenda el potencial de automatización de su negocio.",
+            cta_button: "Hablar con Especialista",
+            not_found: "Artículo No Encontrado",
+            back_home: "Volver al Inicio"
+        },
+        glossary: {
+            pretitle: "/ Referencias Técnicas",
+            title: "GLOSARIO.",
+            subtitle: "Diccionario semántico y referencias rápidas con los conceptos clave de inteligencia artificial, integración RAG, protocolo MCP, desarrollo Next.js y Core Web Vitals.",
+            schema_name: "Glosario Técnico GHWD - IA e Ingeniería",
+            schema_desc: "Diccionario de términos técnicos con conceptos fundamentales sobre inteligencia artificial, desarrollo Next.js y automatización corporativa.",
+            search_placeholder: "Buscar término técnico o definición...",
+            all_letters: "Todos",
+            no_terms: "Ningún término técnico localizado para la búsqueda actual.",
+            terms_structure: "Estructura de Términos",
+            back_to_kb: "Volver al KB"
         }
     }
 };
