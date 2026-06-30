@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { MoveDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -21,21 +21,11 @@ export function PageHero({
     title,
     subtitle,
     videoSrc = "https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4",
-    videoClassName,
+    videoClassName = "scale-150 rotate-3",
     showVideo = true,
     titleClassName
 }: PageHeroProps) {
     const { t } = useLanguage();
-    const [isDesktop, setIsDesktop] = useState(false);
-
-    useEffect(() => {
-        setIsDesktop(window.innerWidth >= 768);
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth >= 768);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     // Detecção dinâmica de título longo para evitar quebra de layout
     const titleString = typeof title === 'string' ? title : '';
@@ -50,7 +40,7 @@ export function PageHero({
 
             {/* Background - Video Texture */}
             <div className="absolute inset-0 z-0">
-                {showVideo && isDesktop && (
+                {showVideo && (
                     <video
                         autoPlay
                         loop
