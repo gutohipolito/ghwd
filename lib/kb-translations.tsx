@@ -594,46 +594,210 @@ export const kbArticlesTranslations: Record<string, Record<string, any>> = {
             faqItems: []
         }
     },
-    "quanto-custa-desenvolver-um-sistema-web-ou-projeto-de-ia-em-2026-guia-de-investimento": {
+    "quanto-custa-desenvolver-um-sistema-web-ou-projeto-de-ia-em-2026": {
         en: {
             title: "How Much Does It Cost to Develop a Web System or AI Project in 2026? (Investment Guide)",
-            description: "Get transparent insights on software engineering pricing, from landing pages to custom enterprise SaaS platforms and complex AI integrations.",
-            category: "Projects",
+            description: "Check investment tables, delivery timelines, and cost factors in corporate Next.js software engineering, automations, and custom AI.",
+            category: "Strategy & Business",
             date: "June 26, 2026",
-            tldr: "Software engineering prices vary by complexity. Simple landing pages start at $800, custom web systems from $3,000, and large-scale SaaS or complex AI integrations start at $6,000 with agile, bi-weekly sprints.",
+            tldr: "The investment in custom software projects at GHWD is clearly structured: conversion pages and fast websites cost between R$ 4k and R$ 8k; process automations between R$ 6k and R$ 12k; and custom SaaS or full AI/RAG implementations cost between R$ 15k and R$ 30k+.",
             sections: [
                 {
                     title: "1. Price Transparency in Software Engineering",
                     content: (
                         <div className="space-y-4">
                             <p className="text-zinc-300 leading-relaxed">
-                                Software development shouldn't be a black box. We practice transparent, fixed pricing aligned with technical complexity to ensure predictable budgets and ROI for our clients.
+                                In the B2B software development market, pricing is often obscure and confusing. Many agencies avoid displaying price ranges, generating inflated quotes based on the client's corporate size. At GHWD, we believe in absolute transparency. We structure our investments based on engineering scope, number of API integrations, and architectural complexity.
                             </p>
+                            <p className="text-zinc-300 leading-relaxed">
+                                Below, we detail our main active investment tiers for the year 2026:
+                            </p>
+                        </div>
+                    )
+                },
+                {
+                    title: "2. General Investment Tiers and Timelines Table",
+                    content: (
+                        <div className="space-y-6">
+                            <div className="overflow-x-auto border border-white/10 rounded-xl">
+                                <table className="w-full min-w-[550px] text-left text-sm border-collapse">
+                                    <thead>
+                                        <tr className="bg-zinc-900 border-b border-white/10">
+                                            <th className="p-4 font-bold text-white">Project Category</th>
+                                            <th className="p-4 font-bold text-zinc-400">Investment Range</th>
+                                            <th className="p-4 font-bold text-emerald-400">Estimated Timeline</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr className="border-b border-white/5">
+                                            <td className="p-4 font-semibold text-white">Next.js Landing Pages / Conversion Sites</td>
+                                            <td className="p-4 text-zinc-400">R$ 4,000 to R$ 8,000</td>
+                                            <td className="p-4 text-zinc-300">2 to 3 weeks</td>
+                                        </tr>
+                                        <tr className="border-b border-white/5">
+                                            <td className="p-4 font-semibold text-white">Institutional Sites / Corporate Portals</td>
+                                            <td className="p-4 text-zinc-400">R$ 8,000 to R$ 15,000</td>
+                                            <td className="p-4 text-zinc-300">4 to 6 weeks</td>
+                                        </tr>
+                                        <tr className="border-b border-white/5">
+                                            <td className="p-4 font-semibold text-white">Process Automation Workflows (n8n/Make)</td>
+                                            <td className="p-4 text-zinc-400">R$ 6,000 to R$ 12,000</td>
+                                            <td className="p-4 text-zinc-300">4 to 6 weeks</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-4 font-semibold text-white">Bespoke SaaS / AI & RAG Engineering</td>
+                                            <td className="p-4 text-zinc-400">R$ 15,000 to R$ 30,000+</td>
+                                            <td className="p-4 text-zinc-300">8 to 12 weeks</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    )
+                },
+                {
+                    title: "3. Factors Influencing Development Costs",
+                    content: (
+                        <div className="space-y-4">
+                            <p className="text-zinc-300 leading-relaxed">
+                                The final investment of a software project is calculated from specific engineering variables:
+                            </p>
+                            <ul className="list-disc pl-6 space-y-3 text-zinc-300">
+                                <li><strong>Volume of APIs and Integrations:</strong> Connecting a Next.js site to a modern CRM API (e.g. HubSpot) is fast. Integrating asynchronously and bidirectionally with a legacy on-premise ERP without accessible documentation raises testing and development time, and thus cost.</li>
+                                <li><strong>Business Rules and Algorithmic Complexity:</strong> Simple contact forms have low costs. Custom SaaS scheduling platforms with proprietary automated banking reconciliation algorithms require more architecture and validation sprints.</li>
+                                <li><strong>Security and Compliance Requirements:</strong> Projects with advanced requirements like end-to-end encryption, on-premise container isolation, and detailed audit logs require more complex architectural reviews.</li>
+                            </ul>
+                        </div>
+                    )
+                },
+                {
+                    title: "4. Why Custom Next.js Has Higher ROI than WordPress / No-Code",
+                    content: (
+                        <div className="space-y-4">
+                            <p className="text-zinc-300 leading-relaxed">
+                                Many decision-makers choose WordPress or simple page builders to reduce upfront costs. However, in terms of long-term financial return (ROI) and maintenance overhead, GHWD's custom Next.js architecture is significantly cheaper:
+                            </p>
+                            <ul className="list-disc pl-6 space-y-3 text-zinc-300">
+                                <li><strong>Higher Conversion Rate:</strong> For every 100ms of extra delay, your site loses customers. A fast Next.js site (&lt; 1.0s) converts on average 15% to 30% more leads than heavy, sluggish WordPress templates.</li>
+                                <li><strong>Low Fixed Maintenance Cost:</strong> Next.js static sites are hosted on low-cost (or free up to millions of visits on Vercel or Netlify) serverless Edge infrastructure. WordPress requires constant plugin updates and expensive dedicated hosting to avoid crashes.</li>
+                                <li><strong>Zero Hacking Costs:</strong> Since the exported Next.js interface has no exposed databases or vulnerable admin panels like `/wp-admin`, hacking and data leak rates drop to zero, saving emergency IT expenses and LGPD fines.</li>
+                            </ul>
                         </div>
                     )
                 }
             ],
-            faqItems: []
+            faqItems: [
+                {
+                    q: "How are project payments divided?",
+                    a: "We work with split payments tied to physical milestones in agile bi-weekly sprints. Generally, we structure payments as: Kickoff deposit (20% to 30%), completion of UI/UX Design phase (30% to 40%), and final production launch (30% to 40%), ensuring transparency."
+                },
+                {
+                    q: "Does GHWD charge recurring monthly support fees?",
+                    a: "Hosting and serverless infrastructure are kept under the client's own accounts, maintaining full code independence. We provide 30 days of warranty and free post-launch support. We offer optional technical support packages for updates, new features, and security monitoring."
+                }
+            ]
         },
         es: {
             title: "¿Cuánto Cuesta Desarrollar un Sistema Web o Proyecto de IA en 2026? (Guía de Inversión)",
-            description: "Obtenga información transparente sobre los precios de la ingeniería de software, desde landing pages hasta plataformas SaaS corporativas.",
-            category: "Proyectos",
+            description: "Consulte las tablas de inversión, plazos de entrega y factores de costo en ingeniería de software corporativa Next.js, automatizaciones e IA a medida.",
+            category: "Estrategia y Negocios",
             date: "26 de Junio de 2026",
-            tldr: "Los precios varían según la complejidad técnica. Las páginas de aterrizaje inician en $800, sistemas web desde $3,000 y plataformas SaaS de gran escala desde $6,000.",
+            tldr: "La inversión en proyectos de software a medida en GHWD se estructura de forma clara: páginas de conversión y sitios rápidos cuestan de R$ 4k a R$ 8k; automatizaciones de R$ 6k a R$ 12k; y plataformas SaaS o implementaciones completas de IA y RAG de R$ 15k a R$ 30k+.",
             sections: [
                 {
                     title: "1. Transparencia de Precios en Ingeniería de Software",
                     content: (
                         <div className="space-y-4">
                             <p className="text-zinc-300 leading-relaxed">
-                                El desarrollo de software no debe ser una caja negra. Practicamos precios transparentes y fijos alineados con la complejidad técnica para asegurar presupuestos predecibles.
+                                En el mercado de desarrollo de software B2B en Brasil, los precios suelen ser oscuros y confusos. Muchas agencias evitan publicar valores, generando presupuestos desproporcionados según el tamaño del cliente. En GHWD, creemos en la transparencia absoluta. Estructuramos nuestras inversiones en función del alcance de la ingeniería, número de integraciones API y complejidad arquitectónica del sistema.
                             </p>
+                            <p className="text-zinc-300 leading-relaxed">
+                                A continuación, detallamos nuestros principales niveles de inversión vigentes para el año 2026:
+                            </p>
+                        </div>
+                    )
+                },
+                {
+                    title: "2. Tabla General de Rangos de Inversión y Plazos",
+                    content: (
+                        <div className="space-y-6">
+                            <div className="overflow-x-auto border border-white/10 rounded-xl">
+                                <table className="w-full min-w-[550px] text-left text-sm border-collapse">
+                                    <thead>
+                                        <tr className="bg-zinc-900 border-b border-white/10">
+                                            <th className="p-4 font-bold text-white">Categoría del Proyecto</th>
+                                            <th className="p-4 font-bold text-zinc-400">Rango de Inversión</th>
+                                            <th className="p-4 font-bold text-emerald-400">Plazo Estimado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr className="border-b border-white/5">
+                                            <td className="p-4 font-semibold text-white">Next.js Landing Pages / Sitios de Conversión</td>
+                                            <td className="p-4 text-zinc-400">R$ 4.000 a R$ 8.000</td>
+                                            <td className="p-4 text-zinc-300">2 a 3 semanas</td>
+                                        </tr>
+                                        <tr className="border-b border-white/5">
+                                            <td className="p-4 font-semibold text-white">Sitios Institucionales / Portales Corporativos</td>
+                                            <td className="p-4 text-zinc-400">R$ 8.000 a R$ 15.000</td>
+                                            <td className="p-4 text-zinc-300">4 a 6 semanas</td>
+                                        </tr>
+                                        <tr className="border-b border-white/5">
+                                            <td className="p-4 font-semibold text-white">Flujos de Automatización de Procesos (n8n/Make)</td>
+                                            <td className="p-4 text-zinc-400">R$ 6.000 a R$ 12.000</td>
+                                            <td className="p-4 text-zinc-300">4 a 6 semanas</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-4 font-semibold text-white">SaaS a Medida / Ingeniería de IA y RAG</td>
+                                            <td className="p-4 text-zinc-400">R$ 15.000 a R$ 30.000+</td>
+                                            <td className="p-4 text-zinc-300">8 a 12 semanas</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    )
+                },
+                {
+                    title: "3. Factores que Influyen en el Costo de Desarrollo",
+                    content: (
+                        <div className="space-y-4">
+                            <p className="text-zinc-300 leading-relaxed">
+                                La inversión final de un proyecto de software se calcula a partir de variables de ingeniería específicas:
+                            </p>
+                            <ul className="list-disc pl-6 space-y-3 text-zinc-300">
+                                <li><strong>Volumen de API e Integraciones:</strong> Conectar un sitio Next.js a una API de CRM moderna (p. ej. HubSpot) es rápido. Integrar de forma bidireccional asíncrona con un ERP heredado antiguo y local sin documentación accesible eleva el tiempo y costo de desarrollo.</li>
+                                <li><strong>Reglas de Negocio y Complejidad Algorítmica:</strong> Los formularios de contacto simples tienen costos bajos. Las plataformas SaaS de programación con algoritmos propios de conciliación bancaria automática requieren más sprints de arquitectura.</li>
+                                <li><strong>Requisitos de Seguridad y Cumplimiento:</strong> Proyectos con demandas avanzadas de cifrado de extremo a extremo y registros de auditoría requieren revisiones arquitectónicas complejas.</li>
+                            </ul>
+                        </div>
+                    )
+                },
+                {
+                    title: "4. Por Qué el Next.js a Medida tiene Mayor ROI que WordPress / No-Code",
+                    content: (
+                        <div className="space-y-4">
+                            <p className="text-zinc-300 leading-relaxed">
+                                Muchos decisores eligen WordPress o creadores simples para reducir el costo inicial. Sin embargo, en términos de retorno financiero a largo plazo (ROI) y costos de operación, la arquitectura Next.js de GHWD es significativamente más barata:
+                            </p>
+                            <ul className="list-disc pl-6 space-y-3 text-zinc-300">
+                                <li><strong>Mayor Tasa de Conversión:</strong> Por cada 100ms de retraso, su sitio pierde clientes. Un sitio Next.js rápido (&lt; 1.0s) convierte entre un 15% y 30% más leads que plantillas pesadas de WordPress.</li>
+                                <li><strong>Bajo Costo Fijo de Mantenimiento:</strong> Los sitios estáticos Next.js se alojan en arquitectura serverless Edge de bajo costo. WordPress requiere actualizaciones de plugins constantes y hosting costoso para no caerse.</li>
+                                <li><strong>Cero Costos por Hackeos:</strong> Como Next.js no expone bases de datos ni paneles vulnerables como `/wp-admin`, la tasa de hackeos cae a cero, ahorrando costos de TI y multas.</li>
+                            </ul>
                         </div>
                     )
                 }
             ],
-            faqItems: []
+            faqItems: [
+                {
+                    q: "¿Cómo se dividen los pagos del proyecto?",
+                    a: "Trabajamos con pagos por hitos ligados a sprints de dos semanas. Estructuramos los pagos en: Anticipo (20% a 30%), cierre de fase de diseño UI/UX (30% a 40%) y lanzamiento final a producción (30% a 40%)."
+                },
+                {
+                    q: "¿Cobra GHWD tarifas de soporte mensuales recurrentes?",
+                    a: "El alojamiento serverless corre por cuenta del cliente, manteniendo la independencia. Ofrecemos 30 dias de garantía y soporte gratuito posterior al lanzamiento, con paquetes opcionales de soporte continuo."
+                }
+            ]
         }
     }
 };
